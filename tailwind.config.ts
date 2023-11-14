@@ -11,7 +11,15 @@ const config:Config = {
       './chunk/*.{ts,tsx,js,jsx}',
       './chunk/**/*.{ts,tsx,js,jsx}',
   ],
-  theme: {},
+  theme: {
+      extend: {
+          colors: {
+              dark: '#232323',
+              theme: '#49B486',
+              lightGrey: '#BBBBBB'
+          }
+      }
+  },
   plugins: [],
 }
 

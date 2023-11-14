@@ -70,8 +70,10 @@ export default function RootLayout({children}:propsType):ReactNode {
     return (
         <html>
             <body dir={'rtl'} className={DanaFont.className}>
-                <HeaderComponent />
-                {children}
+                <div className={'max-w-[1440px] mx-auto overflow-hidden'}>
+                    <HeaderComponent />
+                    {children}
+                </div>
             </body>
         </html>
     );
