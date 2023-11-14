@@ -6,7 +6,7 @@ export default function HomePage():ReactNode {
     // Returning JSX
     return (
         <div>
-            <h1 className={'font-black'}>سلام سلام بچه ها</h1>
+            <h1 className={'font-black'}>خانه</h1>
         </div>
     );
 }
