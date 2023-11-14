@@ -26,7 +26,7 @@ export default function HeaderComponent():ReactNode {
                 </div>
                 <div className={'vertical-divider lg:block hidden'} />
                 <ul className={'lg:flex hidden items-center gap-[30px]'}>
-                    <li><LinkComponent link={'/work-samples'}>نمونه کار ها</LinkComponent></li>
+                    <li><LinkComponent activeInHome link={'/work-samples'}>نمونه کار ها</LinkComponent></li>
                     <DropdownComponent link={'/services'} title={'خدمات ما'}>
                         <li><Link className={'px-[15px] truncate text-[16px] text-dark font-normal py-[5px] block hover:bg-white/30 transition-all duration-500'} href={'#'}>لینک ۱</Link></li>
                         <li><Link className={'px-[15px] truncate text-[16px] text-dark font-normal py-[5px] block hover:bg-white/30 transition-all duration-500'} href={'#'}>لینک ۲</Link></li>
