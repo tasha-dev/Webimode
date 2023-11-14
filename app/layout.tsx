@@ -3,6 +3,7 @@ import {ReactNode} from "react";
 import {Metadata} from "next";
 import LocalFont from 'next/font/local';
 import {NextFont} from "next/dist/compiled/@next/font";
+import '@/app/index.css';
 
 // Defining custom local font of Dana
 const DanaFont:NextFont = LocalFont({
