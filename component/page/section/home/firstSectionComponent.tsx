@@ -2,12 +2,16 @@
 import {ReactNode} from "react";
 import Link from "next/link";
 import IconComponent from "@/chunk/iconComponent";
+import Image from 'next/image';
+import leftSideImage from '@/public/img/home/firstSection/img-left-side.png';
+import bgZigzagImage from '@/public/img/home/firstSection/img-bg-zigzag.svg';
 
 // Creating and exporting first section of home page as default
 export default function FirstSectionComponent():ReactNode {
     // Returning JSX
     return (
         <section>
+            <img src={bgZigzagImage.src} alt="عکس زیگزاگ در پس زمینه" />
             <main>
                 <div>تیم وبیمود</div>
                 <h1>وبیمود</h1>
@@ -25,7 +29,7 @@ export default function FirstSectionComponent():ReactNode {
                 </div>
             </main>
             <div>
-
+                <Image width={100} height={100} src={leftSideImage.src} alt={'عکس گوشی'} />
             </div>
         </section>
     );
