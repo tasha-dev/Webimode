@@ -6,4 +6,7 @@
 /*Custom styles*/
 .vertical-divider {@apply w-[2px] rounded-[20rem] h-[35px] bg-dark;}
 .theme-shadow {box-shadow:  0 8px 24px 0 rgba(73, 180, 134, 0.24), 2px 3px 16px 0 rgba(255, 255, 255, 0.24) inset, -2px -3px 24px 0 rgba(0, 0, 0, 0.12) inset;}
-.btn-primary {@apply flex justify-center theme-shadow items-center gap-[16px] text-[18px] font-normal text-white px-[16px] py-[10] bg-theme rounded-[14px];}
+.btn-primary {@apply flex justify-center theme-shadow items-center gap-[16px] text-[18px] font-normal text-white px-[24px] py-[12px] bg-theme rounded-[14px];}
+.btn-primary.text-big {@apply text-[24px];}
+.btn-secondary {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-themeBlue border border-themeBlue px-[24px] py-[12px] text-[18px];}
+.btn-secondary.text-big {@apply text-[24px];}
