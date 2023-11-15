@@ -11,3 +11,4 @@
 :is(.btn-secondary, .btn-primary).text-big {@apply lg:text-[24px] text-[18px];}
 .btn-secondary {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-themeBlue border border-themeBlue px-[24px] py-[12px] text-[18px];}
 .text-big {@apply lg:text-[24px] text-[18px];}
+.sign {@apply px-[12px] py-[8px] bg-theme theme-shadow lg:mb-[10px] mb-[20px] inline-block lg:text-[15px] text-[10px] font-normal text-white rounded-l-[12px] rounded-tr-[12px];}
