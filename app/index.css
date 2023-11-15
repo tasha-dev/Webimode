@@ -6,9 +6,13 @@
 /*Custom styles*/
 .vertical-divider {@apply w-[2px] rounded-[20rem] h-[35px] bg-dark;}
 .theme-shadow {box-shadow:  0 8px 24px 0 rgba(73, 180, 134, 0.24), 2px 3px 16px 0 rgba(255, 255, 255, 0.24) inset, -2px -3px 24px 0 rgba(0, 0, 0, 0.12) inset;}
+.theme-shadow-dark {box-shadow: 2px 3px 8px 0 rgba(255, 255, 255, 0.32) inset, -2px -3px 8px 0 rgba(0, 0, 0, 0.12) inset;}
 .btn-primary {@apply flex justify-center theme-shadow items-center gap-[16px] text-[18px] font-normal text-white px-[24px] py-[12px] bg-theme rounded-[14px];}
 .btn-primary.no-py {@apply py-0;}
 :is(.btn-secondary, .btn-primary).text-big {@apply lg:text-[24px] text-[18px];}
 .btn-secondary {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-themeBlue border border-themeBlue px-[24px] py-[12px] text-[18px];}
 .text-big {@apply lg:text-[24px] text-[18px];}
 .sign {@apply px-[12px] py-[8px] bg-theme theme-shadow lg:mb-[10px] mb-[20px] inline-block lg:text-[15px] text-[10px] font-normal text-white rounded-l-[12px] rounded-tr-[12px];}
+.sign-white {@apply px-[12px] py-[8px] bg-white theme-shadow-dark text-theme lg:mb-[10px] mb-[20px] inline-block lg:text-[15px] text-[10px] font-normal rounded-l-[12px] rounded-tr-[12px];}
+.btn-primary-white {@apply flex justify-center theme-shadow-dark items-center gap-[16px] text-[18px] font-normal text-theme px-[24px] py-[12px] bg-white rounded-[14px];}
+.btn-secondary-white {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-white border border-white px-[24px] py-[12px] text-[18px];}
