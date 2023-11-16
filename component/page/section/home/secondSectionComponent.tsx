@@ -21,8 +21,8 @@ export default function SecondSectionComponent():ReactNode {
                 </h4>
                 <p className={'text-[20px] text-center text-lightGrey leading-[36px]'}>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</p>
             </header>
-            <main dir="ltr" className="grid grid-cols-6 my-[232px] relative">
-                <div className="w-[56px] h-[56px] aspect-square flex justify-center items-center rounded-full absolute left-0 top-[50%] -translate-y-[50%] bg-white z-[3] border border-theme text-theme">
+            <main dir="ltr" className="grid lg:grid-cols-6 grid-cols-1 lg:gap-0 gap-[120px] lg:my-[232px] my-[32px] relative">
+                <div className="w-[56px] h-[56px] aspect-square flex justify-center items-center rounded-full lg:absolute left-0 top-[50%] lg:-translate-y-[50%] lg:rotate-0 rotate-90 lg:mx-0 mx-auto bg-white z-[3] border border-theme text-theme">
                     <span className="translate-y-[5px]"><IconComponent name="right-arrow" size={24} /></span>
                 </div>
                 <StepComponent position="bottom" count="۱" isActive={true} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
@@ -30,8 +30,8 @@ export default function SecondSectionComponent():ReactNode {
                 <StepComponent position="bottom" count="۳" isActive={false} icon='design' title='طراحی اولیه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                 <StepComponent position="top" count="۴" isActive={false} icon='replace' title='پیاده سازی و تحویل'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                 <StepComponent position="bottom" count="۵" isActive={false} icon='vote-yes' title='تغییر و تکمیل طراحی'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
-                <div className="h-[2px] bg-lightGrey" />
-                <div className="w-[56px] h-[56px] aspect-square flex justify-center items-center rounded-full absolute right-0 top-[50%] -translate-y-[50%] bg-white z-[3] border border-lightGrey text-lightGrey">
+                <div className="h-[2px] bg-lightGrey lg:block hidden" />
+                <div className="w-[56px] h-[56px] aspect-square lg:flex hidden justify-center items-center rounded-full absolute right-0 top-[50%] -translate-y-[50%] bg-white z-[3] border border-lightGrey text-lightGrey">
                     <IconComponent name="party-horn" size={24} />
                 </div>
             </main>
