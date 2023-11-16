@@ -18,7 +18,7 @@ const config:Config = {
               theme: '#49B486',
               lightGrey: '#BBBBBB',
               themeBlue: '#2B96CC',
-              darkerTheme: '#123828'
+              darkerTheme: '#123828',
           }
       }
   },
