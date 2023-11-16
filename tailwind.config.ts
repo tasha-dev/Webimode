@@ -18,8 +18,15 @@ const config:Config = {
               theme: '#49B486',
               lightGrey: '#BBBBBB',
               themeBlue: '#2B96CC',
+              lightTheme: '#5DE3AA',
               darkerTheme: '#123828',
-              lighterGrey: '#e3e3e3'
+              lighterGrey: '#e3e3e3',
+              themePurple: '#9288F8',
+              frogGreen: '#86D028',
+              darkFrogGreen: '#1EBB10',
+              lightOrange: '#FCAA0B',
+              orange: '#FD7123',
+              pink: '#FF5492'
           }
       }
   },
