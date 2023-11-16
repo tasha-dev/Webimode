@@ -18,7 +18,9 @@ export default function StepComponent({children, icon, isActive, title, position
     return (
         <div className="h-[2px] relative data-[active='true']:bg-theme data-[active='false']:bg-lightGrey" data-active={isActive}>
             <div className="absolute w-[24px] h-[24px] aspect-square rounded-full data-[active='true']:bg-theme z-[2] data-[active='false']:bg-lightGrey left-full -translate-x-[50%] -translate-y-[50%]" data-active={isActive} />
-            <div className="w-[56px] h-[56px] left-full -translate-x-[50%] flex justify-center items-center absolute z-[4] rounded-full data-[position='top']:translate-y-[30px] data-[position='bottom']:-translate-y-[30px] data-[position='bottom']:bottom-full data-[position='top']:top-full data-[position='bottom']:bottom-full data-[active='false']:bg-lighterGrey data-[active='false']:text-lightGrey data-[active='true']:bg-theme data-[active='true']:text-white" data-active={isActive} data-position={position}>{count}</div>
+            <div className="w-[56px] h-[56px] left-full font-bold -translate-x-[50%] flex justify-center items-center absolute z-[4] rounded-full data-[position='top']:translate-y-[30px] data-[position='bottom']:-translate-y-[30px] data-[position='bottom']:bottom-full data-[position='top']:top-full data-[position='bottom']:bottom-full data-[active='false']:bg-lighterGrey data-[active='false']:text-lightGrey data-[active='true']:bg-theme data-[active='true']:text-white" data-active={isActive} data-position={position}>
+                {count}
+            </div>
             <DetailComponent position={position} icon={icon} isActive={isActive} title={title}>{children}</DetailComponent>
         </div>
     );
