@@ -3,6 +3,7 @@ import {ReactNode} from "react";
 import FirstSectionComponent from "@/component/page/section/home/firstSectionComponent";
 import MissionComponent from "@/component/missionComponent";
 import SecondSectionComponent from "@/component/page/section/home/secondSectionComponent";
+import ThirdSectionComponent from "@/component/page/section/home/thirdSectionComponent";
 
 // Creating and exporting Home Page as default
 export default function HomePage():ReactNode {
@@ -12,6 +13,7 @@ export default function HomePage():ReactNode {
             <FirstSectionComponent />
             <MissionComponent />
             <SecondSectionComponent />
+            <ThirdSectionComponent />
         </>
     );
 }
