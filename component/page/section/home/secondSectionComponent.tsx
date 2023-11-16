@@ -8,24 +8,24 @@ export default function SecondSectionComponent():ReactNode {
     // Returning JSX
     return (
         <section className={'lg:mt-[256px] mt-[196px] p-[20px]'}>
-            <header className={'flex items-center justify-center flex-col max-w-[560px] mx-auto mb-[40px]'}>
+            <header className={'flex items-center justify-center flex-col max-w-[560px] mx-auto lg:mb-[40px] mb-[32px]'}>
                 <div className={'sign'}>تیم وبیمود</div>
-                <h4 className={'relative text-[48px] font-bold mb-[8px] text-center'}>
+                <h4 className={'relative lg:text-[48px] text-[20px] font-bold mb-[8px] text-center'}>
                     <span className={'inline-block ml-[1ch] text-dark'}>مراحل خدمات</span>
                     <span className={'inline-block text-theme'}>وبیمود</span>
-                    <span className={'text-theme absolute right-full bottom-full flex flex-col w-[30px]'}>
+                    <span className={'text-theme absolute right-full bottom-full lg:flex hidden flex-col w-[30px]'}>
                         <span className={'self-center'}><IconComponent name={'star'} size={10} /></span>
                         <span className={'self-end'}><IconComponent name={'star'} size={12} /></span>
                         <span className={'self-start'}><IconComponent name={'star'} size={14} /></span>
                     </span>
                 </h4>
-                <p className={'text-[20px] text-center text-lightGrey leading-[36px]'}>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</p>
+                <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</p>
             </header>
-            <main dir="ltr" className="grid lg:grid-cols-6 grid-cols-1 lg:gap-0 gap-[120px] lg:my-[232px] my-[32px] relative">
+            <main dir="ltr" className="grid lg:grid-cols-6 grid-cols-1 lg:mt-[232px] mt-[32px] relative">
                 <div className="w-[56px] h-[56px] aspect-square flex justify-center items-center rounded-full lg:absolute left-0 top-[50%] lg:-translate-y-[50%] lg:rotate-0 rotate-90 lg:mx-0 mx-auto bg-white z-[3] border border-theme text-theme">
                     <span className="translate-y-[5px]"><IconComponent name="right-arrow" size={24} /></span>
                 </div>
-                <StepComponent position="bottom" count="۱" isActive={true} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
+                <StepComponent isFirstOne position="bottom" count="۱" isActive={true} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                 <StepComponent position="top" count="۲" isActive={false} icon='money-check-edit' title='بررسی و اعلام هزینه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                 <StepComponent position="bottom" count="۳" isActive={false} icon='design' title='طراحی اولیه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                 <StepComponent position="top" count="۴" isActive={false} icon='replace' title='پیاده سازی و تحویل'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
