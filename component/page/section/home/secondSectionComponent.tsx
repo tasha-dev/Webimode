@@ -14,9 +14,9 @@ export default function SecondSectionComponent():ReactNode {
                     <span className={'inline-block ml-[1ch] text-dark'}>مراحل خدمات</span>
                     <span className={'inline-block text-theme'}>وبیمود</span>
                     <span className={'text-theme absolute right-full bottom-full lg:flex hidden flex-col w-[30px]'}>
-                        <span className={'self-center'}><IconComponent name={'star'} size={10} /></span>
-                        <span className={'self-end'}><IconComponent name={'star'} size={12} /></span>
-                        <span className={'self-start'}><IconComponent name={'star'} size={14} /></span>
+                        <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
+                        <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
+                        <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                     </span>
                 </h4>
                 <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</p>

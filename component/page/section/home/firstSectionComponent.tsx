@@ -21,7 +21,7 @@ export default function FirstSectionComponent():ReactNode {
                         <span className={'text-dark font-normal inline-block ml-[10px]'}>واقعی کردن</span>
                         <span className={'text-theme font-bold inline-block'}>ایده ها</span>
                         <span className={'text-theme absolute right-[102%] bottom-full flex flex-col w-[30px]'}>
-                            <span className={'self-center'}><IconComponent name={'star'} size={10} /></span>
+                            <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
                             <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
                             <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                         </span>
