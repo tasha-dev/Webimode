@@ -21,7 +21,7 @@ export default function SecondSectionComponent():ReactNode {
                 </h4>
                 <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>
                     تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین
-                    <br />
+                    <br className="lg:block hidden" />
                     مرحله آن پشتیبان شماست .
                 </p>
             </header>

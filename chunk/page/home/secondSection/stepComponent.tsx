@@ -23,17 +23,17 @@ export default function StepComponent({children, icon, isActive, title, position
                     ? (
                         <div className="w-[50%] relative lg:hidden block">
                             <svg className="ml-auto" width="101" height="97" viewBox="0 0 101 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M98.5215 0.816406C98.5215 31.7897 0.562887 38.7688 2.00003 96.5669" stroke={(isActive) ? '#49B486' : '#e3e3e3'} stroke-width="3"/>
+                                <path d="M98.5215 0.816406C98.5215 31.7897 0.562887 38.7688 2.00003 96.5669" stroke={(isActive) ? '#49B486' : '#e3e3e3'} strokeWidth="3"/>
                             </svg>
                         </div>
                     ) : (position === 'top')
                         ? (
                             <svg className="rotate-90 lg:hidden block absolute bottom-[99%] left-[49%]" width="101" height="97" viewBox="0 0 101 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M98.5215 0.816406C98.5215 31.7897 0.562887 38.7688 2.00003 96.5669" stroke={(isActive) ? '#49B486' : '#e3e3e3'} stroke-width="3"/>
+                                <path d="M98.5215 0.816406C98.5215 31.7897 0.562887 38.7688 2.00003 96.5669" stroke={(isActive) ? '#49B486' : '#e3e3e3'} strokeWidth="3"/>
                             </svg>
                         ) : (
                             <svg className="absolute lg:hidden block bottom-[99%] right-[49%]" width="101" height="97" viewBox="0 0 101 97" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M98.5215 0.816406C98.5215 31.7897 0.562887 38.7688 2.00003 96.5669" stroke={(isActive) ? '#49B486' : '#e3e3e3'} stroke-width="3"/>
+                                <path d="M98.5215 0.816406C98.5215 31.7897 0.562887 38.7688 2.00003 96.5669" stroke={(isActive) ? '#49B486' : '#e3e3e3'} strokeWidth="3"/>
                             </svg>
                         )
             }
