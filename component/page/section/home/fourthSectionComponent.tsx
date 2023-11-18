@@ -7,7 +7,7 @@ export default function FourthSectionComponent():ReactNode {
   // Returning JSX
   return (
     <section className="mt-[256px]">
-      <header className={'flex items-center justify-center flex-col max-w-[961px] mx-auto lg:mb-[40px] mb-[32px]'}>
+      <header className={'flex items-center justify-center flex-col mx-auto lg:mb-[40px] mb-[32px]'}>
         <div className={'sign'}>مهارت وبیمود</div>
         <h4 className={'relative lg:text-[48px] text-[20px] font-bold mb-[8px] text-center'}>
           <span className={'inline-block ml-[1ch] text-theme'}>مهارت های</span>
@@ -18,7 +18,11 @@ export default function FourthSectionComponent():ReactNode {
             <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
           </span>
         </h4>
-        <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>تیم وبیمود افتخار این را دارد که بتواند تمام نیاز های کارفمایان را در انواع زمینههای مختلف طراحی و برنامه نوسی و... در بهترین حالت ممکن برطرف کند .</p>
+        <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>
+            تیم وبیمود افتخار این را دارد که بتواند تمام نیاز های کارفمایان را در انواع زمینههای مختلف طراحی و برنامه نوسی و...
+            <br/>
+            در بهترین حالت ممکن برطرف کند .
+        </p>
       </header>
       <main>
         
