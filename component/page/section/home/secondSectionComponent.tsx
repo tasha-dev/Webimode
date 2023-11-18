@@ -8,7 +8,7 @@ export default function SecondSectionComponent():ReactNode {
     // Returning JSX
     return (
         <section className={'lg:mt-[256px] mt-[196px] p-[20px]'}>
-            <header className={'flex items-center justify-center flex-col max-w-[560px] mx-auto lg:mb-[40px] mb-[32px]'}>
+            <header className={'flex items-center justify-center flex-col mx-auto lg:mb-[40px] mb-[32px]'}>
                 <div className={'sign'}>تیم وبیمود</div>
                 <h4 className={'relative lg:text-[48px] text-[20px] font-bold mb-[8px] text-center'}>
                     <span className={'inline-block ml-[1ch] text-dark'}>مراحل خدمات</span>
@@ -19,7 +19,11 @@ export default function SecondSectionComponent():ReactNode {
                         <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                     </span>
                 </h4>
-                <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</p>
+                <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>
+                    تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین
+                    <br />
+                    مرحله آن پشتیبان شماست .
+                </p>
             </header>
             <main dir="ltr" className="grid lg:grid-cols-6 grid-cols-1 lg:mt-[232px] mt-[32px] relative">
                 <div className="w-[56px] h-[56px] aspect-square flex justify-center items-center rounded-full lg:absolute left-0 top-[50%] lg:-translate-y-[50%] lg:rotate-0 rotate-90 lg:mx-0 mx-auto bg-white z-[3] border border-theme text-theme">
