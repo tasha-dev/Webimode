@@ -30,91 +30,93 @@ export default function FourthSectionComponent():ReactNode {
   
   // Returning JSX
   return (
-    <section className="my-[256px] p-[20px]">
-      <header className={'flex items-center justify-center flex-col mx-auto lg:mb-[40px] mb-[32px]'}>
-        <div className={'sign'}>مهارت وبیمود</div>
-        <h4 className={'relative lg:text-[48px] text-[20px] font-bold lg:mb-[8px] mb-[12px] text-center'}>
-          <span className={'inline-block ml-[1ch] text-theme'}>مهارت های</span>
-          <span className={'inline-block text-dark'}>تیم وبیمود</span>
-          <span className={'text-theme absolute left-full bottom-full lg:flex hidden flex-col w-[30px]'}>
-            <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
-            <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
-            <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
-          </span>
-        </h4>
-        <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>
-            تیم وبیمود افتخار این را دارد که بتواند تمام نیاز های کارفمایان را در انواع زمینههای مختلف طراحی و برنامه نوسی و...
-            <br className='lg:block hidden'/>
-            در بهترین حالت ممکن برطرف کند .
-        </p>
-      </header>
-      <main className='gap-[24px] flex items-center justify-center'>
-        <button id='prev-tech-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full lg:flex hidden justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey'>
-          <IconComponent size={16} name="chevron-right" />
-        </button>
-        <Swiper 
-          modules={[Navigation]}
-          slidesPerView={14} 
-          spaceBetween={32}
-          breakpoints={{
-            1024: {slidesPerView: 14},
-            1: {slidesPerView: 4}
-          }}
-          onSlideChange={(event) => {
-            if (window.innerWidth > 1024) {
-              if (event.activeIndex === 0) {
-                setSlideRemainingOnRightSide(false);
-                setSlideRemainingOnLeftSide(true);
-              } else if (event.activeIndex === 16) {
-                setSlideRemainingOnRightSide(true);
-                setSlideRemainingOnLeftSide(false);
-              } else if (event.activeIndex !== 16 && event.activeIndex !== 0) {
-                setSlideRemainingOnRightSide(true);
-                setSlideRemainingOnLeftSide(true);
+    <section className="my-[256px]">
+      <div className="container p-[20px]">
+        <header className={'flex items-center justify-center flex-col mx-auto lg:mb-[40px] mb-[32px]'}>
+          <div className={'sign'}>مهارت وبیمود</div>
+          <h4 className={'relative lg:text-[48px] text-[20px] font-bold lg:mb-[8px] mb-[12px] text-center'}>
+            <span className={'inline-block ml-[1ch] text-theme'}>مهارت های</span>
+            <span className={'inline-block text-dark'}>تیم وبیمود</span>
+            <span className={'text-theme absolute left-full bottom-full lg:flex hidden flex-col w-[30px]'}>
+              <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
+              <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
+              <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
+            </span>
+          </h4>
+          <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>
+              تیم وبیمود افتخار این را دارد که بتواند تمام نیاز های کارفمایان را در انواع زمینههای مختلف طراحی و برنامه نوسی و...
+              <br className='lg:block hidden'/>
+              در بهترین حالت ممکن برطرف کند .
+          </p>
+        </header>
+        <main className='gap-[24px] flex items-center justify-center'>
+          <button id='prev-tech-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full lg:flex hidden justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey'>
+            <IconComponent size={16} name="chevron-right" />
+          </button>
+          <Swiper 
+            modules={[Navigation]}
+            slidesPerView={14} 
+            spaceBetween={32}
+            breakpoints={{
+              1024: {slidesPerView: 14},
+              1: {slidesPerView: 4}
+            }}
+            onSlideChange={(event) => {
+              if (window.innerWidth > 1024) {
+                if (event.activeIndex === 0) {
+                  setSlideRemainingOnRightSide(false);
+                  setSlideRemainingOnLeftSide(true);
+                } else if (event.activeIndex === 16) {
+                  setSlideRemainingOnRightSide(true);
+                  setSlideRemainingOnLeftSide(false);
+                } else if (event.activeIndex !== 16 && event.activeIndex !== 0) {
+                  setSlideRemainingOnRightSide(true);
+                  setSlideRemainingOnLeftSide(true);
+                }
               }
-            }
-          }}
-          className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white bg-lighterGrey'
-          navigation={{
-            nextEl: '#next-tech-slider-btn',
-            prevEl: '#prev-tech-slider-btn',
-          }}
-        >
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} size={24} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={28} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} size={32} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} size={36} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} size={40} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} size={48} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} size={56} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} size={56} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} size={56} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} size={48} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} size={40} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} size={36} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={24} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} size={24} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={28} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} size={32} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} size={36} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} size={40} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} size={48} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} size={56} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} size={56} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} size={56} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} size={48} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} size={40} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} size={36} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
-            <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={24} /></SwiperSlide>
-        </Swiper>
-        <button id='next-tech-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full lg:flex hidden justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey'>
-          <IconComponent size={16} name="chevron-left" />
-        </button>
-      </main>
+            }}
+            className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white bg-lighterGrey'
+            navigation={{
+              nextEl: '#next-tech-slider-btn',
+              prevEl: '#prev-tech-slider-btn',
+            }}
+          >
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} size={24} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={28} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} size={32} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} size={36} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} size={40} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} size={48} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} size={48} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} size={40} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} size={36} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={24} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} size={24} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={28} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} size={32} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} size={36} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} size={40} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} size={48} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} size={48} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} size={40} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} size={36} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={24} /></SwiperSlide>
+          </Swiper>
+          <button id='next-tech-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full lg:flex hidden justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey'>
+            <IconComponent size={16} name="chevron-left" />
+          </button>
+        </main>
+      </div>
     </section>
   );
 }
