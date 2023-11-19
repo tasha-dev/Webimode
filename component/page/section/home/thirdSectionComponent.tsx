@@ -65,6 +65,7 @@ export default function ThirdSectionComponent():ReactNode {
                 </main>
                 <div className="xl:hidden block">
                     <Swiper 
+                        initialSlide={activeIndexOfSlider}
                         modules={[Navigation]}
                         spaceBetween={10}
                         navigation={{

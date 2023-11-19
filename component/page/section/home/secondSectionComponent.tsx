@@ -28,7 +28,7 @@ export default function SecondSectionComponent():ReactNode {
                 </header>
                 <main dir="ltr" className="grid lg:grid-cols-6 grid-cols-1 lg:mt-[232px] mt-[32px] relative">
                     <div className="w-[56px] h-[56px] aspect-square flex justify-center items-center rounded-full lg:absolute left-0 top-[50%] lg:-translate-y-[50%] lg:rotate-0 rotate-90 lg:mx-0 mx-auto bg-white z-[3] border border-theme text-theme">
-                        <span className="translate-y-[5px]"><IconComponent name="right-arrow" size={24} /></span>
+                        <IconComponent name="right-arrow" size={24} />
                     </div>
                     <StepComponent isFirstOne position="bottom" count="۱" isActive={true} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                     <StepComponent position="top" count="۲" isActive={false} icon='money-check-edit' title='بررسی و اعلام هزینه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>

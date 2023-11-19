@@ -31,7 +31,7 @@ export default function FirstSectionComponent():ReactNode {
                             <span className={'inline-block ml-[1ch] text-dark'}>وبیمود وقعی کردن</span>
                             <span className={'inline-block text-theme'}>ایده ها</span>
                             <span className={'text-theme absolute right-full bottom-full flex flex-col w-[30px]'}>
-                                <span className={'self-center'}><IconComponent name={'star'} size={100} /></span>
+                                <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                             </span>

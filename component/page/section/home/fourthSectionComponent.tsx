@@ -27,6 +27,7 @@ export default function FourthSectionComponent():ReactNode {
   // Defining states of component
   const [isAnySlideRemainingOnRightSide, setSlideRemainingOnRightSide]:[boolean, Dispatch<boolean>] = useState(false);
   const [isAnySlideRemainingOnLeftSide, setSlideRemainingOnLeftSide]:[boolean, Dispatch<boolean>] = useState(true);
+  const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
   
   // Returning JSX
   return (
@@ -55,6 +56,7 @@ export default function FourthSectionComponent():ReactNode {
           </button>
           <Swiper 
             modules={[Navigation]}
+            initialSlide={activeIndexOfSlider}
             slidesPerView={14} 
             spaceBetween={32}
             breakpoints={{
@@ -62,6 +64,8 @@ export default function FourthSectionComponent():ReactNode {
               1: {slidesPerView: 4}
             }}
             onSlideChange={(event) => {
+              setActiveIndexOfSlider(event.activeIndex)
+
               if (window.innerWidth > 1024) {
                 if (event.activeIndex === 0) {
                   setSlideRemainingOnRightSide(false);
