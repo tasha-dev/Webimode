@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 /*Custom styles*/
-svg {@apply block overflow-visible;}
 .vertical-divider {@apply w-[2px] rounded-[20rem] h-[35px] bg-dark;}
 .theme-shadow {box-shadow:  0 8px 24px 0 rgba(73, 180, 134, 0.24), 2px 3px 16px 0 rgba(255, 255, 255, 0.24) inset, -2px -3px 24px 0 rgba(0, 0, 0, 0.12) inset;}
 .theme-shadow-dark {box-shadow: 2px 3px 8px 0 rgba(255, 255, 255, 0.32) inset, -2px -3px 8px 0 rgba(0, 0, 0, 0.12) inset;}

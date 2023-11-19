@@ -29,10 +29,10 @@ export default function FirstSectionComponent():ReactNode {
                     <h1 className={'relative lg:hidden block text-[20px] font-bold mb-[8px] text-center'}>
                         <span className={'inline-block ml-[1ch] text-dark'}>وبیمود وقعی کردن</span>
                         <span className={'inline-block text-theme'}>ایده ها</span>
-                        <span className={'text-theme absolute right-full bottom-full flex flex-col w-[15px]'}>
-                            <span className={'self-center'}><IconComponent name={'star'} size={4} /></span>
-                            <span className={'self-end'}><IconComponent name={'star'} size={5} /></span>
-                            <span className={'self-start'}><IconComponent name={'star'} size={7} /></span>
+                        <span className={'text-theme absolute right-full bottom-full flex flex-col w-[30px]'}>
+                            <span className={'self-center'}><IconComponent name={'star'} size={100} /></span>
+                            <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
+                            <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                         </span>
                     </h1>
                     <p className={'lg:text-[28px] text-[13px] lg:text-start text-center font-normal text-lightGrey lg:leading-[56px] leading-[26px] lg:mb-[58px] mb-[32px]'}>بهترین خدمات برنامه نویسی ، طرای سایت ، طراحی لوگو ، انیمیشن و... با تیم حرفه ای وبیمود کسب و کار خود را به سطح باللاتری ببرید !</p>
