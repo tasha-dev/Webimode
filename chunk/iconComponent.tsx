@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 
 // Defining type of props
 interface propsType {
-    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike';
+    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send';
     size: number;
 }
 
@@ -169,6 +169,13 @@ export default function IconComponent({size, name}:propsType):ReactNode {
             <svg width={size} height={size}  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.0876 12.3962C16.7359 12.8015 16.3012 13.1265 15.813 13.3492C15.3248 13.5719 14.7944 13.6871 14.2578 13.687H11.2661L11.5181 15.2177C11.6072 15.7568 11.4997 16.3099 11.215 16.7763C10.9303 17.2426 10.4874 17.5911 9.96721 17.7581C9.44699 17.9252 8.88406 17.8996 8.38109 17.6862C7.87813 17.4728 7.46864 17.0857 7.22731 16.5955L6.00781 14.1242V2.43698H13.7328C14.6354 2.44067 15.5067 2.76824 16.1882 3.36011C16.8696 3.95197 17.316 4.76879 17.4461 5.66197L17.9748 9.41197C18.0496 9.94393 18.009 10.4857 17.8559 11.0007C17.7029 11.5156 17.4408 11.9915 17.0876 12.3962Z" fill="currentColor"/>
                 <path d="M0.0078125 9.93652V6.18652C0.00900339 5.19233 0.404474 4.23919 1.10748 3.53619C1.81048 2.83318 2.76362 2.43771 3.75781 2.43652H4.50781V13.6865H3.75781C2.76362 13.6853 1.81048 13.2899 1.10748 12.5869C0.404474 11.8839 0.00900339 10.9307 0.0078125 9.93652Z" fill="currentColor"/>
+            </svg>
+        );
+    } else if (name === 'send') {
+        return (
+            <svg width={size} height={size}  viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.22921 8.68526L14.3159 8.68703C14.2434 8.4766 14.1244 8.28519 13.9679 8.12699L12.8471 7.0062C12.7531 6.91269 12.7004 6.78545 12.7008 6.65285L12.7004 5.43841C12.7027 4.77737 12.4414 4.14268 11.9743 3.6749C11.7812 3.48209 11.5579 3.32206 11.3132 3.20107C10.4764 2.77747 9.47168 2.86541 8.72111 3.42791L1.85606 7.9051C1.56275 8.08439 1.3411 8.36026 1.22921 8.68526Z" fill="currentColor"/>
+<path d="M1.84357 10.4597L8.69274 14.9252C9.79218 15.7591 11.3594 15.5438 12.1933 14.4443C12.5226 14.0101 12.7009 13.4802 12.701 12.9352L12.701 11.7211C12.701 11.5885 12.7538 11.4612 12.8477 11.3674L13.9685 10.2467C14.125 10.0885 14.244 9.89703 14.3165 9.68662L1.22912 9.68767C1.33847 10.0084 1.55562 10.2812 1.84357 10.4597Z" fill="currentColor"/>
             </svg>
         );
     } 
