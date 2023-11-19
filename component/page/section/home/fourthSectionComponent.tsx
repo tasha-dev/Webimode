@@ -50,7 +50,7 @@ export default function FourthSectionComponent():ReactNode {
           </p>
         </header>
         <main className='gap-[24px] flex items-center justify-center'>
-          <button id='prev-tech-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full lg:flex hidden justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey'>
+          <button id='prev-tech-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='slider-prev-next-btn lg:flex hidden'>
             <IconComponent size={16} name="chevron-right" />
           </button>
           <Swiper 
@@ -112,7 +112,7 @@ export default function FourthSectionComponent():ReactNode {
               <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={24} /></SwiperSlide>
           </Swiper>
-          <button id='next-tech-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full lg:flex hidden justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey'>
+          <button id='next-tech-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='slider-prev-next-btn lg:flex hidden'>
             <IconComponent size={16} name="chevron-left" />
           </button>
         </main>

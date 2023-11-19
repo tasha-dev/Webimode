@@ -5,7 +5,7 @@
 import IconComponent from '@/chunk/iconComponent';
 import ServiceItemComponent from '@/chunk/page/home/thirdSection/serviceItemComponent';
 import Link from 'next/link';
-import {ReactNode} from 'react';
+import {Dispatch, ReactNode, useState} from 'react';
 import FigmaImage from '@/public/img/home/thirdSection/services/img-figma.png';
 import CodeImage from '@/public/img/home/thirdSection/services/img-code.png';
 import ChartsImage from '@/public/img/home/thirdSection/services/img-charts.png';
@@ -15,10 +15,16 @@ import SocialsImage from '@/public/img/home/thirdSection/services/img-socials.pn
 import ManImage from '@/public/img/home/thirdSection/services/img-man.png';
 import AiImage from '@/public/img/home/thirdSection/services/img-ai.png';
 import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation} from 'swiper/modules';
 import 'swiper/css';
 
 // Creating and exporting third section component as default
 export default function ThirdSectionComponent():ReactNode {
+    // Defining states of component
+    const [activeIndexOfSlider, setActiveInderOfSlider]:[number, Dispatch<number>] = useState(0);
+    const [isAnySlideRemainingOnRightSide, setSlideRemainingOnRightSide]:[boolean, Dispatch<boolean>] = useState(false);
+    const [isAnySlideRemainingOnLeftSide, setSlideRemainingOnLeftSide]:[boolean, Dispatch<boolean>] = useState(true);
+    
     // Returning JSX
     return (
         <section className='xl:mt-[500px] mt-[196px]'>
@@ -58,16 +64,55 @@ export default function ThirdSectionComponent():ReactNode {
                 <ServiceItemComponent icon='ai' iconGradiant='reversed-pink' img={AiImage.src} title='هوش مصنوعی'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent>
                 </main>
                 <div className="xl:hidden block">
-                <Swiper spaceBetween={10}>
-                    <SwiperSlide><ServiceItemComponent icon='design' iconGradiant='blue' img={FigmaImage.src} hasButtons hasMobileImageInLeft title='طراحی UI UX'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                    <SwiperSlide><ServiceItemComponent icon='window' iconGradiant='purple' img={CodeImage.src} title='برنامه نویسی وب سایت'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                    <SwiperSlide><ServiceItemComponent icon='poll' iconGradiant='green' img={ChartsImage.src} title='تولید محتوا'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                    <SwiperSlide><ServiceItemComponent icon='pencil-paintbrush' iconGradiant='orange' img={PencilImage.src} title='طراحی لوگو'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                    <SwiperSlide><ServiceItemComponent icon='mobile' iconGradiant='deep-green' img={MobileImage.src} title='اپلیکیشن اندروید'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                    <SwiperSlide><ServiceItemComponent icon='slack' iconGradiant='dark-blue' img={SocialsImage.src} title='مدیریت شبکه اجتماعی'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                    <SwiperSlide><ServiceItemComponent icon='lang' iconGradiant='pink' img={ManImage.src} title='ترجمه مقالات و مدارک'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                    <SwiperSlide><ServiceItemComponent icon='ai' iconGradiant='reversed-pink' img={AiImage.src} title='هوش مصنوعی'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
-                </Swiper>
+                    <Swiper 
+                        modules={[Navigation]}
+                        spaceBetween={10}
+                        navigation={{
+                            nextEl: '#prev-services-slider-btn',
+                            prevEl: '#next-services-slider-btn',
+                        }}
+                        onSlideChange={(event) => {
+                            setActiveInderOfSlider(event.activeIndex);
+
+                            if (event.activeIndex === 0) {
+                                setSlideRemainingOnRightSide(false);
+                                setSlideRemainingOnLeftSide(true);
+                              } else if (event.activeIndex === 7) {
+                                setSlideRemainingOnRightSide(true);
+                                setSlideRemainingOnLeftSide(false);
+                              } else if (event.activeIndex !== 7 && event.activeIndex !== 0) {
+                                setSlideRemainingOnRightSide(true);
+                                setSlideRemainingOnLeftSide(true);
+                              }
+                          }}
+                    >
+                        <SwiperSlide><ServiceItemComponent icon='design' iconGradiant='blue' img={FigmaImage.src} hasButtons hasMobileImageInLeft title='طراحی UI UX'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='window' iconGradiant='purple' img={CodeImage.src} title='برنامه نویسی وب سایت'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='poll' iconGradiant='green' img={ChartsImage.src} title='تولید محتوا'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='pencil-paintbrush' iconGradiant='orange' img={PencilImage.src} title='طراحی لوگو'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='mobile' iconGradiant='deep-green' img={MobileImage.src} title='اپلیکیشن اندروید'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='slack' iconGradiant='dark-blue' img={SocialsImage.src} title='مدیریت شبکه اجتماعی'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='lang' iconGradiant='pink' img={ManImage.src} title='ترجمه مقالات و مدارک'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='ai' iconGradiant='reversed-pink' img={AiImage.src} title='هوش مصنوعی'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                    </Swiper>
+                    <div className='flex justify-between items-center mx-[32px] mt-[40px]'>
+                        <button id='next-services-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='slider-prev-next-btn flex'>
+                            <IconComponent name='chevron-right' size={16} />
+                        </button>
+                        <div className='flex gap-[12px] items-start'>
+                            <div data-active={(activeIndexOfSlider === 0)} className='slider-slide-bullet' />
+                            <div data-active={(activeIndexOfSlider === 1)} className='slider-slide-bullet' />
+                            <div data-active={(activeIndexOfSlider === 2)} className='slider-slide-bullet' />
+                            <div data-active={(activeIndexOfSlider === 3)} className='slider-slide-bullet' />
+                            <div data-active={(activeIndexOfSlider === 4)} className='slider-slide-bullet' />
+                            <div data-active={(activeIndexOfSlider === 5)} className='slider-slide-bullet' />
+                            <div data-active={(activeIndexOfSlider === 6)} className='slider-slide-bullet' />
+                            <div data-active={(activeIndexOfSlider === 7)} className='slider-slide-bullet' />
+                        </div>
+                        <button id='prev-services-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='slider-prev-next-btn flex'>
+                            <IconComponent name='chevron-left' size={16} />
+                        </button>
+                    </div>
                 </div> 
             </div>
         </section>

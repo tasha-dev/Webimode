@@ -5,6 +5,8 @@
 
 /*Custom styles*/
 .container {@apply max-w-[1440px] mx-auto;}
+.slider-prev-next-btn {@apply transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey;}
+.slider-slide-bullet {@apply w-[16px] h-[16px] rounded-full aspect-square relative transition-all duration-500  data-[active="false"]:bg-lightGrey data-[active="true"]:bg-theme data-[active="true"]:after:content-[''] data-[active="true"]:after:absolute data-[active="true"]:after:top-0 data-[active="true"]:after:left-0 data-[active="true"]:after:w-full data-[active="true"]:after:h-full data-[active="true"]:after:scale-150 data-[active="true"]:after:block data-[active="true"]:after:border data-[active="true"]:after:border-theme data-[active="true"]:after:rounded-full;}
 .vertical-divider {@apply w-[2px] rounded-[20rem] h-[35px] bg-dark;}
 .theme-shadow {box-shadow:  0 8px 24px 0 rgba(73, 180, 134, 0.24), 2px 3px 16px 0 rgba(255, 255, 255, 0.24) inset, -2px -3px 24px 0 rgba(0, 0, 0, 0.12) inset;}
 .theme-shadow-dark {box-shadow: 2px 3px 8px 0 rgba(255, 255, 255, 0.32) inset, -2px -3px 8px 0 rgba(0, 0, 0, 0.12) inset;}
