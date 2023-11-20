@@ -97,10 +97,10 @@ export default function ThirdSectionComponent():ReactNode {
                         <SwiperSlide><ServiceItemComponent icon='ai' iconGradiant='reversed-pink' img={AiImage.src} title='هوش مصنوعی'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
                     </Swiper>
                     <div className='flex justify-between items-center mx-[32px] mt-[40px]'>
-                        <button id='next-services-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='slider-prev-next-btn flex'>
+                        <button id='next-services-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='slider-prev-next-btn sm:flex hidden'>
                             <IconComponent name='chevron-right' size={16} />
                         </button>
-                        <div className='flex gap-[12px] items-start'>
+                        <div className='flex gap-[12px] items-center justify-center lg:w-auto w-full'>
                             <div data-active={(activeIndexOfSlider === 0)} className='slider-slide-bullet' />
                             <div data-active={(activeIndexOfSlider === 1)} className='slider-slide-bullet' />
                             <div data-active={(activeIndexOfSlider === 2)} className='slider-slide-bullet' />
@@ -110,7 +110,7 @@ export default function ThirdSectionComponent():ReactNode {
                             <div data-active={(activeIndexOfSlider === 6)} className='slider-slide-bullet' />
                             <div data-active={(activeIndexOfSlider === 7)} className='slider-slide-bullet' />
                         </div>
-                        <button id='prev-services-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='slider-prev-next-btn flex'>
+                        <button id='prev-services-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='slider-prev-next-btn sm:flex hidden'>
                             <IconComponent name='chevron-left' size={16} />
                         </button>
                     </div>

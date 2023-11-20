@@ -12,9 +12,6 @@ export default function MissionComponent():ReactNode {
         <div className={'bg-gradient-to-b from-theme to-darkerTheme'}>
             <div className="container xl:h-[465px] flex xl:flex-row flex-col-reverse gap-[100px]">
                 <div className={'xl:w-[50%] w-full relative xl:h-[465px]'}>
-                    <video hidden className={'absolute top-0 left-0 w-full h-full pointer-events-none object-cover object-right'} src="/video/video-mission-bg.mp4" autoPlay={true} loop>
-                        <source src="/video/video-mission-bg.mp4" />
-                    </video>
                     <Image className={'xl:w-[70%] w-[50%] xl:-translate-y-[calc(574px-465px)] xl:h-[574px]'} src={rocketImage.src} alt="عکس موشک" width={422} height={574} />
                 </div>
                 <div className={'xl:w-[50%] w-full xl:py-[60px] py-[32px] xl:px-[68px] px-[16px] lg:block flex items-center justify-center flex-col'}>
