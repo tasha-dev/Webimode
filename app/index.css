@@ -5,6 +5,7 @@
 
 /*Custom styles*/
 .shadow-custom {box-shadow: -2px -2px 12px 0px rgba(0, 0, 0, 0.04) inset, 2px 2px 30px 0px rgba(255, 255, 255, 0.36) inset;}
+.swiper.overflow-visible {overflow: visible !important;}
 .container {@apply max-w-[1440px] mx-auto;}
 .slider-prev-next-btn {@apply transition-all shrink-0 duration-500 border w-[32px] h-[32px] aspect-square rounded-full justify-center items-center data-[active="true"]:bg-theme data-[active="true"]:text-white data-[active="true"]:border-theme data-[active="false"]:bg-white data-[active="false"]:text-lightGrey data-[active="false"]:border-lightGrey;}
 .slider-slide-bullet {@apply w-[16px] h-[16px] rounded-full aspect-square relative transition-all duration-500  data-[active="false"]:bg-lightGrey data-[active="true"]:bg-theme data-[active="true"]:after:content-[''] data-[active="true"]:after:absolute data-[active="true"]:after:top-0 data-[active="true"]:after:left-0 data-[active="true"]:after:w-full data-[active="true"]:after:h-full data-[active="true"]:after:scale-150 data-[active="true"]:after:block data-[active="true"]:after:border data-[active="true"]:after:border-theme data-[active="true"]:after:rounded-full;}
