@@ -26,7 +26,8 @@ const config:Config = {
               darkFrogGreen: '#1EBB10',
               lightOrange: '#FCAA0B',
               orange: '#FD7123',
-              pink: '#FF5492'
+              pink: '#FF5492',
+              lightGreen: '#93AF40'
           }
       }
   },
