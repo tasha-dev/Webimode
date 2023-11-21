@@ -49,6 +49,7 @@ export default function NinethSectionComponent():ReactNode {
                     </div>
                     <div className="lg:hidden block">
                         <Swiper
+                            initialSlide={activeIndexOfSlider}
                             className="overflow-visible"
                             spaceBetween={20}
                             onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
