@@ -20,7 +20,7 @@ export default function SeventhSectionComponent():ReactNode {
                     <div className="sign">امنیت وبیمود</div>
                     <div className="flex lg:flex row flex-col items-center lg:justify-between justify-center lg:gap-[100px] gap-[8px]">
                         <div>
-                            <h4 className="lg:text-[48px] text-[20px] block text-dark font-normal whitespace-nowrap relative lg:text-start text-center">
+                            <h4 className="lg:text-[48px] text-[20px] block text-dark font-normal whitespace-nowrap relative text-center">
                                 ما 
                                 <span className="text-theme mr-[1ch] font-bold">امنیت پرداختی و سرویس</span>    
                                 <span className={'text-theme absolute right-[102%] bottom-full lg:flex hidden flex-col w-[30px]'}>
@@ -29,9 +29,9 @@ export default function SeventhSectionComponent():ReactNode {
                                     <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                                 </span>
                             </h4>
-                            <h4 className="lg:text-[48px] text-[20px] whitespace-nowrap block text-dark font-normal lg:text-start text-center">شما را تضمین میکنیم.</h4>
+                            <h4 className="lg:text-[48px] text-[20px] whitespace-nowrap block text-dark font-normal text-center">شما را تضمین میکنیم.</h4>
                         </div>
-                        <p className="lg:text-[20px] text-[13px] text-lightGrey font-normal lg:leading-[36px] leading-[26px] lg:text-start text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان .</p>
+                        <p className="lg:text-[20px] text-[13px] text-lightGrey font-normal lg:leading-[36px] leading-[26px] text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان .</p>
                     </div>
                 </header>
                 <main className="lg:grid hidden grid-cols-6 gap-[20px]">

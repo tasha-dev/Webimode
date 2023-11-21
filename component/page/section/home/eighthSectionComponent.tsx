@@ -9,24 +9,24 @@ import LeftSideImage from '@/public/img/home/eighthSection/img-left-side.png';
 export default function EighthSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="mt-[250px] bg-gradient-to-b from-theme to-darkerTheme">
-            <div className="container p-[20px] flex items-center justify-between gap-[40px]">
-                <div className="w-[60%]">
+        <section className="lg:mt-[250px] mt-[196px] bg-gradient-to-b from-theme to-darkerTheme">
+            <div className="container p-[20px] flex lg:flex-row flex-col items-center justify-between lg:gap-[40px] gap-[20px]">
+                <div className="lg:w-[60%] w-full lg:block flex flex-col items-center justify-center">
                     <div className="sign-white">درخواست همکاری</div>
-                    <h4 className="text-white text-[48px] font-normal mb-[12px] relative">
+                    <h4 className="text-white lg:text-[48px] text-[20px] font-normal mb-[12px] relative lg:text-start text-center">
                         پروژه خودتو به 
                         <span className='font-bold inline-block mx-[1ch]'>
                             تیم وبیمود
                         </span>
                         بسپار 
-                        <span className={'text-white absolute right-[102%] bottom-full flex flex-col w-[30px]'}>
+                        <span className={'text-white absolute right-[102%] bottom-full lg:flex hidden flex-col w-[30px]'}>
                             <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
                             <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
                             <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                         </span>
                     </h4>
-                    <p className="text-lightGrey text-[20px] leading-[36px] font-normal mb-[40px]">تیم وبیمود با داشتن نیرو های حرفه ای و کارآند در زمینه های مختلف طراحی و توسعه تمام تلاش خود را می کند تا بتواند بهترین خدمات را ارائه دهد .</p>
-                    <div className="flex items-start gap-[20px]">
+                    <p className="text-lightGrey lg:text-[20px] text-[13px] lg:leading-[36px] leading-[26px] font-normal lg:mb-[40px] mb-[32px] lg:text-start text-center">تیم وبیمود با داشتن نیرو های حرفه ای و کارآند در زمینه های مختلف طراحی و توسعه تمام تلاش خود را می کند تا بتواند بهترین خدمات را ارائه دهد .</p>
+                    <div className="flex items-start gap-[20px] lg:w-auto w-full">
                         <div className={'flex lg:flex-row flex-col gap-[24px] flex-wrap lg:w-auto w-full'}>
                             <Link href={'/contact-us'} className={'btn-primary-white lg:w-auto w-full'}>
                                 درخواست همکاری  
@@ -36,12 +36,12 @@ export default function EighthSectionComponent():ReactNode {
                                 <IconComponent name={'chevron-left'} size={16} />
                             </Link>
                         </div>
-                        <span className="text-white">
+                        <span className="text-white lg:block hidden">
                             <IconComponent name="hand-arrow-left" size={112} />
                         </span>
                     </div>
                 </div>
-                <Image className="w-[40%]" src={LeftSideImage.src} alt="عکس موبایل" width={1000} height={1000} />
+                <Image className="lg:w-[60%] w-full" src={LeftSideImage.src} alt="عکس موبایل" width={1000} height={1000} />
             </div>
         </section>
     );
