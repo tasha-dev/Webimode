@@ -27,7 +27,8 @@ const config:Config = {
               lightOrange: '#FCAA0B',
               orange: '#FD7123',
               pink: '#FF5492',
-              lightGreen: '#93AF40'
+              lightGreen: '#93AF40',
+              darkestTheme: '#001F18'
           }
       }
   },

@@ -22,3 +22,4 @@
 .btn-secondary-white {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-white border border-white px-[24px] py-[12px] text-[18px];}
 .btn-secondary-theme {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-theme border border-theme px-[24px] py-[12px] text-[18px];}
 .btn-secondary-theme-icon {@apply flex justify-center items-center w-[36px] h-[36px] rounded-[12px] bg-transparent text-theme border border-theme;}
+footer::before {@apply content-[''] absolute top-0 left-0 w-full h-[20vh] -translate-y-[100%] bg-[url('../public/img/footer/img-top.svg')] bg-cover}
