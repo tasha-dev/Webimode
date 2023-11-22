@@ -4,6 +4,7 @@ import {Metadata} from "next";
 import LocalFont from 'next/font/local';
 import {NextFont} from "next/dist/compiled/@next/font";
 import HeaderComponent from "@/component/headerComponent";
+import FooterComponent from "@/component/footerComponent";
 import '@/app/index.css';
 
 // Defining custom local font of Dana
@@ -72,6 +73,7 @@ export default function RootLayout({children}:propsType):ReactNode {
             <body dir={'rtl'} className={DanaFont.className}>
                 <HeaderComponent />
                 {children}
+                <FooterComponent />
             </body>
         </html>
     );
