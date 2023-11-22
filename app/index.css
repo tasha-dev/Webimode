@@ -21,3 +21,4 @@
 .sign-white {@apply px-[12px] py-[8px] bg-white theme-shadow-dark text-theme lg:mb-[10px] mb-[20px] inline-block lg:text-[15px] text-[10px] font-normal rounded-l-[12px] rounded-tr-[12px];}
 .btn-primary-white {@apply flex justify-center theme-shadow-dark items-center gap-[16px] text-[18px] font-normal text-theme px-[24px] py-[12px] bg-white rounded-[14px];}
 .btn-secondary-white {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-white border border-white px-[24px] py-[12px] text-[18px];}
+.btn-secondary-theme {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-theme border border-theme px-[24px] py-[12px] text-[18px];}

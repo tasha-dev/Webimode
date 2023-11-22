@@ -11,31 +11,35 @@ interface propsType {
     date: Date;
     title: string;
     children: string;
+    link: string;
 }
 
 // Creating and exporting blog compnonent as default
-export default function BlogComponent({children, date, genre, img, title}:propsType):ReactNode {
+export default function BlogComponent({children, date, genre, img, title, link}:propsType):ReactNode {
     // Returning JSX
     return (
-        <article>
-            <Link href={`/blog/`}>
-                <Image src={img} width={1000} height={1000} alt={title} />
+        <article className="group">
+            <Link href={link} className="rounded-[20px] h-[186px] overflow-hidden block mb-[16px]">
+                <Image className="w-full h-full object-cover" src={img} width={1000} height={1000} alt={title} />
             </Link>
-            <Link href={`/blog/`}>
-                <div>
-                    <span>{genre}</span>
-                    <div />
-                    <div>
-                        <IconComponent name="clock" size={16} />
-                        <span>{date.toLocaleDateString('ir-fa')}</span>
+            <Link href={link} className="relative block p-[2px]">
+                <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-tr from-lightGrey group-hover:from-theme to-white rounded-[32px] z-[-1]" />
+                <div className="bg-white w-full rounded-[32px] p-[24px]">
+                    <div className="flex flex-wrap gap-[10px] mb-[9px]">
+                        <span className="text-[13px] font-normal text-lightGrey">{genre}</span>
+                        <div />
+                        <div className="flex items-center gap-[8px] text-lightGrey">
+                            <IconComponent name="clock" size={16} />
+                            <span className="text-[13px] font-normal">{date.toLocaleDateString('ir-fa')}</span>
+                        </div>
                     </div>
+                    <span className="mb-[8px] text-dark truncate block text-[24px] font-normal">{title}</span>
+                    <p className="text-lightGrey font-normal text-[15px] line-clamp-5 leading-[28px] mb-[32px]">{children}</p>
+                    <button className="transition-all duration-200 group-hover:bg-darkerTheme bg-theme text-white flex items-center justify-center gap-[16px] text-[18px] font-normal shadow-custom p-[12px] rounded-[14px] w-full">
+                        مشاهده مقاله    
+                        <IconComponent size={16} name="chevron-left" />
+                    </button>
                 </div>
-                <span>{title}</span>
-                <p>{children}</p>
-                <button>
-                    مشاهده مقاله    
-                    <IconComponent size={16} name="chevron-left" />
-                </button>
             </Link>
         </article>
     );
