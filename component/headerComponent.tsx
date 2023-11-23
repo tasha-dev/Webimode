@@ -11,16 +11,16 @@ import LinkComponent from "@/chunk/header/linkComponent";
 export default function HeaderComponent():ReactNode {
     // Returning JSX
     return (
-        <header>
-            <div className="container px-[32px] py-[36px] lg:flex items-center justify-between gap-[10px] flex-wrap">
+        <header className="fixed top-0 w-full bg-white z-[100] shadow-xl">
+            <div className="container lg:px-[32px] px-[20px] lg:py-[20px] py-[10px] lg:flex items-center justify-between gap-[10px] flex-wrap">
                 <div className={'flex items-center lg:justify-start justify-between lg:w-auto w-full gap-[30px]'}>
-                    <button className={'lg:hidden flex justify-center items-center bg-white border border-dark aspect-square w-[40px] text-dark rounded-[12px]'}>
+                    <button className={'lg:hidden flex justify-center items-center transition-all duration-500 hover:bg-dark hover:text-white bg-white border border-dark aspect-square w-[40px] text-dark rounded-[12px]'}>
                         <IconComponent name={'list-right'} size={20} />
                     </button>
                     <Link href={'/'}>
                         <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={56} height={56} />
                     </Link>
-                    <button className={'lg:hidden flex justify-center items-center bg-theme theme-shadow aspect-square w-[40px] text-white rounded-[12px]'}>
+                    <button className={'lg:hidden flex justify-center items-center bg-theme theme-shadow transition-all duration-500 hover:bg-darkerTheme aspect-square w-[40px] text-white rounded-[12px]'}>
                         <IconComponent name={'shaking-hands'} size={20} />
                     </button>
                     <div className={'vertical-divider lg:block hidden'} />
@@ -40,7 +40,7 @@ export default function HeaderComponent():ReactNode {
                         درخواست همکاری
                         <IconComponent name={'chevron-left'} size={15} />
                     </Link>
-                    <button className={'flex justify-center items-center bg-white border border-dark aspect-square w-[50px] text-dark rounded-[14px]'}>
+                    <button className={'flex justify-center items-center transition-all duration-500 hover:bg-dark hover:text-white bg-white border border-dark aspect-square w-[50px] text-dark rounded-[14px]'}>
                         <IconComponent name={'list'} size={20} />
                     </button>
                 </div>

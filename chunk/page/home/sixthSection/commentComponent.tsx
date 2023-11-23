@@ -79,11 +79,11 @@ export default function CommentComponent({children, dislikeCount, likeCount, nam
                         </div>
                     ) : false
             }
-            <div data-showing={isCommentShowing} className="transition-all duration-500 data-[showing='false']:invisible data-[showing='false']:h-0 data-[showing='true']:visible data-[showing='true']:h-auto data-[showing='false']:opacity-0 data-[showing='true']:opacity-100">
+            <div data-showing={isCommentShowing} className="transition-all duration-500 data-[showing='false']:hidden data-[showing='true']:block">
                 <div className="w-full h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-500 via-lightGrey my-[16px]" />   
                 <form action={'#'} className="flex items-end gap-[20px] bg-lighterGrey border border-lightGrey rounded-[16px] overflow-hidden">
                     <textarea required name="comment" id="comment-input" placeholder="پاسخ خود را بنویسید" className="p-[12px] w-full bg-transparent h-[92px] outline-none resize-none placeholder:text-[13px] placeholder:text-lightGrey text-[13px] text-dark"/>
-                    <button className="w-[28px] h-[28px] aspect-square rounded-[8px] m-[12px] bg-lightGrey text-gray-500 flex items-center justify-center">
+                    <button className="w-[28px] h-[28px] aspect-square rounded-[8px] m-[12px] bg-lightGrey text-gray-500 flex items-center justify-center transition-all duration-500 hover:bg-gray-500 hover:text-gray-700">
                         <IconComponent name="send" size={20} />
                     </button>
                 </form>

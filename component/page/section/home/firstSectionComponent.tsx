@@ -12,7 +12,7 @@ export default function FirstSectionComponent():ReactNode {
     // Returning JSX
     return (
         <section className={'lg:relative'}>
-            <div className="container lg:pt-[100px] pt-[96px]">
+            <div className="container lg:pt-[250px] pt-[200px]">
                 <img className={'absolute top-0 right-0 z-[-1]'} src={bgZigzagImage.src} alt="عکس زیگزاگ در پس زمینه" />
                 <div className={'flex xl:flex-row flex-col lg:gap-[186px] gap-[112px] justify-between items-start px-[20px]'}>
                     <main className={'xl:w-[50%] w-full lg:block flex items-center flex-col'}>

@@ -17,7 +17,9 @@ export default function SeventhSectionComponent():ReactNode {
         <section>
             <div className="container p-[20px]">
                 <header className="lg:mb-[100px] mb-[56px] lg:block flex flex-col items-center justify-center">
-                    <div className="sign">امنیت وبیمود</div>
+                    <div className="flex justify-center items-center">
+                        <div className="sign">امنیت وبیمود</div>
+                    </div>
                     <div className="flex lg:flex row flex-col items-center lg:justify-between justify-center lg:gap-[100px] gap-[8px]">
                         <div>
                             <h4 className="lg:text-[48px] text-[20px] block text-dark font-normal whitespace-nowrap relative text-center">

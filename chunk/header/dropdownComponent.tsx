@@ -15,7 +15,7 @@ export default function DropdownComponent({children, title, link}:propsType):Rea
     return (
         <li className={'group relative'}>
             <LinkComponent link={link} isDropdown>{title}</LinkComponent>
-            <ul className={'absolute top-full right-0 bg-theme py-[10px] overflow-hidden transition-all duration-500 rounded-[10px] invisible opacity-0 group-hover:opacity-100 group-hover:visible w-[200px]'}>
+            <ul className={'absolute top-full right-0 bg-theme py-[10px] transition-all duration-500 rounded-[10px] invisible opacity-0 group-hover:opacity-100 group-hover:visible w-[200px] max-h-[200px] overflow-auto'}>
                 {children}
             </ul>
         </li>
