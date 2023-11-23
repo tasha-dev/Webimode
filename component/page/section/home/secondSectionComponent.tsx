@@ -20,7 +20,7 @@ export default function SecondSectionComponent():ReactNode {
                             <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                         </span>
                     </h4>
-                    <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>
+                    <p className={'paragraph text-center'}>
                         تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین
                         <br className="lg:block hidden" />
                         مرحله آن پشتیبان شماست .

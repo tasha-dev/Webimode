@@ -34,7 +34,7 @@ export default function CommentComponent({children, dislikeCount, likeCount, nam
                     {rating}
                 </div>
             </div>
-            <p className=" text-lightGrey text-[13px] font-normal leading-[24px] mb-[16px]">{children}</p>
+            <p className="text-lightGrey text-[13px] font-normal leading-[24px] mb-[16px]">{children}</p>
             <div className="flex justify-between items-center gap-[10px] flex-wrap">
                 <button 
                     onClick={() => {

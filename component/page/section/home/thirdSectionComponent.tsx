@@ -39,7 +39,7 @@ export default function ThirdSectionComponent():ReactNode {
                             </h4>
                         </div>
                         <div className='flex justify-around flex-col'>
-                            <p className='text-lightGrey xl:text-start text-center xl:text-[20px] text-[13px] font-normal xl:truncate'>بهترین و با کیفیت ترین خدمات طراحی و پشتیبانی و برنامه نویسی را با تیم وبیمود در بلاترین سطح تجربه کنید !</p>
+                            <p className='paragraph xl:text-start text-center'>بهترین و با کیفیت ترین خدمات طراحی و پشتیبانی و برنامه نویسی را با تیم وبیمود در بلاترین سطح تجربه کنید !</p>
                             <div className={'xl:flex hidden gap-[34px] shrink-0'}>
                                 <Link href={'/contact-us'} className={'btn-primary'}>
                                     درخواست همکاری  

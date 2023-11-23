@@ -27,7 +27,7 @@ export default function FifthSectionComponent():ReactNode {
                 </header>
                 <main className="flex flex-col items-center justify-center">
                     <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">پشتیبانی 24/7 در کنار شما</h6>
-                    <p className="text-center mb-[16px] text-white text-[13px] font-normal leading-[28px]">
+                    <p className="text-center paragraph-small">
                         تیم وبیمود افتخار این را دارد بتا بتواند در تمامی مراحل ایده پردازی تا 
                         <br />
                         تحویل و پشتیبانی پروژه در تمام ساعت زور و روز های هفته ر کنار شما باشد

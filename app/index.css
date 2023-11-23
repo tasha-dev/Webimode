@@ -23,3 +23,6 @@
 .btn-secondary-theme {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-theme border border-theme px-[24px] py-[12px] text-[18px];}
 .btn-secondary-theme-icon {@apply flex justify-center items-center w-[36px] h-[36px] rounded-[12px] bg-transparent text-theme border border-theme;}
 footer::before {@apply content-[''] absolute top-0 left-0 w-full h-[20vh] -translate-y-[100%] bg-[url('../public/img/footer/img-top.svg')] bg-cover}
+.paragraph-big {@apply lg:text-[28px] text-[13px] font-normal text-lightGrey lg:leading-[56px] leading-[26px] lg:mb-[58px] mb-[32px];}
+.paragraph {@apply lg:text-[20px] text-[13px] text-lightGrey lg:leading-[36px] leading-[28px];}
+.paragraph-small {@apply mb-[16px] text-white text-[13px] font-normal leading-[28px];}

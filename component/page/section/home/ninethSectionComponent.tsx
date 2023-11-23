@@ -25,7 +25,7 @@ export default function NinethSectionComponent():ReactNode {
                         <br className="lg:hidden block" />
                         به شما ارائه می هد   
                     </h4>
-                    <p className="text-lightGrey font-normal lg:text-[20px] text-[13px] lg:leading-[36px] leading-[26px] text-center mb-[30px]">
+                    <p className="paragraph text-center mb-[30px]">
                         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنا نلورم
                         <br className="lg:block hidden" />
                         ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ .

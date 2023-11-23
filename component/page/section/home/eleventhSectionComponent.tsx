@@ -21,7 +21,7 @@ export default function EleventhSectionComponent():ReactNode {
                                 <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                             </span>
                         </h4>
-                        <p className="text-lightGrey font-normal lg:text-[20px] text-[13px] lg:leading-[36px] leading-[28px] lg:text-start text-center">
+                        <p className="paragraph lg:text-start text-center">
                             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است .
                         </p>
                     </header>

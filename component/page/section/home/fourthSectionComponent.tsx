@@ -44,7 +44,7 @@ export default function FourthSectionComponent():ReactNode {
               <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
             </span>
           </h4>
-          <p className={'lg:text-[20px] text-[13px] text-center text-lightGrey lg:leading-[36px] leading-[28px]'}>
+          <p className={'paragraph text-center'}>
               تیم وبیمود افتخار این را دارد که بتواند تمام نیاز های کارفمایان را در انواع زمینههای مختلف طراحی و برنامه نوسی و...
               <br className='lg:block hidden'/>
               در بهترین حالت ممکن برطرف کند .

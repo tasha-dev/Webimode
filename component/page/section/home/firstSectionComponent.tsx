@@ -36,7 +36,7 @@ export default function FirstSectionComponent():ReactNode {
                                 <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                             </span>
                         </h1>
-                        <p className={'lg:text-[28px] text-[13px] lg:text-start text-center font-normal text-lightGrey lg:leading-[56px] leading-[26px] lg:mb-[58px] mb-[32px]'}>بهترین خدمات برنامه نویسی ، طرای سایت ، طراحی لوگو ، انیمیشن و... با تیم حرفه ای وبیمود کسب و کار خود را به سطح باللاتری ببرید !</p>
+                        <p className={'paragraph-big lg:text-start text-center'}>بهترین خدمات برنامه نویسی ، طرای سایت ، طراحی لوگو ، انیمیشن و... با تیم حرفه ای وبیمود کسب و کار خود را به سطح باللاتری ببرید !</p>
                         <div className={'flex lg:flex-row flex-col lg:w-auto w-full lg:flex-wrap lg:gap-[34px] gap-[24px]'}>
                             <Link href={'tel:9120000000'} className={'btn-primary text-big lg:w-auto w-full'}>
                                 <span className={'lg:inline hidden'}><IconComponent name={'telephone'} size={16} /></span>

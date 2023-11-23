@@ -31,7 +31,7 @@ export default function SeventhSectionComponent():ReactNode {
                             </h4>
                             <h4 className="lg:text-[48px] text-[20px] whitespace-nowrap block text-dark font-normal text-center">شما را تضمین میکنیم.</h4>
                         </div>
-                        <p className="lg:text-[20px] text-[13px] text-lightGrey font-normal lg:leading-[36px] leading-[26px] text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان .</p>
+                        <p className="paragraph text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان .</p>
                     </div>
                 </header>
                 <main className="lg:grid hidden grid-cols-6 gap-[20px]">

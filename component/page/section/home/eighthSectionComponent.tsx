@@ -25,7 +25,7 @@ export default function EighthSectionComponent():ReactNode {
                             <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                         </span>
                     </h4>
-                    <p className="text-lightGrey lg:text-[20px] text-[13px] lg:leading-[36px] leading-[26px] font-normal lg:mb-[40px] mb-[32px] lg:text-start text-center">تیم وبیمود با داشتن نیرو های حرفه ای و کارآند در زمینه های مختلف طراحی و توسعه تمام تلاش خود را می کند تا بتواند بهترین خدمات را ارائه دهد .</p>
+                    <p className="paragraph lg:mb-[40px] mb-[32px] lg:text-start text-center">تیم وبیمود با داشتن نیرو های حرفه ای و کارآند در زمینه های مختلف طراحی و توسعه تمام تلاش خود را می کند تا بتواند بهترین خدمات را ارائه دهد .</p>
                     <div className="flex items-start gap-[20px] lg:w-auto w-full">
                         <div className={'flex lg:flex-row flex-col gap-[24px] flex-wrap lg:w-auto w-full'}>
                             <Link href={'/contact-us'} className={'btn-primary-white lg:w-auto w-full'}>
