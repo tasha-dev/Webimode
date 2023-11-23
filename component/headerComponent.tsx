@@ -11,7 +11,7 @@ import LinkComponent from "@/chunk/header/linkComponent";
 export default function HeaderComponent():ReactNode {
     // Returning JSX
     return (
-        <header className="fixed top-0 w-full bg-white z-[100] shadow-xl">
+        <header className="fixed top-0 w-full bg-white z-[100] shadow-lg shadow-lightGrey/20">
             <div className="container lg:px-[32px] px-[20px] lg:py-[20px] py-[10px] lg:flex items-center justify-between gap-[10px] flex-wrap">
                 <div className={'flex items-center lg:justify-start justify-between lg:w-auto w-full gap-[30px]'}>
                     <button className={'lg:hidden flex justify-center items-center transition-all duration-500 hover:bg-dark hover:text-white bg-white border border-dark aspect-square w-[40px] text-dark rounded-[12px]'}>
