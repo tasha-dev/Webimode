@@ -24,7 +24,7 @@ export default function ContactComponent():ReactNode {
             </form>
             <div className="absolute left-[30px] bottom-0 translate-y-[50%] lg:w-[80px] w-[64px] lg:h-[80px] h-[64px] aspect-square p-[5px] flex items-center justify-center bg-lightTheme text-white rounded-full">
                 <svg className="w-full h-full " viewBox="0 0 68 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="34" cy="34.8359" r="33" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="9 9"/>
+                    <circle cx="34" cy="34.8359" r="33" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="9 9"/>
                     <path d="M44.8081 47.7554C45.3598 47.7812 45.8279 47.3549 45.8537 46.8032L46.2742 37.8131C46.3 37.2614 45.8737 36.7932 45.322 36.7674C44.7703 36.7416 44.3022 37.1679 44.2764 37.7196L43.9026 45.7109L35.9114 45.3372C35.3597 45.3114 34.8915 45.7377 34.8657 46.2894C34.8399 46.8411 35.2663 47.3092 35.8179 47.335L44.8081 47.7554ZM22.4052 23.5893L44.1155 47.4298L45.5942 46.0832L23.8839 22.2427L22.4052 23.5893Z" fill="currentColor"/>
                 </svg>
             </div>
