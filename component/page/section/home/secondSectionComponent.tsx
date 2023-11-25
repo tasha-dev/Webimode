@@ -9,7 +9,7 @@ import StepComponent from "@/chunk/page/home/secondSection/stepComponent";
 // Creating and exporting second section of home page as default
 export default function SecondSectionComponent():ReactNode {
     // Defining states of component
-    const [activeStep, setActiveStep]:[number, Dispatch<number>] = useState(0);
+    const [activeStep, setActiveStep]:[number, Dispatch<number>] = useState(1);
 
     // Defining refrences
     const firstLineHelper:MutableRefObject<any> = useRef();

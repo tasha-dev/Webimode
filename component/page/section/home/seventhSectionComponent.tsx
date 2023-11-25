@@ -2,7 +2,7 @@
 'use client';
 
 // Importing part
-import {Dispatch, ReactNode, useState} from "react";
+import {Dispatch, ReactNode, useState, useEffect, MutableRefObject, useRef} from "react";
 import FeaturesComponent from "@/chunk/page/home/seventhSection/featuresComponent";
 import IconComponent from "@/chunk/iconComponent";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -11,6 +11,52 @@ import {Swiper, SwiperSlide} from "swiper/react";
 export default function SeventhSectionComponent():ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
+    const [activeFeatureIndex, setActiveFeatureIndex]:[number, Dispatch<number>] = useState(1);
+
+    // Defining refrences
+    const firstLineHelper:MutableRefObject<any> = useRef();
+    const secondLineHelper:MutableRefObject<any> = useRef();
+    const thirdLineHelper:MutableRefObject<any> = useRef();
+    const fourthLineHelper:MutableRefObject<any> = useRef();
+    const fifthLineHelper:MutableRefObject<any> = useRef();
+    const sixthLineHelper:MutableRefObject<any> = useRef();
+    const mainStickyPart:MutableRefObject<any> = useRef();
+
+    // Defining a function to check if lement 1 is overlaping on element
+    function doElsCollide(el1:any, el2:any):boolean {
+        el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
+        el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
+        el2.offsetBottom = el2.offsetTop + el2.offsetHeight;
+        el2.offsetRight = el2.offsetLeft + el2.offsetWidth;
+    
+        return !((el1.offsetBottom < el2.offsetTop) ||
+                 (el1.offsetTop > el2.offsetBottom) ||
+                 (el1.offsetRight < el2.offsetLeft) ||
+                 (el1.offsetLeft > el2.offsetRight))
+    };
+
+    // Using useEffect hook to animate
+    useEffect(() => {
+        addEventListener('scroll', () => {
+          if (innerWidth > 1024) {
+            if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
+              setActiveFeatureIndex(1);
+            } else if (doElsCollide(secondLineHelper.current, mainStickyPart.current)) {
+              setActiveFeatureIndex(2);
+            } else if (doElsCollide(thirdLineHelper.current, mainStickyPart.current)) {
+              setActiveFeatureIndex(3);
+            } else if (doElsCollide(fourthLineHelper.current, mainStickyPart.current)) {
+              setActiveFeatureIndex(4);
+            }  else if (doElsCollide(fifthLineHelper.current, mainStickyPart.current)) {
+              setActiveFeatureIndex(5);
+            }  else if (doElsCollide(sixthLineHelper.current, mainStickyPart.current)) {
+              setActiveFeatureIndex(6);
+            }
+          } else {
+            setActiveFeatureIndex(1);
+          }
+        })
+    }, [])
 
     // Returning JSX
     return (
@@ -36,14 +82,24 @@ export default function SeventhSectionComponent():ReactNode {
                         <p className="paragraph text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان .</p>
                     </div>
                 </header>
-                <main className="lg:grid hidden grid-cols-6 gap-[20px]">
-                    <FeaturesComponent icon="shield-check" isActive={true} isGoingToBeActive={true} position="top" title="خرید امن با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
-                    <FeaturesComponent icon="hand-holding-dollor" isActive={false} isGoingToBeActive={false} position="bottom" title="مرکز حل اختلافات با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
-                    <FeaturesComponent icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
-                    <FeaturesComponent icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
-                    <FeaturesComponent icon="hand-holding-dollor" isActive={false} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
-                    <FeaturesComponent hasNoLeft icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
-                </main>
+                <div className="h-[4200px] relative lg:block hidden">
+                    <div className="absolute top-0 left-0 w-full">
+                        <div ref={firstLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
+                        <div ref={secondLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
+                        <div ref={thirdLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
+                        <div ref={fourthLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
+                        <div ref={fifthLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
+                        <div ref={sixthLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
+                    </div>
+                    <main ref={mainStickyPart} className="grid grid-cols-6 gap-[20px] sticky top-[20%]">
+                        <FeaturesComponent icon="shield-check" isActive={(activeFeatureIndex >= 1)} isGoingToBeActive={(activeFeatureIndex === 1)} position="top" title="خرید امن با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
+                        <FeaturesComponent icon="hand-holding-dollor" isActive={(activeFeatureIndex >= 2)} isGoingToBeActive={(activeFeatureIndex === 2)} position="bottom" title="مرکز حل اختلافات با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
+                        <FeaturesComponent icon="shaking-hands" isActive={(activeFeatureIndex >= 3)} isGoingToBeActive={(activeFeatureIndex === 3)} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
+                        <FeaturesComponent icon="shaking-hands" isActive={(activeFeatureIndex >= 4)} isGoingToBeActive={(activeFeatureIndex === 4)} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
+                        <FeaturesComponent icon="hand-holding-dollor" isActive={(activeFeatureIndex >= 5)} isGoingToBeActive={(activeFeatureIndex === 5)} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
+                        <FeaturesComponent hasNoLeft icon="shaking-hands" isActive={(activeFeatureIndex >= 6)} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
+                    </main>
+                </div>
                 <div className="lg:hidden block">
                     <Swiper  
                         initialSlide={activeIndexOfSlider}
