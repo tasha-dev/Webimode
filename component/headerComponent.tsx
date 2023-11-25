@@ -20,7 +20,7 @@ export default function HeaderComponent():ReactNode {
 
     // Returning JSX
     return (
-        <header data-scrolled={isScrolled} className="fixed top-0 transition-all duration-500 w-full bg-white z-[100] shadow-lg data-[scrolled='false']:shadow-transparent data-[scrolled='true']:shadow-lightGrey/20">
+        <header data-scrolled={isScrolled} className="lg:fixed static top-0 transition-all duration-500 w-full lg:bg-white z-[100] lg:shadow-lg lg:data-[scrolled='false']:shadow-transparent lg:data-[scrolled='true']:shadow-lightGrey/20">
             <div className="container lg:px-[32px] px-[20px] lg:py-[20px] py-[10px] lg:flex items-center justify-between gap-[10px] flex-wrap">
                 <div className={'flex items-center lg:justify-start justify-between lg:w-auto w-full gap-[30px]'}>
                     <button className={'lg:hidden flex justify-center items-center transition-all duration-500 hover:bg-dark hover:text-white bg-white border border-dark aspect-square w-[40px] text-dark rounded-[12px]'}>
