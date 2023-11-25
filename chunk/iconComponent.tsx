@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 
 // Defining type of props
 interface propsType {
-    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin';
+    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google';
     size: number;
 }
 
@@ -271,6 +271,15 @@ export default function IconComponent({size, name}:propsType):ReactNode {
                 <path d="M17.9961 13.691V18.1274H15.4245V13.9874C15.4245 12.9482 15.0525 12.239 14.1213 12.239C13.4109 12.239 12.9873 12.7166 12.8013 13.1798C12.7341 13.3454 12.7161 13.5758 12.7161 13.8062V18.1274H10.1433C10.1433 18.1274 10.1781 11.117 10.1433 10.391H12.7161V11.4866L12.6993 11.5118H12.7161V11.4878C13.0581 10.9598 13.6677 10.2086 15.0345 10.2086C16.7265 10.2086 17.9961 11.315 17.9961 13.691ZM7.45169 6.66016C6.57209 6.66016 5.99609 7.23856 5.99609 7.99696C5.99609 8.74096 6.55529 9.33496 7.41809 9.33496H7.43489C8.33249 9.33496 8.89049 8.73976 8.89049 7.99696C8.87369 7.23856 8.33249 6.66016 7.45169 6.66016ZM6.14849 18.1274H8.72129V10.391H6.14849V18.1274Z" fill="currentColor"/>
                 <path d="M4.79609 2.73496C4.15957 2.73496 3.54912 2.98782 3.09904 3.4379C2.64895 3.88799 2.39609 4.49844 2.39609 5.13496V19.535C2.39609 20.1715 2.64895 20.7819 3.09904 21.232C3.54912 21.6821 4.15957 21.935 4.79609 21.935H19.1961C19.8326 21.935 20.4431 21.6821 20.8932 21.232C21.3432 20.7819 21.5961 20.1715 21.5961 19.535V5.13496C21.5961 4.49844 21.3432 3.88799 20.8932 3.4379C20.4431 2.98782 19.8326 2.73496 19.1961 2.73496H4.79609ZM4.79609 0.334961H19.1961C20.4691 0.334961 21.69 0.840674 22.5902 1.74085C23.4904 2.64102 23.9961 3.86192 23.9961 5.13496V19.535C23.9961 20.808 23.4904 22.0289 22.5902 22.9291C21.69 23.8292 20.4691 24.335 19.1961 24.335H4.79609C3.52305 24.335 2.30216 23.8292 1.40198 22.9291C0.501807 22.0289 -0.00390625 20.808 -0.00390625 19.535V5.13496C-0.00390625 3.86192 0.501807 2.64102 1.40198 1.74085C2.30216 0.840674 3.52305 0.334961 4.79609 0.334961V0.334961Z" fill="currentColor"/>
             </svg>
+        );
+    } else if (name === 'google') {
+        return (
+          <svg width={size} height={size} viewBox="0 0 262 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+            <path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4"/>
+            <path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853"/>
+            <path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05"/>
+            <path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335"/>
+          </svg>
         );
     }
 }

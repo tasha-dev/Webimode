@@ -1,3 +1,6 @@
+// Forcing nextJS to render this component as client side component
+'use client';
+
 // Importing part
 import {ReactNode} from "react";
 import ContactComponent from '@/chunk/footer/contactComponent';
@@ -5,15 +8,27 @@ import Link from "next/link";
 import Image from 'next/image';
 import LogoImage from '@/app/favicon.ico';
 import IconComponent from "@/chunk/iconComponent";
+import {usePathname} from 'next/navigation';
 
 // Creating and exporting footer component of pages
 export default function FooterComponent():ReactNode {
+    // Getting URL of current page
+    const pathname:string = usePathname();
+
+    // Defining URL's with which dont need contact component
+    const noContactComponentURL:Array<string> = ['/sign-in'];
+
     // Returning JSX
     return (
-        <footer className="bg-gradient-to-b from-darkerTheme to-darkerTheme lg:mt-[150px] lg:relative">
-            <div className="container lg:p-[20px] lg:relative lg:mb-0 mb-[80px]">
-                <ContactComponent />
-            </div>
+        <footer data-hasBefore={!noContactComponentURL.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme lg:mt-[150px] lg:relative">
+            {
+              (!noContactComponentURL.includes(pathname))
+                ? (
+                    <div className="container lg:p-[20px] lg:relative lg:mb-0 mb-[80px]">
+                      <ContactComponent />
+                    </div>
+                ) : false
+            } 
             <div className="container p-[20px]">
                 <main>
                     <Link className="block h-[56px] w-[56px] mb-[12px] lg:mx-0 mx-auto" href={'/'}>
