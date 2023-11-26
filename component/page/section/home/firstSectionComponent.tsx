@@ -4,7 +4,6 @@ import Link from "next/link";
 import IconComponent from "@/chunk/iconComponent";
 import Image from 'next/image';
 import leftSideImage from '@/public/img/home/firstSection/img-left-side.png';
-import leftSideMQImage from '@/public/img/home/firstSection/img-left-side-mq.png';
 import bgZigzagImage from '@/public/img/home/firstSection/img-bg-zigzag.svg';
 
 // Creating and exporting first section of home page as default
@@ -50,8 +49,7 @@ export default function FirstSectionComponent():ReactNode {
                         </div>
                     </main>
                     <div className={'xl:w-[50%] w-full'}>
-                        <Image width={625} height={962} src={leftSideImage.src} alt={'عکس گوشی'} className={'w-full -mt-[30px] lg:block hidden'} />
-                        <Image width={360} height={566} src={leftSideMQImage.src} alt={'عکس گوشی'} className={'w-full lg:hidden block'} />
+                        <Image width={625} height={962} src={leftSideImage.src} alt={'عکس گوشی'} className={'w-full lg:-mt-[30px]'} />
                     </div>
                 </div>
             </div>
