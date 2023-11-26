@@ -4,6 +4,8 @@ import Link from 'next/link';
 import IconComponent from '@/chunk/iconComponent';
 import InputComponent from '@/chunk/inputComponent';
 import HalfDividerComponent from '@/chunk/halfDividerComponent';
+import Image from 'next/image';
+import LeftSideImage from '@/public/img/img-sign-in.png';
 
 // Creating and exporting sign in page as default
 export default function SignInPage():ReactNode {
@@ -49,6 +51,7 @@ export default function SignInPage():ReactNode {
           <div>
           </div>
         </div> 
+        <Image src={LeftSideImage.src} alt="عکس" width={634} height={883} />
       </div>
     </section>
   );
