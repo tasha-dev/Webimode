@@ -1,5 +1,5 @@
 // Importing part
-import {ReactNode} from 'rect';
+import {ReactNode} from 'react';
 
 // Defining type of props
 interface propsType {
