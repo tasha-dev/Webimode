@@ -27,7 +27,7 @@ export default function InputComponent({placeHolder, name, icon, inputType, requ
     // Returning JSX
     return (
       <div data-focused={isFocused} className="rounded-[16px] overflow-hidden flex justify-between items-center border-2 transition-all duration-500 data-[focused='true']:border-dark data-[focused='false']:border-lightGrey">
-        <input placeholder={placeHolder} name={name} id={name} onFocus={() => setFoucused(true)} onBlur={() => setFoucused(false)} data-focused={isFocused} type={(isPasswordShowing) ? 'text' : 'password'} required={required} max={12} minlenght={8} className="p-[16px] text-[16px] font-normal w-full outline-0 transition-all duration-500 data-[focused='true']:text-dark data-[focused='false']:text-lightGrey"  />
+        <input placeholder={placeHolder} name={name} id={name} onFocus={() => setFoucused(true)} onBlur={() => setFoucused(false)} data-focused={isFocused} type={(isPasswordShowing) ? 'text' : 'password'} required={required} maxLength={12} minLength={8} className="p-[16px] text-[16px] font-normal w-full outline-0 transition-all duration-500 data-[focused='true']:text-dark data-[focused='false']:text-lightGrey"  />
         <button type={'button'} onClick={() => (isPasswordShowing) ? setPasswordShowing(false) : setPasswordShowing(true)} data-focused={isFocused} className="p-[20px] data-[focused='true']:text-dark data-[focused='false']:text-lightGrey transition-all duration-500 hover:bg-lighterGrey focus:bg-lighterGrey outline-0">
           <IconComponent size={16} name={icon} />
         </button>
