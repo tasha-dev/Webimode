@@ -82,8 +82,8 @@ export default function SecondSectionComponent():ReactNode {
                         <div ref={fourthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                         <div ref={fifthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                     </div>
-                    <main dir="ltr" className="grid lg:grid-cols-6 grid-cols-1 lg:mt-[232px] mt-[32px] lg:sticky relative lg:top-[50%]" ref={mainStickyPart}>
-                        <div data-active={(activeStep >= 1)} className="step-icon-component flex lg:left-0 lg:top-[50%] lg:-translate-y-[50%] lg:absolute lg:rotate-0 rotate-90 lg:mx-0 mx-auto"><IconComponent name="right-arrow" size={24} /></div>
+                    <main dir="ltr" className="grid lg:grid-cols-6 lg:gap-0 gap-[16px] grid-cols-1 lg:mt-[232px] mt-[32px] lg:sticky relative lg:top-[50%]" ref={mainStickyPart}>
+                        <div data-active={(activeStep >= 1)} className="step-icon-component lg:flex hidden left-0 top-[50%] -translate-y-[50%] absolute"><IconComponent name="right-arrow" size={24} /></div>
                         <StepComponent isFirstOne position="bottom" count="۱" isActive={(activeStep >= 1)} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                         <StepComponent position="top" count="۲" isActive={(activeStep >= 2)} icon='money-check-edit' title='بررسی و اعلام هزینه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                         <StepComponent position="bottom" count="۳" isActive={(activeStep >= 3)} icon='design' title='طراحی اولیه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
