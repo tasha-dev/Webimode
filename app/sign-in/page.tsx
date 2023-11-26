@@ -3,6 +3,7 @@ import {ReactNode} from 'react';
 import Link from 'next/link';
 import IconComponent from '@/chunk/iconComponent';
 import InputComponent from '@/chunk/inputComponent';
+import HalfDividerComponent from '@/chunk/halfDividerComponent';
 
 // Creating and exporting sign in page as default
 export default function SignInPage():ReactNode {
@@ -22,14 +23,10 @@ export default function SignInPage():ReactNode {
             </header>
             <main>
               <Link href='#'>
-                <iconComponent size={24} name="google" />
+                <IconComponent size={24} name="google" />
                 ثبت نام با حساب گوگل
               </Link>
-              <div>
-                <div />
-                <span>یا</span>
-                <div />
-              </div>
+              <HalfDividerComponent>یا</HalfDividerComponent>
               <form action="#">
                 <InputComponent placeHolder="نام و نام خانوادگی ...." inputType="text" icon="person" />
                 <InputComponent placeHolder="شماره تلفن ...." inputType="tell" icon="telephone" />
@@ -37,7 +34,16 @@ export default function SignInPage():ReactNode {
                 <InputComponent placeHolder="ایمیل ...." inputType="mail" icon="mail" />
                 <InputComponent placeHolder="رمز عبور ...." inputType="password" />
                 <InputComponent placeHolder="تکرار رمز عبور ...." inputType="password" />
+                <button>
+                  ثبت نام کنید
+                  <IconComponent size={16} name="chevron-left" />   
+                </button>
               </form>
+              <HalfDividerComponent>از قبل اکانت دارم</HalfDividerComponent>
+              <Link href="/log-in">
+                ورود به حساب
+                <IconComponent size={16} name="chevron-left" />
+              </Link>
             </main>
           </div>
           <div>

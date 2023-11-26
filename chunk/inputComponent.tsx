@@ -3,6 +3,7 @@
 
 // Importing part
 import {ReactNode, useState} from 'react';
+import IconComponent from '@/chunk/iconComponent';
 
 // Defining type of props
 interface propsType {
@@ -22,16 +23,16 @@ export default function InputComponent({placeHolder, icon, inputType, required =
     // Returning JSX
     return (
       <div>
-        <input type="password" required={required} maxLenght={12} minLenght={8}>
+        <input type={(isPasswordShowing) ? 'text' : 'password'} required={required} maxLenght={12} minLenght={8} />
         <div>
-          <IconComponent size={16} name={(!isPasswordShowing) ? 'eye' : 'slash-eye'} />
+          <IconComponent size={16} name={'slash-eye'} />
         </div>
       </div>
     );
   } else {
     return (
       <div>
-        <input type={inputType} required={required}>
+        <input type={inputType} required={required} />
         <div>
           <IconComponent size={16} name={icon} />
         </div>
