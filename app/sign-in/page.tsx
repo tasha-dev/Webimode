@@ -14,44 +14,46 @@ export default function SignInPage():ReactNode {
     <section>
       <div className="container px-[20px] pb-[20px] lg:pt-[250px] pt-[200px]">
         <div className="sign">ثبت نام</div>
-        <div>
+        <div className="grid grid-cols-2 gap-[64px]">
           <div>
-            <header>
-              <h1>
-                <span>به راحتی ثبت نام کن</span>
+            <header className="mb-[48px]">
+              <h1 className="font-semibold text-[40px] text-dark leading-[74px] mb-[12px]">
+                <span className="text-theme inline-block ml-[1ch]">به راحتی ثبت نام کن</span>
                 و به خانواده وبیمود ملحق شو !
               </h1>
               <p className="paragraph">به راحتی در وب سایت وبیمود ثبت نام کنید و از نمونه کار های ما دیدن کنید و اگر ایده ای دارین برای ما مطرح کنید تا به واقعیت بپیوندد .</p>
             </header>
             <main>
-              <Link href='#'>
+              <Link href='#' className="btn-light-border">
                 <IconComponent size={24} name="google" />
                 ثبت نام با حساب گوگل
               </Link>
               <HalfDividerComponent>یا</HalfDividerComponent>
-              <form action="#">
-                <InputComponent placeHolder="نام و نام خانوادگی ...." inputType="text" icon="person" />
-                <InputComponent placeHolder="شماره تلفن ...." inputType="tell" icon="telephone" />
-                <InputComponent placeHolder="شماره شرکت ( اختیاری )" inputType="tell" icon="caller" />
-                <InputComponent placeHolder="ایمیل ...." inputType="mail" icon="mail" />
-                <InputComponent placeHolder="رمز عبور ...." inputType="password" />
-                <InputComponent placeHolder="تکرار رمز عبور ...." inputType="password" />
-                <button>
+              <form action="#" className="grid grid-cols-2 gap-[20px] my-[32px]">
+                <InputComponent name="name-input" required placeHolder="نام و نام خانوادگی ...." inputType="text" icon="person" />
+                <InputComponent name="tel-input" required placeHolder="شماره تلفن ...." inputType="tel" icon="telephone" />
+                <InputComponent name="company-tell-input" required placeHolder="شماره شرکت ( اختیاری )" inputType="tel" icon="caller" />
+                <InputComponent name="email-input" required placeHolder="ایمیل ...." inputType="email" icon="mail" />
+                <InputComponent name="password-input" required placeHolder="رمز عبور ...." inputType="password" />
+                <InputComponent name="password-repeat-input" required placeHolder="تکرار رمز عبور ...." inputType="password" />
+                <button className="col-span-2 mt-[40px] btn-secondary-theme">
                   ثبت نام کنید
                   <IconComponent size={16} name="chevron-left" />   
                 </button>
               </form>
               <HalfDividerComponent>از قبل اکانت دارم</HalfDividerComponent>
-              <Link href="/log-in">
-                ورود به حساب
-                <IconComponent size={16} name="chevron-left" />
-              </Link>
+              <div className="flex justify-center items-center">
+                <Link href="/log-in" className="btn-secondary w-[50%] mt-[32px]">
+                  ورود به حساب
+                  <IconComponent size={16} name="chevron-left" />
+                </Link>
+              </div>
             </main>
           </div>
-          <div>
+          <div className="rounded-[48px] flex overflow-hidden">
+            <Image src={LeftSideImage.src} alt="عکس" width={634} height={883} className="w-full h-full" />
           </div>
-        </div> 
-        <Image src={LeftSideImage.src} alt="عکس" width={634} height={883} />
+        </div>  
       </div>
     </section>
   );

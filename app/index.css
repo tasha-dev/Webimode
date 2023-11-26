@@ -20,7 +20,7 @@
 .sign-white {@apply px-[12px] py-[8px] bg-white theme-shadow-dark text-theme lg:mb-[10px] mb-[20px] inline-block lg:text-[15px] text-[10px] font-normal rounded-l-[12px] rounded-tr-[12px];}
 .btn-primary-white {@apply flex justify-center transition-all duration-500 theme-shadow-dark items-center gap-[16px] text-[18px] font-normal text-theme px-[24px] py-[12px] bg-white rounded-[14px] hover:bg-theme hover:text-white;}
 .btn-secondary-white {@apply flex justify-center transition-all duration-500 items-center gap-[24px] rounded-[18px] bg-transparent text-white border border-white px-[24px] py-[12px] text-[18px] hover:bg-white hover:text-dark;}
-.btn-secondary-theme {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-theme border border-theme px-[24px] py-[12px] text-[18px];}
+.btn-secondary-theme {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-theme border border-theme px-[24px] py-[12px] text-[18px] transition-all duration-500 hover:bg-theme hover:text-white;}
 .btn-secondary-theme-icon {@apply flex justify-center items-center w-[36px] h-[36px] rounded-[12px] bg-transparent text-theme border border-theme;}
 footer[data-hasBefore="true"]::before {@apply content-[''] absolute top-0 left-0 w-full h-[20vh] -translate-y-[100%] bg-[url('../public/img/footer/img-top.svg')] bg-cover}
 .paragraph-big {@apply lg:text-[28px] text-[13px] font-normal text-lightGrey lg:leading-[56px] leading-[26px] lg:mb-[58px] mb-[32px];}
@@ -28,3 +28,5 @@ footer[data-hasBefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .paragraph-small {@apply mb-[16px] text-white text-[13px] font-normal leading-[28px];}
 .step-component {@apply lg:h-[2px] transition-all duration-500 relative lg:data-[active='true']:bg-theme lg:data-[active='false']:bg-lightGrey;}
 .step-icon-component {@apply w-[56px] transition-all duration-500 h-[56px] aspect-square justify-center items-center rounded-full data-[active='true']:bg-theme data-[active='false']:bg-white z-[3] border data-[active='false']:border-lightGrey data-[active='true']:border-theme data-[active='false']:text-lightGrey data-[active='true']:text-white;}
+.btn-light-border {@apply block w-full p-[16px] flex justify-center items-center gap-[12px] text-dark border-2 border-lightGrey bg-white transition-all duration-500 hover:bg-lightGrey rounded-[16px] text-[16px] font-normal mb-[32px];}
+.submit-btn {@apply flex justify-center transition-all duration-500 items-center gap-[24px] rounded-[18px] bg-transparent text-theme border border-theme px-[24px] py-[12px] text-[18px] hover:bg-theme hover:text-white;}
