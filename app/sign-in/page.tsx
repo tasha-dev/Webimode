@@ -34,8 +34,8 @@ export default function SignInPage():ReactNode {
                 <InputComponent name="tel-input" required placeHolder="شماره تلفن ...." inputType="tel" icon="telephone" />
                 <InputComponent name="company-tell-input" required placeHolder="شماره شرکت ( اختیاری )" inputType="tel" icon="caller" />
                 <InputComponent name="email-input" required placeHolder="ایمیل ...." inputType="email" icon="mail" />
-                <InputComponent name="password-input" required placeHolder="رمز عبور ...." inputType="password" />
-                <InputComponent name="password-repeat-input" required placeHolder="تکرار رمز عبور ...." inputType="password" />
+                <InputComponent icon='slash-eye' name="password-input" required placeHolder="رمز عبور ...." inputType="password" />
+                <InputComponent icon='slash-eye' name="password-repeat-input" required placeHolder="تکرار رمز عبور ...." inputType="password" />
                 <button className="col-span-2 mt-[40px] btn-secondary-theme">
                   ثبت نام کنید
                   <IconComponent size={16} name="chevron-left" />   
