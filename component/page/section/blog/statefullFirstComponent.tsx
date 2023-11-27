@@ -4,6 +4,7 @@
 // Importing part
 import {Dispatch, ReactNode, useState} from "react";
 import FirstSectionComponent from "@/component/page/section/blog/firstSectionComponent";
+import SecondSectionComponent from "@/component/page/section/blog/secondSectionComponent";
 
 // Note: this component is created to prevent the whole blog page to be rendred as client side component
 // Creating and exporting a component which holds first and second section's of blog page with their states as default
@@ -17,8 +18,8 @@ export default function StatefullFirstComponent():ReactNode {
         <>
             <FirstSectionComponent>
                 {
-                    filterings.map((filter) => (
-                        <li className="shrink-0">
+                    filterings.map((filter, index) => (
+                        <li className="shrink-0" key={index}>
                             <button 
                                 onClick={() => setActiveBlogFiltering(filter)} 
                                 data-active={(activeBlogFiltering === filter)} 
@@ -30,6 +31,7 @@ export default function StatefullFirstComponent():ReactNode {
                     ))
                 }
             </FirstSectionComponent>
+            <SecondSectionComponent filter={activeBlogFiltering} />
         </>
     );
 }
