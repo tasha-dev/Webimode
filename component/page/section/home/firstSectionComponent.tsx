@@ -26,7 +26,7 @@ export default function FirstSectionComponent():ReactNode {
                                 <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                             </span>
                         </h2>
-                        <h1 className={'relative lg:hidden block text-[20px] font-bold mb-[8px] text-center'}>
+                        <h2 className={'relative lg:hidden block text-[20px] font-bold mb-[8px] text-center'}>
                             <span className={'inline-block ml-[1ch] text-dark'}>وبیمود وقعی کردن</span>
                             <span className={'inline-block text-theme'}>ایده ها</span>
                             <span className={'text-theme absolute right-full bottom-full flex flex-col w-[30px]'}>
@@ -34,7 +34,7 @@ export default function FirstSectionComponent():ReactNode {
                                 <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                             </span>
-                        </h1>
+                        </h2>
                         <p className={'paragraph-big lg:text-start text-center'}>بهترین خدمات برنامه نویسی ، طرای سایت ، طراحی لوگو ، انیمیشن و... با تیم حرفه ای وبیمود کسب و کار خود را به سطح باللاتری ببرید !</p>
                         <div className={'flex lg:flex-row flex-col lg:w-auto w-full lg:flex-wrap lg:gap-[34px] gap-[24px]'}>
                             <Link href={'tel:9120000000'} className={'btn-primary text-big lg:w-auto w-full'}>
