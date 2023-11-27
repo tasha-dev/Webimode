@@ -20,7 +20,7 @@ export default function FooterComponent():ReactNode {
 
     // Returning JSX
     return (
-        <footer data-hasBefore={!noContactComponentURL.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme lg:mt-[150px] lg:relative">
+        <footer data-hasbefore={!noContactComponentURL.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme lg:mt-[150px] lg:relative">
             {
               (!noContactComponentURL.includes(pathname))
                 ? (

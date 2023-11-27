@@ -3,8 +3,13 @@ import {ReactNode} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import SearchFormComponent from "@/chunk/page/blog/firstSection/searchFormComponent";
 
+// Defining type of props
+interface propsType {
+    children: ReactNode;
+}
+
 // Creating and exporting first section of blog page as default
-export default function FirstSectionComponent():ReactNode {
+export default function FirstSectionComponent({children}:propsType):ReactNode {
     // Returning JSX
     return (
         <section className="mb-[1000px]">
@@ -44,14 +49,8 @@ export default function FirstSectionComponent():ReactNode {
                         <SearchFormComponent name="blog-search-input" placeHolder="اسم مقاله ، دسته بندی ، ...."  />
                     </div>
                     <ul className="flex items-center gap-[32px] justify-between overflow-auto max-w-[1000px] no-scroll mx-auto px-[20px]">
-                            <li className="shrink-0"><button data-active={true} className="blog-genre-btn">همه مقالات</button></li>
-                            <li className="shrink-0"><button data-active={false} className="blog-genre-btn">تکنولوژی</button></li>
-                            <li className="shrink-0"><button data-active={false} className="blog-genre-btn">سلامت و بهداشت</button></li>
-                            <li className="shrink-0"><button data-active={false} className="blog-genre-btn">ایده پردازی</button></li>
-                            <li className="shrink-0"><button data-active={false} className="blog-genre-btn">هوش مصنوعی</button></li>
-                            <li className="shrink-0"><button data-active={false} className="blog-genre-btn">جشنواره ها</button></li>
-                            <li className="shrink-0"><button data-active={false} className="blog-genre-btn">طراحی و خلاقیت</button></li>
-                        </ul>
+                        {children}
+                    </ul>
                 </main>
             </div>
         </section>
