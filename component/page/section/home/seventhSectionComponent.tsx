@@ -6,6 +6,7 @@ import {Dispatch, ReactNode, useState, useEffect, MutableRefObject, useRef} from
 import FeaturesComponent from "@/chunk/page/home/seventhSection/featuresComponent";
 import IconComponent from "@/chunk/iconComponent";
 import {Swiper, SwiperSlide} from "swiper/react";
+import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 
 // Creating and exporting seventh section of home page as default
 export default function SeventhSectionComponent():ReactNode {
@@ -113,14 +114,7 @@ export default function SeventhSectionComponent():ReactNode {
                         <SwiperSlide><FeaturesComponent icon="hand-holding-dollor" isActive={false} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
                         <SwiperSlide><FeaturesComponent hasNoLeft icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
                     </Swiper>
-                    <div className='flex gap-[12px] items-center justify-center w-full'>
-                        <div data-active={(activeIndexOfSlider === 0)} className='slider-slide-bullet' />
-                        <div data-active={(activeIndexOfSlider === 1)} className='slider-slide-bullet' />
-                        <div data-active={(activeIndexOfSlider === 2)} className='slider-slide-bullet' />
-                        <div data-active={(activeIndexOfSlider === 3)} className='slider-slide-bullet' />
-                        <div data-active={(activeIndexOfSlider === 4)} className='slider-slide-bullet' />
-                        <div data-active={(activeIndexOfSlider === 5)} className='slider-slide-bullet' />
-                    </div>
+                    <SliderPaginationComponent activeIndex={activeIndexOfSlider} slidesCount={6} slidesPerView={1} />
                 </div>
             </div>
         </section>

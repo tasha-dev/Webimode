@@ -6,6 +6,7 @@ import {Dispatch, ReactNode, useState} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import {Swiper, SwiperSlide} from "swiper/react";
 import CommentComponent from '@/chunk/page/home/sixthSection/commentComponent';
+import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 
 // Creating and exorting sixth section component as default
 export default function SixthSectionComponent():ReactNode {
@@ -55,13 +56,7 @@ export default function SixthSectionComponent():ReactNode {
                             <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                             <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                         </Swiper>
-                        <div className="flex justify-center items-center gap-[12px] mt-[32px]">
-                            <div data-active={(activeIndexOfSlider/3 === 0)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSlider/3 === 1)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSlider/3 === 2)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSlider/3 === 3)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSlider/3 === 4)} className="slider-slide-bullet" />
-                        </div>
+                        <SliderPaginationComponent activeIndex={activeIndexOfSlider} slidesCount={5} slidesPerView={3} />
                     </div>
                     <div className="lg:hidden block">
                     <Swiper
@@ -77,13 +72,7 @@ export default function SixthSectionComponent():ReactNode {
                             <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                             <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                         </Swiper>
-                        <div className="flex justify-center items-center gap-[12px] mt-[32px]">
-                            <div data-active={(activeIndexOfSliderMQ === 0)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSliderMQ === 1)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSliderMQ === 2)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSliderMQ === 3)} className="slider-slide-bullet" />
-                            <div data-active={(activeIndexOfSliderMQ === 4)} className="slider-slide-bullet" />
-                        </div>
+                        <SliderPaginationComponent activeIndex={activeIndexOfSliderMQ} slidesCount={5} slidesPerView={1} />
                     </div>
                 </main>
             </div>

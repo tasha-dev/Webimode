@@ -30,7 +30,7 @@ export default function BlogComponent({children, date, genre, img, title, link}:
                         <div className="w-[1px] h-[16px] bg-lightGrey rounded-[100px]" />
                         <div className="flex items-center gap-[8px] text-lightGrey">
                             <IconComponent name="clock" size={16} />
-                            <span className="text-[13px] font-normal">{date.toLocaleDateString('ir-fa')}</span>
+                            <span className="text-[13px] font-normal">{date.toLocaleDateString('fa-ir')}</span>
                         </div>
                     </div>
                     <span className="mb-[8px] text-dark truncate block lg:text-[24px] text-[16px] font-normal">{title}</span>

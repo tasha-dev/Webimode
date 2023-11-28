@@ -10,6 +10,7 @@ import BlogImage from '@/public/img/blog/img-random.png';
 import {Navigation} from "swiper/modules";
 import 'swiper/css';
 import BlogComponent from "@/chunk/page/blog/firstSection/secondSection/blogComponent";
+import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 
 // Defining type of props
 interface propsType {
@@ -57,13 +58,12 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
     
     // Returning JSX
     return (
-        <section className="mb-[1000px]">
+        <section className="mb-[1000px] mt-[100px]">
             <div className="container p-[20px]">
-                <div>
-                    <h4 className="relative">
-                        <span>{filter}</span>
-                        مقالات
-                        <span className={'text-dark absolute right-[102%] bottom-full lg:flex hidden flex-col w-[30px]'}>
+                <div className="flex mb-[64px] justify-between items-center">
+                    <h4 className="relative text-[32px] font-normal text-theme">
+                        <span className="text-current ml-[1ch] inline-block">{filter}</span>
+                        <span className={'text-current absolute right-[102%] bottom-full lg:flex hidden flex-col w-[30px]'}>
                             <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
                             <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
                             <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
@@ -98,104 +98,111 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                     }}
                 >
                    <SwiperSlide>
-                        {
-                            content.map((item, index) => (
-                                <BlogComponent
-                                    key={index}
-                                    date={item.date}
-                                    genre={item.genre}
-                                    img={item.img}
-                                    link={item.link}
-                                    title={item.title}
-                                    isBig={(index === 0)}
-                                >
-                                    {item.content}
-                                </BlogComponent>
-                            ))
-                        }
+                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                            {
+                                content.map((item, index) => (
+                                    <BlogComponent
+                                        key={index}
+                                        date={item.date}
+                                        genre={item.genre}
+                                        img={item.img}
+                                        link={item.link}
+                                        title={item.title}
+                                        isBig={(index === 0)}
+                                    >
+                                        {item.content}
+                                    </BlogComponent>
+                                ))
+                            }
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        {
-                            content.map((item, index) => (
-                                <BlogComponent
-                                    key={index}
-                                    date={item.date}
-                                    genre={item.genre}
-                                    img={item.img}
-                                    link={item.link}
-                                    title={item.title}
-                                    isBig={(index === 0)}
-                                >
-                                    {item.content}
-                                </BlogComponent>
-                            ))
-                        }
+                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                            {
+                                content.map((item, index) => (
+                                    <BlogComponent
+                                        key={index}
+                                        date={item.date}
+                                        genre={item.genre}
+                                        img={item.img}
+                                        link={item.link}
+                                        title={item.title}
+                                        isBig={(index === 0)}
+                                    >
+                                        {item.content}
+                                    </BlogComponent>
+                                ))
+                            }
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        {
-                            content.map((item, index) => (
-                                <BlogComponent
-                                    key={index}
-                                    date={item.date}
-                                    genre={item.genre}
-                                    img={item.img}
-                                    link={item.link}
-                                    title={item.title}
-                                    isBig={(index === 0)}
-                                >
-                                    {item.content}
-                                </BlogComponent>
-                            ))
-                        }
+                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                            {
+                                content.map((item, index) => (
+                                    <BlogComponent
+                                        key={index}
+                                        date={item.date}
+                                        genre={item.genre}
+                                        img={item.img}
+                                        link={item.link}
+                                        title={item.title}
+                                        isBig={(index === 0)}
+                                    >
+                                        {item.content}
+                                    </BlogComponent>
+                                ))
+                            }
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        {
-                            content.map((item, index) => (
-                                <BlogComponent
-                                    key={index}
-                                    date={item.date}
-                                    genre={item.genre}
-                                    img={item.img}
-                                    link={item.link}
-                                    title={item.title}
-                                    isBig={(index === 0)}
-                                >
-                                    {item.content}
-                                </BlogComponent>
-                            ))
-                        }
+                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                            {
+                                content.map((item, index) => (
+                                    <BlogComponent
+                                        key={index}
+                                        date={item.date}
+                                        genre={item.genre}
+                                        img={item.img}
+                                        link={item.link}
+                                        title={item.title}
+                                        isBig={(index === 0)}
+                                    >
+                                        {item.content}
+                                    </BlogComponent>
+                                ))
+                            }
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        {
-                            content.map((item, index) => (
-                                <BlogComponent
-                                    key={index}
-                                    date={item.date}
-                                    genre={item.genre}
-                                    img={item.img}
-                                    link={item.link}
-                                    title={item.title}
-                                    isBig={(index === 0)}
-                                >
-                                    {item.content}
-                                </BlogComponent>
-                            ))
-                        }
+                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                            {
+                                content.map((item, index) => (
+                                    <BlogComponent
+                                        key={index}
+                                        date={item.date}
+                                        genre={item.genre}
+                                        img={item.img}
+                                        link={item.link}
+                                        title={item.title}
+                                        isBig={(index === 0)}
+                                    >
+                                        {item.content}
+                                    </BlogComponent>
+                                ))
+                            }
+                        </div>
                     </SwiperSlide>
                 </Swiper>
-                <div className='flex gap-[12px] items-center justify-center w-full'>
-                    <button id={'filtred-blogs-next-slide'} data-active={isAnySlideRemainingOnRightSide} className="slider-prev-next-btn flex">
-                        <IconComponent name="chevron-right" size={16} />
-                    </button>
-                    <div data-active={(activeIndexOfSlider === 0)} className='slider-slide-bullet' />
-                    <div data-active={(activeIndexOfSlider === 1)} className='slider-slide-bullet' />
-                    <div data-active={(activeIndexOfSlider === 2)} className='slider-slide-bullet' />
-                    <div data-active={(activeIndexOfSlider === 3)} className='slider-slide-bullet' />
-                    <div data-active={(activeIndexOfSlider === 4)} className='slider-slide-bullet' />
-                    <button id={'filtred-blogs-prev-slide'} data-active={isAnySlideRemainingOnLeftSide} className="slider-prev-next-btn flex">
-                        <IconComponent name="chevron-left" size={16} />
-                    </button>
-                </div>
+                <SliderPaginationComponent 
+                    activeIndex={activeIndexOfSlider} 
+                    slidesCount={5} 
+                    hasButtons 
+                    slidesPerView={1} 
+                    hasSlideRemainingLeftSide={isAnySlideRemainingOnLeftSide} 
+                    hasSlideRemainingRightSide={isAnySlideRemainingOnRightSide} 
+                    nextBtnId="filtred-blogs-next-slide"
+                    prevBtnId="filtred-blogs-prev-slide" 
+                />
             </div>
         </section>
     );

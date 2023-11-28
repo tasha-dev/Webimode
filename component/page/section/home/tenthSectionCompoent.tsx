@@ -9,6 +9,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
 import BlogComponent from "@/component/blogComponent";
 import BlogImage from '@/public/img/blog/img-random.png';
+import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 
 // Creating and exporting tenth section of home page as default
 export default function TenthSectionComponent():ReactNode {
@@ -50,8 +51,8 @@ export default function TenthSectionComponent():ReactNode {
                             slidesPerView={3}
                             spaceBetween={20}
                             navigation={{
-                                nextEl: '#prev-services-section-10-slider-btn',
-                                prevEl: '#next-services-section-10-slider-btn',
+                                prevEl: '#prev-services-section-10-slider-btn',
+                                nextEl: '#next-services-section-10-slider-btn',
                             }}
                             onSlideChange={(event) => {
                                 setActiveIndexOfSlider(event.activeIndex);
@@ -84,21 +85,16 @@ export default function TenthSectionComponent():ReactNode {
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                         </Swiper>
-                        <div className='flex justify-center items-center gap-[20px] mt-[40px]'>
-                            <button id='next-services-section-10-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='slider-prev-next-btn sm:flex hidden'>
-                                <IconComponent name='chevron-right' size={16} />
-                            </button>
-                            <div className='flex gap-[12px] items-center justify-center lg:w-auto w-full'>
-                                <div data-active={(activeIndexOfSlider/3 === 0)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSlider/3 === 1)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSlider/3 === 2)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSlider/3 === 3)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSlider/3 === 4)} className='slider-slide-bullet' />
-                            </div>
-                            <button id='prev-services-section-10-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='slider-prev-next-btn sm:flex hidden'>
-                                <IconComponent name='chevron-left' size={16} />
-                            </button>
-                        </div>
+                        <SliderPaginationComponent 
+                            hasButtons
+                            hasSlideRemainingLeftSide={isAnySlideRemainingOnLeftSide}
+                            hasSlideRemainingRightSide={isAnySlideRemainingOnRightSide}
+                            nextBtnId="next-services-section-10-slider-btn"
+                            prevBtnId="prev-services-section-10-slider-btn"
+                            activeIndex={activeIndexOfSlider}
+                            slidesCount={5}
+                            slidesPerView={3} 
+                        />
                     </div>
                     <div className="lg:hidden block">
                     <Swiper
@@ -107,8 +103,8 @@ export default function TenthSectionComponent():ReactNode {
                             slidesPerView={1}
                             spaceBetween={20}
                             navigation={{
-                                nextEl: '#prev-services-slider-section-10-btn-mq',
-                                prevEl: '#next-services-slider-section-10-btn-mq',
+                                prevEl: '#prev-services-slider-section-10-btn-mq',
+                                nextEl: '#next-services-slider-section-10-btn-mq',
                             }}
                             onSlideChange={(event) => {
                                 setActiveIndexOfSliderMQ(event.activeIndex);
@@ -131,21 +127,16 @@ export default function TenthSectionComponent():ReactNode {
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                         </Swiper>
-                        <div className='flex justify-center items-center gap-[20px] mt-[40px]'>
-                            <button id='next-services-slider-section-10-btn-mq' data-active={isAnySlideRemainingOnRightSideMQ} className='slider-prev-next-btn sm:flex hidden'>
-                                <IconComponent name='chevron-right' size={16} />
-                            </button>
-                            <div className='flex gap-[12px] items-center justify-center lg:w-auto w-full'>
-                                <div data-active={(activeIndexOfSliderMQ === 0)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSliderMQ === 1)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSliderMQ === 2)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSliderMQ === 3)} className='slider-slide-bullet' />
-                                <div data-active={(activeIndexOfSliderMQ === 4)} className='slider-slide-bullet' />
-                            </div>
-                            <button id='prev-services-slider-section-10-btn-mq' data-active={isAnySlideRemainingOnLeftSideMQ} className='slider-prev-next-btn sm:flex hidden'>
-                                <IconComponent name='chevron-left' size={16} />
-                            </button>
-                        </div>
+                        <SliderPaginationComponent 
+                            hasButtons
+                            hasSlideRemainingLeftSide={isAnySlideRemainingOnLeftSideMQ}
+                            hasSlideRemainingRightSide={isAnySlideRemainingOnRightSideMQ}
+                            nextBtnId="next-services-slider-section-10-btn-mq"
+                            prevBtnId="prev-services-slider-section-10-btn-mq"
+                            activeIndex={activeIndexOfSliderMQ}
+                            slidesCount={5}
+                            slidesPerView={1} 
+                        />
                     </div>
                 </main>
             </div>

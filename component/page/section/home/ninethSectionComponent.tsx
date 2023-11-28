@@ -4,6 +4,7 @@
 // Importing part
 import IconComponent from "@/chunk/iconComponent";
 import FeatureComponent from "@/chunk/page/home/ninethSection/featureComponent";
+import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import Link from "next/link";
 import {ReactNode, useState, Dispatch} from "react";
 import {Swiper, SwiperSlide} from 'swiper/react';
@@ -58,11 +59,7 @@ export default function NinethSectionComponent():ReactNode {
                             <SwiperSlide><FeatureComponent percentage={79} theme="blue" title="سرعت بیشتر">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ .</FeatureComponent></SwiperSlide>
                             <SwiperSlide><FeatureComponent percentage={86} theme="orange" title="امنیت بالاتر">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ .</FeatureComponent></SwiperSlide>
                         </Swiper>
-                        <div className='flex gap-[12px] items-center justify-center lg:w-auto w-full mt-[32px]'>
-                            <div data-active={(activeIndexOfSlider === 0)} className='slider-slide-bullet' />
-                            <div data-active={(activeIndexOfSlider === 1)} className='slider-slide-bullet' />
-                            <div data-active={(activeIndexOfSlider === 2)} className='slider-slide-bullet' />
-                        </div>
+                        <SliderPaginationComponent activeIndex={activeIndexOfSlider} slidesCount={3} slidesPerView={1} />
                     </div>
                 </main>
             </div>
