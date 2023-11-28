@@ -19,10 +19,10 @@ interface propsType {
 export default function BlogComponent({children, date, genre, link, title, isBig = false, img}:propsType):ReactNode {
     // Conditional rendering
     return (
-        <Link href={link} data-isbig={isBig} className="data-[isbig='true']:col-span-1 data-[isbig='true']:row-span-2 block group">
-            <article data-isbig={isBig} className="data-[isbig='false']:flex data-[isbig='false']:gap-[20px] data-[isbig='false']:justify-start">
+        <Link href={link} data-isbig={isBig} className="xl:data-[isbig='true']:col-span-1 lg:data-[isbig='true']:col-span-2 data-[isbig='true']:cols-span-1 xl:data-[isbig='true']:row-span-2 block group">
+            <article data-isbig={isBig} className="data-[isbig='false']:flex xl:data-[isbig='false']:flex-row flex-col xl:data-[isbig='false']:gap-[20px] data-[isbig='false']:justify-start">
                 <Image data-isbig={isBig} src={img} alt={title} width={1000} height={1000} className="data-[isbig='false']:w-[50%] data-[isbig='true']:mb-[16px] data-[isbig='true']:w-full data-[isbig='true']:h-[289px] rounded-[40px] object-cover" />
-                <div data-isbig={isBig} className="data-[isbig='false']:w-[50%] overflow-hidden">
+                <div data-isbig={isBig} className="xl:data-[isbig='false']:w-[50%] data-[isbig='false']:w-full overflow-hidden">
                     <div className="flex items-center gap-[16px] mb-[9px]">
                         <span className="text-[13px] block truncate font-normal text-lightGrey max-w-[10ch]">{genre}</span>
                         <div className="bg-lightGrey h-[16px] w-[1px] rounded-[20px]" />

@@ -69,10 +69,12 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                             <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                         </span>
                     </h4>
-                    <Link href="#" className="btn-primary">
-                        مشاهده همه
-                        <IconComponent size={16} name="chevron-left" />
-                    </Link>
+                    <div>
+                        <Link href="#" className="btn-primary">
+                            مشاهده همه
+                            <IconComponent size={16} name="chevron-left" />
+                        </Link>
+                    </div>
                 </div>
                 <Swiper
                     spaceBetween={20}
@@ -98,7 +100,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                     }}
                 >
                    <SwiperSlide>
-                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 xl:gap-[36px] gap-[32px]">
                             {
                                 content.map((item, index) => (
                                     <BlogComponent
@@ -117,7 +119,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 xl:gap-[36px] gap-[32px]">
                             {
                                 content.map((item, index) => (
                                     <BlogComponent
