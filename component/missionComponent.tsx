@@ -4,7 +4,6 @@ import rocketImage from '@/public/img/mission/img-rocket.png';
 import Image from "next/image";
 import Link from "next/link";
 import IconComponent from "@/chunk/iconComponent";
-import '@/public/style/animation/missionComponent.style.css';
 import LineMorphComponent from '@/chunk/lineMorphComponent';
 
 // Creating and exporting mission component as default
@@ -15,7 +14,7 @@ export default function MissionComponent():ReactNode {
             <div className="container xl:h-[465px] flex xl:flex-row flex-col-reverse gap-[100px]">
                 <div className={'xl:w-[50%] w-full relative xl:h-[465px] z-[1]'}>
                     <div className="w-full absolute right-0 top-0 lg:block hidden">
-                        <div className="relative xl:h-[574px] circle-animation">
+                        <div className="relative xl:h-[574px] animate-circleMotion">
                             <div className="w-[16px] h-[16px] aspect-square rounded-full bg-pink z-[10] absolute -top-[30%] left-[50%]" />
                             <div className="w-[16px] h-[16px] aspect-square rounded-full bg-themePurple z-[10] absolute -top-[20%] right-[30%]" />
                             <div className="w-[16px] h-[16px] aspect-square rounded-full bg-theme z-[10] absolute -top-[10%] left-[20%]" />

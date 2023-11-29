@@ -9,7 +9,7 @@ import LeftSideImage from '@/public/img/home/eighthSection/img-left-side.png';
 export default function EighthSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="lg:mt-[250px] mt-[196px] bg-gradient-to-b from-theme to-darkerTheme">
+        <section className="lg:mt-[250px] mt-[196px] bg-gradient-to-b from-theme to-darkerTheme overflow-hidden">
             <div className="container p-[20px] flex lg:flex-row flex-col items-center justify-between lg:gap-[40px] gap-[20px]">
                 <div className="lg:w-[60%] w-full lg:block flex flex-col items-center justify-center">
                     <div className="sign-white">درخواست همکاری</div>
@@ -41,7 +41,7 @@ export default function EighthSectionComponent():ReactNode {
                         </span>
                     </div>
                 </div>
-                <Image className="lg:w-[60%] w-full" src={LeftSideImage.src} alt="عکس موبایل" width={1000} height={1000} />
+                <Image className="lg:w-[60%] w-full animate-circleMotion" src={LeftSideImage.src} alt="عکس موبایل" width={1000} height={1000} />
             </div>
         </section>
     );
