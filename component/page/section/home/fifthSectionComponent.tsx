@@ -11,18 +11,20 @@ export default function FifthSectionComponent():ReactNode {
     return (
         <section className="bg-gradient-to-b from-theme to-darkerTheme relative lg:h-[717px] h-[488px] overflow-hidden">
             <Image src={BgImage.src} width={1140} height={717} alt="عکس بکگراند" className="opacity-50 w-full h-full object-cover absolute top-0 left-0 z-[1] pointer-events-none" />
-            <div className="container px-[20px] lg:py-[48px] py-[32px] z-[2]">
+            <div className="container px-[20px] lg:py-[48px] py-[32px] z-[2] relative">
                 <header className="flex flex-col items-center justify-center lg:mb-[56px] mb-[40px]">
                     <div className="sign-white">چرا وبیمود</div>
                     <h4 className={'relative lg:text-[48px] text-[20px] text-center text-white'}>
-                        <span className={'inline-block ml-[1ch] font-normal'}>چرا باید</span>
-                        <span className={'inline-block ml-[1ch] font-bold'}>وبیمود</span>
-                        <span className={'inline-block font-normal'}>را انتخاب کنید ?</span>
-                        <span className={'text-white absolute left-full bottom-full lg:flex hidden flex-col w-[30px]'}>
-                            <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
-                            <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
-                            <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
+                        <span className={'inline-block font-normal'}>چرا باید</span>
+                        <span className={'inline-block relative mx-[1ch] font-bold'}>
+                            وبیمود
+                            <span className={'text-white absolute left-full bottom-full lg:flex hidden flex-col w-[30px]'}>
+                                <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
+                                <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
+                                <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
+                            </span>
                         </span>
+                        <span className={'inline-block font-normal'}>را انتخاب کنید ?</span>
                     </h4>
                 </header>
                 <main className="flex flex-col items-center justify-center">
