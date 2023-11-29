@@ -4,23 +4,21 @@ import IconComponent from "./iconComponent";
 
 // Defining type of props
 interface propsType {
-    prevBtnId?: string;
-    nextBtnId?: string;
-    hasSlideRemainingRightSide?: boolean;
-    hasSlideRemainingLeftSide?: boolean;
     activeIndex: number;
-    hasButtons?: boolean;
     slidesPerView: number;
     slidesCount: number;
+    prevBtnId?: string;
+    nextBtnId?: string;
+    hasButtons?: boolean;
 }
 
 // Creating and exporting slider pagination as default
-export default function SliderPaginationComponent({activeIndex, slidesCount, hasButtons = false, slidesPerView, nextBtnId, prevBtnId, hasSlideRemainingLeftSide, hasSlideRemainingRightSide}:propsType):ReactNode {
+export default function SliderPaginationComponent({activeIndex, slidesCount, hasButtons = false, slidesPerView, nextBtnId, prevBtnId}:propsType):ReactNode {
     // Conditional rendering
     if (hasButtons) {
         return (
             <div className="flex items-center justify-center gap-[20px] mt-[64px]">
-                <button id={prevBtnId} data-active={hasSlideRemainingRightSide} className="slider-prev-next-btn flex">
+                <button id={prevBtnId} data-active={(activeIndex !== 0)} className="slider-prev-next-btn flex">
                     <IconComponent name="chevron-right" size={16} />
                 </button>
                 <div className='flex gap-[12px] items-center justify-center'>
@@ -30,7 +28,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                         ))
                     }
                 </div>
-                <button id={nextBtnId} data-active={hasSlideRemainingLeftSide} className="slider-prev-next-btn flex">
+                <button id={nextBtnId} data-active={(activeIndex !== ((slidesCount*slidesPerView)-slidesPerView))} className="slider-prev-next-btn flex">
                     <IconComponent name="chevron-left" size={16} />
                 </button>
             </div>

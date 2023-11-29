@@ -15,11 +15,7 @@ import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 export default function TenthSectionComponent():ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
-    const [isAnySlideRemainingOnRightSide, setSlideRemainingOnRightSide]:[boolean, Dispatch<boolean>] = useState(false);
-    const [isAnySlideRemainingOnLeftSide, setSlideRemainingOnLeftSide]:[boolean, Dispatch<boolean>] = useState(true);
     const [activeIndexOfSliderMQ, setActiveIndexOfSliderMQ]:[number, Dispatch<number>] = useState(0);
-    const [isAnySlideRemainingOnRightSideMQ, setSlideRemainingOnRightSideMQ]:[boolean, Dispatch<boolean>] = useState(false);
-    const [isAnySlideRemainingOnLeftSideMQ, setSlideRemainingOnLeftSideMQ]:[boolean, Dispatch<boolean>] = useState(true);
 
     // Returnining JSX
     return (
@@ -50,23 +46,10 @@ export default function TenthSectionComponent():ReactNode {
                             slidesPerGroup={3}
                             slidesPerView={3}
                             spaceBetween={20}
+                            onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex)}}
                             navigation={{
                                 prevEl: '#prev-services-section-10-slider-btn',
                                 nextEl: '#next-services-section-10-slider-btn',
-                            }}
-                            onSlideChange={(event) => {
-                                setActiveIndexOfSlider(event.activeIndex);
-
-                                if (event.activeIndex === 0) {
-                                    setSlideRemainingOnRightSide(false);
-                                    setSlideRemainingOnLeftSide(true);
-                                } else if (event.activeIndex/3 === 4) {
-                                    setSlideRemainingOnRightSide(true);
-                                    setSlideRemainingOnLeftSide(false);
-                                } else if (event.activeIndex/3 !== 4 && event.activeIndex !== 0) {
-                                    setSlideRemainingOnRightSide(true);
-                                    setSlideRemainingOnLeftSide(true);
-                                }
                             }}
                         > 
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
@@ -87,8 +70,6 @@ export default function TenthSectionComponent():ReactNode {
                         </Swiper>
                         <SliderPaginationComponent 
                             hasButtons
-                            hasSlideRemainingLeftSide={isAnySlideRemainingOnLeftSide}
-                            hasSlideRemainingRightSide={isAnySlideRemainingOnRightSide}
                             nextBtnId="next-services-section-10-slider-btn"
                             prevBtnId="prev-services-section-10-slider-btn"
                             activeIndex={activeIndexOfSlider}
@@ -98,6 +79,7 @@ export default function TenthSectionComponent():ReactNode {
                     </div>
                     <div className="lg:hidden block">
                     <Swiper
+                            onSlideChange={(event) => {setActiveIndexOfSliderMQ(event.activeIndex)}}
                             modules={[Navigation]}
                             slidesPerGroup={1}
                             slidesPerView={1}
@@ -105,20 +87,6 @@ export default function TenthSectionComponent():ReactNode {
                             navigation={{
                                 prevEl: '#prev-services-slider-section-10-btn-mq',
                                 nextEl: '#next-services-slider-section-10-btn-mq',
-                            }}
-                            onSlideChange={(event) => {
-                                setActiveIndexOfSliderMQ(event.activeIndex);
-
-                                if (event.activeIndex === 0) {
-                                    setSlideRemainingOnRightSideMQ(false);
-                                    setSlideRemainingOnLeftSideMQ(true);
-                                } else if (event.activeIndex/3 === 4) {
-                                    setSlideRemainingOnRightSideMQ(true);
-                                    setSlideRemainingOnLeftSideMQ(false);
-                                } else if (event.activeIndex/3 !== 4 && event.activeIndex !== 0) {
-                                    setSlideRemainingOnRightSideMQ(true);
-                                    setSlideRemainingOnLeftSideMQ(true);
-                                }
                             }}
                         > 
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
@@ -129,8 +97,6 @@ export default function TenthSectionComponent():ReactNode {
                         </Swiper>
                         <SliderPaginationComponent 
                             hasButtons
-                            hasSlideRemainingLeftSide={isAnySlideRemainingOnLeftSideMQ}
-                            hasSlideRemainingRightSide={isAnySlideRemainingOnRightSideMQ}
                             nextBtnId="next-services-slider-section-10-btn-mq"
                             prevBtnId="prev-services-slider-section-10-btn-mq"
                             activeIndex={activeIndexOfSliderMQ}

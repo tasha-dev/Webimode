@@ -20,13 +20,11 @@ import cSharpImage from '@/public/img/home/fourthSection/img-xd.png';
 import figmaImage from '@/public/img/home/fourthSection/img-figma.png';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SliderItemComponent from '@/chunk/page/home/fourthSection/sliderItemComponent';
-import {Navigation} from 'swiper/modules';
+import {Navigation, Autoplay} from 'swiper/modules';
 
 // Creating and exporting fourth section of home page as default
 export default function FourthSectionComponent():ReactNode {
   // Defining states of component
-  const [isAnySlideRemainingOnRightSide, setSlideRemainingOnRightSide]:[boolean, Dispatch<boolean>] = useState(false);
-  const [isAnySlideRemainingOnLeftSide, setSlideRemainingOnLeftSide]:[boolean, Dispatch<boolean>] = useState(true);
   const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
   
   // Returning JSX
@@ -51,35 +49,25 @@ export default function FourthSectionComponent():ReactNode {
           </p>
         </header>
         <main className='gap-[24px] flex items-center justify-center'>
-          <button id='prev-tech-slider-btn' data-active={isAnySlideRemainingOnRightSide} className='slider-prev-next-btn lg:flex hidden'>
+          <button id='prev-tech-slider-btn' data-active={(activeIndexOfSlider !== 0)} className='slider-prev-next-btn lg:flex hidden'>
             <IconComponent size={16} name="chevron-right" />
           </button>
           <Swiper 
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             initialSlide={activeIndexOfSlider}
             slidesPerView={14} 
+            slidesPerGroup={14}
             spaceBetween={32}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             breakpoints={{
-              1024: {slidesPerView: 14},
-              1: {slidesPerView: 4}
+              1024: {slidesPerView: 14, slidesPerGroup: 14},
+              1: {slidesPerView: 4, slidesPerGroup: 4}
             }}
-            onSlideChange={(event) => {
-              setActiveIndexOfSlider(event.activeIndex)
-
-              if (window.innerWidth > 1024) {
-                if (event.activeIndex === 0) {
-                  setSlideRemainingOnRightSide(false);
-                  setSlideRemainingOnLeftSide(true);
-                } else if (event.activeIndex === 16) {
-                  setSlideRemainingOnRightSide(true);
-                  setSlideRemainingOnLeftSide(false);
-                } else if (event.activeIndex !== 16 && event.activeIndex !== 0) {
-                  setSlideRemainingOnRightSide(true);
-                  setSlideRemainingOnLeftSide(true);
-                }
-              }
-            }}
-            className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white bg-lighterGrey'
+            onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex);console.log(event.activeIndex)}}
+            className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white w-full bg-lighterGrey'
             navigation={{
               nextEl: '#next-tech-slider-btn',
               prevEl: '#prev-tech-slider-btn',
@@ -99,10 +87,9 @@ export default function FourthSectionComponent():ReactNode {
               <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} size={36} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
-              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={24} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} size={24} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={28} /></SwiperSlide>
-              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} size={32} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} size={32} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} size={36} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} size={40} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} size={48} /></SwiperSlide>
@@ -114,9 +101,22 @@ export default function FourthSectionComponent():ReactNode {
               <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} size={36} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
-              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={24} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} size={24} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} size={28} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} size={32} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} size={36} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} size={40} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} size={48} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} size={56} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} size={48} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} size={40} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} size={36} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
           </Swiper>
-          <button id='next-tech-slider-btn' data-active={isAnySlideRemainingOnLeftSide} className='slider-prev-next-btn lg:flex hidden'>
+          <button id='next-tech-slider-btn' data-active={(activeIndexOfSlider !== 28)} className='slider-prev-next-btn lg:flex hidden'>
             <IconComponent size={16} name="chevron-left" />
           </button>
         </main>

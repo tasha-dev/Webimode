@@ -23,8 +23,6 @@ import SliderPaginationComponent from '@/chunk/sliderPaginationCompont';
 export default function ThirdSectionComponent():ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveInderOfSlider]:[number, Dispatch<number>] = useState(0);
-    const [isAnySlideRemainingOnRightSide, setSlideRemainingOnRightSide]:[boolean, Dispatch<boolean>] = useState(false);
-    const [isAnySlideRemainingOnLeftSide, setSlideRemainingOnLeftSide]:[boolean, Dispatch<boolean>] = useState(true);
     
     // Returning JSX
     return (
@@ -66,6 +64,7 @@ export default function ThirdSectionComponent():ReactNode {
                 </main>
                 <div className="xl:hidden block">
                     <Swiper 
+                        onSlideChange={(event) => {setActiveInderOfSlider(event.activeIndex)}}
                         initialSlide={activeIndexOfSlider}
                         modules={[Navigation]}
                         spaceBetween={20}
@@ -73,20 +72,6 @@ export default function ThirdSectionComponent():ReactNode {
                             nextEl: '#next-services-slider-btn',
                             prevEl: '#prev-services-slider-btn',
                         }}
-                        onSlideChange={(event) => {
-                            setActiveInderOfSlider(event.activeIndex);
-
-                            if (event.activeIndex === 0) {
-                                setSlideRemainingOnRightSide(false);
-                                setSlideRemainingOnLeftSide(true);
-                              } else if (event.activeIndex === 7) {
-                                setSlideRemainingOnRightSide(true);
-                                setSlideRemainingOnLeftSide(false);
-                              } else if (event.activeIndex !== 7 && event.activeIndex !== 0) {
-                                setSlideRemainingOnRightSide(true);
-                                setSlideRemainingOnLeftSide(true);
-                              }
-                          }}
                     >
                         <SwiperSlide><ServiceItemComponent icon='design' iconGradiant='blue' img={FigmaImage.src} hasButtons hasMobileImageInLeft title='طراحی UI UX'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
                         <SwiperSlide><ServiceItemComponent icon='window' iconGradiant='purple' img={CodeImage.src} title='برنامه نویسی وب سایت'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
@@ -102,8 +87,6 @@ export default function ThirdSectionComponent():ReactNode {
                         slidesCount={8} 
                         hasButtons 
                         slidesPerView={1} 
-                        hasSlideRemainingLeftSide={isAnySlideRemainingOnLeftSide} 
-                        hasSlideRemainingRightSide={isAnySlideRemainingOnRightSide} 
                         nextBtnId="next-services-slider-btn"
                         prevBtnId="prev-services-slider-btn" 
                     />

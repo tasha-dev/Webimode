@@ -21,8 +21,6 @@ interface propsType {
 export default function SecondSectionComponent({filter}:propsType):ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
-    const [isAnySlideRemainingOnRightSide, setSlideRemainingOnRightSide]:[boolean, Dispatch<boolean>] = useState(false);
-    const [isAnySlideRemainingOnLeftSide, setSlideRemainingOnLeftSide]:[boolean, Dispatch<boolean>] = useState(true);
     const [content, setContent]:[Array<{
         genre: string;
         img: string;
@@ -79,20 +77,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                 <Swiper
                     spaceBetween={20}
                     initialSlide={activeIndexOfSlider}
-                    onSlideChange={(event) => {
-                        setActiveIndexOfSlider(event.activeIndex);
-
-                        if (event.activeIndex === 0) {
-                            setSlideRemainingOnRightSide(false);
-                            setSlideRemainingOnLeftSide(true);
-                        } else if (event.activeIndex === 4) {
-                            setSlideRemainingOnRightSide(true);
-                            setSlideRemainingOnLeftSide(false);
-                        } else if (event.activeIndex !== 4 && event.activeIndex !== 0) {
-                            setSlideRemainingOnRightSide(true);
-                            setSlideRemainingOnLeftSide(true);
-                        }
-                    }}
+                    onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex)}}
                     modules={[Navigation]}
                     navigation={{
                         nextEl: '#filtred-blogs-next-slide',
@@ -200,8 +185,6 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                     slidesCount={5} 
                     hasButtons 
                     slidesPerView={1} 
-                    hasSlideRemainingLeftSide={isAnySlideRemainingOnLeftSide} 
-                    hasSlideRemainingRightSide={isAnySlideRemainingOnRightSide} 
                     nextBtnId="filtred-blogs-next-slide"
                     prevBtnId="filtred-blogs-prev-slide" 
                 />
