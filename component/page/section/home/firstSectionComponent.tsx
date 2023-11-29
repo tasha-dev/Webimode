@@ -3,8 +3,10 @@ import {ReactNode} from "react";
 import Link from "next/link";
 import IconComponent from "@/chunk/iconComponent";
 import Image from 'next/image';
-import leftSideImage from '@/public/img/home/firstSection/img-left-side.png';
+import leftSideImage from '@/public/img/home/firstSection/left-side/img-left-side.png';
+import leftSideImageBG from '@/public/img/home/firstSection/left-side/img-left-side-bg.png';
 import bgZigzagImage from '@/public/img/home/firstSection/img-bg-zigzag.svg';
+import LineMorphComponent from "@/chunk/lineMorphComponent";
 
 // Creating and exporting first section of home page as default
 export default function FirstSectionComponent():ReactNode {
@@ -48,8 +50,10 @@ export default function FirstSectionComponent():ReactNode {
                             </Link>
                         </div>
                     </main>
-                    <div className={'xl:w-[50%] w-full'}>
-                        <Image width={625} height={962} src={leftSideImage.src} alt={'عکس گوشی'} className={'w-full lg:-mt-[30px]'} />
+                    <div className={'xl:w-[50%] w-full relative overflow-hidden'}>
+                        <Image width={625} height={962} src={leftSideImage.src} alt={'عکس گوشی'} className={'w-full lg:-mt-[30px] z-[3] relative'} />
+                        <LineMorphComponent strokeColor="#49B486" className="absolute top-0 lg:translate-y-[-70px] translate-y-[-50px] left-0 z-[2] w-full" />
+                        <Image width={500} height={395} src={leftSideImageBG.src} alt={'عکس  بکگراند گوشی'} className={'w-full hiden absolute top-0 left-0 z-[1]'} />
                     </div>
                 </div>
             </div>
