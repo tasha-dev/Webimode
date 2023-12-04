@@ -13,7 +13,7 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
     // Returning JSX
     return (
         <section>
-            <div className="container lg:mt-[250px] mt-[68px] relative">
+            <div className="container relative">
                 <div className="absolute lg:block hidden top-0 left-0 w-full h-full -translate-y-[20%] pointer-events-none p-[20px]">
                     <div className="absolute top-0 right-[200px] w-[8px] h-[8px] aspect-square bg-theme rounded-full" />
                     <div className="flex items-start gap-[5px] absolute top-[10px] left-[300px] text-themePurple">

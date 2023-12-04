@@ -12,7 +12,7 @@ export default function LogInPage():ReactNode {
   // Returning JSX 
   return (
     <section className='lg:mb-0 mb-[105px]'>
-      <div className="container px-[20px] pb-[20px] lg:pt-[250px] pt-[68px]">
+      <div className="container px-[20px] pb-[20px]">
         <div className='lg:block hidden'>
           <div className="sign">ورود به حساب</div>
         </div>
