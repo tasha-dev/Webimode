@@ -85,7 +85,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                     }}
                 >
                    <SwiperSlide>
-                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 xl:gap-[36px] gap-[32px]">
+                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 gap-[20px]">
                             {
                                 content.map((item, index) => (
                                     <BlogComponent
@@ -104,7 +104,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 xl:gap-[36px] gap-[32px]">
+                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 gap-[20px]">
                             {
                                 content.map((item, index) => (
                                     <BlogComponent
@@ -123,7 +123,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 gap-[20px]">
                             {
                                 content.map((item, index) => (
                                     <BlogComponent
@@ -142,7 +142,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 gap-[20px]">
                             {
                                 content.map((item, index) => (
                                     <BlogComponent
@@ -161,7 +161,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="grid grid-cols-2 grid-rows-2 gap-[36px]">
+                        <div className="grid lg:grid-cols-2 grid-cols-1 xl:grid-rows-2 gap-[20px]">
                             {
                                 content.map((item, index) => (
                                     <BlogComponent
