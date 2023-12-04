@@ -3,8 +3,8 @@ import IconComponent from "@/chunk/iconComponent";
 import Link from "next/link";
 import {ReactNode} from "react";
 
-// Creating and exporting Footer Contacut Component as default
-export default function FooterContactComponent():ReactNode {
+// Creating and exporting before footer component as default
+export default function BeforeFooterComponent():ReactNode {
     // Returning JSX
     return (
         <section className="lg:mt-[196px] mt-[156px]">
