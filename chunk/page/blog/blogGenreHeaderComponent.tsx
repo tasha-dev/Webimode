@@ -33,9 +33,14 @@ export default function BlogGenreHeaderComponent({highlightedTitle, link, nonHig
                     <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                 </span>
             </h4>
-            <div>
-                <Link href={link} className={(theme === 'theme') ? "btn-primary" : "btn-primary-white"}>
-                    مشاهده همه
+            <div className="lg:block hidden">
+                <Link href={link} className={(theme === 'theme') ? "btn-secondary-theme" : "btn-secondary-white"}>
+                    <span className="lg:block hidden">مشاهده همه</span>
+                    <IconComponent size={16} name="chevron-left" />
+                </Link>
+            </div>
+            <div className="lg:hidden block">
+                <Link href={link} className={(theme === 'theme') ? "btn-secondary-theme-icon" : "btn-secondary-white-icon"}>
                     <IconComponent size={16} name="chevron-left" />
                 </Link>
             </div>
