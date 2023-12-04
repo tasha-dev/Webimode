@@ -3,14 +3,13 @@
 
 // Importing part
 import {Dispatch, ReactNode, useState} from "react";
-import IconComponent from "@/chunk/iconComponent";
-import Link from "next/link";
 import {Swiper, SwiperSlide} from "swiper/react";
 import BlogImage from '@/public/img/blog/img-random.png';
 import {Navigation} from "swiper/modules";
-import 'swiper/css';
 import BlogComponent from "@/chunk/page/blog/firstSection/secondSection/blogComponent";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
+import BlogGenreHeaderComponent from "@/chunk/page/blog/blogGenreHeaderComponent";
+import 'swiper/css';
 
 // Defining type of props
 interface propsType {
@@ -56,24 +55,9 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
     
     // Returning JSX
     return (
-        <section className="mb-[1000px] mt-[100px]">
+        <section className="mt-[100px]">
             <div className="container p-[20px]">
-                <div className="flex mb-[64px] justify-between items-center">
-                    <h4 className="relative text-[32px] font-normal text-theme">
-                        <span className="text-current ml-[1ch] inline-block">{filter}</span>
-                        <span className={'text-current absolute right-[102%] bottom-full lg:flex hidden flex-col w-[30px]'}>
-                            <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
-                            <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
-                            <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
-                        </span>
-                    </h4>
-                    <div>
-                        <Link href="#" className="btn-primary">
-                            مشاهده همه
-                            <IconComponent size={16} name="chevron-left" />
-                        </Link>
-                    </div>
-                </div>
+                <BlogGenreHeaderComponent highlightedTitle={filter} link="#" />
                 <Swiper
                     spaceBetween={20}
                     initialSlide={activeIndexOfSlider}
