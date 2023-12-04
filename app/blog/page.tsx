@@ -5,6 +5,7 @@ import ThirdSectionComponent from "@/component/page/section/blog/thirdSectionCom
 import FourthSectionComponent from "@/component/page/section/blog/fourthSectionComponent";
 import FooterContactComponent from "@/component/footerContactComponent";
 import FifthSectionComponent from "@/component/page/section/blog/fifthSectionComponent";
+import SixthSectionComponent from "@/component/page/section/blog/sixthSectionComponent";
 
 // Creating and exporting blog page as defualt
 export default function BlogPage():ReactNode {
@@ -15,6 +16,7 @@ export default function BlogPage():ReactNode {
             <ThirdSectionComponent />
             <FourthSectionComponent />
             <FifthSectionComponent />
+            <SixthSectionComponent />
             <FooterContactComponent />
         </>
     );
