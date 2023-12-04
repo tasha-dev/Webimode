@@ -20,7 +20,7 @@ export default function FourthSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="mt-[200px] mb-[1000px] bg-darkerTheme">
+        <section className="mt-[200px] bg-darkerTheme">
             <div className="container px-[20px] py-[60px]">
                 <BlogGenreHeaderComponent link="#" theme="white" highlightedTitle="داغ ترین مقالات"/>
                 <main>

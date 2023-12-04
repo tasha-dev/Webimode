@@ -3,6 +3,8 @@ import {ReactNode} from "react";
 import StatefullFirstComponent from "@/component/page/section/blog/statefullFirstComponent";
 import ThirdSectionComponent from "@/component/page/section/blog/thirdSectionComponent";
 import FourthSectionComponent from "@/component/page/section/blog/fourthSectionComponent";
+import FooterContactComponent from "@/component/footerContactComponent";
+import FifthSectionComponent from "@/component/page/section/blog/fifthSectionComponent";
 
 // Creating and exporting blog page as defualt
 export default function BlogPage():ReactNode {
@@ -12,6 +14,8 @@ export default function BlogPage():ReactNode {
             <StatefullFirstComponent />
             <ThirdSectionComponent />
             <FourthSectionComponent />
+            <FifthSectionComponent />
+            <FooterContactComponent />
         </>
     );
 }

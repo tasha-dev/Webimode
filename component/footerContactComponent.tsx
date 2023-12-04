@@ -3,8 +3,8 @@ import IconComponent from "@/chunk/iconComponent";
 import Link from "next/link";
 import {ReactNode} from "react";
 
-// Creating and exporting eleventh section of home page as default
-export default function EleventhSectionComponent():ReactNode {
+// Creating and exporting Footer Contacut Component as default
+export default function FooterContactComponent():ReactNode {
     // Returning JSX
     return (
         <section className="lg:mt-[196px] mt-[156px]">

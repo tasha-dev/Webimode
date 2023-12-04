@@ -11,7 +11,7 @@ import SeventhSectionComponent from "@/component/page/section/home/seventhSectio
 import EighthSectionComponent from "@/component/page/section/home/eighthSectionComponent";
 import NinethSectionComponent from "@/component/page/section/home/ninethSectionComponent";
 import TenthSectionComponent from "@/component/page/section/home/tenthSectionCompoent";
-import EleventhSectionComponent from "@/component/page/section/home/eleventhSectionComponent";
+import FooterContactComponent from "@/component/footerContactComponent";
 
 // Creating and exporting Home Page as default
 export default function HomePage():ReactNode {
@@ -29,7 +29,7 @@ export default function HomePage():ReactNode {
             <EighthSectionComponent />
             <NinethSectionComponent />
             <TenthSectionComponent />
-            <EleventhSectionComponent />
+            <FooterContactComponent />
         </>
     );
 }

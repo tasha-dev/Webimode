@@ -10,7 +10,7 @@ interface propsType {
     prevBtnId?: string;
     nextBtnId?: string;
     hasButtons?: boolean;
-    theme: 'theme' | 'white';
+    theme?: 'theme' | 'white';
 }
 
 // Creating and exporting slider pagination as default
