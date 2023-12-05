@@ -7,9 +7,9 @@ export default function FifthSectionComponent():ReactNode {
     return (
         <section className="mt-[40px]">
             <div className="container p-[20px]">
-                <header className="grid grid-cols-2 gap-[20px] mb-[40px]">
-                    <div className="bg-lighterGrey border border-lightGrey rounded-[18px] h-[356px]" />
-                    <div className="bg-lighterGrey border border-lightGrey rounded-[18px] h-[356px]" />
+                <header className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] mb-[40px]">
+                    <div className="bg-lighterGrey border border-lightGrey rounded-[18px] lg:h-[356px] h-[156px]" />
+                    <div className="bg-lighterGrey border border-lightGrey rounded-[18px] lg:h-[356px] h-[156px]" />
                 </header>
                 <main>
                     <h3 className="title-single-blog">تکنولوژی هوش مصنوعی همه را شگفت زده کرد تا جهانیان متوجه آن شود</h3>
