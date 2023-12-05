@@ -4,7 +4,7 @@ import rocketImage from '@/public/img/mission/img-rocket.png';
 import Image from "next/image";
 import Link from "next/link";
 import IconComponent from "@/chunk/iconComponent";
-import LineMorphComponent from '@/chunk/lineMorphComponent';
+import LineMorphComponent from '@/chunk/animation/lineMorphComponent';
 
 // Creating and exporting mission component as default
 export default function MissionComponent():ReactNode {

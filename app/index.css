@@ -31,6 +31,8 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .paragraph-big {@apply lg:text-[28px] text-[13px] font-normal text-lightGrey lg:leading-[56px] leading-[26px] lg:mb-[58px] mb-[32px];}
 .paragraph {@apply lg:text-[20px] text-[13px] text-lightGrey lg:leading-[36px] leading-[28px];}
 .paragraph-small {@apply mb-[16px] text-white text-[13px] font-normal leading-[28px];}
+.paragraph-single-blog {@apply text-[15px] font-normal text-lightGrey leading-[28px];}
+.title-single-blog {@apply mb-[16px] font-normal text-[24px] text-dark;}
 .step-component {@apply lg:h-[2px] transition-all duration-500 relative lg:data-[active='true']:bg-theme lg:data-[active='false']:bg-lightGrey;}
 .step-icon-component {@apply w-[56px] transition-all duration-500 h-[56px] aspect-square justify-center items-center rounded-full data-[active='true']:bg-theme data-[active='false']:bg-white z-[3] border data-[active='false']:border-lightGrey data-[active='true']:border-theme data-[active='false']:text-lightGrey data-[active='true']:text-white;}
 .btn-light-border {@apply w-full p-[16px] flex lg:justify-center justify-between items-center gap-[12px] text-dark border-2 border-lightGrey bg-white transition-all duration-500 hover:bg-lightGrey rounded-[16px] text-[16px] font-normal mb-[32px];}

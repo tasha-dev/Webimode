@@ -6,7 +6,7 @@ import Image from 'next/image';
 import leftSideImage from '@/public/img/home/firstSection/left-side/img-left-side.png';
 import leftSideImageBG from '@/public/img/home/firstSection/left-side/img-left-side-bg.png';
 import bgZigzagImage from '@/public/img/home/firstSection/img-bg-zigzag.svg';
-import LineMorphComponent from "@/chunk/lineMorphComponent";
+import LineMorphComponent from "@/chunk/animation/lineMorphComponent";
 
 // Creating and exporting first section of home page as default
 export default function FirstSectionComponent():ReactNode {
