@@ -13,8 +13,15 @@ const config: Config = {
     ],
     theme: {
         extend: {
-            animation: {circleMotion: 'circleMotion 10s linear infinite'},
+            animation: {
+                circleMotion: 'circleMotion 10s linear infinite',
+                customRotate: 'customRotate 1.5s linear infinite'
+            },
             keyframes: {
+                customRotate: {
+                    '0%': {transform: 'rotate(0) scale(1.35)'},
+                    '100%': {transform: 'rotate(360deg) scale(1.35)'}
+                },
                 circleMotion: {
                     '0%, 100%' : {transform: 'translateX(0) translateY(0)'},
                     '40%' : {transform: 'translateX(10px) translateY(10px)'},
