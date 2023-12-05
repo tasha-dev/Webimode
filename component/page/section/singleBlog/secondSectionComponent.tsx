@@ -1,6 +1,6 @@
 // Importing part
 import {ReactNode} from "react";
-import BlogImage from '@/public/img/blog/img-random.png';
+import BlogImage from '@/public/img/blog/skewedRectangle/img-skewed-rectangle.svg';
 import Image from "next/image";
 import ReactagnlePulseComponent from '@/chunk/animation/rectanglePulseComponent';
 
@@ -8,10 +8,10 @@ import ReactagnlePulseComponent from '@/chunk/animation/rectanglePulseComponent'
 export default function SecondSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section>
+        <section className="mt-[40px]">
             <div className="container p-[20px]">
-                <header>
-                    <Image width={1000} height={1000} src={BlogImage.src} alt="تایتل بلاگ" />
+                <header className="mb-[100px] relative">
+                    <Image className="w-full object-cover" width={1000} height={1000} src={BlogImage.src} alt="تایتل بلاگ" />
                     <ReactagnlePulseComponent />
                 </header>
                 <main>

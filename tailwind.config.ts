@@ -15,7 +15,9 @@ const config: Config = {
         extend: {
             animation: {
                 circleMotion: 'circleMotion 10s linear infinite',
-                customRotate: 'customRotate 1.5s linear infinite'
+                customRotate: 'customRotate 1.5s linear infinite',
+                rectanglePusle: 'rectanglePusle 3s ease infinite',
+                rectanglePusleCentred: 'rectanglePusleCentred 3s ease infinite'
             },
             keyframes: {
                 customRotate: {
@@ -27,10 +29,35 @@ const config: Config = {
                     '40%' : {transform: 'translateX(10px) translateY(10px)'},
                     '60%' : {transform: 'translateX(20px) translateY(0)'},
                     '80%' : {transform: 'translateX(10px) translateY(20px)'}
+                },
+                rectanglePusle: {
+                    '0%': {
+                        transform: 'scale(0)',
+                        opacity: '0'
+                    }, '75%' : {
+                        transform: 'scale(1)',
+                        opacity: '100%'
+                    }, '100%' : {
+                        transform: 'scale(1)',
+                        opacity: '0%'
+                    }
+                }, 
+                rectanglePusleCentred : {
+                    '0%': {
+                        transform: 'translateX(-50%) translateY(-50%) scale(0)',
+                        opacity: '0'
+                    }, '90%' : {
+                        transform: 'translateX(-50%) translateY(-50%) scale(1)',
+                        opacity: '100%'
+                    }, '100%' : {
+                        transform: 'translateX(-50%) translateY(-50%) scale(1)',
+                        opacity: '0%'
+                    }
                 }
             },
             colors: {
                 dark: '#232323',
+                lightestDark: '#565656',
                 theme: '#49B486',
                 lightGrey: '#BBBBBB',
                 themeBlue: '#2B96CC',

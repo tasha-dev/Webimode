@@ -18,7 +18,7 @@ body > section:first-of-type {@apply lg:mt-[250px] mt-[68px];}
 .btn-primary {@apply flex justify-center transition-all duration-500 theme-shadow items-center gap-[16px] text-[18px] font-normal text-white px-[24px] py-[12px] bg-theme rounded-[14px] hover:bg-darkerTheme;}
 .btn-primary.no-py {@apply py-0;}
 :is(.btn-secondary, .btn-primary).text-big {@apply lg:text-[24px] text-[18px];}
-.btn-secondary {@apply flex justify-center transition-all duration-500 items-center gap-[24px] rounded-[18px] bg-transparent text-themeBlue border border-themeBlue hover:bg-themeBlue hover:text-white;}
+.btn-secondary {@apply flex justify-center transition-all duration-500 items-center gap-[24px] rounded-[18px] bg-transparent text-themeBlue border border-themeBlue hover:bg-themeBlue hover:text-white py-[12px] px-[24px];}
 .sign {@apply px-[12px] py-[8px] bg-theme theme-shadow lg:mb-[10px] mb-[20px] inline-block lg:text-[15px] text-[10px] font-normal text-white rounded-l-[12px] rounded-tr-[12px];}
 .sign-mb-0 {@apply px-[12px] py-[8px] bg-theme theme-shadow inline-block lg:text-[15px] text-[10px] font-normal text-white rounded-l-[12px] rounded-tr-[12px];}
 .sign-white {@apply px-[12px] py-[8px] bg-white theme-shadow-dark text-theme lg:mb-[10px] mb-[20px] inline-block lg:text-[15px] text-[10px] font-normal rounded-l-[12px] rounded-tr-[12px];}
@@ -40,3 +40,7 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .no-scroll::-webkit-scrollbar {@apply hidden;}
 .blog-genre-btn {@apply p-[8px] rounded-[12px] border border-theme text-[16px] font-normal data-[active='false']:bg-white  data-[active='true']:bg-theme data-[active='true']:text-white data-[active='false']:text-theme data-[active='false']:hover:bg-lighterGrey/50 transition-all duration-500;}
 .blog-cta-btn {@apply transition-all duration-500 w-[74px] h-[74px] shrink-0 bg-lighterGrey text-lightGrey shadow-custom rounded-full flex items-center justify-center hover:bg-theme hover:text-white relative after:content-[''] after:opacity-0 after:w-full after:h-full after:absolute lg:after:block after:hidden after:top-0 after:left-0 after:rounded-full after:bg-[url(../public/img/sliderPagination/img-ring.svg)] after:bg-cover after:bg-center after:rotate-90 after:origin-center after:transition-all after:duration-500 hover:after:opacity-100 after:animate-customRotate;}
+.animation-delay-1 {animation-delay: 1s;}
+.animation-delay-2 {animation-delay: 2s;}
+.animation-delay-3 {animation-delay: 3s;}
+.animation-delay-4 {animation-delay: 4s;}
