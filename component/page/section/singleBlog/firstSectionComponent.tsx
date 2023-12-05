@@ -22,32 +22,34 @@ export default function FirstSectionComponent(): ReactNode {
                         <span className="text-theme">دست مکانیکی که میتواند تمام دنیا و جهانیان را متحیر کند و جایگزین انسان شود !!!</span>
                     </p>
                 </header>
-                <main className="grid grid-cols-2 gap-[80px] mb-[20px]">
-                    <div>
+                <main className="lg:grid grid-cols-2 block gap-[80px] mb-[20px]">
+                    <div className="lg:mb-0 mb-[50px]">
                         <h1 className="mb-[16px] font-normal text-[24px] text-dark">تکنولوژی هوش مصنوعی همه را شگفت زده کرد تا جهانیان متوجه آن شود</h1>
                         <p className="text-[15px] font-normal text-lightGrey leading-[28px]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است .لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است .</p>
                     </div>
-                    <div>
-                        <div className="flex mb-[62px]">
-                            <button className="blog-cta-btn ml-[43px]">
-                                <IconComponent name="file" size={32} />
+                    <div className="w-full flex lg:flex-col flex-col-reverse lg:gap-[62px] gap-[20px]">
+                        <div className="flex lg:gap-0 gap-[24px] w-full lg:overflow-hidden overflow-auto">
+                            <button className="blog-cta-btn lg:ml-[43px]">
+                                <span className="lg:block hidden"><IconComponent name="file" size={32} /></span>
+                                <span className="lg:hidden block"><IconComponent name="file" size={24} /></span>
                             </button>
                             <button className="blog-cta-btn ml-[24px]">
-                                <IconComponent name="share" size={32} />
+                                <span className="lg:block hidden"><IconComponent name="share" size={32} /></span>
+                                <span className="lg:hidden block"><IconComponent name="share" size={24} /></span>
                             </button>
-                            <div className="flex items-center justify-center ml-[24px] shrink-0">
+                            <div className="lg:flex hidden items-center justify-center ml-[24px] shrink-0">
                                 <div className="h-[38px] rounded-[50px] bg-lightGrey w-[3px]" />
                             </div>
-                            <div className="overflow-auto w-full flex items-center">
-                                <ul className="flex items-center gap-[20px]">
+                            <div className="lg:overflow-auto w-full flex items-center">
+                                <ul className="flex items-center gap-x-[20px] gap-y-[25px]">
                                     <li><Link className="px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]" href='#'>تکنولوژی</Link></li>
                                     <li><Link className="px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]" href='#'>طراحی و خلاقیت</Link></li>
                                     <li><Link className="px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]" href='#'>توسعه وب</Link></li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="flex gap-[18px]">
-                            <div className="flex shadow-custom bg-theme rounded-[16px] relative shrink-0">
+                        <div className="flex lg:flex-row flex-col gap-[18px] lg:pr-0 pr-[36px]">
+                            <div className="flex lg:flex-row flex-col shadow-custom bg-theme rounded-[16px] relative lg:shrink-0 shrink lg:w-auto w-full">
                                 <div className="absolute top-0 right-0 translate-x-[50%] -translate-y-[50%]">
                                     <Image className="w-[68px] h-[68px] rounded-[16px] shadow-lg " width={1000} height={1000} alt="عکس پروفایل نویسنده بلاگ" src={EhsanImage.src} />
                                     <div className="absolute top-0 left-0 w-full h-full rounded-[16px] scale-[1.25] border border-theme" />
@@ -65,7 +67,7 @@ export default function FirstSectionComponent(): ReactNode {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex items-center justify-center">
+                            <div className="lg:flex hidden items-center justify-center">
                                 <div className="h-[38px] rounded-[50px] bg-lightGrey w-[3px] shrink-0" />
                             </div>
                             <div className="overflow-auto w-full flex items-center">
@@ -80,7 +82,7 @@ export default function FirstSectionComponent(): ReactNode {
                         </div>
                     </div>
                 </main>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center lg:justify-center justify-end">
                     <span className="text-dark -rotate-45"><IconComponent name="arrow-curve" size={50} /></span>
                 </div>
             </div>
