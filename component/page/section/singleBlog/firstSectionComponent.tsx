@@ -28,7 +28,7 @@ export default function FirstSectionComponent(): ReactNode {
                         <p className="text-[15px] font-normal text-lightGrey leading-[28px]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است .لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است .</p>
                     </div>
                     <div className="w-full flex lg:flex-col flex-col-reverse lg:gap-[62px] gap-[20px]">
-                        <div className="flex lg:gap-0 gap-[24px] w-full lg:overflow-hidden overflow-auto">
+                        <div className="flex lg:gap-0 gap-[24px] w-full lg:overflow-visible overflow-auto lg:pb-0 pb-[15px]">
                             <button className="blog-cta-btn lg:ml-[43px]">
                                 <span className="lg:block hidden"><IconComponent name="file" size={32} /></span>
                                 <span className="lg:hidden block"><IconComponent name="file" size={24} /></span>
