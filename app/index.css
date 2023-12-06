@@ -44,3 +44,4 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .animation-delay-2 {animation-delay: 2s;}
 .animation-delay-3 {animation-delay: 3s;}
 .animation-delay-4 {animation-delay: 4s;}
+.blog-tag {@apply px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]}

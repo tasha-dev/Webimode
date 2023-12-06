@@ -42,9 +42,9 @@ export default function FirstSectionComponent(): ReactNode {
                             </div>
                             <div className="lg:overflow-auto w-full flex items-center">
                                 <ul className="flex items-center gap-x-[20px] gap-y-[25px]">
-                                    <li><Link className="px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]" href='#'>تکنولوژی</Link></li>
-                                    <li><Link className="px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]" href='#'>طراحی و خلاقیت</Link></li>
-                                    <li><Link className="px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]" href='#'>توسعه وب</Link></li>
+                                    <li><Link className="blog-tag" href='#'>تکنولوژی</Link></li>
+                                    <li><Link className="blog-tag" href='#'>طراحی و خلاقیت</Link></li>
+                                    <li><Link className="blog-tag" href='#'>توسعه وب</Link></li>
                                 </ul>
                             </div>
                         </div>

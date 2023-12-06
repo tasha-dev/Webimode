@@ -6,7 +6,7 @@ import {Dispatch, ReactNode, useState} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 import BlogImage from '@/public/img/blog/img-random.png';
 import {Navigation} from "swiper/modules";
-import BlogComponent from "@/chunk/page/blog/firstSection/secondSection/blogComponent";
+import BlogComponent from "@/chunk/page/blog/secondSection/blogComponent";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import BlogGenreHeaderComponent from "@/chunk/page/blog/blogGenreHeaderComponent";
 import 'swiper/css';
