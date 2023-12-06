@@ -64,6 +64,7 @@ const config: Config = {
                 lightTheme: '#5DE3AA',
                 darkerTheme: '#123828',
                 lighterGrey: '#e3e3e3',
+                lightestGrey: '#F6F6F6',
                 themePurple: '#9288F8',
                 frogGreen: '#86D028',
                 darkFrogGreen: '#1EBB10',
