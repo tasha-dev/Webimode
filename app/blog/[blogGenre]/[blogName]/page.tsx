@@ -6,6 +6,7 @@ import ThirdSectionComponent from "@/component/page/section/singleBlog/thirdSect
 import FourthSectionComponent from "@/component/page/section/singleBlog/fourthSectionComponent";
 import FifthSectionComponent from "@/component/page/section/singleBlog/fifthSectionComponent";
 import SixthSectionComponent from "@/component/page/section/singleBlog/sixthSectionComponent";
+import SeventhSectionComponent from "@/component/page/section/singleBlog/seventhSectionComponent";
 
 // Creating and exporting blog (Single) page as default
 export default function SingleBlogPage():ReactNode {
@@ -18,6 +19,7 @@ export default function SingleBlogPage():ReactNode {
             <FourthSectionComponent />
             <FifthSectionComponent />
             <SixthSectionComponent />
+            <SeventhSectionComponent />
         </>
     );
 }
