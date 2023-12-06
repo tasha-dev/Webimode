@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 
 // Defining type of props
 interface propsType {
-    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'; 
+    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'; 
     size: number;
 }
 
@@ -336,6 +336,12 @@ export default function IconComponent({size, name}:propsType):ReactNode {
         return (
             <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.6746 2.75827C18.4076 1.70392 16.9359 0.923427 15.3524 0.465964C13.7688 0.00850183 12.1077 -0.116013 10.4736 0.100265C7.45065 0.492983 4.69047 2.02144 2.75351 4.37527C0.816545 6.72911 -0.152009 9.73188 0.0445118 12.7739C0.241033 15.8159 1.5879 18.6691 3.81162 20.7541C6.03535 22.8392 8.96925 23.9998 12.0176 24.0003H18.9996C20.3252 23.9987 21.596 23.4714 22.5334 22.534C23.4707 21.5967 23.998 20.3259 23.9996 19.0003V11.3093V11.2463C23.8937 9.61171 23.4556 8.01592 22.712 6.55648C21.9683 5.09704 20.9348 3.80462 19.6746 2.75827ZM7.99959 7.00027H11.9996C12.2648 7.00027 12.5192 7.10562 12.7067 7.29316C12.8942 7.4807 12.9996 7.73505 12.9996 8.00027C12.9996 8.26548 12.8942 8.51984 12.7067 8.70737C12.5192 8.89491 12.2648 9.00027 11.9996 9.00027H7.99959C7.73437 9.00027 7.48002 8.89491 7.29248 8.70737C7.10495 8.51984 6.99959 8.26548 6.99959 8.00027C6.99959 7.73505 7.10495 7.4807 7.29248 7.29316C7.48002 7.10562 7.73437 7.00027 7.99959 7.00027ZM15.9996 17.0003H7.99959C7.73437 17.0003 7.48002 16.8949 7.29248 16.7074C7.10495 16.5198 6.99959 16.2655 6.99959 16.0003C6.99959 15.7351 7.10495 15.4807 7.29248 15.2932C7.48002 15.1056 7.73437 15.0003 7.99959 15.0003H15.9996C16.2648 15.0003 16.5192 15.1056 16.7067 15.2932C16.8942 15.4807 16.9996 15.7351 16.9996 16.0003C16.9996 16.2655 16.8942 16.5198 16.7067 16.7074C16.5192 16.8949 16.2648 17.0003 15.9996 17.0003ZM15.9996 13.0003H7.99959C7.73437 13.0003 7.48002 12.8949 7.29248 12.7074C7.10495 12.5198 6.99959 12.2655 6.99959 12.0003C6.99959 11.7351 7.10495 11.4807 7.29248 11.2932C7.48002 11.1056 7.73437 11.0003 7.99959 11.0003H15.9996C16.2648 11.0003 16.5192 11.1056 16.7067 11.2932C16.8942 11.4807 16.9996 11.7351 16.9996 12.0003C16.9996 12.2655 16.8942 12.5198 16.7067 12.7074C16.5192 12.8949 16.2648 13.0003 15.9996 13.0003Z" fill="currentColor"/>
+            </svg>
+        );
+    } else if (name === 'play') {
+        return (
+            <svg width={size} height={size} viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.992 8.03902L11.454 1.04501C10.709 0.4995 9.82755 0.170927 8.90727 0.0957177C7.98699 0.0205083 7.06385 0.2016 6.24019 0.618919C5.41653 1.03624 4.72451 1.67348 4.24085 2.46002C3.75718 3.24656 3.50076 4.15167 3.50001 5.07502V19.07C3.49857 19.9943 3.75365 20.9008 4.23686 21.6887C4.72006 22.4766 5.41243 23.1149 6.2369 23.5326C7.06137 23.9503 7.98559 24.1311 8.90668 24.0547C9.82777 23.9783 10.7096 23.6478 11.454 23.1L20.992 16.106C21.6249 15.6416 22.1395 15.0346 22.4942 14.3343C22.8489 13.634 23.0338 12.86 23.0338 12.075C23.0338 11.29 22.8489 10.516 22.4942 9.81571C22.1395 9.11541 21.6249 8.50846 20.992 8.04402V8.03902Z" fill="currentColor"/>
             </svg>
         );
     }
