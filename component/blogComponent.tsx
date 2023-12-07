@@ -3,6 +3,7 @@ import {ReactNode} from "react";
 import Link from "next/link";
 import IconComponent from "@/chunk/iconComponent";
 import Image from 'next/image';
+import BgImage from '@/public/img/blog/img-bg.png';
 
 // Defining type of props
 interface propsType {
@@ -23,17 +24,7 @@ export default function BlogComponent({children, date, genre, img, title, link, 
             <Link href={link} className="block group">
                 <Image className="w-full h-full object-cover block mb-[16px] rounded-[20px]" src={img} width={1000} height={1000} alt={title} />
                 <div className="relative">
-                    <svg className="w-full h-full absolute top-0 left-0 z-[-1]"  xmlns="http://www.w3.org/2000/svg">
-                        <rect className="stroke-[2px] stroke-[url(#paint0_linear_2010_1176)] group-hover:stroke-[url(#paint0_linear_2010_1176_2)]" width={'100%'} height={'100%'} fill="none" rx={32} />
-                        <linearGradient id="paint0_linear_2010_1176" x1="0.5" y1="0.359375" x2="291.408" y2="438.638" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#e3e3e3" />
-                            <stop offset="1" stop-color="#e3e3e3" stop-opacity="0" />
-                        </linearGradient>
-                        <linearGradient id="paint0_linear_2010_1176_2" x1="0.5" y1="0.359375" x2="291.408" y2="438.638" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#49B486" />
-                            <stop offset="1" stop-color="#49B486" stop-opacity="0" />
-                        </linearGradient>
-                    </svg>
+                    <Image width={1000} height={1000} alt="" src={BgImage.src} className="absolute top-0 left-0 w-full h-full z-[-1] transition-all duration-500 grayscale group-hover:grayscale-0" />
                     <div className="w-full rounded-[32px] p-[20px]">
                         <div className="flex flex-wrap gap-[10px] mb-[9px] items-center">
                             <span data-theme={theme} className="text-[13px] font-normal data-[theme='theme']:text-lightGrey data-[theme='white']:text-lighterGrey">{genre}</span>
