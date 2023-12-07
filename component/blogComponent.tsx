@@ -19,15 +19,19 @@ interface propsType {
 export default function BlogComponent({children, date, genre, img, title, link, theme = 'theme'}:propsType):ReactNode {
     // Returning JSX
     return (
-        <article className="">
+        <article>
             <Link href={link} className="block group">
                 <Image className="w-full h-full object-cover block mb-[16px] rounded-[20px]" src={img} width={1000} height={1000} alt={title} />
                 <div className="relative">
-                    <svg data-theme={theme} className="w-full h-full absolute top-0 text-lighterGrey left-0 z-[-1]"  xmlns="http://www.w3.org/2000/svg">
-                        <rect width={'100%'} height={'100%'} fill="none" stroke="url(#paint0_linear_2010_1176)" strokeWidth={2} rx={32} />
+                    <svg className="w-full h-full absolute top-0 left-0 z-[-1]"  xmlns="http://www.w3.org/2000/svg">
+                        <rect className="stroke-[2px] stroke-[url(#paint0_linear_2010_1176)] group-hover:stroke-[url(#paint0_linear_2010_1176_2)]" width={'100%'} height={'100%'} fill="none" rx={32} />
                         <linearGradient id="paint0_linear_2010_1176" x1="0.5" y1="0.359375" x2="291.408" y2="438.638" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="currentColor" />
-                            <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+                            <stop stop-color="#e3e3e3" />
+                            <stop offset="1" stop-color="#e3e3e3" stop-opacity="0" />
+                        </linearGradient>
+                        <linearGradient id="paint0_linear_2010_1176_2" x1="0.5" y1="0.359375" x2="291.408" y2="438.638" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#49B486" />
+                            <stop offset="1" stop-color="#49B486" stop-opacity="0" />
                         </linearGradient>
                     </svg>
                     <div className="w-full rounded-[32px] p-[20px]">
@@ -43,7 +47,7 @@ export default function BlogComponent({children, date, genre, img, title, link, 
                         <p data-theme={theme} className="data-[theme='theme']:text-lightGrey data-[theme='white']:text-lighterGrey font-normal lg:text-[15px] text-[13px] line-clamp-5 leading-[28px] lg:mb-[32px] mb-[24px]">{children}</p>
                         <button 
                             data-theme={theme}
-                            className={'transition-all data-[theme="theme"]:shadow-custom flex items-center w-full justify-center gap-[16px] lg:text-[18px] text-[13px] font-normal p-[12px] rounded-[14px] duration-200 text-white data-[theme="white"]:border data-[theme="white"]:border-white data-[theme="theme"]:bg-theme data-[theme="white"]:bg-transparent data-[theme="theme"]:group-hover:bg-darkerTheme data-[theme="white"]:group-hover:text-white/50 data-[theme="white"]:group-hover:border-white/50'}
+                            className={'transition-all shadow-custom-theme flex items-center w-full justify-center gap-[16px] lg:text-[18px] text-[13px] font-normal p-[12px] rounded-[14px] duration-200 text-white data-[theme="white"]:border data-[theme="white"]:border-white data-[theme="theme"]:bg-theme data-[theme="white"]:bg-transparent data-[theme="theme"]:group-hover:bg-darkerTheme data-[theme="white"]:group-hover:text-white/50 data-[theme="white"]:group-hover:border-white/50'}
                         >
                             مشاهده مقاله    
                             <IconComponent size={16} name="chevron-left" />

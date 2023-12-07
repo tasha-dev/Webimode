@@ -11,24 +11,17 @@ import BottomImage from '@/public/img/img-video-player-bottom.svg';
 interface propsType {
     src: string;
     cover?: string;
-    className?: string;
     title?: string
 }
 
 // Creating and exporting video player componet as default
-export default function VideoPlayerComponent({cover = '', src, className = '', title = ''}:propsType):ReactNode {
+export default function VideoPlayerComponent({cover = '', src, title = ''}:propsType):ReactNode {
     // Defining states of component
     const [isLoading, setLoading]:[boolean, Dispatch<boolean>] = useState(true);
     const [isPlaying, setPlaying]:[boolean, Dispatch<boolean>] = useState(false);
 
     // Defining refrence to video element
     const videoElementRef:MutableRefObject<any> = useRef();
-
-    // Using useEffect hook to set if video is loaded
-    useEffect(() => {
-        const videoElement:HTMLVideoElement = videoElementRef.current;
-        videoElement.addEventListener('load', () => setLoading(false))
-    }, [])
 
     // Using useEffect to play video
     useEffect(() => {
@@ -39,7 +32,6 @@ export default function VideoPlayerComponent({cover = '', src, className = '', t
             : videoElement.pause()
     }, [isPlaying])
 
-
     // Returning JSX
     return (
         <>
@@ -48,9 +40,9 @@ export default function VideoPlayerComponent({cover = '', src, className = '', t
                 className="relative lg:h-[325px] h-[170px] rounded-[48px] overflow-hidden cursor-pointer lg:mx-[31px] mx-[16px]" 
                 data-loading={isLoading}
                 data-playing={isPlaying}
-                onClick={() => {if (isLoading) {(isPlaying) ? setPlaying(false) : setPlaying(true)}}}
+                onClick={() => {if (!isLoading) {(isPlaying) ? setPlaying(false) : setPlaying(true)}}}
             >
-                <video onCanPlay={() => setPlaying(false)} className="transition-all duration-500 h-[325px] w-full object-cover" src={src} ref={videoElementRef}>
+                <video className="transition-all duration-500 h-[325px] w-full object-cover" src={src} ref={videoElementRef} onLoadedData={() => setLoading(false)}>
                     <source src={src} srcSet={src} />
                 </video>
                 <div data-playing={isPlaying} className="absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-500 bg-dark data-[playing='false']:opacity-100 data-[playing='false']:visible data-[playing='true']:opacity-0 data-[playing='true']:invisible">
