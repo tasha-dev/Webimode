@@ -41,7 +41,7 @@ export default function SixthSectionComponenet():ReactNode {
                             <div className="p-[20px] text-dark font-normal truncate block">7. امکان استفاده از خدمات دیجیتال مارکتینگ و تولید محتوا </div>
                             <div className="p-[20px] text-dark font-normal truncate block">8. عدم نیاز به پرداخت به مجری قبل از تحویل قسمتی از کار</div>
                         </div>
-                        <div className="col-span-1 bg-theme rounded-[32px] p-[10px]">    
+                        <div className="col-span-1 bg-theme shadow-custom rounded-[32px] p-[10px]">    
                             <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
                             <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
                             <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
