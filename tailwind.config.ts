@@ -73,7 +73,8 @@ const config: Config = {
                 pink: '#FF5492',
                 lightGreen: '#93AF40',
                 darkestTheme: '#001F18',
-                LighterDarkerTheme: '#00896B'
+                LighterDarkerTheme: '#00896B',
+                alert: '#FF7089'
             }
         }
     },

@@ -5,6 +5,7 @@ import SecondSectionComponent from "@/component/page/section/create/secondSectio
 import ThirdSectionComponent from "@/component/page/section/create/thirdSection/thirdSectionComponent";
 import FourthSectionComponent from "@/component/page/section/create/fourthSectionComponent";
 import FifthSectionComponent from "@/component/page/section/create/fifthSectionComponent";
+import SixthSectionComponenet from "@/component/page/section/create/sixthSectionComponent";
 
 // Creating and exporting create page as default
 export default function CreateBlogPage():ReactNode {
@@ -16,6 +17,7 @@ export default function CreateBlogPage():ReactNode {
             <ThirdSectionComponent />
             <FourthSectionComponent />
             <FifthSectionComponent />
+            <SixthSectionComponenet />
         </>
     );
 }
