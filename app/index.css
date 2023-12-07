@@ -6,6 +6,9 @@
 /*Custom styles*/
 body > section:first-of-type {@apply lg:mt-[250px] mt-[68px];}
 .shadow-custom {box-shadow: -2px -2px 12px 0px rgba(0, 0, 0, 0.04) inset, 2px 2px 30px 0px rgba(255, 255, 255, 0.36) inset;}
+.shadow-custom-outer {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
+.shadow-custom-outer-progress-done-in-progress:is([data-progress="done"], [data-progress="in-progress"]) {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
+.shadow-custom-outer-sellected[data-selected="true"] {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
 .shadow-custom-theme[data-theme='theme'] {@apply shadow-custom;}
 .swiper.overflow-visible {overflow: visible !important;}
 .container {@apply max-w-[1440px] mx-auto;}
@@ -46,3 +49,6 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .animation-delay-3 {animation-delay: 3s;}
 .animation-delay-4 {animation-delay: 4s;}
 .blog-tag {@apply px-[12px] py-[6px] whitespace-nowrap transition-all duration-500 bg-white border border-lightGrey text-lightGrey hover:bg-lighterGrey hover:text-lightGrey rounded-[8px]}
+.notebook-divider {@apply w-[6px] h-[60px] bg-gradient-to-b from-darkerTheme to-theme rounded-[20px] relative;}
+.notebook-divider::before {@apply w-[12px] h-[12px] bg-white rounded-full absolute top-0 left-0 -translate-x-[25%] -translate-y-[25%] z-[-1] content-[''];}
+.notebook-divider::after {@apply w-[12px] h-[12px] bg-white rounded-full absolute bottom-0 left-0 -translate-x-[25%] translate-y-[25%] z-[-1] content-[''];}

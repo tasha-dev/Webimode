@@ -72,7 +72,8 @@ const config: Config = {
                 orange: '#FD7123',
                 pink: '#FF5492',
                 lightGreen: '#93AF40',
-                darkestTheme: '#001F18'
+                darkestTheme: '#001F18',
+                LighterDarkerTheme: '#00896B'
             }
         }
     },
