@@ -16,7 +16,7 @@ interface propsType {
 export default function StepComponent({icon, link, progress, title, index}:propsType):ReactNode {
     // Returning JSX
     return (
-        <Link data-progress={progress} href={link} className="block py-[12px] pl-[12px] pr-[45px] relative border data-[progress='in-progress']:border-theme data-[progress='done']:border-theme data-[progress='waiting']:border-LighterDarkerTheme rounded-[24px] bg-darkerTheme">
+        <Link data-progress={progress} href={link} className="block lg:w-auto w-[280px] py-[12px] pl-[12px] pr-[45px] relative border data-[progress='in-progress']:border-theme data-[progress='done']:border-theme data-[progress='waiting']:border-LighterDarkerTheme rounded-[24px] bg-darkerTheme">
             <div data-progress={progress} className="absolute top-0 rounded-[16px] right-0 -translate-y-[50%] translate-x-[50%] w-[56px] h-[56px] shadow-custom-outer-progress-done-in-progress data-[progress='waiting']:shadow-lg data-[progress='in-progress']:text-white data-[progress='done']:text-white data-[progress='waiting']:text-lightGrey data-[progress='in-progress']:bg-theme data-[progress='done']:bg-theme data-[progress='waiting']:bg-LighterDarkerTheme flex items-center justify-center">
                 <IconComponent size={32} name={icon} />
             </div>
