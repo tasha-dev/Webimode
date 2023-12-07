@@ -9,6 +9,7 @@ body > section:first-of-type {@apply lg:mt-[250px] mt-[68px];}
 .shadow-custom-outer {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
 .shadow-custom-outer-progress-done-in-progress:is([data-progress="done"], [data-progress="in-progress"]) {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
 .shadow-custom-outer-sellected[data-selected="true"] {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
+.shadow-custom-outer-active[data-active="true"] {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
 .shadow-custom-theme[data-theme='theme'] {@apply shadow-custom;}
 .swiper.overflow-visible {overflow: visible !important;}
 .container {@apply max-w-[1440px] mx-auto;}

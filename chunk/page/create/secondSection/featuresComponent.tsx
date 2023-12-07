@@ -16,7 +16,8 @@ export default function FeaturesComponent({icon, link, children, title}:propsTyp
     // Returning JSX
     return (
         <Link href={link} className="group relative h-[182px] block grayscale transition-all duration-500 hover:grayscale-0 bg-[url(../public/img/create/secondSection/img-features-bg-theme.png)] lg:bg-cover bg-contain bg-no-repeat">
-            <div className="z-[-1] absolute right-0 top-0 lg:w-[50px] w-[75%] h-full bg-gradient-to-l from-white via-white to to-transparent" />
+            <div className="z-[-1] absolute right-0 top-0 lg:w-[50px] w-[100%] h-full bg-gradient-to-l from-white via-white to to-transparent" />
+            <div className="z-[-1] absolute left-0 bottom-0 w-full lg:h-[50px] h-[50%] bg-gradient-to-t from-white via-white to to-transparent" />
             <div className="p-[20px]">
                 <div className="h-[30px] mb-[8px] w-[30px] flex items-center justify-center rounded-[8px] transition-all duration-500 bg-lighterGrey text-lightGrey group-hover:bg-theme group-hover:text-white shadow-custom">
                     <IconComponent size={20} name={icon} />
