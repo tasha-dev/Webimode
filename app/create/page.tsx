@@ -8,6 +8,7 @@ import FifthSectionComponent from "@/component/page/section/create/fifthSectionC
 import SixthSectionComponenet from "@/component/page/section/create/sixthSectionComponent";
 import SeventhSectionComponent from "@/component/page/section/create/seventhSectionComponent";
 import EstimateComponent from "@/component/estimateComponent";
+import EightSectionComponent from "@/component/page/section/create/eighthSectionComponent";
 
 // Creating and exporting create page as default
 export default function CreateBlogPage():ReactNode {
@@ -22,6 +23,7 @@ export default function CreateBlogPage():ReactNode {
             <SixthSectionComponenet />
             <SeventhSectionComponent />
             <EstimateComponent />
+            <EightSectionComponent />
         </>
     );
 }
