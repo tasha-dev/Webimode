@@ -11,7 +11,7 @@ import ProjectComponent from "@/component/projectComponent";
 import ProjectImage from '@/public/img/blog/img-random.png';
 import 'swiper/css';
 
-// Creating and exporting eighth section of work samples page as defaultt
+// Creating and exporting tenth section of work samples page as defaultt
 export default function EighthSectionComponent():ReactNode {
     // Defining states of component
     const [activeSliderIndex, setActiveSliderIndex]:[number, Dispatch<number>] = useState(0);
