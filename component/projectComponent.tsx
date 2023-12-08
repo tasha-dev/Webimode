@@ -14,10 +14,11 @@ interface propsType {
     link: string;
     children: string;
     theme?: 'white' | 'theme';
+    ratingTheme?: 'white' | 'theme' | 'blue' | 'red';
 }
 
 // Creating and exporting project component as default
-export default function ProjectComponent({img, link, maxPrice, minPrice, rating, title, children, theme = 'white'}:propsType):ReactNode {
+export default function ProjectComponent({img, link, maxPrice, minPrice, rating, title, children, theme = 'white', ratingTheme = theme}:propsType):ReactNode {
     // Returning JSX
     return (
         <Link href={link} className="group block">
@@ -25,7 +26,7 @@ export default function ProjectComponent({img, link, maxPrice, minPrice, rating,
             <div>
                 <div className="flex items-center justify-between mb-[16px] gap-[10px] w-full">
                     <span data-theme={theme} className="text-[20px] block truncate font-normal w-full data-[theme='white']:text-white data-[theme='theme']:text-dark">{title}</span>
-                    <div data-theme={theme} className="shadow-lg border data-[theme='white']:border-theme data-[theme='theme']:border-theme shrink-0 bg-white flex items-center text-theme gap-[4px] rounded-[8px] px-[8px] py-[6px]">
+                    <div data-theme={theme} data-rating-theme={ratingTheme} className="shadow-lg border data-[theme='white']:border-white data-[theme='theme']:border-theme shrink-0 data-[rating-theme='white']:text-theme data-[rating-theme='theme']:text-theme data-[rating-theme='blue']:text-darketThemeBlue data-[rating-theme='red']:text-themeRed bg-white flex items-center data-[] gap-[4px] rounded-[8px] px-[8px] py-[6px]">
                         <span className="font-bold text-[13px] block">{rating.toFixed(1)}</span>
                         <IconComponent name="rounded-star" size={16} />
                     </div>

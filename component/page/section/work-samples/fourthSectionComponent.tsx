@@ -36,14 +36,14 @@ export default function FourthSectionComponent():ReactNode {
                     <div className="lg:flex hidden items-center gap-[24px]">
                         <button 
                             data-active={(activeSliderIndex !== 0)} 
-                            id="create-5-section-slider-prev-btn" 
+                            id="work-4-section-slider-prev-btn" 
                             className="slider-prev-next-btn"
                         >
                             <IconComponent name="chevron-right" size={16} />
                         </button>
                         <button 
                             data-active={(activeSliderIndex !== 16)} 
-                            id="create-5-section-slider-next-btn" 
+                            id="work-4-section-slider-next-btn" 
                             className="slider-prev-next-btn"
                         >
                             <IconComponent name="chevron-left" size={16} />
@@ -60,8 +60,8 @@ export default function FourthSectionComponent():ReactNode {
                             slidesPerGroup={4}
                             slidesPerView={4}
                             navigation={{
-                                prevEl: '#create-5-section-slider-prev-btn',
-                                nextEl: '#create-5-section-slider-next-btn'
+                                prevEl: '#work-4-section-slider-prev-btn',
+                                nextEl: '#work-4-section-slider-next-btn'
                             }}
                         >
                             <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" minPrice={2450000} maxPrice={7100000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
@@ -96,8 +96,8 @@ export default function FourthSectionComponent():ReactNode {
                             slidesPerGroup={1}
                             slidesPerView={1}
                             navigation={{
-                                prevEl: '#create-5-section-slider-prev-btn-mq',
-                                nextEl: '#create-5-section-slider-next-btn-mq'
+                                prevEl: '#work-4-section-slider-prev-btn-mq',
+                                nextEl: '#work-4-section-slider-next-btn-mq'
                             }}
                         >
                             <SwiperSlide><ProjectComponent img={ProjectImage.src} link="#" minPrice={2450000} maxPrice={7100000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
@@ -108,9 +108,8 @@ export default function FourthSectionComponent():ReactNode {
                         </Swiper>
                         <SliderPaginationComponent 
                             hasButtons 
-                            prevBtnId="create-5-section-slider-prev-btn-mq" 
-                            nextBtnId="create-5-section-slider-next-btn-mq" 
-                            theme="white" 
+                            prevBtnId="work-4-section-slider-prev-btn-mq" 
+                            nextBtnId="work-4-section-slider-next-btn-mq" 
                             activeIndex={activeSliderIndexMQ} 
                             slidesPerView={1} 
                             slidesCount={5} 
