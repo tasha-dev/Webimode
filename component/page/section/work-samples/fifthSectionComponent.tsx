@@ -24,7 +24,7 @@ export default function FifthSectionComponent():ReactNode {
                 <header className="flex items-center lg:justify-between justify-center gap-[10px] flex-wrap lg:mb-[44px] mb-[24px]">
                     <h4 className="lg:text-[36px] text-[20px] font-normal text-white lg:text-start text-center">
                         <span className="font-semibold ml-[1ch] inline-block relative">
-                            پرطرفدار ترین   
+                            خوش قیمت ترین
                             <span className={'text-white absolute right-full bottom-full lg:flex hidden flex-col w-[30px]'}>
                                 <span className={'self-start'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>

@@ -15,7 +15,7 @@ export default function WorkSamplesPage():ReactNode {
             <ThirdSectionComponent />
             <FourthSectionComponent />
             <FifthSectionComponent />
-            <SixthSectionComponenet
+            <SixthSectionComponenet />
         </>
     );
 }
