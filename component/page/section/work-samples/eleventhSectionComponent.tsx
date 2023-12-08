@@ -19,9 +19,9 @@ export default function EleventhSectionComponent(): ReactNode {
 
     // Returning JSX
     return (
-        <section className="mt-[96px]">
-            <div className="container p-[20px]">
-                <header className="xl:block hidden mb-[97px]">
+        <section className="lg:mt-[96px] mt-[46px]">
+            <div className="container">
+                <header className="xl:block hidden mb-[97px] p-[20px]">
                     <div className="flex items-center">
                         <div className="w-full h-[2px] bg-gradient-to-l from-transparent to-lightGrey" />
                         <div className="w-[56px] h-[56px] aspect-square text-lightGrey flex items-center justify-center rounded-full bg-white border border-lightGrey">
@@ -61,9 +61,6 @@ export default function EleventhSectionComponent(): ReactNode {
                         </form>
                     </div>
                     <div className="container px-[20px] py-[68px] relative">
-                        <div className="flex items-center justify-center w-[56px] h-[56px] bg-lightestGrey border-[3px] border-white rounded-full text-lighterGrey absolute top-0 left-[50%] -translate-x-[50%] -translate-y-[50%]">
-                            <IconComponent name="chat" size={24} />
-                        </div>
                         <main>
                             <div className="xl:block hidden">
                                 <Swiper
