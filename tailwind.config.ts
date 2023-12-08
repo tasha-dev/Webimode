@@ -61,6 +61,7 @@ const config: Config = {
                 theme: '#49B486',
                 lightGrey: '#BBBBBB',
                 themeBlue: '#2B96CC',
+                darketThemeBlue: '#382BCC',
                 lightTheme: '#5DE3AA',
                 darkerTheme: '#123828',
                 lighterGrey: '#e3e3e3',
@@ -74,7 +75,8 @@ const config: Config = {
                 lightGreen: '#93AF40',
                 darkestTheme: '#001F18',
                 LighterDarkerTheme: '#00896B',
-                alert: '#FF7089'
+                alert: '#FF7089',
+                themeRed: '#EB3349',
             }
         }
     },
