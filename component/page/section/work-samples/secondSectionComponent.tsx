@@ -1,5 +1,12 @@
+// Forcing nextJS to render this component as client side component
+'use client';
+
 // Importing part
-import {ReactNode} from "react";
+import {Dispatch, ReactNode, useState} from "react";
+import ProjectImage from '@/public/img/blog/img-random.png';
+import ProjectComponent from "@/component/projectComponent";
+import {Swiper, SwiperSlide} from "swiper/react";
+import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 
 // Defining type of props
 interface propsType {
@@ -8,8 +15,133 @@ interface propsType {
 
 // Creating and exporting second section of work samples page as default
 export default function SecondSectionComponent({filtering}:propsType):ReactNode {
+    // Defining states of component
+    const [activeIndex, setActiveIndex]:[number, Dispatch<number>] = useState(0);
+    const [activeIndexXL, setActiveIndexXL]:[number, Dispatch<number>] = useState(0);
+    const [activeIndexLG, setActiveIndexLG]:[number, Dispatch<number>] = useState(0);
+    
     // Returning JSX
     return (
-        <div></div>
+        <section>
+            <main className="container p-[20px]">
+                <div className="xl:block hidden">
+                    <Swiper
+                        initialSlide={activeIndex}
+                        spaceBetween={20}
+                        slidesPerGroup={5}
+                        slidesPerView={5}
+                        onSlideChange={(event) => setActiveIndex(event.activeIndex)}
+                    >
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                    </Swiper>
+                    <SliderPaginationComponent activeIndex={activeIndex} slidesCount={4*12} slidesPerView={4} hasNumbers  />
+                </div>
+                <div className="xl:hidden lg:block hidden">
+                    <Swiper
+                        initialSlide={activeIndexXL}
+                        spaceBetween={20}
+                        slidesPerGroup={2}
+                        slidesPerView={2}
+                        onSlideChange={(event) => setActiveIndexXL(event.activeIndex)}
+                    >
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                    </Swiper>
+                    <SliderPaginationComponent activeIndex={activeIndexXL} slidesCount={24} slidesPerView={2} hasNumbers  />
+                </div>
+                <div className="lg:hidden block">
+                    <Swiper
+                        initialSlide={activeIndexLG}
+                        spaceBetween={20}
+                        slidesPerGroup={1}
+                        slidesPerView={1}
+                        onSlideChange={(event) => setActiveIndexLG(event.activeIndex)}
+                    >
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                        <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" maxPrice={7100000} minPrice={2450000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
+                    </Swiper>
+                    <SliderPaginationComponent activeIndex={activeIndexLG} slidesCount={12} slidesPerView={1} hasNumbers />
+                </div>
+            </main>
+        </section>
     );
 }

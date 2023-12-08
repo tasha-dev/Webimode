@@ -7,6 +7,9 @@ import {Dispatch, ReactNode, useState, useEffect} from "react";
 import {Swiper} from "swiper/react";
 import {Navigation} from "swiper/modules";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
+import Image from "next/image";
+import ImageLight1 from '@/public/img/light/img-light-1.svg';
+import ImageLight2 from '@/public/img/light/img-light-2.svg';
 import 'swiper/css';
 
 // Defining type of props
@@ -31,6 +34,10 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
     return (
         <section className="lg:mb-[80px] mb-[36px]">
             <div className="container relative p-[20px]">
+                <div>
+                    <Image className="absolute top-0 left-0" width={170} height={170} alt="نور" src={ImageLight1.src} />
+                    <Image className="absolute top-[100px] right-0" width={170} height={170} alt="نور" src={ImageLight2.src} />
+                </div>
                 <div className="absolute lg:block hidden top-0 left-0 w-full h-full pointer-events-none m-[20px]">
                     <div className="absolute top-0 right-[200px] w-[24px] h-[24px] aspect-square bg-themePurple rounded-full" />
                     <div className="w-[24px] h-[24px] aspect-square rounded-full bg-pink absolute top-0 left-[200px]" />
