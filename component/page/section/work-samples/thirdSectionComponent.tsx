@@ -24,14 +24,14 @@ export default function ThirdSectionComponent():ReactNode {
                 <header className="flex items-center lg:justify-between justify-center gap-[10px] flex-wrap lg:mb-[44px] mb-[24px]">
                     <h4 className="lg:text-[36px] text-[20px] font-normal text-white lg:text-start text-center">
                         <span className="font-semibold ml-[1ch] inline-block relative">
-                            پروژه های مشابه
+                            پرفروش ترین
                             <span className={'text-white absolute right-full bottom-full lg:flex hidden flex-col w-[30px]'}>
                                 <span className={'self-start'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
                             </span>
                         </span>
-                        درخواست شما
+                        سایت های فروشگاهی
                     </h4>
                     <div className="lg:flex hidden items-center gap-[24px]">
                         <button 
