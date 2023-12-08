@@ -5,6 +5,7 @@ import ThirdSectionComponent from "@/component/page/section/work-samples/thirdSe
 import FourthSectionComponent from "@/component/page/section/work-samples/fourthSectionComponent";
 import FifthSectionComponent from "@/component/page/section/work-samples/fifthSectionComponent";
 import SixthSectionComponenet from "@/component/page/section/work-samples/sixthSectionComponent";
+import SeventhSectionComponent from "@/component/page/section/work-samples/seventhSectionComponent";
 
 // Creating and exporting work samples page as default
 export default function WorkSamplesPage():ReactNode {
@@ -16,6 +17,7 @@ export default function WorkSamplesPage():ReactNode {
             <FourthSectionComponent />
             <FifthSectionComponent />
             <SixthSectionComponenet />
+            <SeventhSectionComponent />
         </>
     );
 }
