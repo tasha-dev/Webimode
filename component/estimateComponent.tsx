@@ -20,11 +20,11 @@ export default function EstimateComponent(): ReactNode {
                         </h5>
                         <p className="paragraph lg:mb-[40px] mb-[32px] lg:text-start text-center">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
                         <div className="flex lg:flex-row flex-col items-center gap-[24px] flex-wrap lg:w-auto w-full">
-                            <Link className="btn-primary-white lg:w-auto w-full" href='#'>
+                            <Link className="btn-primary-white lg:w-auto w-full" href='/estimate'>
                                 تخمین قیمت پروژه
                                 <IconComponent name="chevron-left" size={16} />
                             </Link>
-                            <Link className="btn-secondary-white lg:w-auto w-full" href='#'>
+                            <Link className="btn-secondary-white lg:w-auto w-full" href='/create'>
                                 ثبت درخواست همکاری
                                 <IconComponent name="chevron-left" size={16} />
                             </Link>

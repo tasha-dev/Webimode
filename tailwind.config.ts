@@ -57,6 +57,7 @@ const config: Config = {
             },
             colors: {
                 dark: '#232323',
+                pageDark: '#363636',
                 lightestDark: '#565656',
                 theme: '#49B486',
                 lightGrey: '#BBBBBB',
