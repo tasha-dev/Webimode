@@ -19,7 +19,7 @@ export default function FifthSectionComponent():ReactNode {
 
     // Returning JSX 
     return (
-        <section className="py-[64px] lg:mt-[249px] mt-[149px] lg:mb-[161px] mb-[129px] bg-gradient-to-r from-themeBlue to-darketThemeBlue">
+        <section className="lg:py-[64px] lg:mt-[249px] mt-[50px] lg:mb-[161px] mb-[50px] bg-gradient-to-r from-themeBlue to-darketThemeBlue">
             <div className="container p-[20px]">
                 <header className="flex items-center lg:justify-between justify-center gap-[10px] flex-wrap lg:mb-[44px] mb-[24px]">
                     <h4 className="lg:text-[36px] text-[20px] font-normal text-white lg:text-start text-center">

@@ -15,8 +15,8 @@ interface propsType {
 export default function BlogGenreHeaderComponent({highlightedTitle, link, nonHighlightedTitle, theme = 'theme'}: propsType): ReactNode {
     // Returning JSX
     return (
-        <header className="flex mb-[64px] justify-between items-center">
-            <h4 className="relative text-[32px] font-normal">
+        <header className="flex lg:mb-[64px] mb-[20px] justify-between items-center">
+            <h4 className="relative lg:text-[32px] text-[30px] font-normal">
                 <span data-theme={theme} className="data-[theme='theme']:text-theme data-[theme='white']:text-white ml-[1ch] inline-block">{highlightedTitle}</span>
                 {
                     (nonHighlightedTitle && nonHighlightedTitle !== '')

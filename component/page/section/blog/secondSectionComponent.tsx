@@ -55,7 +55,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
     
     // Returning JSX
     return (
-        <section className="mt-[100px]">
+        <section className="lg:mt-[100px] mt-[50px]">
             <div className="container p-[20px]">
                 <BlogGenreHeaderComponent highlightedTitle={filter} link="#" />
                 <main>

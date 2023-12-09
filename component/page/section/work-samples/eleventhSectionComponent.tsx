@@ -19,7 +19,7 @@ export default function EleventhSectionComponent(): ReactNode {
 
     // Returning JSX
     return (
-        <section className="lg:mt-[96px] mt-[46px]">
+        <section className="lg:mt-[96px] mt-[50px]">
             <div className="container">
                 <header className="xl:block hidden mb-[97px] p-[20px]">
                     <div className="flex items-center">
@@ -34,7 +34,7 @@ export default function EleventhSectionComponent(): ReactNode {
                     <div className="container px-[20px] py-[40px]">
                         <div className="sign">نظرات کاربران</div>
                         <div className="flex items-center justify-between flex-wrap gap-[20px] mb-[40px]">
-                            <h5 className="text-[48px]">
+                            <h5 className="lg:text-[48px] text-[20px]">
                                 <span className='font-bold inline-block ml-[1ch] text-theme'>نظرات</span>
                                 <span className="font-normal inline-block text-dark">کاربران وبیمود</span>
                             </h5>

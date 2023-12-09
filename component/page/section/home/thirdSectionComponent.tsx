@@ -26,7 +26,7 @@ export default function ThirdSectionComponent():ReactNode {
     
     // Returning JSX
     return (
-        <section className='xl:mt-[500px] mt-[196px]'>
+        <section className='xl:mt-[500px] mt-[50px]'>
             <div className="container p-[20px]">
                 <header className='xl:mb-[40px] mb-[32px]'>
                     <div className='flex xl:gap-[50px] gap-[8px] xl:flex-row flex-col xl:items-stretch items-center justify-between'>

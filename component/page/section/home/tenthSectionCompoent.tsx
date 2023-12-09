@@ -19,7 +19,7 @@ export default function TenthSectionComponent():ReactNode {
 
     // Returnining JSX
     return (
-        <section className="lg:mt-[256px] mt-[196px]">
+        <section className="lg:mt-[256px] mt-[50px]">
             <div className="container p-[20px]">
                 <header className="flex items-end justify-between gap-[10px] lg:mb-[51px] mb-[24px]">
                     <div>

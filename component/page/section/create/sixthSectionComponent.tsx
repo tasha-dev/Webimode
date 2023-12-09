@@ -6,7 +6,7 @@ import IconComponent from "@/chunk/iconComponent";
 export default function SixthSectionComponenet():ReactNode {
     // Returning JSX
     return (
-        <section className="lg:my-[225px] my-[196px]">
+        <section className="lg:my-[225px] my-[50px]">
             <div className="container p-[20px]">
                 <header className="lg:mb-[56px] mb-[40px] flex flex-col items-center justify-center">
                     <div className="sign">مزیت های وبیمود</div>
@@ -22,16 +22,16 @@ export default function SixthSectionComponenet():ReactNode {
                         بهتر از بقیه سایت هاست
                     </h3>
                 </header>
-                <main className="lg:w-[80%] w-full mx-auto overflow-hidden">
-                    <div className="grid grid-cols-5">
-                        <div className="col-span-2 truncate p-[20px] text-[20px] font-normal text-lightGrey"><span className="block truncate">مزایا و امکانات</span></div>
-                        <div className="col-span-1 truncate p-[20px] flex items-center justify-center text-[20px] font-normal text-theme"><span className="block truncate">تیم وبیمود</span></div>
-                        <div className="col-span-1 truncate p-[20px] flex items-center justify-center text-[20px] font-normal text-lightGrey"><span className="block truncate">شرکت طراحی سایت</span></div>
-                        <div className="col-span-1 truncate p-[20px] flex items-center justify-center text-[20px] font-normal text-lightGrey"><span className="block truncate">سایت ساز آنلاین</span></div>
+                <main className="lg:w-[80%] w-full mx-auto overflow-auto">
+                    <div className="lg:grid flex lg:grid-cols-5 grid-cols-4 lg:gap-0 gap-[50px]">
+                        <div className="lg:col-span-2 lg:w-auto lg:shrink-0 shrink-0 w-[30%] truncate p-[20px] text-[20px] font-normal text-lightGrey"><span className="block truncate">مزایا و امکانات</span></div>
+                        <div className="lg:col-span-1 lg:w-auto lg:shrink-0 shrink-0 w-[30%] truncate p-[20px] flex items-center justify-center text-[20px] font-normal text-theme"><span className="block truncate">تیم وبیمود</span></div>
+                        <div className="lg:col-span-1 lg:w-auto lg:shrink-0 shrink-0 w-[30%] truncate p-[20px] flex items-center justify-center text-[20px] font-normal text-lightGrey"><span className="block truncate">شرکت طراحی سایت</span></div>
+                        <div className="lg:col-span-1 lg:w-auto lg:shrink-0 shrink-0 w-[30%] truncate p-[20px] flex items-center justify-center text-[20px] font-normal text-lightGrey"><span className="block truncate">سایت ساز آنلاین</span></div>
                     </div>
-                    <div className="w-full bg-gradient-to-r my-[16px] from-white to-white via-lightGrey h-[2px]" />
-                    <div className="grid grid-cols-5 lg:gap-[100px] gap-[50px]">
-                        <div className="col-span-2">
+                    <div className="w-full bg-gradient-to-r my-[16px] from-white to-white via-lightGrey h-[2px] lg:block hidden" />
+                    <div className="lg:grid flex lg:grid-cols-5 grid-cols-4 lg:gap-[100px] gap-[50px]">
+                        <div className="lg:col-span-2 col-span-1 lg:shrink shrink-0 lg:w-auto w-[30%]">
                             <div className="p-[20px] text-dark font-normal truncate block">1. پرداخت امن</div>
                             <div className="p-[20px] text-dark font-normal truncate block">2. امکان بررسی و انتخاب از بین صدها متخصص و نمونه کار</div>
                             <div className="p-[20px] text-dark font-normal truncate block">3. امکان بررسی تخصصی نظرات سایر کارفرمایان</div>
@@ -41,35 +41,35 @@ export default function SixthSectionComponenet():ReactNode {
                             <div className="p-[20px] text-dark font-normal truncate block">7. امکان استفاده از خدمات دیجیتال مارکتینگ و تولید محتوا </div>
                             <div className="p-[20px] text-dark font-normal truncate block">8. عدم نیاز به پرداخت به مجری قبل از تحویل قسمتی از کار</div>
                         </div>
-                        <div className="col-span-1 bg-theme shadow-custom rounded-[32px] p-[10px]">    
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
-                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="lg:block hidden truncate">دارد</span></div>
+                        <div className="col-span-1 bg-theme shadow-custom rounded-[32px] p-[10px] lg:shrink shrink-0 lg:w-auto w-[30%]">    
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
+                            <div className="text-white text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-check" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">دارد</span></div>
                         </div>
-                        <div className="col-span-1 bg-lightestGrey rounded-[32px] p-[10px]">    
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="lg:block hidden truncate">گاهی اوقات</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="lg:block hidden truncate">گاهی اوقات</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
+                        <div className="col-span-1 bg-lightestGrey rounded-[32px] p-[10px] lg:shrink shrink-0 lg:w-auto w-[30%]">    
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">گاهی اوقات</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">گاهی اوقات</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
                         </div>
-                        <div className="col-span-1 bg-lightestGrey rounded-[32px] p-[10px]">    
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="lg:block hidden truncate">گاهی اوقات</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="lg:block hidden truncate">گاهی اوقات</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
-                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="lg:block hidden truncate">ندارد</span></div>
+                        <div className="col-span-1 bg-lightestGrey rounded-[32px] p-[10px] lg:shrink shrink-0 lg:w-auto w-[30%]">    
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">گاهی اوقات</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-orange text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-warn" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">گاهی اوقات</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
+                            <div className="text-alert text-[16px] font-semibold p-[20px] flex items-center justify-center gap-[8px] lg:truncate"><span className="shrink-0"><IconComponent name="circle-x" size={24} /></span><span className="truncate lg:block hidden whitespace-nowrap">ندارد</span></div>
                         </div>
                     </div>
                 </main>

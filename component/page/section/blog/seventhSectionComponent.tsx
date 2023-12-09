@@ -20,7 +20,7 @@ export default function SeventhSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="mt-[200px]">
+        <section className="lg:mt-[200px] mt-[50px]">
             <div className="container p-[20px]">
                 <BlogGenreHeaderComponent highlightedTitle={'پربازدید ترین'} nonHighlightedTitle="مقالات" link="#" />
                 <main>

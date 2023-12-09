@@ -70,7 +70,7 @@ export default function RootLayout({children}:propsType):ReactNode {
     // Returning JSX
     return (
         <html>
-            <body dir={'rtl'} className={DanaFont.className}>
+            <body dir={'rtl'} className={`${DanaFont.className} overflow-x-hidden overflow-y-auto`}>
                 <HeaderComponent />
                 {children}
                 <FooterComponent />

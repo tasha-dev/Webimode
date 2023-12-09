@@ -7,7 +7,7 @@ import {ReactNode} from "react";
 export default function BeforeFooterComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="lg:mt-[196px] mt-[156px]">
+        <section className="lg:mt-[196px] mt-[50px]">
             <div className="container p-[20px]">
                 <div className="lg:w-[50%] lg:ml-[150px]">
                     <header className="lg:mb-[56px] mb-[24px] lg:block flex items-center justify-center flex-col">

@@ -20,7 +20,7 @@ export default function SixthSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="mt-[200px] bg-gradient-to-r from-darkerTheme to-darkestTheme">
+        <section className="lg:mt-[200px] mt-[50px] bg-gradient-to-r from-darkerTheme to-darkestTheme">
             <div className="container px-[20px] py-[60px]">
                 <BlogGenreHeaderComponent link="#" theme="white" highlightedTitle="داغ ترین مقالات"/>
                 <main>

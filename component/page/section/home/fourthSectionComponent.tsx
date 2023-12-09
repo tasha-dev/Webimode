@@ -29,7 +29,7 @@ export default function FourthSectionComponent():ReactNode {
   
   // Returning JSX
   return (
-    <section className="my-[256px]">
+    <section className="lg:my-[256px] my-[50px]">
       <div className="container p-[20px]">
         <header className={'flex items-center justify-center flex-col mx-auto lg:mb-[40px] mb-[32px]'}>
           <div className={'sign'}>مهارت وبیمود</div>
@@ -64,7 +64,8 @@ export default function FourthSectionComponent():ReactNode {
             }}
             breakpoints={{
               1024: {slidesPerView: 14, slidesPerGroup: 14},
-              1: {slidesPerView: 4, slidesPerGroup: 4}
+              768: {slidesPerView: 4, slidesPerGroup: 4},
+              1: {slidesPerView: 2, slidesPerGroup: 2},
             }}
             onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex);console.log(event.activeIndex)}}
             className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white w-full bg-lighterGrey'

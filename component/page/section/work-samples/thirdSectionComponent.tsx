@@ -19,7 +19,7 @@ export default function ThirdSectionComponent():ReactNode {
 
     // Returning JSX 
     return (
-        <section className="bg-gradient-to-r from-darkerTheme to-theme py-[64px]">
+        <section className="bg-gradient-to-r from-darkerTheme to-theme lg:py-[64px] py-[20px]">
             <div className="container p-[20px]">
                 <header className="flex items-center lg:justify-between justify-center gap-[10px] flex-wrap lg:mb-[44px] mb-[24px]">
                     <h4 className="lg:text-[36px] text-[20px] font-normal text-white lg:text-start text-center">

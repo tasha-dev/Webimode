@@ -16,7 +16,7 @@ export default function SixthSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="lg:my-[256px] my-[196px]">
+        <section className="lg:my-[256px] my-[50px]">
             <div className="container p-[20px]">
                 <header className="flex flex-col items-center justify-center lg:mb-[56px] mb-[40px]">
                     <div className="sign">رضایت شما</div>

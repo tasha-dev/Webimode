@@ -25,7 +25,7 @@ export default function EighthSectionComponent():ReactNode {
                 <div className="container px-[20px] py-[40px]">
                     <div className="sign">نظرات کاربران</div>
                     <div className="flex items-center justify-between flex-wrap gap-[20px] mb-[40px]">
-                        <h5 className="text-[48px]">
+                        <h5 className="lg:text-[48px] text-[20px]">
                             <span className='font-bold inline-block ml-[1ch] text-theme'>نظرات</span>
                             <span className="font-normal inline-block text-dark">کاربران وبیمود</span>
                         </h5>

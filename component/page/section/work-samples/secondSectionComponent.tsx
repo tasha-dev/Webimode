@@ -22,7 +22,7 @@ export default function SecondSectionComponent({filtering}:propsType):ReactNode 
     
     // Returning JSX
     return (
-        <section className="lg:mb-[234px] mb-[133px]">
+        <section className="lg:mb-[234px] mb-[50px]">
             <main className="container p-[20px]">
                 <div className="xl:block hidden">
                     <Swiper

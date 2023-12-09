@@ -7,7 +7,7 @@ import {ReactNode} from "react";
 export default function FourthSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="xl:block hidden py-[225px]">
+        <section className="xl:block hidden lg:py-[225px] py-[50px]">
             <div className="container p-[20px]">
                 <header className="flex flex-col items-center justify-center mb-[117px]">
                     <div className="sign">مراح سفارش سایت</div>

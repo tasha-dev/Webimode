@@ -9,7 +9,7 @@ import IconComponent from "@/chunk/iconComponent";
 export default function EstimateComponent(): ReactNode {
     // Returning JSX
     return (
-        <div className="container lg:my-[249px] my-[196px] lg:p-[20px]">
+        <div className="container lg:my-[249px] my-[50px] lg:p-[20px]">
             <div className="lg:rounded-[20px] shadow-custom bg-gradient-to-t from-darkerTheme to-darkestTheme">
                 <div className="lg:grid lg:grid-cols-2 gap-[15px] lg:p-[40px] p-[32px]">
                     <div className="lg:col-span-1 lg:block flex flex-col items-center justify-center lg:mb-0 mb-[40px]">

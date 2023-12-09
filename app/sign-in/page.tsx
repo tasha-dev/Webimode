@@ -11,18 +11,18 @@ import LeftSideImage from '@/public/img/img-sign-in.png';
 export default function SignInPage():ReactNode {
   // Returning JSX 
   return (
-    <section className='lg:mb-0 mb-[105px]'>
+    <section className='lg:mb-0 mb-[50px]'>
       <div className="container px-[20px] pb-[20px]">
         <div className='lg:block hidden'>
           <div className="sign">ثبت نام</div>
         </div>
         <div className="lg:grid flex flex-col-reverse grid-cols-2 lg:gap-[64px] gap-[40px]">
           <div>
-            <header className="lg:mb-[48px] mb-[40px] lg:block flex items-center justify-center flex-col">
+            <header className="lg:mb-[48px] mb-[20px] lg:block flex items-center justify-center flex-col">
               <div className='lg:hidden block'>
                 <div className="sign-mb-0">ثبت نام</div>
               </div>
-              <h1 className="font-semibold lg:text-[40px] text-[20px] text-dark leading-[74px] mb-[12px] lg:text-start text-center">
+              <h1 className="font-semibold lg:text-[40px] text-[20px] text-dark leading-[74px] lg:mb-[12px] lg:text-start text-center">
                 <span className="text-theme inline-block ml-[1ch]">به راحتی ثبت نام کن</span>
                 و به خانواده وبیمود ملحق شو !
               </h1>

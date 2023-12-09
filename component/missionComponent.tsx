@@ -11,7 +11,7 @@ export default function MissionComponent():ReactNode {
     // returning JSX
     return (
         <div className={'bg-gradient-to-b from-theme to-darkerTheme'}>
-            <div className="container xl:h-[465px] flex xl:flex-row flex-col-reverse gap-[100px]">
+            <div className="container xl:h-[465px] flex xl:flex-row flex-col-reverse lg:gap-[100px] gap-0">
                 <div className={'xl:w-[50%] w-full relative xl:h-[465px] z-[1]'}>
                     <div className="w-full absolute right-0 top-0 lg:block hidden">
                         <div className="relative xl:h-[574px] animate-circleMotion">

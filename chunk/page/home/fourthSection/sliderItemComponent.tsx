@@ -14,7 +14,7 @@ export default function SliderItemComponent({alt, img, size}:propsType):ReactNod
     // Returning JSX
     return (
         <div className='h-[80px] flex justify-center items-center'>
-            <Image src={img} alt={alt} width={size} height={size} className={`lg:w-auto lg:h-auto w-[56px] h-[56px] rounded-full object-cover`} />
+            <Image src={img} alt={alt} width={size} height={size} className={`lg:w-auto lg:h-auto w-[56px] h-[56px] rounded-full object-cover aspect-square`} />
         </div>
     );
 }

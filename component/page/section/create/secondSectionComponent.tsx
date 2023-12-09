@@ -6,9 +6,9 @@ import FeaturesComponent from "@/chunk/page/create/secondSection/featuresCompone
 export default function SecondSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="mt-[calc(208px-20px)] mb-[225px]">
+        <section className="lg:mt-[calc(208px-20px)] mt-[40px] lg:mb-[225px] mb-[40px]">
             <div className="container p-[20px]">
-                <main className="grid lg:gap-[20px] lg:grid-cols-4 grid-cols-1 gap-[32px]">
+                <main className="grid lg:grid-cols-4 grid-cols-1 gap-[20px]">
                     <FeaturesComponent title="ثبت رایگان پروژه" icon="rounded-star" link="#">به رایگان و در چند کلیک پروژه خود را ثبت و از متخصصین مختلف پیشنهاد قیمت و زمان طراحی سایت مورد نظرتان را دریافت نمایید.</FeaturesComponent>
                     <FeaturesComponent title="پشتیبانی لحظه ای و مستمر" icon="headphone" link="#">به رایگان و در چند کلیک پروژه خود را ثبت و از متخصصین مختلف پیشنهاد قیمت و زمان طراحی سایت مورد نظرتان را دریافت نمایید.</FeaturesComponent>
                     <FeaturesComponent title="بازگشت 2% برای هر پروژه" icon="percentage" link="#">به رایگان و در چند کلیک پروژه خود را ثبت و از متخصصین مختلف پیشنهاد قیمت و زمان طراحی سایت مورد نظرتان را دریافت نمایید.</FeaturesComponent>

@@ -11,7 +11,7 @@ import ReactagnlePulseComponent from '@/chunk/animation/rectanglePulseComponent'
 export default function NinethSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="my-[56px]">
+        <section className="lg:my-[56px] my-[50px]">
             <div className="container p-[20px]">
                 <div className="mb-[80px]">
                     <div className="mb-[100px] relative">
@@ -24,7 +24,7 @@ export default function NinethSectionComponent():ReactNode {
                     </div>
                 </div>
                 <div className="mb-[56px]">
-                    <div className="grid grid-cols-2 gap-[20px] mb-[56px]">
+                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] mb-[56px]">
                         <Image className="object-cover" src={ImageRectDarkRLSmall.src} alt="عکس" width={1000} height={1000} />
                         <Image className="object-cover" src={ImageRectDarkLRSmall.src} alt="عکس" width={1000} height={1000} />
                     </div>
@@ -46,7 +46,7 @@ export default function NinethSectionComponent():ReactNode {
                     <h3 className="semibold-blog-title text-center">متن آزمایشی و توضیحات در اینجاست</h3>
                     <p className="paragraph-single-blog text-center">ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد</p>
                 </div>
-                <div className="lg:w-[75%] w-full mx-auto h-[2px] bg-gradient-to-r from-white to-white via-lightGrey mt-[56px]" />
+                <div className="lg:w-[75%] w-full mx-auto h-[2px] bg-gradient-to-r from-white to-white via-lightGrey lg:mt-[56px] mt-[30px]" />
             </div>
         </section>
     );

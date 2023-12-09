@@ -11,18 +11,18 @@ import LeftSideImage from '@/public/img/img-log-in.jpg';
 export default function LogInPage():ReactNode {
   // Returning JSX 
   return (
-    <section className='lg:mb-0 mb-[105px]'>
+    <section className='lg:mb-0 mb-[50px]'>
       <div className="container px-[20px] pb-[20px]">
         <div className='lg:block hidden'>
           <div className="sign">ورود به حساب</div>
         </div>
         <div className="lg:grid flex flex-col-reverse grid-cols-2 lg:gap-[64px] gap-[40px]">
           <div>
-            <header className="lg:mb-[48px] mb-[40px] lg:block flex items-center justify-center flex-col">
+            <header className="lg:mb-[48px] mb-[20px] lg:block flex items-center justify-center flex-col">
               <div className='lg:hidden block'>
                 <div className="sign-mb-0">ورود به حساب</div>
               </div>
-              <h1 className="font-semibold lg:text-[40px] text-[20px] text-dark leading-[74px] mb-[12px] lg:text-start text-center">
+              <h1 className="font-semibold lg:text-[40px] text-[20px] text-dark leading-[74px] lg:mb-[12px] lg:text-start text-center">
                 به دنیای ایده های وبیمود
                 <span className="text-theme inline-block mr-[1ch]">خوش آمدید</span>
               </h1>
