@@ -29,17 +29,7 @@ export default function SignInPage():ReactNode {
               <p className="paragraph lg:text-start text-center">به راحتی در وب سایت وبیمود ثبت نام کنید و از نمونه کار های ما دیدن کنید و اگر ایده ای دارین برای ما مطرح کنید تا به واقعیت بپیوندد .</p>
             </header>
             <main>
-              <Link href='#' className="btn-light-border">
-                <div className='flex justify-center items-center gap-[12px]'>
-                  <IconComponent size={24} name="google" />
-                  ثبت نام با حساب گوگل
-                </div>
-                <span className='lg:hidden block'>
-                  <IconComponent size={16} name='chevron-left' />
-                </span>
-              </Link>
-              <HalfDividerComponent>یا</HalfDividerComponent>
-              <form action="#" className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] my-[32px]">
+              <form action="#" className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] mb-[32px]">
                 <InputComponent name="name-input" required placeHolder="نام و نام خانوادگی ...." inputType="text" icon="person" />
                 <InputComponent name="tel-input" required placeHolder="شماره تلفن ...." inputType="tel" icon="telephone" />
                 <InputComponent name="company-tell-input" required placeHolder="شماره شرکت ( اختیاری )" inputType="tel" icon="caller" />
@@ -51,6 +41,16 @@ export default function SignInPage():ReactNode {
                   <IconComponent size={16} name="chevron-left" />   
                 </button>
               </form>
+              <HalfDividerComponent>یا</HalfDividerComponent>
+              <Link href='#' className="btn-light-border mt-[32px]">
+                <div className='flex justify-center items-center gap-[12px]'>
+                  <IconComponent size={24} name="google" />
+                  ثبت نام با حساب گوگل
+                </div>
+                <span className='lg:hidden block'>
+                  <IconComponent size={16} name='chevron-left' />
+                </span>
+              </Link>
               <HalfDividerComponent>از قبل اکانت دارم</HalfDividerComponent>
               <div className="flex justify-center items-center mt-[32px]">
                 <Link href="/log-in" className="btn-secondary lg:w-[50%] w-[75%]">
@@ -60,7 +60,7 @@ export default function SignInPage():ReactNode {
               </div>
             </main>
           </div>
-          <div className="rounded-[48px] flex overflow-hidden lg:h-auto h-[500px]">
+          <div className="lg:rounded-[48px] rounded-[20px] flex overflow-hidden lg:h-auto h-[200px]">
             <Image src={LeftSideImage.src} alt="عکس" width={634} height={883} className="w-full h-full object-cover" />
           </div>
         </div>  

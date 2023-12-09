@@ -29,7 +29,16 @@ export default function LogInPage():ReactNode {
               <p className="paragraph lg:text-start text-center">وارد حساب کاربریتان شوید و از روند پروژه هایتان مطلع شوید و با متخصصان ما در مورد روند پروژه صحبت کنید</p>
             </header>
             <main>
-              <Link href='#' className="btn-light-border">
+              <form action="#" className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] mb-[32px]">
+                <InputComponent name="name-email-input" required placeHolder="نام کاربری یا ایمیل ...." inputType="text" icon="person" />
+                <InputComponent icon='slash-eye' name="password-input" required placeHolder="رمز عبور ...." inputType="password" />
+                <button className="lg:col-span-2 col-span-1 mt-[40px] btn-secondary-theme">
+                    ورود به حساب
+                  <IconComponent size={16} name="chevron-left" />   
+                </button>
+              </form>
+              <HalfDividerComponent>یا</HalfDividerComponent>
+              <Link href='#' className="btn-light-border mt-[32px]">
                 <div className='flex justify-center items-center gap-[12px]'>
                   <IconComponent size={24} name="google" />
                   ورود با حساب گوگل
@@ -38,15 +47,6 @@ export default function LogInPage():ReactNode {
                   <IconComponent size={16} name='chevron-left' />
                 </span>
               </Link>
-              <HalfDividerComponent>یا</HalfDividerComponent>
-              <form action="#" className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] my-[32px]">
-                <InputComponent name="name-email-input" required placeHolder="نام کاربری یا ایمیل ...." inputType="text" icon="person" />
-                <InputComponent icon='slash-eye' name="password-input" required placeHolder="رمز عبور ...." inputType="password" />
-                <button className="lg:col-span-2 col-span-1 mt-[40px] btn-secondary-theme">
-                    ورود به حساب
-                  <IconComponent size={16} name="chevron-left" />   
-                </button>
-              </form>
               <HalfDividerComponent>اکانت ندارم !</HalfDividerComponent>
               <div className="flex justify-center items-center mt-[32px]">
                 <Link href="/sign-in" className="btn-secondary lg:w-[50%] w-[75%]">
@@ -56,7 +56,7 @@ export default function LogInPage():ReactNode {
               </div>
             </main>
           </div>
-          <div className="rounded-[48px] flex overflow-hidden lg:h-auto h-[500px]">
+          <div className="lg:rounded-[48px] rounded-[20px] flex overflow-hidden lg:h-auto h-[200px]">
             <Image src={LeftSideImage.src} alt="عکس" width={634} height={883} className="w-full h-full object-cover" />
           </div>
         </div>  
