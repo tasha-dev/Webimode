@@ -7,7 +7,7 @@ import StepComponent from "@/chunk/page/estimate/stepComponent";
 export default function FirstSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="bg-dark">
+        <section className="bg-dark pb-[96px]">
             <div className="container p-[20px]">
                 <header className="mb-[48px] lg:w-[75%] w-full mx-auto">
                     <h1 className="text-white font-normal text-[36px] mb-[16px] text-center">
@@ -26,20 +26,27 @@ export default function FirstSectionComponent():ReactNode {
                 </header>
                 <main>
                     <div className="bg-pageDark px-[56px] py-[52px] rounded-[88px] border-4 border-lightestDark flex flex-col gap-[60px]">
-                        <StepComponent contentType="dropdown" number={1} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
-                            <p>askldjalskjdlkajskldjaslkjdalskdjaslkdjaskld</p>
+                        <StepComponent dropdownTitle="موضوع سایت خود را وارد کنید" contentType="dropdown" number={1} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                         </StepComponent>
-                        <StepComponent contentType="dropdown" number={2} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
-                            <p>askldjalskjdlkajskldjaslkjdalskdjaslkdjaskld</p>
+                        <StepComponent contentType="range" number={2} subTitle="انواع تنوع در تعداد صفحات برای طراحی پروژه شما" title="تعداد صفحات سایت خود را  وارد کنید :" />
+                        <StepComponent dropdownTitle="نوع سیستم مدیریت محتوا" contentType="dropdown" number={3} subTitle="انواع سیستم های مدیریت محتوا برای بهبود عملکرد سایت شما" title="نوع سیستم مدیریت محتوا سایت خود را  وارد کنید :">
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                         </StepComponent>
-                        <StepComponent contentType="dropdown" number={3} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
-                            <p>askldjalskjdlkajskldjaslkjdalskdjaslkdjaskld</p>
-                        </StepComponent>
-                        <StepComponent contentType="dropdown" number={4} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
-                            <p>askldjalskjdlkajskldjaslkjdalskdjaslkdjaskld</p>
-                        </StepComponent>
-                        <StepComponent isLastOne contentType="dropdown" number={5} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
-                            <p>askldjalskjdlkajskldjaslkjdalskdjaslkdjaskld</p>
+                        <StepComponent isLastOne dropdownTitle="ویژگی های سایت شما" contentType="dropdown" number={4} subTitle="انواع ویژگی های جانبی برای بهبود سایت" title="ویژگی های سایت خود را  وارد کنید :">
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                            <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                         </StepComponent>
                     </div>
                 </main>

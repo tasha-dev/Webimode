@@ -21,14 +21,16 @@ export default function DropdownComponent({children, title, theme}:propsType):Re
     return (
         <div className="shrink-0 relative w-[306px]">
             <button 
-                className="flex items-center w-full justify-between bg-white/10 border border-white/30 gap-[10px] rounded-[16px] p-[16px]" 
+                className="flex items-center transition-all duration-500 shadow-lg w-full justify-between data-[theme='dark']:bg-lightestDark border data-[theme='dark']:data-[opened='true']:text-theme data-[theme='dark']:data-[opened='false']:text-lighterGrey data-[theme='dark']:data-[opened='true']:border-theme data-[theme='dark']:data-[opened='false']:border-white/20 gap-[10px] rounded-[16px] p-[16px]" 
                 data-theme={theme} 
-                onClick={() => (isOpened) ? setOpened(false) : setOpened(true)}
+                data-opened={isOpened}
+                onClick={() => setOpened(true)}
+                onBlur={() => setOpened(false)}
             >
-                <span className="block shrink-0 text-lighterGrey font-normal text-[16px]">{title}</span>
-                <span className="block text-lightGrey"><IconComponent size={16} name="chevron-down" /></span>
+                <span className="block truncate text-current font-normal text-[16px]">{title}</span>
+                <span className="block text-current"><IconComponent size={16} name="chevron-down" /></span>
             </button>
-            <div data-opened={isOpened} className="absolute transition-all duration-500 data-[opened='true']:visible data-[opened='true']:opacity-100 data-[opened='false']:invisible data-[opened='false']:opacity-0 top-[110%] left-0 py-[16px] bg-white/10 border border-white/30 w-full rounded-[16px]">
+            <div data-theme={theme}  data-opened={isOpened} className="absolute transition-all z-[10] duration-500 data-[opened='true']:visible data-[opened='true']:opacity-100 data-[opened='false']:invisible data-[opened='false']:opacity-0 top-[110%] left-0 py-[10px] data-[theme='dark']:bg-lightestDark border data-[theme='dark']:border-theme w-full rounded-[16px]">
                 {children}
             </div>
         </div>

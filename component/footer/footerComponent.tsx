@@ -17,13 +17,14 @@ export default function FooterComponent():ReactNode {
     const pathname:string = usePathname();
 
     // Defining URL's with which dont need contact component
-    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in'];
+    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in', '/estimate'];
+    const noMarginTopPages:Array<string> = ['/estimate'];
 
     // Returning JSX
     return (
         <>
             {(!noContactComponentURL.includes(pathname)) ? <BeforeFooterComponent /> : false}
-            <footer data-hasbefore={!noContactComponentURL.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme lg:mt-[150px] lg:relative">
+            <footer data-hasbefore={!noContactComponentURL.includes(pathname)} data-hasMarginTop={!noMarginTopPages.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme data-[hasMarginTop='true']:lg:mt-[150px] lg:relative">
                 {
                     (!noContactComponentURL.includes(pathname))
                         ? (
