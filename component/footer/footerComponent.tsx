@@ -17,8 +17,8 @@ export default function FooterComponent():ReactNode {
     const pathname:string = usePathname();
 
     // Defining URL's with which dont need contact component
-    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in', '/estimate'];
-    const noMarginTopPages:Array<string> = ['/estimate'];
+    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in', '/estimate', '/chat-gpt'];
+    const noMarginTopPages:Array<string> = ['/estimate', '/chat-gpt'];
 
     // Returning JSX
     return (

@@ -18,7 +18,7 @@ export default function HeaderComponent():ReactNode {
 
     // Getting url of page
     const pathname:string = usePathname();
-    const darkBgUrl:Array<string> = ['/estimate'];
+    const darkBgUrl:Array<string> = ['/estimate', '/chat-gpt'];
 
     // Using useEffect hook to add event listener to check if page is scrolled scrolled or not
     useEffect(() => addEventListener('scroll', () => setScrolled((scrollY !== 0))), [])

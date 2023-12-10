@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 
 // Defining type of props
 interface propsType {
-    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'shield-check'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'; 
+    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'shield-check'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'|'nim-circle-arrow'; 
     size: number;
 }
 
@@ -48,8 +48,8 @@ export default function IconComponent({size, name}:propsType):ReactNode {
         );
     } else if (name === 'star') {
         return (
-            <svg width={size} height={size} fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.3484 0.617706C7.19537 0.346384 6.80463 0.346385 6.6516 0.617707L4.53041 4.37851C4.49457 4.44205 4.44205 4.49457 4.37851 4.53041L0.617706 6.6516C0.346384 6.80463 0.346385 7.19537 0.617707 7.3484L4.37851 9.46959C4.44205 9.50543 4.49457 9.55795 4.53041 9.62149L6.6516 13.3823C6.80463 13.6536 7.19537 13.6536 7.3484 13.3823L9.46959 9.62149C9.50543 9.55795 9.55795 9.50543 9.62149 9.46959L13.3823 7.3484C13.6536 7.19537 13.6536 6.80463 13.3823 6.6516L9.62149 4.53041C9.55795 4.49457 9.50543 4.44205 9.46959 4.37851L7.3484 0.617706Z" fill="currentColor"/>
+            <svg width={size} height={size} viewBox="0 0 6 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.53441 1.04739C2.68744 0.776072 3.07818 0.776072 3.23122 1.04739L3.90991 2.2507C3.94574 2.31423 3.99827 2.36676 4.0618 2.40259L5.26511 3.08128C5.53643 3.23432 5.53643 3.62506 5.26511 3.77809L4.0618 4.45678C3.99827 4.49262 3.94574 4.54514 3.90991 4.60868L3.23122 5.81198C3.07818 6.0833 2.68744 6.0833 2.53441 5.81198L1.85572 4.60868C1.81988 4.54514 1.76736 4.49262 1.70382 4.45678L0.500519 3.77809C0.229197 3.62506 0.229197 3.23432 0.50052 3.08128L1.70382 2.40259C1.76736 2.36676 1.81988 2.31423 1.85572 2.2507L2.53441 1.04739Z" fill="currentColor"/>
             </svg>
         );
     } else if (name === 'right-arrow') {
@@ -470,6 +470,12 @@ export default function IconComponent({size, name}:propsType):ReactNode {
         return (
             <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20 2.91699C20 3.60866 19.4417 4.16699 18.75 4.16699H1.25C0.558333 4.16699 0 3.60866 0 2.91699C0 2.22533 0.558333 1.66699 1.25 1.66699H18.75C19.4417 1.66699 20 2.22533 20 2.91699ZM12.0833 16.667H7.91667C7.225 16.667 6.66667 17.2253 6.66667 17.917C6.66667 18.6087 7.225 19.167 7.91667 19.167H12.0833C12.775 19.167 13.3333 18.6087 13.3333 17.917C13.3333 17.2253 12.775 16.667 12.0833 16.667ZM15.4167 9.16699H4.58333C3.89167 9.16699 3.33333 9.72533 3.33333 10.417C3.33333 11.1087 3.89167 11.667 4.58333 11.667H15.4167C16.1083 11.667 16.6667 11.1087 16.6667 10.417C16.6667 9.72533 16.1083 9.16699 15.4167 9.16699Z" fill="currentColor"/>
+            </svg>
+        );
+    } else if (name === "nim-circle-arrow") {
+        return (
+            <svg width={size} height={size} viewBox="0 0 34 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M33.2893 4.77131C33.7929 4.99795 34.0175 5.58996 33.7908 6.0936L30.0975 14.3009C29.8709 14.8045 29.2789 15.0291 28.7752 14.8024C28.2716 14.5758 28.047 13.9838 28.2737 13.4801L31.5566 6.18478L24.2613 2.90182C23.7576 2.67519 23.5331 2.08318 23.7597 1.57954C23.9864 1.0759 24.5784 0.851349 25.082 1.07799L33.2893 4.77131ZM33.2336 6.61823C28.0241 8.59421 20.1953 12.5371 13.6892 17.9126C7.15202 23.3137 2.15625 29.9859 2.15625 37.4062H0.15625C0.15625 29.0742 5.7347 21.8904 12.4153 16.3708C19.1269 10.8255 27.1595 6.7831 32.5243 4.74823L33.2336 6.61823ZM2.15625 37.4062C2.15625 44.8266 7.15202 51.4988 13.6892 56.8998C20.1953 62.2752 28.0241 66.218 33.2335 68.1939L32.5243 70.0639C27.1595 68.0291 19.127 63.9868 12.4153 58.4416C5.7347 52.9221 0.15625 45.7383 0.15625 37.4062H2.15625Z" fill="currentColor"/>
             </svg>
         );
     }
