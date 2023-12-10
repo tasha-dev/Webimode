@@ -18,13 +18,13 @@ export default function FirstSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="bg-dark pb-[96px]">
-            <div className="container p-[20px]">
-                <header className="mb-[48px] lg:w-[75%] w-full mx-auto">
-                    <h1 className="text-white font-normal text-[36px] mb-[16px] text-center">
+        <section className="bg-dark lg:pb-[96px] pb-[60px]">
+            <div className="container lg:p-[20px]">
+                <header className="mb-[48px] lg:w-[75%] w-full mx-auto lg:p-0 p-[20px]">
+                    <h1 className="text-white font-normal lg:text-[36px] text-[20px] lg:leading-normal leading-[40px] mb-[16px] text-center">
                         <span className="relative text-theme font-semibold inline-block ml-[1ch]">
                             قیمت پروژه ای
-                            <span className={'text-theme absolute right-[102%] bottom-full flex flex-col w-[30px]'}>
+                            <span className={'text-theme absolute right-[102%] bottom-full lg:flex hidden flex-col w-[30px]'}>
                                 <span className={'self-center'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-end'}><IconComponent name={'star'} size={14} /></span>
                                 <span className={'self-start'}><IconComponent name={'star'} size={18} /></span>
@@ -36,8 +36,8 @@ export default function FirstSectionComponent():ReactNode {
                     <p className="paragraph text-center">در اینجا می توانید به راحتی قیمت های انواع پروژه هایی که مد نظرتان هست با هر نوع خدماتی که می خواهید را بفهمید تا بتونید به راحتی از قیمت ها باخبر و شوید و با خیالی پروژه خود را ثبت کنید .</p>
                 </header>
                 <main>
-                    <div className="bg-pageDark px-[56px] py-[52px] rounded-[88px] border-4 border-lightestDark">
-                        <div className="flex flex-col gap-[60px] lg:mb-[128px] mb-[50px]">
+                    <div className="bg-pageDark lg:px-[56px] px-[20px] lg:py-[52px] py-[20px] lg:rounded-[88px] lg:border-4 border-lightestDark lg:shadow-none shadow-lg">
+                        <div className="flex flex-col lg:gap-[60px] gap-[48px] lg:mb-[128px] mb-[50px]">
                             <StepComponent dropdownTitle="موضوع سایت خود را وارد کنید" contentType="dropdown" number={1} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
                                 <button onClick={() => setSubject('1')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                                 <button onClick={() => setSubject('2')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
@@ -64,8 +64,8 @@ export default function FirstSectionComponent():ReactNode {
                                 <button onClick={() => setFeatures('5')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                             </StepComponent>
                         </div>
-                        <div className="py-[32px] px-[40px] bg-theme shadow-custom rounded-[48px] grid grid-cols-3 gap-[50px] mb-[56px]">
-                            <div className="col-span-2">
+                        <div className="lg:py-[32px] py-[24px] lg:px-[40px] px-[16px] bg-theme shadow-custom rounded-[48px] grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[36px] mb-[56px] z-[2] relative">
+                            <div className="lg:col-span-2 col-span-1">
                                 <span className="mb-[32px] text-white text-[24px] font-normal block">موارد انتخاب شده برای طراحی سایت خود  :</span>
                                 <ul className="flex flex-col gap-[24px]">
                                     <li className="flex items-center gap-[16px] text-white">
@@ -88,10 +88,10 @@ export default function FirstSectionComponent():ReactNode {
                             </div>
                             <div className="shadow-custom p-[48px] flex flex-col items-center justify-center shadow-custom bg-dark rounded-[40px] text-white">
                                 <IconComponent size={28} name="money-check-edit" />
-                                <span className="block mb-[16px] text-current text-center text-[24px] font-semibold">قیمت تخمین زده شده :</span>
+                                <span className="block mb-[16px] text-current text-center lg:text-[24px] text-[16px] font-semibold">قیمت تخمین زده شده :</span>
                                 <div className="flex items-end justify-center gap-[1ch] flex-wrap">
-                                    <span className="block text-current font-bold text-[32px]">12,344,000</span>
-                                    <span className="block text-current font-semibold text-[16px]">میلیون تومان</span>
+                                    <span className="block text-current font-bold lg:text-[32px] text-[24px]">{(1000000).toLocaleString()}</span>
+                                    <span className="block text-current font-semibold lg:text-[16px] text-[13px]">میلیون تومان</span>
                                 </div>
                             </div>
                         </div>

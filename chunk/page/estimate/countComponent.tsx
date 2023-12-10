@@ -19,8 +19,8 @@ export default function CountComponent({isActive, number, nextGoingToActive, isL
             </div>
             {
                 (isLastOne)
-                    ? false
-                    : <div className="absolute top-full left-[50%] -translate-x-[50%] h-[80px] border-r-[3px] border-dashed border-r-lighterGrey" />
+                    ? <div className="absolute top-full left-[50%] -translate-x-[50%] h-[155px] border-r-[3px] border-dashed border-r-lighterGrey" />
+                    : <div className="absolute top-full left-[50%] -translate-x-[50%] lg:h-[80px] h-[160px] border-r-[3px] border-dashed border-r-lighterGrey" />
             }
         </div>
     );
