@@ -1,11 +1,21 @@
+// Forcing nextJS to render this component as client side componnent
+'use client';
+
 // Importing part
-import {ReactNode} from "react";
+import {Dispatch, ReactNode, useState} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import StepComponent from "@/chunk/page/estimate/stepComponent";
 import Link from "next/link";
 
 // Creating and exporting first section of estimate page as defatault
 export default function FirstSectionComponent():ReactNode {
+    // Defining states of component
+    const [subject, setSubject]:[string, Dispatch<string>] = useState('default');
+    const [cms, setCms]:[string, Dispatch<string>] = useState('default');
+    const [features, setFeatures]:[string, Dispatch<string>] = useState('default');
+    const [pagesCountMax, setPagesCountMax]:[number, Dispatch<number>] = useState(0);
+    const [pagesCountMin, setPagesCountMin]:[number, Dispatch<number>] = useState(0);
+
     // Returning JSX
     return (
         <section className="bg-dark pb-[96px]">
@@ -29,26 +39,29 @@ export default function FirstSectionComponent():ReactNode {
                     <div className="bg-pageDark px-[56px] py-[52px] rounded-[88px] border-4 border-lightestDark">
                         <div className="flex flex-col gap-[60px] lg:mb-[128px] mb-[50px]">
                             <StepComponent dropdownTitle="موضوع سایت خود را وارد کنید" contentType="dropdown" number={1} subTitle="انواع سایت در زمینه های متفاوت" title="موضوع سایت خود را  وارد کنید :">
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setSubject('1')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setSubject('2')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setSubject('3')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setSubject('4')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setSubject('5')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                             </StepComponent>
-                            <StepComponent contentType="range" number={2} subTitle="انواع تنوع در تعداد صفحات برای طراحی پروژه شما" title="تعداد صفحات سایت خود را  وارد کنید :" />
+                            <StepComponent onRangeChange={(event) => {
+                                setPagesCountMax(event.maxValue);
+                                setPagesCountMin(event.minValue);
+                            }} contentType="range" number={2} subTitle="انواع تنوع در تعداد صفحات برای طراحی پروژه شما" title="تعداد صفحات سایت خود را  وارد کنید :" />
                             <StepComponent dropdownTitle="نوع سیستم مدیریت محتوا" contentType="dropdown" number={3} subTitle="انواع سیستم های مدیریت محتوا برای بهبود عملکرد سایت شما" title="نوع سیستم مدیریت محتوا سایت خود را  وارد کنید :">
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setCms('1')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setCms('2')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setCms('3')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setCms('4')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setCms('5')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                             </StepComponent>
                             <StepComponent isLastOne dropdownTitle="ویژگی های سایت شما" contentType="dropdown" number={4} subTitle="انواع ویژگی های جانبی برای بهبود سایت" title="ویژگی های سایت خود را  وارد کنید :">
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
-                                <button data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setFeatures('1')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setFeatures('2')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setFeatures('3')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setFeatures('4')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
+                                <button onClick={() => setFeatures('5')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                             </StepComponent>
                         </div>
                         <div className="py-[32px] px-[40px] bg-theme shadow-custom rounded-[48px] grid grid-cols-3 gap-[50px] mb-[56px]">
@@ -57,19 +70,19 @@ export default function FirstSectionComponent():ReactNode {
                                 <ul className="flex flex-col gap-[24px]">
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">موضوع سایت خود را وارد کنید ( سایت فروشگاهی - سایت شخصی )</span>
+                                        <span className="text-[16px] font-normal text-current block">موضوع سایت خود را وارد کنید ( {subject} )</span>
                                     </li>
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">تعداد صفحات سایت خود را وارد کنید ( 10 الی 15 صفحه )</span>
+                                        <span className="text-[16px] font-normal text-current block">تعداد صفحات سایت خود را وارد کنید ( {pagesCountMin} الی {pagesCountMax} صفحه )</span>
                                     </li>
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">نوع سیستم مدیریت محتوا سایت خود را وارد کنید ( 10 الی 15 صفحه )</span>
+                                        <span className="text-[16px] font-normal text-current block">نوع سیستم مدیریت محتوا سایت خود را وارد کنید ( {cms})</span>
                                     </li>
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">ویژگی های سایت خود را وارد کنید ( 10 الی 15 صفحه )</span>
+                                        <span className="text-[16px] font-normal text-current block">ویژگی های سایت خود را وارد کنید ( {features} )</span>
                                     </li>
                                 </ul>
                             </div>

@@ -2,7 +2,7 @@
 'use client';
 
 // Importing part
-import {ReactNode} from "react";
+import {EventHandler, ReactNode} from "react";
 import CountComponent from "./countComponent";
 import DropdownComponent from "@/chunk/dropdownComponent";
 import MultiRangeSlider from "multi-range-slider-react";
@@ -19,10 +19,11 @@ interface propsType {
     dropdownTitle?: string;
     maxRange?: number;
     minRange?: number;
+    onRangeChange?: EventHandler<any>;
 }
 
 // Creating and exporting step component as default
-export default function StepComponent({contentType, subTitle, title, children, number, isLastOne = false, dropdownTitle = '', maxRange = 10, minRange = 0}:propsType):ReactNode {
+export default function StepComponent({contentType, subTitle, title, children, number, isLastOne = false, dropdownTitle = '', maxRange = 10, minRange = 0, onRangeChange}:propsType):ReactNode {
     // Returning JSX
     return (
         <div className="flex items-center justify-between gap-[10px]">
@@ -45,6 +46,7 @@ export default function StepComponent({contentType, subTitle, title, children, n
                             max={maxRange} 
                             minValue={minRange} 
                             maxValue={maxRange} 
+                            onChange={onRangeChange}
                         />
                     </div>
             }
