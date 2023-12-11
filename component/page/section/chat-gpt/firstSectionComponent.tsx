@@ -8,13 +8,19 @@ import Link from "next/link";
 import LineMorphComponent from "@/chunk/animation/lineMorphComponent";
 import LineImage1 from '@/public/img/chat-gpt/shapes/img-line-1.svg';
 import LineImage2 from '@/public/img/chat-gpt/shapes/img-line-2.svg';
+import TraiangleImage1 from '@/public/img/chat-gpt/shapes/img-trangle-them.svg';
+import TraiangleImage2 from '@/public/img/chat-gpt/shapes/img-traiangle-purple.svg';
 
 // Creating and exporting first section of chat gpt page as default
 export default function FirstSectionComponent():ReactNode {
     // Returning JSX
     return (
-        <section className="bg-dark">
-            <div className="container p-[20px]">
+        <section className="bg-dark relative">
+            <div>
+                <Image className="absolute top-[700px] left-0 z-[1]" alt="" width={269} height={269} src={TraiangleImage1.src} />
+                <Image className="absolute top-[1800px] right-0 z-[1]" alt="" width={269} height={269} src={TraiangleImage2.src} />
+            </div>
+            <div className="container p-[20px] z-[2] relative">
                 <header className="flex items-center justify-center flex-col mb-[135px]">
                     <div className="relative w-[75%] mx-auto mb-[40px]">
                         <div>
@@ -61,7 +67,7 @@ export default function FirstSectionComponent():ReactNode {
                 <main className="relative z-[2]">
                     <div className="relative">
                         <LineMorphComponent strokeColor="white" className="absolute bottom-[75%] left-[50%] -translate-x-[50%] z-[-1] w-[30%]" />
-                        <Image src={DemoImage.src} alt="دمو عکس" width={900} height={600} className="w-full z-[2] relative rounded-[48px] object-cover border-[3px] border-white/20" />
+                        <Image src={DemoImage.src} alt="دمو عکس" width={900} height={600} className="w-full z-[2] relative shadow-2xl rounded-[48px] object-cover border-[3px] border-white/20" />
                         <span className="text-theme rotate-90 absolute bottom-[105%] right-0"><IconComponent name="arrow-curve" size={44} /></span>
                         <Image className="absolute left-[133px] z-[1] top-[98%]" src={LineImage2} alt="" width="285" height="211" />
                     </div>
