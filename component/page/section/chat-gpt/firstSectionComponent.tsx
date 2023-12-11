@@ -10,7 +10,6 @@ import LineImage1 from '@/public/img/chat-gpt/shapes/img-line-1.svg';
 import LineImage1Mq from '@/public/img/chat-gpt/shapes/img-line-1-mq.svg';
 import LineImage2 from '@/public/img/chat-gpt/shapes/img-line-2.svg';
 import TraiangleImage1 from '@/public/img/chat-gpt/shapes/img-trangle-them.svg';
-import TraiangleImage2 from '@/public/img/chat-gpt/shapes/img-traiangle-purple.svg';
 import HeaderStarsImage from '@/public/img/chat-gpt/firstSection/img-header-star.svg';
 import HeaderStarsImageMQ from '@/public/img/chat-gpt/firstSection/img-header-star-mq.svg';
 
@@ -19,10 +18,7 @@ export default function FirstSectionComponent():ReactNode {
     // Returning JSX
     return (
         <section className="bg-dark relative">
-            <div className="lg:block hidden">
-                <Image className="absolute top-[700px] left-0 z-[1]" alt="" width={269} height={269} src={TraiangleImage1.src} />
-                <Image className="absolute top-[1800px] right-0 z-[1]" alt="" width={269} height={269} src={TraiangleImage2.src} />
-            </div>
+            <Image className="absolute top-[700px] left-0 z-[1] lg:block hidden" alt="" width={269} height={269} src={TraiangleImage1.src} />
             <div className="container p-[20px] z-[2] relative">
                 <header className="flex items-center justify-center flex-col mb-[135px]">
                     <div className="relative lg:w-[75%] w-full mx-auto lg:mb-[40px] mb-[50px]">
@@ -61,9 +57,9 @@ export default function FirstSectionComponent():ReactNode {
                 <main className="relative z-[2]">
                     <div className="relative">
                         <LineMorphComponent strokeColor="white" className="absolute lg:bottom-[75%] bottom-[15%] left-[50%] -translate-x-[50%] z-[-1] lg:w-[30%] w-[90%]" />
-                        <Image src={DemoImage.src} alt="دمو عکس" width={900} height={600} className="w-full z-[2] relative shadow-2xl rounded-[48px] object-cover border-[3px] border-white/20" />
+                        <Image src={DemoImage.src} alt="دمو عکس" width={900} height={600} className="w-full z-[2] relative shadow-2xl rounded-[48px] object-cover border-[3px] border-lightestDark" />
                         <span className="text-theme rotate-90 absolute bottom-[105%] right-0 lg:block hidden"><IconComponent name="arrow-curve" size={44} /></span>
-                        <Image className="absolute left-[133px] z-[1] top-[98%] lg:block hidden" src={LineImage2} alt="" width="285" height="211" />
+                        <Image className="absolute xl:left-[28%] left-[25%] z-[1] top-[98%] lg:block hidden" src={LineImage2} alt="" width="285" height="211" />
                     </div>
                 </main>
             </div>
