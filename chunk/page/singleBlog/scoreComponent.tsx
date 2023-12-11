@@ -1,13 +1,18 @@
 // Forcing nextJS to render this component as client side component
 'use client';
 
+// Defining type of props
+interface propsType {
+    count?: number;
+}
+
 // Importing part
-import {Dispatch, ReactNode, useState} from "react";
+import {ReactNode, useState} from "react";
 
 // Creating and exporting score componet as default
-export default function ScoreComponent(): ReactNode {
+export default function ScoreComponent({count = 0.0}:propsType):ReactNode {
     // Defining states of component
-    const [score, setScore]: [number,any] = useState(0.0);
+    const [score, setScore]: [number,any] = useState(count);
 
     // Returning JSX
     return (
