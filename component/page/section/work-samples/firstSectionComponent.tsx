@@ -10,6 +10,8 @@ import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import Image from "next/image";
 import ImageLight1 from '@/public/img/light/img-light-1.svg';
 import ImageLight2 from '@/public/img/light/img-light-2.svg';
+import TopsideImageCircleLeft from '@/public/img/work-samples/firstSection/img-circles-left.svg';
+import TopsideImageCircleRight from '@/public/img/work-samples/firstSection/img-circles-right.svg';
 import 'swiper/css';
 
 // Defining type of props
@@ -33,20 +35,14 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
     // Returning JSX
     return (
         <section className="lg:mb-[80px] mb-[36px]">
-            <div className="container relative p-[20px]">
+            <div className="container p-[20px]">
                 <div>
-                    <Image className="absolute top-0 left-0" width={170} height={170} alt="نور" src={ImageLight1.src} />
-                    <Image className="absolute top-[100px] right-0" width={170} height={170} alt="نور" src={ImageLight2.src} />
+                    <Image className="absolute top-0 left-0" width={170} height={170} alt="" src={ImageLight1.src} />
+                    <Image className="absolute top-[100px] right-0" width={170} height={170} alt="" src={ImageLight2.src} />
                 </div>
-                <div className="absolute lg:block hidden top-0 left-0 w-full h-full pointer-events-none m-[20px]">
-                    <div className="absolute top-0 right-[200px] w-[24px] h-[24px] aspect-square bg-themePurple rounded-full" />
-                    <div className="w-[24px] h-[24px] aspect-square rounded-full bg-pink absolute top-0 left-[200px]" />
-                    <div className="absolute w-[16px] h-[16px] aspect-square rounded-full bg-themeBlue right-0 top-[100px]" />
-                    <div className="absolute w-[12px] h-[12px] aspect-square rounded-full bg-themePurple left-0 top-[80px]" />
-                    <div className="w-[16px] h-[16px] aspect-square rounded-full bg-pink absolute right-[100px] top-[200px]" />
-                    <div className="absolute left-[100px] top-[200px] w-[8px] h-[8px] aspect-square bg-themeBlue rounded-full" />
-                </div>
-                <header className="flex items-center justify-center flex-col lg:mb-[100px] mb-[24px]">
+                <header className="flex items-center justify-center flex-col lg:mb-[100px] mb-[24px] relative">
+                    <Image alt="" width={700} height={1400} src={TopsideImageCircleLeft.src} className="w-[50%] lg:block hidden pointer-events-none object-contain object-left h-full absolute top-0 left-0" />
+                    <Image alt="" width={700} height={1400} src={TopsideImageCircleRight.src} className="w-[50%] lg:block hidden pointer-events-none object-contain object-right h-full absolute top-0 right-0" />
                     <div className="sign">انواع نمونه کار ها</div>
                     <h1 className="lg:text-[48px] text-[32px] font-normal text-dark lg:mb-[12px] mb-[8px] text-center">
                         <span className="font-bold text-theme inline-block ml-[1ch]">بهترین و متنوع ترین</span>

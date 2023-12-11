@@ -13,11 +13,11 @@ interface propsType {
     link: string;
     isDropdown?: boolean;
     activeInHome?: boolean;
-    theme: 'white' | 'dark';
+    theme?: 'white' | 'dark';
 }
 
 // Creating and exporting header link component as default
-export default function LinkComponent({children, link, isDropdown = false, activeInHome = false, theme}:propsType):ReactNode {
+export default function LinkComponent({children, link, isDropdown = false, activeInHome = false, theme = 'white'}:propsType):ReactNode {
     // Getting URL of the current page
     const currentURL:string = usePathname();
 

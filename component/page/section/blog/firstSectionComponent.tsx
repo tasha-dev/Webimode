@@ -2,6 +2,9 @@
 import {ReactNode} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import SearchFormComponent from "@/chunk/page/blog/firstSection/searchFormComponent";
+import Image from "next/image";
+import TopsideCirclesImageLeft from '@/public/img/blog/firstSection/img-top-side-cirlces-left.svg';
+import TopsideCirclesImageRight from '@/public/img/blog/firstSection/img-top-side-cirlces-right.svg';
 
 // Defining type of props
 interface propsType {
@@ -14,20 +17,8 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
     return (
         <section>
             <div className="container relative">
-                <div className="absolute lg:block hidden top-0 left-0 w-full h-full -translate-y-[20%] pointer-events-none p-[20px]">
-                    <div className="absolute top-0 right-[200px] w-[8px] h-[8px] aspect-square bg-theme rounded-full" />
-                    <div className="flex items-start gap-[5px] absolute top-[10px] left-[300px] text-themePurple">
-                        <div className="w-[16px] h-[16px] aspect-square rounded-full bg-current" />
-                        <IconComponent size={27} name="arrow-curve" />
-                    </div>
-                    <div className="absolute w-[16px] h-[16px] aspect-square rounded-full bg-themePurple right-[50px] top-[100px]" />
-                    <div className="absolute w-[16px] h-[16px] aspect-square rounded-full bg-dark left-[200px] top-[50px]" />
-                    <div className="flex flex-col items-center justify-center gap-[5px] absolute right-[100px] top-[200px] text-dark">
-                        <span className="rotate-90"><IconComponent size={27} name="arrow-curve" /></span>
-                        <div className="w-[16px] h-[16px] aspect-square rounded-full bg-current" />
-                    </div>
-                    <div className="absolute bottom-[100px] left-[100px] w-[8px] h-[8px] aspect-square bg-theme rounded-full" />
-                </div>
+                <Image alt="" src={TopsideCirclesImageLeft.src} width={700} height={1400} className="w-[50%] lg:block hidden h-full absolute left-[20px] top-0 object-contain object-left" />
+                <Image alt="" src={TopsideCirclesImageRight.src} width={700} height={1400} className="w-[50%] lg:block hidden h-full absolute right-[20px] top-0 object-contain object-right" />
                 <header className="flex items-center justify-center flex-col lg:mb-[48px] mb-[16px] p-[20px]">
                     <div className="sign">مقالات وبیمود</div>
                     <h1 className="font-normal lg:text-[48px] text-[20px] text-dark mb-[16px] text-center">
