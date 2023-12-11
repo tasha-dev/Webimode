@@ -2,13 +2,20 @@
 import {ReactNode} from "react";
 import {Metadata} from "next";
 import LocalFont from 'next/font/local';
-import {NextFont} from "next/dist/compiled/@next/font";
 import HeaderComponent from "@/component/headerComponent";
 import FooterComponent from "@/component/footer/footerComponent";
+import {Fredoka} from 'next/font/google';
 import '@/app/index.css';
 
+// Defining english font of fredoka
+const FredokaFont = Fredoka({
+    weight: ['300','400','500','600','700'],
+    subsets: ["latin"],
+    variable: '--font-fredoka'
+});
+
 // Defining custom local font of Dana
-const DanaFont:NextFont = LocalFont({
+const DanaFont = LocalFont({
     src: [
         {
             path: '../public/font/DanaFaNum-Thin.woff2',
@@ -70,7 +77,7 @@ export default function RootLayout({children}:propsType):ReactNode {
     // Returning JSX
     return (
         <html>
-            <body dir={'rtl'} className={`${DanaFont.className} overflow-x-hidden overflow-y-auto`}>
+            <body dir={'rtl'} className={`${DanaFont.className} ${FredokaFont.variable} overflow-x-hidden overflow-y-auto`}>
                 <HeaderComponent />
                 {children}
                 <FooterComponent />

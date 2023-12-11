@@ -13,6 +13,7 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            fontFamily: {fredoka: 'var(--font-fredoka)'},
             animation: {
                 circleMotion: 'circleMotion 10s linear infinite',
                 customRotate: 'customRotate 1.5s linear infinite',

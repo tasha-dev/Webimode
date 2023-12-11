@@ -14,7 +14,7 @@ export default function CostComponent({price, step, total, title}:propsType):Rea
     // Returning JSX
     return (
         <li>
-            <div className="flex items-center gap-[8px]">
+            <div className="flex items-center gap-[8px] mb-[12px]">
                 <div className="w-[12px] h-[12px] rounded-full bg-theme" />
                 <span className="text-[16px] font-normal text-theme">{title}</span>
             </div>
