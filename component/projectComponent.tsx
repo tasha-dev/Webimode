@@ -22,7 +22,9 @@ export default function ProjectComponent({img, link, maxPrice, minPrice, rating,
     // Returning JSX
     return (
         <Link href={link} className="group block">
-            <Image width={1000} height={1000} alt={title} src={img} className="w-full h-[182px] rounded-[32px] mb-[16px] block object-cover" />
+            <div className="w-full h-[182px] rounded-[32px] mb-[16px] relative overflow-hidden">
+                <Image width={1000} height={1000} alt={title} src={img} className="block transition-all duration-500 object-cover w-full h-full absolute top-0 left-0 group-hover:scale-105" />
+            </div>
             <div>
                 <div className="flex items-center justify-between mb-[16px] gap-[10px] w-full">
                     <span data-theme={theme} className="text-[20px] block truncate font-normal w-full data-[theme='white']:text-white data-[theme='theme']:text-dark">{title}</span>
