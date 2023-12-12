@@ -21,7 +21,7 @@ export default function MoveComponent({children, index, isActive, title, icon, i
             <div data-active={isActive} className="w-[64px] h-[64px] aspect-square shrink-0 transition-all duration-500 rounded-[16px] flex items-center justify-center border bg-lightestGrey data-[active='true']:text-theme data-[active='true']:border-theme data-[active='false']:text-lightGrey data-[active='false']:border-lighterGrey">
                 <IconComponent name={icon} size={32} />
             </div>
-            <div data-active={isActive} className="rounded-[32px] mr-[20px] bg-lightestGrey border p-[24px] data-[active='false']:border-lighterGrey data-[active='true']:border-theme">
+            <div data-active={isActive} className="rounded-[32px] mr-[20px] hover:bg-lighterGrey transition-all duration-500 bg-lightestGrey border p-[24px] data-[active='false']:border-lighterGrey data-[active='true']:border-theme">
                 <div>
                     <div data-active={isActive} className="shadow-custom-outer w-[31px] h-[31px] aspect-square rounded-[8px] flex items-center justify-center data-[active='false']:bg-lighterGrey data-[active='false']:text-dark/50 mb-[12px] data-[active='true']:bg-theme data-[active='true']:text-white">
                         {index}
