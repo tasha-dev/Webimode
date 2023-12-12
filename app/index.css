@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 /*Custom styles*/
-body > section:first-of-type {@apply lg:pt-[250px] pt-[20px];}
+body > section:first-of-type {@apply lg:pt-[200px] pt-[20px];}
 .shadow-custom {box-shadow: -2px -2px 12px 0px rgba(0, 0, 0, 0.04) inset, 2px 2px 30px 0px rgba(255, 255, 255, 0.36) inset;}
 .group:hover .group-hover\:shadow-custom {@apply shadow-custom}
 .shadow-custom-outer {box-shadow:  -1px -2px 16px 0px rgba(0, 0, 0, 0.08) inset, 2px 3px 16px 0px rgba(255, 255, 255, 0.32) inset, 0px 4px 16px 0px rgba(84, 152, 255, 0.25);}
