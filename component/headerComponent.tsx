@@ -43,9 +43,6 @@ export default function HeaderComponent():ReactNode {
                         <Link href={'/'}>
                             <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={56} height={56} />
                         </Link>
-                        <button className={'lg:hidden flex justify-center items-center bg-theme theme-shadow transition-all duration-500 hover:bg-darkerTheme aspect-square w-[40px] text-white rounded-[12px]'}>
-                            <IconComponent name={'shaking-hands'} size={20} />
-                        </button>
                         <div className={'vertical-divider lg:block hidden'} />
                         <ul className={'lg:flex hidden items-center gap-[30px]'}>
                             <li><LinkComponent theme={(darkBgUrl.includes(pathname)) ? 'dark' : 'white'} activeInHome link={'/work-samples'}>نمونه کار ها</LinkComponent></li>
