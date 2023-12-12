@@ -8,7 +8,7 @@ import CostComponent from "@/chunk/page/chat-gpt-app/costComponent";
 export default function RightSideComponent():ReactNode {
     // Returning JSX
     return (
-        <div className="col-span-1 bg-pageDark overflow-auto p-[20px] no-scroll">
+        <div className="bg-pageDark overflow-auto p-[20px] no-scroll lg:block hidden">
             <div>
                 <div className="chat-tag">اطاعات شخصی و اعتبار</div>
                 <ProfileComponent cash={2.500} img={ImageOfMrEhsan.src} name="احسان امانیان" />

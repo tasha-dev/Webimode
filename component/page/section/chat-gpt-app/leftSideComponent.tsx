@@ -9,7 +9,7 @@ import ChatItemComponent from "@/chunk/page/chat-gpt-app/chatItemComponent";
 export default function LeftSideComponent():ReactNode {
     // Returning JSX
     return (
-        <div className="col-span-1 bg-pageDark overflow-auto no-scroll">
+        <div className="bg-pageDark overflow-auto no-scroll lg:block hidden">
             <div className="p-[20px] no-scroll">
                 <div className="chat-tag">
                     <IconComponent size={16} name="chat" />
