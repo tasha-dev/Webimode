@@ -2,10 +2,10 @@
 'use client';
 
 // Importing part
-import IconComponent from '@/chunk/iconComponent';
-import ServiceItemComponent from '@/chunk/page/home/thirdSection/serviceItemComponent';
-import Link from 'next/link';
 import {Dispatch, ReactNode, useState} from 'react';
+import IconComponent from '@/chunk/iconComponent';
+import ServiceItemComponent from '@/chunk/serviceItemComponent';
+import Link from 'next/link';
 import FigmaImage from '@/public/img/home/thirdSection/services/img-figma.png';
 import CodeImage from '@/public/img/home/thirdSection/services/img-code.png';
 import ChartsImage from '@/public/img/home/thirdSection/services/img-charts.png';
@@ -16,8 +16,8 @@ import ManImage from '@/public/img/home/thirdSection/services/img-man.png';
 import AiImage from '@/public/img/home/thirdSection/services/img-ai.png';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
-import 'swiper/css';
 import SliderPaginationComponent from '@/chunk/sliderPaginationCompont';
+import 'swiper/css';
 
 // Creating and exporting third section component as default
 export default function ThirdSectionComponent():ReactNode {

@@ -67,3 +67,4 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .chat-ai-btn {@apply rounded-[12px] shrink-0 px-[16px] py-[12px] border-[1.5px] data-[active='false']:bg-pageDark data-[active='false']:border-lightestDark data-[active='false']:text-lightestGrey data-[active='true']:border-theme data-[active='true']:text-white data-[active='true']:bg-theme theme-shadow-outer-active font-fredoka;}
 .small-btn-primary {@apply transition-all duration-500 flex items-center justify-center text-[13px] font-normal text-white bg-theme rounded-[10px] shadow-custom-outer-theme gap-[8px] p-[12px] hover:bg-darkerTheme;}
 .shadow-black {box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.32);}
+.skewed-right {@apply w-full h-full origin-bottom-left skew-y-[2deg] group-hover:skew-y-0;}

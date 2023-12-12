@@ -2,10 +2,10 @@
 'use client';
 
 // Importing part
-import IconComponent from '@/chunk/iconComponent';
-import ServiceItemComponent from '@/chunk/page/home/thirdSection/serviceItemComponent';
-import Link from 'next/link';
 import {Dispatch, ReactNode, useState} from 'react';
+import IconComponent from '@/chunk/iconComponent';
+import ServiceItemComponent from '@/chunk/serviceItemComponent';
+import Link from 'next/link';
 import FigmaImage from '@/public/img/home/thirdSection/services/img-figma.png';
 import CodeImage from '@/public/img/home/thirdSection/services/img-code.png';
 import ChartsImage from '@/public/img/home/thirdSection/services/img-charts.png';
@@ -14,10 +14,10 @@ import MobileImage from '@/public/img/home/thirdSection/services/img-mobile.png'
 import SocialsImage from '@/public/img/home/thirdSection/services/img-socials.png';
 import ManImage from '@/public/img/home/thirdSection/services/img-man.png';
 import AiImage from '@/public/img/home/thirdSection/services/img-ai.png';
+import SliderPaginationComponent from '@/chunk/sliderPaginationCompont';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
-import SliderPaginationComponent from '@/chunk/sliderPaginationCompont';
 
 // Creating and exporting seventh section component as default
 export default function SeventhSectionComponent():ReactNode {
