@@ -53,7 +53,7 @@ export default function SeventhSectionComponent():ReactNode {
                     </div>
                 </header>
                 <main className='xl:grid hidden grid-cols-2 gap-[20px]'>
-                <ServiceItemComponent icon='design' iconGradiant='blue' img={FigmaImage.src} hasButtons hasMobileImageInLeft title='طراحی UI UX'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent>
+                <ServiceItemComponent icon='design' iconGradiant='blue' img={FigmaImage.src} hasButtons hasHoverAnimation title='طراحی UI UX'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent>
                 <ServiceItemComponent icon='window' iconGradiant='purple' img={CodeImage.src} title='برنامه نویسی وب سایت'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent>
                 <ServiceItemComponent icon='poll' iconGradiant='green' img={ChartsImage.src} title='تولید محتوا'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent>
                 <ServiceItemComponent icon='pencil-paintbrush' iconGradiant='orange' img={PencilImage.src} title='طراحی لوگو'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent>
@@ -73,7 +73,7 @@ export default function SeventhSectionComponent():ReactNode {
                             prevEl: '#prev-services-slider-btn',
                         }}
                     >
-                        <SwiperSlide><ServiceItemComponent icon='design' iconGradiant='blue' img={FigmaImage.src} hasButtons hasMobileImageInLeft title='طراحی UI UX'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
+                        <SwiperSlide><ServiceItemComponent icon='design' iconGradiant='blue' img={FigmaImage.src} hasButtons hasHoverAnimation title='طراحی UI UX'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
                         <SwiperSlide><ServiceItemComponent icon='window' iconGradiant='purple' img={CodeImage.src} title='برنامه نویسی وب سایت'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
                         <SwiperSlide><ServiceItemComponent icon='poll' iconGradiant='green' img={ChartsImage.src} title='تولید محتوا'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
                         <SwiperSlide><ServiceItemComponent icon='pencil-paintbrush' iconGradiant='orange' img={PencilImage.src} title='طراحی لوگو'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
