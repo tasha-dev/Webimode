@@ -15,7 +15,7 @@ export default function MiddleSideComponent():ReactNode {
     const [isFetching, setFetching]:[boolean, Dispatch<boolean>] = useState(false);
 
     // Defininig refrence to middle side section
-    const middleSideRef:MutableRefObject<> = useRef();
+    const middleSideRef:MutableRefObject<any> = useRef();
 
     // Returning JSX
     return (
