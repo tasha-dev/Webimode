@@ -11,7 +11,7 @@ export default function MiddleSideComponent():ReactNode {
     // Defining states of component
     const [activeAi, setActiveAi]:[string, Dispatch<string>] = useState('babbage');
     const [massageInInput, setMassageInInput]:[string, Dispatch<string>] = useState('');
-    const [massages, setMassages]:[Array<{txt: string, sender: 'you'|'bot'} | null>, Dispatch<any>] = useState([]);
+    const [massages, setMassages]:[Array<{txt: string, sender: 'you'|'bot', date: Date} | null>, Dispatch<any>] = useState([]);
     const [isFetching, setFetching]:[boolean, Dispatch<boolean>] = useState(false);
 
     // Defininig refrence to middle side section
@@ -48,11 +48,22 @@ export default function MiddleSideComponent():ReactNode {
                         </li>
                     </ul>
                 </div>
-                <div data-has-massage={(massages.length !== 0)} className="data-[has-massage='false']:opacity-0 w-full h-full data-[has-massage='false']:invisible data-[has-massage='true']:opacity-100 data-[has-massage='true']:visible flex flex-col gap-[40px]">
+                <div data-has-massage={(massages.length !== 0)} className="transition-all duration-500 ease-in-out delay-300 data-[has-massage='false']:opacity-0 w-full h-full data-[has-massage='false']:invisible data-[has-massage='true']:opacity-100 data-[has-massage='true']:visible flex flex-col gap-[40px]">
                     {
                         massages.map((item, index) => (
-                            <div key={index} data-sender={item?.sender} className="border-[1.5px] px-[16px] py-[12px] shadow-black data-[sender='bot']:self-end data-[sender='you']:self-start data-[sender='you']:bg-pageDark data-[sender='you']:border-lightestDark data-[sender='you']:rounded-l-[12px] data-[sender='you']:rounded-tr-[12px] data-[sender='bot']:bg-theme data-[sender='bot']:border-theme data-[sender='bot']:rounded-r-[12px] data-[sender='bot']:rounded-tl-[12px]">
-                                <p className="text-[16px] font-normal leading-[36px] text-white">{item?.txt}</p>
+                            <div key={index} data-sender={item?.sender} className="data-[sender='bot']:self-end data-[sender='you']:self-start">
+                                <div data-sender={item?.sender} className="mb-[12px] flex items-center gap-[8px] justify-start data-[sender='bot']:text-theme data-[sender='you']:text-lightestDark">
+                                    <span className="shrink-0"><IconComponent size={16} name="clock" /></span>
+                                    <span className="text-[13px] font-normal truncate ml-[1ch]">{item?.date.toLocaleDateString('fa-ir')}</span>
+                                    <span className="text-[13px] font-normal truncate">
+                                        {item?.date.getHours().toLocaleString('fa-ir')}
+                                        :
+                                        {item?.date.getMinutes().toLocaleString('fa-ir')}
+                                    </span>
+                                </div>
+                                <div data-sender={item?.sender} className="border-[1.5px] px-[16px] py-[12px] shadow-black data-[sender='you']:bg-pageDark data-[sender='you']:border-lightestDark data-[sender='you']:rounded-l-[12px] data-[sender='you']:rounded-tr-[12px] data-[sender='bot']:bg-theme data-[sender='bot']:border-theme data-[sender='bot']:rounded-r-[12px] data-[sender='bot']:rounded-tl-[12px]">
+                                    <p className="text-[16px] font-normal leading-[36px] text-white">{item?.txt}</p>
+                                </div>
                             </div>
                         ))
                     }
@@ -67,27 +78,36 @@ export default function MiddleSideComponent():ReactNode {
                         // Preventing from sending form to url
                         event.preventDefault();
 
-                        // Adding massage to state
-                        setMassages(() => [...massages, {
-                            txt: massageInInput,
-                            sender: 'you'
-                        }, {
-                            txt: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',
-                            sender: 'bot'
-                        }])
+                       if (!massageInInput.startsWith(' ')) {
+                           const middleSideElement: HTMLDivElement = middleSideRef.current;
 
-                        // Scrolling to bottom of the container
-                        middleSideRef.current.scroll({
-                            left: 0,
-                            top: middleSideRef.current.scrollHeight,
-                            behaviou: 'smooth'
-                        })
+                           // Adding massage to state
+                           setMassages(() => [...massages, {
+                               txt: massageInInput,
+                               sender: 'you',
+                               date: new Date()
+                           }, {
+                               txt: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',
+                               sender: 'bot',
+                               date: new Date()
+                           }])
 
-                        // Showing loading animtion
-                        // setFetching(true);
+                           // Scrolling to bottom of the container
+                           middleSideElement.scrollBy({
+                                left: 0,
+                                top: middleSideElement.scrollHeight,
+                                behavior: 'smooth'
+                           })
 
-                        // Removing typef value of input
-                        setMassageInInput('');
+                           // Showing loading animtion
+                           // setFetching(true);
+                           // setInterval(() => {
+                           // setFetching(false);
+                           // }, 1000)
+
+                           // Removing typef value of input
+                           setMassageInInput('');
+                       }
                     }}
                 >
                     <input 
