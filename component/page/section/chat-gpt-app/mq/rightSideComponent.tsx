@@ -1,25 +1,33 @@
 // Importing part
 import {EventHandler, ReactNode} from "react";
+import IconComponent from "@/chunk/iconComponent";
 import ProfileComponent from "@/chunk/page/chat-gpt-app/profileComponent";
 import ImageOfMrEhsan from '@/public/img/blog/img-ehsan.jpg';
 import CostComponent from "@/chunk/page/chat-gpt-app/costComponent";
-import IconComponent from "@/chunk/iconComponent";
-import Link from "next/link";
-import Image from "next/image";
-import LogoImage from '@/app/favicon.ico';
 
 // Defining type of props
 interface propsType {
-    onClickOfUndoBtn: EventHandler<any>;
-    onClickOfPersonBtn: EventHandler<any>;
+    isOpened?: boolean;
+    closeFunction: EventHandler<any>;
 }
 
-// Creating and exporting right side of chat gpt app as default
-export default function RightSideComponent({onClickOfPersonBtn, onClickOfUndoBtn}:propsType):ReactNode {
+// Creating and exporting right side component (in media querys) as default
+export default function RightSideMQComponent({isOpened, closeFunction}:propsType):ReactNode {
     // Returning JSX
     return (
-        <div className="lg:bg-pageDark bg-dark overflow-auto lg:p-[20px] no-scroll">
-            <div className="lg:block hidden">
+        <div data-opened={isOpened} className="lg:hidden bg-dark p-[20px] overflow-auto block fixed top-0 transition-all duration-500 left-0 w-full h-full z-[50] data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
+            <button onClick={closeFunction} className="shadow-black mb-[32px] w-full bg-pageDark flex items-center justify-between gap-[10px] text-lighterGrey py-[16px] px-[12px] rounded-[12px]">
+                <div className="flex items-center justify-start gap-[10px] w-[50%]">
+                    <span className="shrink-0">
+                        <IconComponent name="person" size={16} />
+                    </span>
+                    <span className="shrink-0 font-normal text-[13px] truncate w-full block text-start">اطلاعات کاربر</span>
+                </div>
+                <span className="shrink-0">
+                    <IconComponent size={16} name="chevron-left" />
+                </span>
+            </button>
+            <div>
                 <div>
                     <div className="chat-tag">اطاعات شخصی و اعتبار</div>
                     <ProfileComponent cash={2.500} img={ImageOfMrEhsan.src} name="احسان امانیان" />
@@ -39,13 +47,6 @@ export default function RightSideComponent({onClickOfPersonBtn, onClickOfUndoBtn
                         <CostComponent price={1} step={1000} title="حالت GPT4 receive" total={1300} />
                     </ul>
                 </div>
-            </div>
-            <div className="lg:hidden flex items-center justify-between gap-[10px] lg:pr-[20px] py-[20px] pl-[30px] pr-[20px]">
-                <button onClick={onClickOfPersonBtn} className="chat-header-btn"><IconComponent name="person" size={20} /></button>
-                <Link href={'/'}>
-                    <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={56} height={56} />
-                </Link>
-                <button onClick={onClickOfUndoBtn} className="chat-header-btn"><IconComponent name="undo" size={20} /></button>
             </div>
         </div>
     );

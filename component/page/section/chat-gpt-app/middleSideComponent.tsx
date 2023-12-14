@@ -2,7 +2,7 @@
 'use client';
 
 // Importing part
-import {ChangeEvent, Dispatch, MutableRefObject, ReactNode, useRef, useState} from "react";
+import {ChangeEvent, Dispatch, EventHandler, MutableRefObject, ReactNode, useRef, useState} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import LoadingComponent from "@/chunk/loadingComponent";
 import SelectImageComponent from '@/chunk/page/chat-gpt-app/selectImageComponent';
@@ -73,7 +73,7 @@ export default function MiddleSideComponent():ReactNode {
                 </div>
             </div>
             <div className="lg:col-span-1 lg:h-[20vh] lg:pl-[20px] lg:pr-[20px] py-[20px] pl-[30px] pr-[20px] flex items-end relative">
-                <div data-opened={(isInputFocused && massageInInput === '')} className="grid lg:grid-cols-4 grid-cols-2 items-center gap-[18px] absolute bottom-[70%] left-0 w-full lg:pr-[20px] py-[20px] pl-[30px] pr-[20px] transition-all duration-500 overflow-auto no-scroll data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
+                <div data-opened={(isInputFocused && massageInInput === '')} className="grid lg:grid-cols-4 grid-cols-2 items-center gap-[18px] absolute lg:bottom-[80%] bottom-full left-0 w-full px-[20px] transition-all duration-500 overflow-auto no-scroll data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
                     <SelectImageComponent onClick={() => false} img={RandomImage.src} />
                     <SelectImageComponent onClick={() => false} img={RandomImage.src} />
                     <SelectImageComponent onClick={() => false} img={RandomImage.src} />
@@ -125,7 +125,7 @@ export default function MiddleSideComponent():ReactNode {
                         required
                         value={massageInInput}
                         onFocus={() => setInputFocused(true)}
-                        onBlur={() => setInputFocused(false)}
+                        onBlur={() => (massageInInput === '') ? false : setInputFocused(false)}
                         placeholder="چیزی تایپ کنید ...." 
                         type="text" 
                         className="px-[16px] py-[12px] w-full bg-transparent text-[20px] font-normal outline-0 placeholder:text-white/50 text-white" 
