@@ -3,12 +3,14 @@ import {ReactNode} from "react";
 
 // Defining type of props
 interface propsType {
-    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'shield-check'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'|'nim-circle-arrow'|'image'|'question-chat'|'exit'|'bin'; 
-    size: number;
+    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'shield-check'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'|'nim-circle-arrow'|'image'|'question-chat'|'exit'|'bin'|'three-dots'|'cloud-download'; 
+    size?: number;
+    width?: number;
+    height?: number;
 }
 
 // Creating and exporting icon component as default
-export default function IconComponent({size, name}:propsType):ReactNode {
+export default function IconComponent({size, name, height, width}:propsType):ReactNode {
     // Conditional rendering
     if (name === 'chevron-down') {
         return (
@@ -501,6 +503,20 @@ export default function IconComponent({size, name}:propsType):ReactNode {
         return (
             <svg width={size} height={size} viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.3828 1.99999H9.83281C9.59359 0.836789 8.57035 0.0015 7.3828 0H6.38279C5.19523 0.0015 4.172 0.836789 3.9328 1.99999H2.3828C2.10666 1.99999 1.88281 2.22384 1.88281 2.49998C1.88281 2.77612 2.10666 3 2.3828 3H2.8828V9.49999C2.88446 10.88 4.00278 11.9984 5.3828 12H8.3828C9.76283 11.9984 10.8811 10.88 10.8828 9.49999V3H11.3828C11.6589 3 11.8828 2.77615 11.8828 2.50001C11.8828 2.22387 11.6589 1.99999 11.3828 1.99999ZM6.38281 8.50001C6.38281 8.77615 6.15896 9 5.88282 9C5.60666 9 5.3828 8.77615 5.3828 8.50001V5.50001C5.3828 5.22387 5.60666 5.00002 5.8828 5.00002C6.15894 5.00002 6.38279 5.22387 6.38279 5.50001V8.50001H6.38281ZM8.3828 8.50001C8.3828 8.77615 8.15895 9 7.88281 9C7.60667 9 7.38282 8.77615 7.38282 8.50001V5.50001C7.38282 5.22387 7.60667 5.00002 7.88281 5.00002C8.15895 5.00002 8.3828 5.22387 8.3828 5.50001V8.50001ZM4.96831 1.99999C5.18098 1.40114 5.74733 1.00076 6.38281 0.999984H7.38282C8.01831 1.00076 8.58465 1.40114 8.79732 1.99999H4.96831Z" fill="currentColor"/>
+            </svg>
+        );
+    } else if (name === 'three-dots') {
+        return (
+            <svg width={width} height={height} viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="2.88281" cy="2.44238" r="2" fill="currentColor"/>
+                <circle cx="10.8828" cy="2.44238" r="2" fill="currentColor"/>
+                <circle cx="18.8828" cy="2.44238" r="2" fill="currentColor"/>
+            </svg>
+        );
+    } else if (name === 'cloud-download') {
+        return (
+            <svg width={size} height={size} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.86934 4.5151C9.70334 4.4821 9.56784 4.3786 9.49834 4.2306C8.72234 2.5951 6.92684 1.6806 5.13084 2.0116C3.49484 2.3116 2.21234 3.6176 1.93884 5.2621C1.85784 5.7476 1.86384 6.23359 1.95534 6.7071C1.98534 6.8616 1.91884 7.0336 1.78234 7.1576C1.20984 7.6781 0.881836 8.41959 0.881836 9.1926C0.881836 10.7086 2.11534 11.9426 3.63184 11.9426H9.13184C11.1998 11.9426 12.8818 10.2606 12.8818 8.1926C12.8818 6.4101 11.6148 4.8636 9.86884 4.5156L9.86934 4.5151ZM8.44284 8.2961L7.08934 9.6496C6.89584 9.8431 6.64134 9.9406 6.38684 9.9416L6.38234 9.9426L6.37784 9.9416C6.12334 9.9406 5.86884 9.8431 5.67534 9.6496L4.32184 8.2961C4.12634 8.1006 4.12634 7.7846 4.32184 7.5891C4.51734 7.3936 4.83334 7.3936 5.02884 7.5891L5.88234 8.4426V5.9426C5.88234 5.6661 6.10634 5.4426 6.38234 5.4426C6.65834 5.4426 6.88234 5.6661 6.88234 5.9426V8.4426L7.73584 7.5891C7.93134 7.3936 8.24734 7.3936 8.44284 7.5891C8.63834 7.7846 8.63834 8.1006 8.44284 8.2961Z" fill="currentColor"/>
             </svg>
         );
     }

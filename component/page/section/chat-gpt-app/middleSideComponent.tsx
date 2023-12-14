@@ -5,11 +5,14 @@
 import {ChangeEvent, Dispatch, MutableRefObject, ReactNode, useRef, useState} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import LoadingComponent from "@/chunk/loadingComponent";
+import SelectImageComponent from '@/chunk/page/chat-gpt-app/selectImageComponent';
+import RandomImage from '@/public/img/blog/img-random.png';
 
 // Creating and exporting middle side of chat gpt app page as default
 export default function MiddleSideComponent():ReactNode {
     // Defining states of component
     const [activeAi, setActiveAi]:[string, Dispatch<string>] = useState('babbage');
+    const [isInputFocused, setInputFocused]:[boolean, Dispatch<boolean>] = useState(false)
     const [massageInInput, setMassageInInput]:[string, Dispatch<string>] = useState('');
     const [massages, setMassages]:[Array<{txt: string, sender: 'you'|'bot', date: Date} | null>, Dispatch<any>] = useState([]);
     const [isFetching, setFetching]:[boolean, Dispatch<boolean>] = useState(false);
@@ -70,6 +73,16 @@ export default function MiddleSideComponent():ReactNode {
                 </div>
             </div>
             <div className="lg:col-span-1 lg:h-[20vh] p-[20px] flex items-end relative">
+                <div data-opened={isInputFocused} className="lg:flex hidden items-center gap-[18px] absolute bottom-[70%] left-0 w-full p-[20px] transition-all duration-500 overflow-auto no-scroll data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+                </div>
                 <form
                     action="#"
                     className="bg-pageDark border border-lightestDark rounded-[12px] shadow-black flex w-full items-center overflow-hidden"
@@ -115,7 +128,8 @@ export default function MiddleSideComponent():ReactNode {
                         onChange={(event:ChangeEvent<HTMLInputElement>) => setMassageInInput(event.target.value)} 
                         required
                         value={massageInInput}
-                        onFocus={() => (massageInInput === '') ? '' : ''}
+                        onFocus={() => setInputFocused(true)}
+                        onBlur={() => setInputFocused(false)}
                         placeholder="چیزی تایپ کنید ...." 
                         type="text" 
                         className="px-[16px] py-[12px] w-full bg-transparent text-[20px] font-normal outline-0 placeholder:text-white/50 text-white" 
