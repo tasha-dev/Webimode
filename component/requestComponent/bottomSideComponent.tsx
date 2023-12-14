@@ -2,16 +2,20 @@
 'use client';
 
 // Importing part
-import {Dispatch, ReactNode, useState} from "react";
+import {Dispatch, EventHandler, ReactNode, useState} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import StepComponent from '@/component/requestComponent/stepComponent';
-import WebsiteSubjectComponent from "@/chunk/requestComponent/websiteSubjectComponent";
+
+// Defining type of props
+interface propsType {
+    activeStep: number;
+    nextStepFunction: EventHandler<any>;
+    prevStepFunction: EventHandler<any>;
+}
 
 // Creating and exporting bottom side of third section in create page as default
-export default function BottomSideComponent():ReactNode {
+export default function BottomSideComponent({activeStep, nextStepFunction, prevStepFunction}:propsType):ReactNode {
     // Defining states of component
-    const [activeStep, setActiveStep]:[number, Dispatch<any>] = useState(1);
-
     const [activeSubject, setActiveSubject]:[string, Dispatch<string>] = useState('طراحی سایت شرکتی');
     const [activeType, setActiveType]:[string, Dispatch<string>] = useState('طراحی سایت آماده');
     const [activePageCount, setActivePageCount]:[string, Dispatch<any>] = useState('1');
@@ -45,17 +49,15 @@ export default function BottomSideComponent():ReactNode {
                 />
                 <div className="flex flex-wrap items-center justify-center gap-[24px]">
                     <button 
-                        onClick={() => (activeStep > 1) ? setActiveStep((prevState:number) => prevState - 1) : false} 
+                        onClick={prevStepFunction} 
                         className="btn-secondary-white"
                     >
                         <IconComponent name="chevron-right" size={16} />
                         مرحله قبل
                     </button>
                     <button 
-                        onClick={() => {
-                            (activeStep < 8) 
-                                ? setActiveStep((prevState:number) => prevState + 1) 
-                                : false;
+                        onClick={(event) => {
+                            nextStepFunction(event);
 
                             (activeStep !== 8)
                                 ? false

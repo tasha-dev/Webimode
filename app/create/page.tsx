@@ -2,7 +2,7 @@
 import {ReactNode} from "react";
 import FirstSectionComponent from "@/component/page/section/create/firstSectionComponent";
 import SecondSectionComponent from "@/component/page/section/create/secondSectionComponent";
-import ThirdSectionComponent from "@/component/requestComponent/thirdSectionComponent";
+import RequestComponent from "@/component/requestComponent/requestComponent";
 import FourthSectionComponent from "@/component/page/section/create/fourthSectionComponent";
 import FifthSectionComponent from "@/component/page/section/create/fifthSectionComponent";
 import SixthSectionComponenet from "@/component/page/section/create/sixthSectionComponent";
@@ -19,7 +19,7 @@ export default function CreateBlogPage():ReactNode {
         <>
             <FirstSectionComponent />
             <SecondSectionComponent />
-            <ThirdSectionComponent />
+            <RequestComponent />
             <FourthSectionComponent />
             <FifthSectionComponent />
             <SixthSectionComponenet />

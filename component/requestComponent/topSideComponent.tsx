@@ -3,8 +3,13 @@ import {ReactNode} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import StepComponent from "@/chunk/page/create/thirdSection/stepComponet";
 
+// Defining type of props
+interface propsType {
+    activeStep: number;
+}
+
 // Creating and exportiong top side component of third section in create page as default
-export default function TopSideComponent():ReactNode {
+export default function TopSideComponent({activeStep}:propsType):ReactNode {
     // Returning JSX
     return (
         <div className="bg-darkerTheme mb-[24px] relative">
@@ -32,19 +37,19 @@ export default function TopSideComponent():ReactNode {
                         <div className="relative lg:mb-[76px]">
                             <div className="absolute lg:block hidden top-[50%] left-0 -translate-y-[50%] h-[1px] w-full bg-lightTheme" />
                             <div className="lg:grid flex items-center grid-cols-4 w-full container px-[50px] gap-[47px]">
-                                <StepComponent icon="rounded-star" index={1} link="#" progress="done" title="موضوع سایت" />
-                                <StepComponent icon="browser" index={2} link="#" progress="waiting" title="نوع سایت" />
-                                <StepComponent icon="file" index={3} link="#" progress="in-progress" title="تعدا صفحات سایت" />
-                                <StepComponent icon="calender-clock" index={4} link="#" progress="waiting" title="مدت زمان طراحی" />
+                                <StepComponent icon="rounded-star" index={1} link="#" progress={(activeStep === 1) ? 'in-progress' : (activeStep > 1) ? 'done' : 'waiting'} title="موضوع سایت" />
+                                <StepComponent icon="browser" index={2} link="#" progress={(activeStep === 2) ? 'in-progress' : (activeStep > 2) ? 'done' : 'waiting'} title="نوع سایت" />
+                                <StepComponent icon="file" index={3} link="#" progress={(activeStep === 3) ? 'in-progress' : (activeStep > 3) ? 'done' : 'waiting'} title="تعدا صفحات سایت" />
+                                <StepComponent icon="calender-clock" index={4} link="#" progress={(activeStep === 4) ? 'in-progress' : (activeStep > 4) ? 'done' : 'waiting'} title="مدت زمان طراحی" />
                             </div>
                         </div>
                         <div className="relative">
                             <div className="absolute lg:block hidden top-[50%] left-0 -translate-y-[50%] h-[1px] w-full bg-lightTheme" />
                             <div className="lg:grid flex items-center grid-cols-4 w-full container px-[50px] gap-[47px]">
-                                <StepComponent icon="dollor-circle" index={5} link="#" progress="waiting" title="بودجه تخمینی" />
-                                <StepComponent icon="poll" index={6} link="#" progress="waiting" title="توضیحات تکمیلی" />
-                                <StepComponent icon="globe" index={7} link="#" progress="waiting" title="سایت های مشابه" />
-                                <StepComponent icon="list" index={8} link="#" progress="waiting" title="گزینه تکمیلی" />
+                                <StepComponent icon="dollor-circle" index={5} link="#" progress={(activeStep === 5) ? 'in-progress' : (activeStep > 5) ? 'done' : 'waiting'} title="بودجه تخمینی" />
+                                <StepComponent icon="poll" index={6} link="#" progress={(activeStep === 6) ? 'in-progress' : (activeStep > 6) ? 'done' : 'waiting'} title="توضیحات تکمیلی" />
+                                <StepComponent icon="globe" index={7} link="#" progress={(activeStep === 7) ? 'in-progress' : (activeStep > 7) ? 'done' : 'waiting'} title="سایت های مشابه" />
+                                <StepComponent icon="list" index={8} link="#" progress={(activeStep === 8) ? 'in-progress' : (activeStep > 8) ? 'done' : 'waiting'} title="گزینه تکمیلی" />
                             </div>
                         </div>
                     </div>
