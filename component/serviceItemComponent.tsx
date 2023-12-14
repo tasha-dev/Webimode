@@ -54,7 +54,7 @@ export default function ServiceItemComponent({children, icon, img, title, hasBut
             </div>
             {
                 (hasHoverAnimation)
-                    ? <Image alt="نمونه کار" src={RandomImage.src} width={1000} height={1000} className="absolute w-[50%] top-[50%] left-0 h-[calc(80%)] origin-left object-cover rounded-[20px] opacity-0 transition-all duration-1000 ease-in-out group-hover-inner-img lg:group-hover:opacity-100" />
+                    ? <Image alt="نمونه کار" src={RandomImage.src} width={1000} height={1000} className="absolute w-[50%] top-0 left-0 h-full origin-left object-cover rounded-[20px] opacity-0 transition-all duration-1000 ease-in-out group-hover-inner-img lg:group-hover:opacity-100" />
                     : false
             }
         </div>
