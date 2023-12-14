@@ -28,7 +28,7 @@ export default function FooterComponent():ReactNode {
         return (
             <>
                 {(!noContactComponentURL.includes(pathname)) ? <BeforeFooterComponent /> : false}
-                <footer data-hasbefore={!noContactComponentURL.includes(pathname)} data-hasMarginTop={!noMarginTopPages.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme data-[hasMarginTop='true']:lg:mt-[150px] lg:relative">
+                <footer data-hasbefore={!noContactComponentURL.includes(pathname)} data-hasmargintop={!noMarginTopPages.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme data-[hasmargintop='true']:lg:mt-[150px] lg:relative">
                     {
                         (!noContactComponentURL.includes(pathname))
                             ? (

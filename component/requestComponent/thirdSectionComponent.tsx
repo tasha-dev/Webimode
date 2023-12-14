@@ -1,7 +1,7 @@
 // Importing part
 import {ReactNode} from "react";
-import TopSideComponent from "@/component/page/section/create/thirdSection/topSideComponent";
-import BottomSideComponent from "@/component/page/section/create/thirdSection/bottomSideComponent";
+import TopSideComponent from "@/component/requestComponent/topSideComponent";
+import BottomSideComponent from "@/component/requestComponent/bottomSideComponent";
 
 // Creating and exporting third section of create page as default
 export default function ThirdSectionComponent():ReactNode {
