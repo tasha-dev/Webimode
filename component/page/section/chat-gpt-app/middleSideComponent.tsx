@@ -19,18 +19,18 @@ export default function MiddleSideComponent():ReactNode {
 
     // Returning JSX
     return (
-        <div className="lg:col-span-3 bg-dark lg:h-scren h-auto relative">
+        <div className="lg:col-span-3 bg-dark lg:h-scren h-auto relative lg:w-auto w-screen">
             <div data-fetching={isFetching} className="absolute top-0 left-0 transition-all duration-500 w-full h-full flex items-center justify-center bg-dark/90 z-[2] data-[fetching='false']:opacity-0 data-[fetching='false']:pointer-events-none">
                 <LoadingComponent />
             </div>
-            <div className="overflow-x-auto overflow-y-hidden flex gap-[24px] items-center justify-center h-[20vh] p-[20px] no-scroll">
+            <div className="overflow-x-auto overflow-y-hidden flex gap-[24px] items-center justify-center lg:h-[20vh] p-[20px] no-scroll w-full">
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('babbage')} data-active={(activeAi === 'babbage')} className="chat-ai-btn">babbage</button>
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('davinci')} data-active={(activeAi === 'davinci')} className="chat-ai-btn">davinci</button>
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('GPT4')} data-active={(activeAi === 'GPT4')} className="chat-ai-btn">GPT4</button>
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('midjourny')} data-active={(activeAi === 'midjourny')} className="chat-ai-btn">midjourny</button>
             </div>
-            <div ref={middleSideRef} data-has-massage={(massages.length !== 0)} className="relative col-span-1 lg:row-span-4 h-[60vh] overflow-x-hidden overflow-y-auto p-[20px] no-scroll">
-                <div data-has-massage={(massages.length !== 0)} className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] p-[24px] transition-all duration-500 ease-in-out lg:w-[75%] w-full shadow-black border border-lightestDark bg-pageDark rounded-[40px] data-[has-massage='true']:opacity-0 data-[has-massage='true']:invisible data-[has-massage='false']:opacity-100 data-[has-massage='false']:visible">
+            <div ref={middleSideRef} data-has-massage={(massages.length !== 0)} className="relative col-span-1 lg:row-span-4 lg:h-[60vh] h-[100vh] overflow-x-hidden overflow-y-auto p-[20px] no-scroll">
+                <div data-has-massage={(massages.length !== 0)} className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] p-[24px] transition-all duration-500 ease-in-out lg:w-[75%] w-[calc(100%-40px)] shadow-black border border-lightestDark bg-pageDark rounded-[40px] data-[has-massage='true']:opacity-0 data-[has-massage='true']:invisible data-[has-massage='false']:opacity-100 data-[has-massage='false']:visible">
                     <div className="flex w-[50%] items-center mx-auto p-[16px] bg-white/20 rounded-[12px] justify-between gap-[10px] shadow-black mb-[32px]">
                         <span className="text-lightGrey shrink-0"><IconComponent name="circle-warn" size={16} /></span>
                         <span className="text-lightGrey block truncate text-[20px] font-normal">توجه داشته باشید</span>
@@ -69,7 +69,7 @@ export default function MiddleSideComponent():ReactNode {
                     }
                 </div>
             </div>
-            <div className="lg:col-span-1 h-[20vh] p-[20px] flex items-end relative">
+            <div className="lg:col-span-1 lg:h-[20vh] p-[20px] flex items-end relative">
                 <form
                     action="#"
                     className="bg-pageDark border border-lightestDark rounded-[12px] shadow-black flex w-full items-center overflow-hidden"
