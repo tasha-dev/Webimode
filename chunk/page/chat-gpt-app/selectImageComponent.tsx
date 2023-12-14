@@ -13,7 +13,7 @@ interface propsType {
 export default function SelectImageComponent({img, onClick}:propsType):ReactNode {
     // Returning JSX
     return (
-        <div onClick={onClick} className="relative h-[130px] w-[180px] shrink-0 rounded-[12px] overflow-hidden block transition-all duration-500 border-[1.5px] border-transparent hover:border-white shadow-black group">
+        <div onClick={onClick} className="relative h-[130px] shrink-0 rounded-[12px] overflow-hidden block transition-all duration-500 border-[1.5px] border-transparent hover:border-white shadow-black group">
             <Image src={img} alt="" className="w-full object-cover h-full absolute top-0 left-0 z-[1]" width={1000} height={1000} />
             <div className="relative z-[2] opacity-0 transition-all duration-500 invisible group-hover:opacity-100 group-hover:visible p-[12px]">
                 <div className="bg-pageDark px-[4px] py-[6px] rounded-[4px] text-white inline-block">

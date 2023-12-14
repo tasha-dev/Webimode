@@ -26,28 +26,28 @@ export default function MiddleSideComponent():ReactNode {
             <div data-fetching={isFetching} className="absolute top-0 left-0 transition-all duration-500 w-full h-full flex items-center justify-center bg-dark/90 z-[2] data-[fetching='false']:opacity-0 data-[fetching='false']:pointer-events-none">
                 <LoadingComponent />
             </div>
-            <div className="overflow-x-auto overflow-y-hidden flex gap-[24px] items-center justify-center lg:h-[20vh] p-[20px] no-scroll w-full">
+            <div className="overflow-x-auto overflow-y-hidden flex gap-[24px] items-center lg:justify-center justify-start lg:h-[20vh] p-[20px] no-scroll w-full">
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('babbage')} data-active={(activeAi === 'babbage')} className="chat-ai-btn">babbage</button>
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('davinci')} data-active={(activeAi === 'davinci')} className="chat-ai-btn">davinci</button>
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('GPT4')} data-active={(activeAi === 'GPT4')} className="chat-ai-btn">GPT4</button>
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('midjourny')} data-active={(activeAi === 'midjourny')} className="chat-ai-btn">midjourny</button>
             </div>
-            <div ref={middleSideRef} data-has-massage={(massages.length !== 0)} className="relative col-span-1 lg:row-span-4 lg:h-[60vh] h-[100vh] overflow-x-hidden overflow-y-auto p-[20px] no-scroll">
-                <div data-has-massage={(massages.length !== 0)} className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] p-[24px] transition-all duration-500 ease-in-out lg:w-[75%] w-[calc(100%-40px)] shadow-black border border-lightestDark bg-pageDark rounded-[40px] data-[has-massage='true']:opacity-0 data-[has-massage='true']:invisible data-[has-massage='false']:opacity-100 data-[has-massage='false']:visible">
-                    <div className="flex w-[50%] items-center mx-auto p-[16px] bg-white/20 rounded-[12px] justify-between gap-[10px] shadow-black mb-[32px]">
+            <div ref={middleSideRef} data-has-massage={(massages.length !== 0)} className="relative col-span-1 lg:row-span-4 lg:h-[60vh] h-[100vh] overflow-x-hidden overflow-y-auto lg:pl-[20px] lg:pr-[20px] py-[20px] pl-[30px] pr-[20px] no-scroll">
+                <div data-has-massage={(massages.length !== 0)} className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] lg:p-[24px] p-[16px] transition-all duration-500 ease-in-out lg:w-[75%] w-[85%] shadow-black border border-lightestDark bg-pageDark rounded-[40px] data-[has-massage='true']:opacity-0 data-[has-massage='true']:invisible data-[has-massage='false']:opacity-100 data-[has-massage='false']:visible">
+                    <div className="flex lg:w-[50%] w-[75%] items-center mx-auto p-[16px] bg-white/20 rounded-[12px] justify-between gap-[10px] shadow-black mb-[32px]">
                         <span className="text-lightGrey shrink-0"><IconComponent name="circle-warn" size={16} /></span>
                         <span className="text-lightGrey block truncate text-[20px] font-normal">توجه داشته باشید</span>
                         <span className="text-lightGrey shrink-0"><IconComponent name="circle-warn" size={16} /></span>
                     </div>
-                    <ul className="list-disc flex flex-col gap-[24px] w-[75%] mx-auto">
+                    <ul className="list-disc flex flex-col gap-[24px] lg:w-[75%] w-full lg:mx-auto lg:pr-0 pr-[20px]">
                         <li className="text-lightGrey">
-                            <span className="text-[16px] font-normal truncate block">هزینه هر درخواست تولید عکس ( تولید 4 عکس ) 2000 تومان می باشد</span>
+                            <span className="lg:text-[16px] text-[13px] font-normal truncate block">هزینه هر درخواست تولید عکس ( تولید 4 عکس ) 2000 تومان می باشد</span>
                         </li>
                         <li className="text-lightGrey">
-                            <span className="text-[16px] font-normal truncate block">هزینه درخواست هر variation یا upscale برابر با 2000 تومان می باشد</span>
+                            <span className="lg:text-[16px] text-[13px] font-normal truncate block">هزینه درخواست هر variation یا upscale برابر با 2000 تومان می باشد</span>
                         </li>
                         <li className="text-lightGrey">
-                            <span className="text-[16px] font-normal truncate block">میانگین زمان تولید یا تغییر عکس حدود 5 دقیقه خواهد بود</span>
+                            <span className="lg:text-[16px] text-[13px] font-normal truncate block">میانگین زمان تولید یا تغییر عکس حدود 5 دقیقه خواهد بود</span>
                         </li>
                     </ul>
                 </div>
@@ -64,20 +64,16 @@ export default function MiddleSideComponent():ReactNode {
                                         {item?.date.getMinutes().toLocaleString('fa-ir')}
                                     </span>
                                 </div>
-                                <div data-sender={item?.sender} className="border-[1.5px] px-[16px] py-[12px] shadow-black data-[sender='you']:bg-pageDark data-[sender='you']:border-lightestDark data-[sender='you']:rounded-l-[12px] data-[sender='you']:rounded-tr-[12px] data-[sender='bot']:bg-theme data-[sender='bot']:border-theme data-[sender='bot']:rounded-r-[12px] data-[sender='bot']:rounded-tl-[12px]">
-                                    <p className="text-[16px] font-normal leading-[36px] text-white">{item?.txt}</p>
+                                <div data-sender={item?.sender} className="border-[1.5px] p-[16px] shadow-black data-[sender='you']:bg-pageDark data-[sender='you']:border-lightestDark data-[sender='you']:rounded-l-[12px] data-[sender='you']:rounded-tr-[12px] data-[sender='bot']:bg-theme data-[sender='bot']:border-theme data-[sender='bot']:rounded-r-[12px] data-[sender='bot']:rounded-tl-[12px]">
+                                    <p className="lg:text-[16px] text-[13px] font-normal lg:leading-[36px] leading-[28px] text-white">{item?.txt}</p>
                                 </div>
                             </div>
                         ))
                     }
                 </div>
             </div>
-            <div className="lg:col-span-1 lg:h-[20vh] p-[20px] flex items-end relative">
-                <div data-opened={isInputFocused} className="lg:flex hidden items-center gap-[18px] absolute bottom-[70%] left-0 w-full p-[20px] transition-all duration-500 overflow-auto no-scroll data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
-                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
-                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
-                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
-                    <SelectImageComponent onClick={() => false} img={RandomImage.src} />
+            <div className="lg:col-span-1 lg:h-[20vh] lg:pl-[20px] lg:pr-[20px] py-[20px] pl-[30px] pr-[20px] flex items-end relative">
+                <div data-opened={(isInputFocused && massageInInput === '')} className="grid lg:grid-cols-4 grid-cols-2 items-center gap-[18px] absolute bottom-[70%] left-0 w-full lg:pr-[20px] py-[20px] pl-[30px] pr-[20px] transition-all duration-500 overflow-auto no-scroll data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
                     <SelectImageComponent onClick={() => false} img={RandomImage.src} />
                     <SelectImageComponent onClick={() => false} img={RandomImage.src} />
                     <SelectImageComponent onClick={() => false} img={RandomImage.src} />

@@ -8,7 +8,7 @@ import LeftSideComponent from "@/component/page/section/chat-gpt-app/leftSideCom
 export default function ChatGptAppPage():ReactNode {
     // Returning JSX
     return (
-        <div className="grid lg:grid-cols-5 grid-col-1 lg:h-[100vh] lg:overflow-hidden w-full">
+        <div className="grid lg:grid-cols-5 grid-col-1 lg:h-[100vh] lg:overflow-hidden">
             <RightSideComponent />
             <MiddleSideComponent />
             <LeftSideComponent />
