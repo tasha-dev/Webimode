@@ -4,7 +4,7 @@
 // Importing part
 import {Dispatch, ReactNode, useState} from 'react';
 import IconComponent from '@/chunk/iconComponent';
-import ServiceItemComponent from '@/chunk/serviceItemComponent';
+import ServiceItemComponent from '@/component/serviceItemComponent';
 import Link from 'next/link';
 import FigmaImage from '@/public/img/home/thirdSection/services/img-figma.png';
 import CodeImage from '@/public/img/home/thirdSection/services/img-code.png';
