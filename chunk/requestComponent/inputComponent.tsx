@@ -19,7 +19,6 @@ export default function InputComponent({onSubmit, isEditable, children, deleteFu
     if (isEditable) {
         // Defining states of component
         const [isFocused, setFocused]:[boolean, Dispatch<boolean>] = useState(false);
-        const [inputValue, setInputValue]:[string, Dispatch<string>] = useState('');
 
         // Returning JSX
         return (

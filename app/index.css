@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 /*Custom styles*/
-body > section:first-of-type {@apply lg:pt-[200px] pt-[20px];}
+body > section:first-of-type:not(.dashboard) {@apply lg:pt-[200px] pt-[20px];}
 .shadow-custom {box-shadow: -2px -2px 12px 0px rgba(0, 0, 0, 0.04) inset, 2px 2px 30px 0px rgba(255, 255, 255, 0.36) inset;}
 .red-shadow {box-shadow: 0px 0px 16px 0px rgba(255, 112, 137, 0.24), -2px -2px 12px 0px rgba(0, 0, 0, 0.16) inset, 2px 2px 18px 0px rgba(255, 255, 255, 0.12) inset;}
 .group:hover .group-hover\:shadow-custom {@apply shadow-custom}
@@ -39,7 +39,7 @@ body > section:first-of-type {@apply lg:pt-[200px] pt-[20px];}
 .btn-secondary-white {@apply flex justify-center transition-all duration-500 items-center gap-[24px] rounded-[18px] bg-transparent text-white border border-white px-[24px] py-[12px] text-[18px] hover:bg-white hover:text-dark;}
 .btn-secondary-white-icon {@apply flex justify-center items-center w-[36px] h-[36px] rounded-[12px] bg-transparent text-white border border-white;}
 .btn-secondary-theme {@apply flex justify-center items-center gap-[24px] rounded-[18px] bg-transparent text-theme border border-theme px-[24px] py-[12px] text-[18px] transition-all duration-500 hover:bg-theme hover:text-white;}
-.btn-secondary-theme-icon {@apply flex justify-center items-center w-[36px] h-[36px] rounded-[12px] bg-transparent text-theme border border-theme;}
+.btn-secondary-theme-icon {@apply flex justify-center items-center w-[36px] h-[36px] rounded-[12px] bg-transparent text-theme border border-theme transition-all duration-500 hover:bg-theme hover:text-white;}
 footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0 w-full h-[20vh] -translate-y-[100%] bg-[url('../public/img/footer/img-top.svg')] bg-cover}
 .paragraph-big {@apply lg:text-[28px] text-[13px] font-normal text-lightGrey lg:leading-[56px] leading-[26px] lg:mb-[58px] mb-[32px];}
 .paragraph {@apply lg:text-[20px] text-[13px] text-lightGrey lg:leading-[36px] leading-[28px];}
