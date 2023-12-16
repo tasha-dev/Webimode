@@ -12,7 +12,7 @@ import DropdownComponent from "@/chunk/header/dropdownComponent";
 export default function DashboardHeaderComponent():ReactNode {
     // Returning JSX 
     return (
-        <div className="bg-white w-full p-[20px]">
+        <div className="bg-white w-full p-[20px] container">
             <header className="flex justify-between gap-[10px] flex-wrap lg:px-[24px] lg:py-[16px] lg:bg-lightestGrey lg:rounded-[24px] lg:border-b-0 border-b border-b-dark">
                 <div className="flex items-center gap-[30px] lg:w-auto lg:justify-start w-full justify-between">
                     <button
