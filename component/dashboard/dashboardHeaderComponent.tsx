@@ -7,14 +7,15 @@ import Link from "next/link";
 import LinkComponent from "@/chunk/header/linkComponent";
 import IconComponent from "@/chunk/iconComponent";
 import DropdownComponent from "@/chunk/header/dropdownComponent";
+import BackgroundImage from '@/public/img/dashboard/img-lines-header.svg';
 
 // Creating and exporting header of dashboard pages as default
 export default function DashboardHeaderComponent():ReactNode {
     // Returning JSX 
     return (
-        <div className="bg-white w-full p-[20px] container">
-            <header className="flex justify-between gap-[10px] flex-wrap lg:px-[24px] lg:py-[16px] lg:bg-lightestGrey lg:rounded-[24px] lg:border-b-0 border-b border-b-dark">
-                <div className="flex items-center gap-[30px] lg:w-auto lg:justify-start w-full justify-between">
+        <div className="bg-white w-full lg:p-[20px] container">
+            <header className="flex justify-between gap-[10px] flex-wrap lg:px-[24px] lg:py-[16px] lg:bg-lightestGrey lg:rounded-[24px] overflow-hidden">
+                <div className="flex items-center gap-[30px] lg:w-auto lg:justify-start w-full justify-between lg:border-b-0 border-b border-b-dark lg:pb-0 pb-[20px] lg:mx-0 mx-[20px] lg:mt-0 mt-[20px]">
                     <button
                         className={'lg:hidden flex justify-center items-center transition-all duration-500 border text-dark border-dark hover:bg-dark hover:text-white bg-white  aspect-square w-[40px] rounded-[12px]'}
                     >
@@ -40,7 +41,7 @@ export default function DashboardHeaderComponent():ReactNode {
                         </button>
                     </div>
                 </div>
-                <div className="flex gap-[30px]">
+                <div className="flex lg:flex-nowrap flex-wrap gap-[30px] lg:p-0 p-[20px]">
                     <div className="lg:flex hidden">
                         <Link href={'/create'} className={'btn-primary no-py h-full'}>
                             <div className="w-[24px] h-[24px] rounded-full bg-white text-theme flex justify-center items-center">
@@ -52,14 +53,15 @@ export default function DashboardHeaderComponent():ReactNode {
                     <div className="lg:flex hidden items-center justify-center">
                         <div className={'vertical-divider'} />
                     </div>
-                    <Link href={'/dashboard/notifications'} className="w-[56px] h-[56px] aspect-square lg:flex hidden items-center justify-center transition-all duration-500 border border-lightGrey hover:bg-lightGrey rounded-[16px] relative text-lightGrey hover:text-dark">
+                    <Link href={'/dashboard/notifications'} className="w-[56px] h-[56px] aspect-square flex items-center justify-center transition-all duration-500 border border-lightGrey hover:bg-lightGrey rounded-[16px] relative text-lightGrey hover:text-dark">
                         <IconComponent name="bell-ring" size={24} />
                         <div className="absolute bottom-0 right-0 translate-y-[50%] translate-x-[50%] rounded-full flex items-center justify-center aspect-square w-[20px] h-[20px] bg-theme text-white text-[12px] font-bold">
                             3
                         </div>
                     </Link>
-                    <div className="group relative lg:block hidden">
-                        <button className="p-[8px] bg-white rounded-[16px] flex items-center justify-between gap-[28px] w-[228px] transition-all duration-500 group-hover:bg-dark/10">
+                    <div className="group relative">
+                        <Image src={BackgroundImage.src} width={212} height={100} alt="" className="w-full scale-150 h-full z-[1] absolute top-0 left-0" />
+                        <button className="p-[8px] z-10 relative bg-white rounded-[16px] lg:shadow-none shadow-xl flex items-center justify-between gap-[28px] w-[228px] transition-all duration-500 group-hover:bg-dark/10">
                             <div className="flex items-center gap-[12px] w-[70%]">
                                 <Image alt="عکس پروفایل شما" width={1000} height={1000} src={ImageOfMrEhsan.src} className="w-[40px] shrink-0 rounded-[12px] h-[40px] aspect-square" />
                                 <div className="w-full">
@@ -76,7 +78,7 @@ export default function DashboardHeaderComponent():ReactNode {
                                 <IconComponent size={14} name="chevron-down" />
                             </div>
                         </button>
-                        <div className="opacity-0 bg-theme py-[10px] rounded-[10px] w-full invisible transition-all duration-500 group-hover:visible group-hover:opacity-100 absolute top-[110%] left-0">
+                        <div className="opacity-0 bg-theme z-10 py-[10px] rounded-[10px] w-full invisible transition-all duration-500 group-hover:visible group-hover:opacity-100 absolute top-[110%] left-0">
                             <ul>
                                 <li><Link className={'px-[15px] truncate text-[16px] text-dark font-normal py-[5px] block hover:bg-white/30 transition-all duration-500'} href={'#'}>لینک ۱</Link></li>
                                 <li><Link className={'px-[15px] truncate text-[16px] text-dark font-normal py-[5px] block hover:bg-white/30 transition-all duration-500'} href={'#'}>لینک ۲</Link></li>
