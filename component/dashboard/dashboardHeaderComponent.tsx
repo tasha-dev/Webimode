@@ -14,7 +14,7 @@ export default function DashboardHeaderComponent():ReactNode {
     // Returning JSX 
     return (
         <div className="bg-white w-full lg:p-[20px] container">
-            <header className="flex justify-between gap-[10px] flex-wrap lg:px-[24px] lg:py-[16px] lg:bg-lightestGrey lg:rounded-[24px] overflow-hidden">
+            <header className="flex justify-between gap-[10px] flex-wrap lg:px-[24px] lg:py-[16px] lg:bg-lightestGrey lg:rounded-[24px]">
                 <div className="flex items-center gap-[30px] lg:w-auto lg:justify-start w-full justify-between lg:border-b-0 border-b border-b-dark lg:pb-0 pb-[20px] lg:mx-0 mx-[20px] lg:mt-0 mt-[20px]">
                     <button
                         className={'lg:hidden flex justify-center items-center transition-all duration-500 border text-dark border-dark hover:bg-dark hover:text-white bg-white  aspect-square w-[40px] rounded-[12px]'}
@@ -61,7 +61,7 @@ export default function DashboardHeaderComponent():ReactNode {
                     </Link>
                     <div className="group relative">
                         <Image src={BackgroundImage.src} width={212} height={100} alt="" className="w-full scale-150 h-full z-[1] absolute top-0 left-0" />
-                        <button className="p-[8px] z-10 relative bg-white rounded-[16px] lg:shadow-none shadow-xl flex items-center justify-between gap-[28px] w-[228px] transition-all duration-500 group-hover:bg-dark/10">
+                        <button className="p-[8px] z-10 relative bg-white rounded-[16px] lg:shadow-none shadow-xl flex items-center justify-between gap-[28px] w-[228px] transition-all duration-500 group-hover:bg-gray-200">
                             <div className="flex items-center gap-[12px] w-[70%]">
                                 <Image alt="عکس پروفایل شما" width={1000} height={1000} src={ImageOfMrEhsan.src} className="w-[40px] shrink-0 rounded-[12px] h-[40px] aspect-square" />
                                 <div className="w-full">
