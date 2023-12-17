@@ -1,17 +1,14 @@
 // Importing part
 import {ReactNode} from "react";
 import DashboardPageComponent from "@/component/dashboard/dashboardPageTemplate";
-import PieChartComponent from '@/chunk/page/dashboard/pieChartComponent';
+import FirstDivComponent from "@/component/page/section/dashboard/firstDivComponent";
 
 // Creating and exporting dashboard page as default
 export default function DashboardPage():ReactNode {
     // Returning JSX
     return (
         <DashboardPageComponent>
-            <div className="grid lg:grid-cols-2 gap-[32px]">
-                <PieChartComponent data={[31, 69]} link="/dashboard/payments" title="کیف پول شما" type="wallet" />
-                <PieChartComponent data={[10, 15, 20, 25, 14]} link="/dashboard/projects" title="مدیریت پروژه ها" type="project-counts" />
-            </div>
+            <FirstDivComponent />
         </DashboardPageComponent>
     );
 }
