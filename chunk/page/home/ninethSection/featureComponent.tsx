@@ -1,6 +1,6 @@
 // Importing part
 import {ReactNode} from "react";
-import CircleProgressComponent from "@/chunk/page/home/ninethSection/circleProgressComponent";
+import CircleProgressComponent from "@/chunk/circleProgressComponent";
 
 // Defining type of props
 interface propsType {
