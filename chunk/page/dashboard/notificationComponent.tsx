@@ -26,7 +26,7 @@ export default function NotificationComponent({children, count, date, sender, li
                 <div className="w-full">
                     <div className="flex justify-between items-center gap-[10px]">
                         <div className="py-[12px] flex items-center gap-[10px]">
-                            <span className="text-dark text-[12px] font-normal block whitespace-nowrap">{sender}</span>
+                            <span className="text-dark text-[12px] font-normal block truncate max-w-[20ch]">{sender}</span>
                             {
                                 (count !== 0)
                                     ? (
