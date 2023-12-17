@@ -3,7 +3,7 @@ import {ReactNode} from "react";
 
 // Defining type of props
 interface propsType {
-    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'shield-check'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'|'nim-circle-arrow'|'image'|'question-chat'|'exit'|'bin'|'three-dots'|'cloud-download'|'undo'|'bell-ring'|'circle-state'|'ticket'|'wallet'|'question-circle'|'gear'; 
+    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'shield-check'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'|'nim-circle-arrow'|'image'|'question-chat'|'exit'|'bin'|'three-dots'|'cloud-download'|'undo'|'bell-ring'|'circle-state'|'ticket'|'wallet'|'question-circle'|'gear'|'penicl-circle'|'bell'; 
     size?: number;
     width?: number;
     height?: number;
@@ -562,6 +562,19 @@ export default function IconComponent({size, name, height, width}:propsType):Rea
         return (
             <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.5 5.00033H4.16667C3.45083 5.00033 2.77333 4.69033 2.30417 4.16783C2.7625 3.65616 3.42833 3.33366 4.16667 3.33366H19.1667C20.2567 3.32866 20.2558 1.67116 19.1667 1.66699H4.16667C1.86583 1.66699 0 3.53283 0 5.83366V14.167C0 16.4678 1.86583 18.3337 4.16667 18.3337H17.5C18.8808 18.3337 20 17.2145 20 15.8337V7.50033C20 6.11949 18.8808 5.00033 17.5 5.00033ZM16.6667 12.5003C15.5767 12.4953 15.5767 10.8387 16.6667 10.8337C17.7567 10.8387 17.7567 12.4953 16.6667 12.5003Z" fill="currentColor"/>
+            </svg>
+        );
+    } else if (name === 'penicl-circle') {
+        return (
+            <svg width={size} height={size} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.16667 7.776L6.862 10.0807C6.48933 10.4533 5.974 10.6667 5.448 10.6667H5.33333V10.552C5.33333 10.026 5.54667 9.51067 5.91933 9.138L8.224 6.83333L9.16667 7.776ZM9.862 5.19533L9.16667 5.89067L10.1093 6.83333L10.8047 6.138C11.0647 5.878 11.0647 5.45533 10.8047 5.19533C10.5447 4.93533 10.1227 4.93467 9.862 5.19533ZM16 8C16 12.4113 12.4113 16 8 16C3.58867 16 0 12.4113 0 8C0 3.58867 3.58867 0 8 0C12.4113 0 16 3.58867 16 8ZM11.7473 4.25267C10.9673 3.47267 9.69933 3.47267 8.91933 4.25267L4.97667 8.19533C4.34733 8.82467 4 9.662 4 10.552V11.3333C4 11.702 4.298 12 4.66667 12H5.448C6.338 12 7.17533 11.6527 7.80467 11.0233L11.7473 7.08067C12.5273 6.30067 12.5273 5.03267 11.7473 4.25267Z" fill="currentColor"/>
+            </svg>
+        );
+    } else if (name === 'bell') {
+        return (
+            <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.38996 15H16.4366C16.8382 15 17.2338 14.9033 17.59 14.7181C17.9463 14.5328 18.2527 14.2645 18.4833 13.9358C18.7139 13.6071 18.8619 13.2277 18.9149 12.8297C18.9678 12.4316 18.9241 12.0267 18.7875 11.6492L16.4108 5.07833C16.0049 3.61809 15.1319 2.33099 13.9252 1.41389C12.7186 0.496791 11.2447 0.000176732 9.72913 8.47759e-10C8.1514 -2.46602e-05 6.62083 0.53799 5.39013 1.52521C4.15944 2.51244 3.3022 3.88984 2.95996 5.43L1.00162 11.7633C0.886325 12.1372 0.860404 12.533 0.925949 12.9188C0.991493 13.3045 1.14667 13.6695 1.379 13.9844C1.61133 14.2992 1.91432 14.5551 2.26359 14.7315C2.61287 14.9079 2.99867 14.9999 3.38996 15Z" fill="currentColor"/>
+                <path d="M5.91797 16.667C6.10923 17.6089 6.62024 18.4557 7.36442 19.064C8.1086 19.6722 9.04017 20.0045 10.0013 20.0045C10.9624 20.0045 11.894 19.6722 12.6382 19.064C13.3824 18.4557 13.8934 17.6089 14.0846 16.667H5.91797Z" fill="currentColor"/>
             </svg>
         );
     }
