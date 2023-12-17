@@ -18,7 +18,7 @@ export default function DashboardNavComponent():ReactNode {
     // Returning JSX
     return (
         <nav className="p-[16px] bg-lightestGrey rounded-[24px]">
-            <ul className="flex flex-col gap-[28px] lg:mb-[250px] mb-[142px]">
+            <ul className="flex flex-col gap-[20px] lg:mb-[250px] mb-[142px]">
                 <NavItemComponent icon="window" isActive={(pathname === '/dashboard')} link="/dashboard" title="فعالیت های اخیر" />
                 <NavItemComponent icon="circle-state" isActive={(pathname === '/dashboard/projects')} link="/dashboard/projects" title="مدیریت پروژه ها" />
                 <NavItemComponent icon="bell-ring" isActive={(pathname === '/dashboard/notifications')} link="/dashboard/notifications" title="پیام های من" />

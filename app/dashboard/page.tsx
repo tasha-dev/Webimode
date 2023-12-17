@@ -8,7 +8,7 @@ export default function DashboardPage():ReactNode {
     // Returning JSX
     return (
         <DashboardPageComponent>
-            <div>
+            <div className="grid lg:grid-cols-2 gap-[32px]">
                 <PieChartComponent data={[31, 69]} link="/dashboard/payments" title="کیف پول شما" type="wallet" />
                 <PieChartComponent data={[10, 15, 20, 25, 14]} link="/dashboard/projects" title="مدیریت پروژه ها" type="project-counts" />
             </div>
