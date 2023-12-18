@@ -5,6 +5,7 @@ import FirstDivComponent from "@/component/page/section/dashboard/firstDivCompon
 import SecondDivComponent from "@/component/page/section/dashboard/secondDivComponent";
 import ThirdDivComponent from "@/component/page/section/dashboard/thirdDivComponent";
 import FourthDivComponent from "@/component/page/section/dashboard/fourthDivComponent";
+import FifthDivComponent from "@/component/page/section/dashboard/fifthDivComponent";
 
 // Creating and exporting dashboard page as default
 export default function DashboardPage():ReactNode {
@@ -16,6 +17,7 @@ export default function DashboardPage():ReactNode {
                 <SecondDivComponent />
                 <ThirdDivComponent />
                 <FourthDivComponent />
+                <FifthDivComponent />
             </div>
         </DashboardPageComponent>
     );

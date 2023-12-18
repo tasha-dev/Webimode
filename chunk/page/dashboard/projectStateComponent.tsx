@@ -10,7 +10,7 @@ import Link from "next/link";
 // Defining type of props
 interface propsType {
     title: string;
-    deadLine: Date;
+    deadLine: string;
     uiUxProgress: number;
     frontEndProgress: number;
     backEndProgress: number;
@@ -31,7 +31,7 @@ export default function ProjectStateComponent({uiUxProgress, backEndProgress, de
         hours: number,
         minutes: number,
         seconds: number
-    } = getDateDifference(deadLine.toISOString(), new Date().toISOString());
+    } = getDateDifference(deadLine, new Date().toISOString());
 
     // Returning JSX
     return (

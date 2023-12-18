@@ -30,17 +30,17 @@ export default function FourthDivComponent():ReactNode {
                 <div className="lg:grid flex flex-col  grid-cols-3 gap-[23px]">
                     <div className="flex flex-col gap-[24px] lg:shrink shrink-0">
                         <ProjectTitleComponent count={3} link="#" theme="theme" title="طراحی سایت" />
-                        <ProjectStateComponent theme="theme" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('2023/12/18')} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
-                        <ProjectStateComponent theme="theme" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('2023/12/17')} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
+                        <ProjectStateComponent theme="theme" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('12/18/2025 10:00').toISOString()} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
+                        <ProjectStateComponent theme="theme" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('12/18/2025 10:00').toISOString()} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
                     </div>
                     <div className="flex flex-col gap-[24px] lg:shrink shrink-0">
                         <ProjectTitleComponent count={1} link="#" theme="purple" title="طراحی اپلیکیشن" />
-                        <ProjectStateComponent theme="purple" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('2023/12/17')} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
+                        <ProjectStateComponent theme="purple" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('12/18/2025 10:00').toISOString()} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
                     </div>
                     <div className="flex flex-col gap-[24px] lg:shrink shrink-0">
                         <ProjectTitleComponent count={0} link="#" theme="blue" title="طراحی لوگو" />
-                        <ProjectStateComponent theme="blue" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('2023/12/18')} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
-                        <ProjectStateComponent theme="blue" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('2023/12/18')} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
+                        <ProjectStateComponent theme="blue" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('12/18/2025 10:00').toISOString()} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
+                        <ProjectStateComponent theme="blue" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('12/18/2025 10:00').toISOString()} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />
                     </div>
                 </div>
             </div>
