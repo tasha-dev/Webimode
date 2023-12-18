@@ -25,7 +25,7 @@ export default function DashboardNavComponent():ReactNode {
                 <NavItemComponent icon="ticket" isActive={(pathname === '/dashboard/tickets')} link="/dashboard/tickets" title="تیکت و درخواست من" />
                 <NavItemComponent icon="wallet" isActive={(pathname === '/dashboard/payments')} link="/dashboard/payments" title="مدیریت پرداخت ها" />
                 <NavItemComponent icon="question-circle" isActive={(pathname === '/dashboard/faq')} link="/dashboard/faq" title="راهنما داشبورد" />
-                <NavItemComponent icon="gear" isActive={(pathname === '/dashboard/settings')} link="/dashboard/settings" title="تنظیمات حساب" />
+                <NavItemComponent icon="gear" isActive={(pathname === '/dashboard/profile')} link="/dashboard/profile" title="تنظیمات حساب" />
             </ul>
             <div className="bg-dark shadow-custom p-[12px] mb-[16px] shadow-black rounded-[24px]">
                 <div className="bg-lightestDark h-[64px] mb-[12px] rounded-[16px] relative">
