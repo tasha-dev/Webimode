@@ -63,14 +63,14 @@ export default function SecondDivComponent():ReactNode {
                     <div className="bg-gradient-to-t from-dark/20 to-transparent pointer-events-none w-full h-full left-0 top-0 absolute" />
                     <div className="h-full overflow-auto scroll-notification-dashboard w-full pl-[25px]">
                         <ul className="flex flex-col gap-[16px]">
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
-                            <NotificationComponent link="#" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
+                            <NotificationComponent link="idk" count={3} date={new Date()} sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</NotificationComponent>
                         </ul>
                     </div>
                 </div>

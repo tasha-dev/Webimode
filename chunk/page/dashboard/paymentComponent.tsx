@@ -44,9 +44,9 @@ export default function PaymentComponent({date, link, paymentType, price}:propsT
                             <span data-payment={paymentType} className="text-[8px] font-normal transition-all duration-500 data-[payment='cash-out']:text-alert data-[payment='deposit']:text-theme group-hover:text-white">{new Date(date).toLocaleDateString('fa-ir')}</span>
                             /
                             <div className="flex items-center gap-[2ch]">
-                                <span data-payment={paymentType} className="text-[8px] font-normal transition-all duration-500 data-[payment='cash-out']:text-alert data-[payment='deposit']:text-theme group-hover:text-white">{new Date(date).getHours().toLocaleString('fa-ir')}</span>
-                                :
                                 <span data-payment={paymentType} className="text-[8px] font-normal transition-all duration-500 data-[payment='cash-out']:text-alert data-[payment='deposit']:text-theme group-hover:text-white">{new Date(date).getMinutes().toLocaleString('fa-ir')}</span>
+                                :
+                                <span data-payment={paymentType} className="text-[8px] font-normal transition-all duration-500 data-[payment='cash-out']:text-alert data-[payment='deposit']:text-theme group-hover:text-white">{new Date(date).getHours().toLocaleString('fa-ir')}</span>
                             </div>
                         </div>
                     </div>

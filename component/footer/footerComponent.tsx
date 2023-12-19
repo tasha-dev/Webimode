@@ -17,8 +17,8 @@ export default function FooterComponent():ReactNode {
     const pathname:string = usePathname();
 
     // Defining URL's with which dont need contact component, no margin in top of footer and no footer at all
-    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in', '/estimate', '/chat-gpt', '/request-project', '/dashboard', '/dashboard/notifications', '/dashboard/tickets', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile'];
-    const noMarginTopPages:Array<string> = ['/estimate', '/chat-gpt'];
+    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in', '/estimate', '/chat-gpt', '/request-project', '/dashboard', '/dashboard/notifications', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile'];
+    const noMarginTopPages:Array<string> = ['/estimate', '/chat-gpt', '/dashboard', '/dashboard/notifications', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile'];
     const noFooterPages:Array<string> = ['/chat-gpt/app'];
 
     // Conditional rendering
@@ -27,10 +27,10 @@ export default function FooterComponent():ReactNode {
     } else {
         return (
             <>
-                {(!noContactComponentURL.includes(pathname)) ? <BeforeFooterComponent /> : false}
-                <footer data-hasbefore={!noContactComponentURL.includes(pathname)} data-hasmargintop={!noMarginTopPages.includes(pathname)} className="bg-gradient-to-b from-darkerTheme to-darkerTheme data-[hasmargintop='true']:lg:mt-[150px] lg:relative">
+                {(!noContactComponentURL.includes(pathname) && !pathname.startsWith('/dashboard/tickets')) ? <BeforeFooterComponent /> : false}
+                <footer data-hasbefore={(!noContactComponentURL.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))} data-hasmargintop={(!noMarginTopPages.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))} className="bg-gradient-to-b from-darkerTheme to-darkerTheme data-[hasmargintop='true']:lg:mt-[150px] lg:relative">
                     {
-                        (!noContactComponentURL.includes(pathname))
+                        (!noContactComponentURL.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))
                             ? (
                                 <div className="container lg:p-[20px] lg:relative lg:mb-0 mb-[80px]">
                                     <ContactComponent />

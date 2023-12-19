@@ -31,7 +31,7 @@ export default function HeaderComponent():ReactNode {
     // Conditional rendering
     if (noHeaderPages.includes(pathname)) {
         return false;
-    } else if (dashboardPages.includes(pathname)) {
+    } else if (dashboardPages.includes(pathname) || pathname.startsWith('/dashboard/tickets')) {
         return <DashboardHeaderComponent />;
     } else {
         return (

@@ -28,10 +28,10 @@ export default function FifthDivComponent():ReactNode {
                     </div>
                 </div>
                 <div className="grid lg:grid-cols-2 gap-[20px]">
-                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
-                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
-                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
-                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
+                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="idk" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
+                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="idk" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
+                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="idk" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
+                    <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="idk" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
                 </div>
             </div>
             <div>
