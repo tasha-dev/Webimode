@@ -14,7 +14,7 @@ export default function DashboardPageComponent({children}:propsTye):ReactNode {
         <section className="dashboard">
             <div className="container p-[20px] grid lg:grid-cols-4 gap-[20px] items-start">
                 <DashboardNavComponent />
-                <div className="lg:col-span-3">
+                <div className="lg:col-span-3 col-span-1 w-full overflow-hidden">
                     {children}
                 </div>
             </div>        

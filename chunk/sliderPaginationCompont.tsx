@@ -10,7 +10,7 @@ interface propsType {
     prevBtnId?: string;
     nextBtnId?: string;
     hasButtons?: boolean;
-    theme?: 'theme' | 'white';
+    theme?: 'theme' | 'white' | 'alert';
     hasNumbers?: boolean;
 }
 
@@ -66,7 +66,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
         if (hasButtons) {
             return (
                 <div className="flex items-center justify-center gap-[20px] mt-[64px]">
-                    <button id={prevBtnId} data-active={(activeIndex !== 0)} className={(theme === 'theme') ? "slider-prev-next-btn" : "slider-prev-next-btn-white"}>
+                    <button id={prevBtnId} data-active={(activeIndex !== 0)} className={`slider-prev-next-btn${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}>
                         <IconComponent name="chevron-right" size={16} />
                     </button>
                     <div className='flex gap-[12px] items-center justify-center'>
@@ -76,11 +76,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                     <div
                                         key={index}
                                         data-active={(activeIndex / slidesPerView === index)}
-                                        className={
-                                            (theme === 'theme')
-                                                ? "slider-slide-bullet"
-                                                : "slider-slide-bullet-white"
-                                        }
+                                        className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                     />
                                 )) : (
                                     <>
@@ -89,28 +85,20 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                                 <div
                                                     key={index}
                                                     data-active={(Math.floor(activeIndex / slidesPerView) === index)}
-                                                    className={
-                                                        (theme === 'theme')
-                                                            ? "slider-slide-bullet"
-                                                            : "slider-slide-bullet-white"
-                                                    }
+                                                    className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                                 />
                                             ))
                                         }
                                         <span className="text-[24px] text-lightGrey font-normal">...</span>
                                         <div
                                             data-active={(Math.floor(activeIndex / slidesPerView) === 10)}
-                                            className={
-                                                (theme === 'theme')
-                                                    ? "slider-slide-bullet"
-                                                    : "slider-slide-bullet-white"
-                                            }
+                                            className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                         />
                                     </>
                                 )
                         }
                     </div>
-                    <button id={nextBtnId} data-active={(activeIndex !== ((slidesCount*slidesPerView)-slidesPerView))} className={(theme === 'theme') ? "slider-prev-next-btn" : "slider-prev-next-btn-white"}>
+                    <button id={nextBtnId} data-active={(activeIndex !== ((slidesCount*slidesPerView)-slidesPerView))} className={`slider-prev-next-btn${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}>
                         <IconComponent name="chevron-left" size={16} />
                     </button>
                 </div>
@@ -124,11 +112,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                 <div
                                     key={index}
                                     data-active={(activeIndex / slidesPerView === index)}
-                                    className={
-                                        (theme === 'theme')
-                                            ? "slider-slide-bullet"
-                                            : "slider-slide-bullet-white"
-                                    }
+                                    className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                 />
                             )) : (
                                 <>
@@ -137,11 +121,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                             <div
                                                 key={index}
                                                 data-active={(Math.floor(activeIndex / slidesPerView) === index)}
-                                                className={
-                                                    (theme === 'theme')
-                                                        ? "slider-slide-bullet"
-                                                        : "slider-slide-bullet-white"
-                                                }
+                                                className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                             />
                                         ))
                                     }

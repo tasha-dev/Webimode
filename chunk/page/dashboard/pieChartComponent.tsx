@@ -2,7 +2,7 @@
 'use client';
 
 // Importing part
-import {ReactNode, useEffect} from "react";
+import {ReactNode} from "react";
 import Link from "next/link";
 import IconComponent from "@/chunk/iconComponent";
 import {Chart as ChartJS, ArcElement} from "chart.js";
@@ -42,7 +42,7 @@ export default function PieChartComponent({data, link, title, type}:propsType):R
                     </div>
                 </div>
                 <div className="p-[24px] bg-lightestGrey border border-lightGrey rounded-[40px] flex lg:flex-row flex-col items-start gap-[24px]">
-                    <div className="w-[120px] h-[120px] overflow-hidden shrink-0">
+                    <div className="w-[120px] h-[120px] bg-white rounded-full overflow-hidden shrink-0">
                         <Doughnut data={{
                             labels: ['taken', 'given'],
                             datasets: [
@@ -133,7 +133,7 @@ export default function PieChartComponent({data, link, title, type}:propsType):R
                     </div>
                 </div>
                 <div className="p-[24px] bg-lightestGrey border border-lightGrey rounded-[40px] flex lg:flex-row flex-col items-start gap-[24px]">
-                    <div className="w-[120px] h-[120px] overflow-hidden shrink-0">
+                    <div className="w-[120px] h-[120px] bg-white rounded-full overflow-hidden shrink-0">
                         <Doughnut data={{
                             labels: ['web-design', 'logo-design', 'motion-graphic', 'seo', 'application'],
                             datasets: [

@@ -1,0 +1,30 @@
+/*Defining styles of date picker*/
+.date-picker-input-deposit {@apply bg-white rounded-[12px] border-[1.5px] p-[14px] border-lighterGrey cursor-pointer transition-all duration-500 hover:bg-lighterGrey text-[13px] font-normal text-dark;}
+.date-picker-deposit.ep-arrow::after {@apply shadow-none border border-lighterGrey;}
+.date-picker-deposit.rmdp-wrapper{@apply bg-white shadow-none border border-lighterGrey rounded-[12px];}
+.date-picker-deposit .rmdp-range {@apply bg-theme shadow-none;}
+.date-picker-deposit .rmdp-range-hover {@apply bg-theme shadow-none;}
+.date-picker-deposit .rmdp-today {@apply bg-theme;}
+.date-picker-deposit .rmdp-day.rmdp-today span {@apply bg-black/20;}
+.date-picker-deposit .rmdp-week-day {@apply text-theme;}
+.date-picker-deposit .rmdp-day:not(.rmdp-disabled,.rmdp-day-hidden) span:hover {@apply bg-dark/30 text-dark;}
+.date-picker-deposit .rmdp-header-values {@apply text-dark;}
+.date-picker-deposit .rmdp-arrow {@apply border-theme;}
+.date-picker-deposit .rmdp-day, .rmdp-week-day {@apply text-dark;}
+.date-picker-deposit .rmdp-arrow-container:hover {@apply bg-theme text-white;}
+.date-picker-deposit span {@apply transition-all duration-500}
+
+.date-picker-input-cash-out {@apply bg-white rounded-[12px] border-[1.5px] p-[14px] border-lighterGrey cursor-pointer transition-all duration-500 hover:bg-lighterGrey text-[13px] font-normal text-dark;}
+.date-picker-cash-out.ep-arrow::after {@apply shadow-none border border-lighterGrey;}
+.date-picker-cash-out.rmdp-wrapper{@apply bg-white shadow-none border border-lighterGrey rounded-[12px];}
+.date-picker-cash-out .rmdp-range {@apply bg-alert shadow-none;}
+.date-picker-cash-out .rmdp-range-hover {@apply bg-alert shadow-none;}
+.date-picker-cash-out .rmdp-today {@apply bg-alert;}
+.date-picker-cash-out .rmdp-day.rmdp-today span {@apply bg-black/20;}
+.date-picker-cash-out .rmdp-week-day {@apply text-alert;}
+.date-picker-cash-out .rmdp-day:not(.rmdp-disabled,.rmdp-day-hidden) span:hover {@apply bg-dark/30 text-dark;}
+.date-picker-cash-out .rmdp-header-values {@apply text-dark;}
+.date-picker-cash-out .rmdp-arrow {@apply border-alert;}
+.date-picker-cash-out .rmdp-day, .rmdp-week-day {@apply text-dark;}
+.date-picker-cash-out .rmdp-arrow-container:hover {@apply bg-alert text-white;}
+.date-picker-cash-out span {@apply transition-all duration-500}
