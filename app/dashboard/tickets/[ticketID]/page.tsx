@@ -33,8 +33,8 @@ export default function DashboardTicketChatPage():ReactNode {
     // Returning JSX
     return (
         <DashboardPageComponent>
-           <div className="grid grid-cols-1 grid-rows-5 gap-[32px] lg:h-[990px] h-[500px]">
-                <div className="flex items-start justify-start">
+           <div className="flex flex-col gap-[32px] lg:h-[990px] h-[500px]">
+                <div className="flex items-start justify-start ">
                     <div className="bg-lightestGrey w-full row-span-1 px-[16px] py-[20px] rounded-[16px] flex items-center justify-between gap-[20px]">
                         <div className="flex gap-[12px]">
                             <Image className="w-[48px] h-[48px] shrink-0 aspect-square rounded-[12px]" alt="عکسی پروفایل" width={48} height={48} src={ImageOfMrEhsan.src} />
@@ -59,7 +59,7 @@ export default function DashboardTicketChatPage():ReactNode {
                         </div>
                     </div>
                 </div>
-                <div ref={scrollableContentRef} className="overflow-auto no-scroll flex flex-col gap-[40px] row-span-3">
+                <div ref={scrollableContentRef} className="overflow-auto no-scroll flex flex-col gap-[40px] h-full">
                     {
                         (chats.length !== 0)
                             ? chats.map((item, index) => (
@@ -90,11 +90,8 @@ export default function DashboardTicketChatPage():ReactNode {
                             // Preventing from sending form to url
                             event.preventDefault();
 
-
-                            if (!massageInInput.startsWith(' ')) {
-                                const scrollableContent: HTMLDivElement = scrollableContentRef.current;
-
-                                // Adding massage to state
+                            // A function that adds massage to state
+                            async function addMassage() {
                                 setChats(() => [...chats, {
                                     content: massageInInput,
                                     sender: 'you',
@@ -104,16 +101,25 @@ export default function DashboardTicketChatPage():ReactNode {
                                     sender: 'them',
                                     date: new Date()
                                 }])
+                            }
 
-                                // Scrolling to bottom of the container
-                                scrollableContent.scrollBy({
-                                    left: 0,
-                                    top: scrollableContent.scrollHeight,
-                                    behavior: 'smooth'
-                                })
+                            // A condition to see if massage in input exists
+                            if (!massageInInput.startsWith(' ')) {
+                                const scrollableContent: HTMLDivElement = scrollableContentRef.current;
 
-                                // Removing typef value of input
-                                setMassageInInput('');
+                                // Runnung "assMassage" function and after that ...
+                                addMassage()
+                                    .then(() => {
+                                        // Scrolling to bottom of the container
+                                        scrollableContent.scrollBy({
+                                            left: 0,
+                                            top: scrollableContent.scrollHeight,
+                                            behavior: 'smooth'
+                                        })
+
+                                        // Removing typef value of input
+                                        setMassageInInput('');
+                                    })
                             }
                         }}
                     >

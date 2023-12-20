@@ -87,35 +87,42 @@ export default function MiddleSideComponent():ReactNode {
                         // Preventing from sending form to url
                         event.preventDefault();
 
+                        // Defining a function to add massage to state
+                        async function addMassage() {
+                            setMassages(() => [...massages, {
+                                txt: massageInInput,
+                                sender: 'you',
+                                date: new Date()
+                            }, {
+                                txt: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',
+                                sender: 'bot',
+                                date: new Date()
+                            }])
+                        }
+
                        if (!massageInInput.startsWith(' ')) {
+                           // Defining Element to scroll to bottom of it
                            const middleSideElement: HTMLDivElement = middleSideRef.current;
 
-                           // Adding massage to state
-                           setMassages(() => [...massages, {
-                               txt: massageInInput,
-                               sender: 'you',
-                               date: new Date()
-                           }, {
-                               txt: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',
-                               sender: 'bot',
-                               date: new Date()
-                           }])
+                           // Adding massage to state and then ...
+                           addMassage()
+                                .then(() => {
+                                    // Scrolling to bottom of the container
+                                    middleSideElement.scrollBy({
+                                        left: 0,
+                                        top: middleSideElement.scrollHeight,
+                                        behavior: 'smooth'
+                                    })
 
-                           // Scrolling to bottom of the container
-                           middleSideElement.scrollBy({
-                                left: 0,
-                                top: middleSideElement.scrollHeight,
-                                behavior: 'smooth'
-                           })
+                                    // Showing loading animtion
+                                    // setFetching(true);
+                                    // setInterval(() => {
+                                    // setFetching(false);
+                                    // }, 1000)
 
-                           // Showing loading animtion
-                           // setFetching(true);
-                           // setInterval(() => {
-                           // setFetching(false);
-                           // }, 1000)
-
-                           // Removing typef value of input
-                           setMassageInInput('');
+                                    // Removing typef value of input
+                                    setMassageInInput('');
+                                }) 
                        }
                     }}
                 >
