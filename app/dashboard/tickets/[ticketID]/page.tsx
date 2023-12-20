@@ -33,7 +33,7 @@ export default function DashboardTicketChatPage():ReactNode {
     // Returning JSX
     return (
         <DashboardPageComponent>
-           <div className="flex flex-col gap-[32px] lg:h-[990px] h-[500px]">
+           <div className="flex flex-col gap-[32px] lg:h-[990px] h-[1000px]">
                 <div className="flex items-start justify-start ">
                     <div className="bg-lightestGrey w-full row-span-1 px-[16px] py-[20px] rounded-[16px] flex items-center justify-between gap-[20px]">
                         <div className="flex gap-[12px]">
