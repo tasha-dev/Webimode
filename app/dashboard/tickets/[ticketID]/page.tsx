@@ -129,7 +129,7 @@ export default function DashboardTicketChatPage():ReactNode {
                             required
                             value={massageInInput}
                             onFocus={() => setInputFocused(true)}
-                            onBlur={() => (massageInInput === '') ? false : setInputFocused(false)}
+                            onBlur={() => setInputFocused(false)}
                             placeholder="چیزی تایپ کنید ...."
                             type="text"
                             className="px-[16px] py-[12px] w-full bg-transparent text-[20px] font-normal outline-0 placeholder:text-lightGrey text-dark"
