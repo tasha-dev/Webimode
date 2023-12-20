@@ -17,8 +17,8 @@ export default function FooterComponent():ReactNode {
     const pathname:string = usePathname();
 
     // Defining URL's with which dont need contact component, no margin in top of footer and no footer at all
-    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in', '/estimate', '/chat-gpt', '/request-project', '/dashboard', '/dashboard/notifications', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile'];
-    const noMarginTopPages:Array<string> = ['/estimate', '/chat-gpt', '/dashboard', '/dashboard/notifications', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile'];
+    const noContactComponentURL:Array<string> = ['/sign-in', '/log-in', '/estimate', '/chat-gpt', '/request-project', '/dashboard', '/dashboard/notifications', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile', '/dashboard/projects'];
+    const noMarginTopPages:Array<string> = ['/estimate', '/chat-gpt', '/dashboard', '/dashboard/notifications', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile', '/dashboard/projects'];
     const noFooterPages:Array<string> = ['/chat-gpt/app'];
 
     // Conditional rendering

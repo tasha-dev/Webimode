@@ -23,7 +23,7 @@ export default function HeaderComponent():ReactNode {
     // Defining page which have dark background and pages which have no header at all
     const darkBgUrl:Array<string> = ['/estimate', '/chat-gpt'];
     const noHeaderPages:Array<string> = ['/chat-gpt/app'];
-    const dashboardPages:Array<string> = ['/dashboard', '/dashboard/notifications', '/dashboard/tickets', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile'];
+    const dashboardPages:Array<string> = ['/dashboard', '/dashboard/notifications', '/dashboard/tickets', '/dashboard/payments', '/dashboard/faq', '/dashboard/profile', '/dashboard/projects'];
 
     // Using useEffect hook to add event listener to check if page is scrolled scrolled or not
     useEffect(() => addEventListener('scroll', () => setScrolled((scrollY !== 0))), [])
