@@ -20,7 +20,7 @@ import cSharpImage from '@/public/img/home/fourthSection/img-xd.png';
 import figmaImage from '@/public/img/home/fourthSection/img-figma.png';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import SliderItemComponent from '@/chunk/page/home/fourthSection/sliderItemComponent';
-import {Navigation, Autoplay} from 'swiper/modules';
+import {Navigation, Autoplay, Mousewheel} from 'swiper/modules';
 
 // Creating and exporting fourth section of home page as default
 export default function FourthSectionComponent():ReactNode {
@@ -49,26 +49,29 @@ export default function FourthSectionComponent():ReactNode {
           </p>
         </header>
         <main className='gap-[24px] flex items-center justify-center'>
-          <button id='prev-tech-slider-btn' data-active={(activeIndexOfSlider !== 0)} className='slider-prev-next-btn lg:flex hidden'>
+          <button id='prev-tech-slider-btn' data-active={(activeIndexOfSlider !== 0)} className='slider-prev-next-btn lg:flex hidden shrink-0'>
             <IconComponent size={16} name="chevron-right" />
           </button>
           <Swiper 
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, Mousewheel]}
             initialSlide={activeIndexOfSlider}
+            direction='horizontal'
+            mousewheel={true}
             slidesPerView={14} 
             slidesPerGroup={14}
             spaceBetween={32}
+            grabCursor
+            onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex);console.log(event.activeIndex)}}
+            className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white w-full bg-lighterGrey'
             autoplay={{
-              delay: 5000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             breakpoints={{
               1024: {slidesPerView: 14, slidesPerGroup: 14},
               768: {slidesPerView: 4, slidesPerGroup: 4},
-              1: {slidesPerView: 2, slidesPerGroup: 2},
+              1: {slidesPerView: 3, slidesPerGroup: 3},
             }}
-            onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex);console.log(event.activeIndex)}}
-            className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white w-full bg-lighterGrey'
             navigation={{
               nextEl: '#next-tech-slider-btn',
               prevEl: '#prev-tech-slider-btn',
@@ -117,7 +120,7 @@ export default function FourthSectionComponent():ReactNode {
               <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} size={32} /></SwiperSlide>
               <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} size={28} /></SwiperSlide>
           </Swiper>
-          <button id='next-tech-slider-btn' data-active={(activeIndexOfSlider !== 28)} className='slider-prev-next-btn lg:flex hidden'>
+          <button id='next-tech-slider-btn' data-active={(activeIndexOfSlider !== 28)} className='slider-prev-next-btn lg:flex hidden shrink-0'>
             <IconComponent size={16} name="chevron-left" />
           </button>
         </main>
