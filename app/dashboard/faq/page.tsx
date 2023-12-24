@@ -6,7 +6,7 @@ import Image from "next/image";
 
 // Creating and exporting Faq page of dashboard as default
 export default function DashboardFaqPage():ReactNode {
-    // Returning JSX
+// Returning JSX
     return (
         <DashboardPageComponent>
             <span className="lg:text-[20px] text-[16px] font-normal text-dark block lg:mb-[8px] mb-[12px]">این متن امتحانی هست</span>

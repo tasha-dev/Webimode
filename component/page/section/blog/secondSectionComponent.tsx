@@ -9,6 +9,7 @@ import {Navigation} from "swiper/modules";
 import BlogComponent from "@/chunk/page/blog/secondSection/blogComponent";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import BlogGenreHeaderComponent from "@/chunk/page/blog/blogGenreHeaderComponent";
+import * as SwiperType from "swiper/types";
 import 'swiper/css';
 
 // Defining type of props
@@ -20,6 +21,7 @@ interface propsType {
 export default function SecondSectionComponent({filter}:propsType):ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
     const [content, setContent]:[Array<{
         genre: string;
         img: string;
@@ -60,6 +62,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                 <BlogGenreHeaderComponent highlightedTitle={filter} link="#" />
                 <main>
                     <Swiper
+                        onSwiper={setSlider}
                         spaceBetween={20}
                         initialSlide={activeIndexOfSlider}
                         onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex)}}
@@ -166,6 +169,7 @@ export default function SecondSectionComponent({filter}:propsType):ReactNode {
                         </SwiperSlide>
                     </Swiper>
                     <SliderPaginationComponent 
+                        swiper={slider}
                         activeIndex={activeIndexOfSlider} 
                         slidesCount={5} 
                         hasButtons 

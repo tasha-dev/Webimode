@@ -17,13 +17,15 @@ import AiImage from '@/public/img/home/thirdSection/services/img-ai.png';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 import SliderPaginationComponent from '@/chunk/sliderPaginationCompont';
+import * as SwiperType from "swiper/types";
 import 'swiper/css';
 
 // Creating and exporting third section component as default
 export default function ThirdSectionComponent():ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveInderOfSlider]:[number, Dispatch<number>] = useState(0);
-    
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+
     // Returning JSX
     return (
         <section className='xl:mt-[500px] mt-[50px]'>
@@ -64,6 +66,7 @@ export default function ThirdSectionComponent():ReactNode {
                 </main>
                 <div className="xl:hidden block">
                     <Swiper 
+                        onSwiper={setSlider}
                         onSlideChange={(event) => {setActiveInderOfSlider(event.activeIndex)}}
                         initialSlide={activeIndexOfSlider}
                         modules={[Navigation]}
@@ -83,6 +86,7 @@ export default function ThirdSectionComponent():ReactNode {
                         <SwiperSlide><ServiceItemComponent icon='ai' iconGradiant='reversed-pink' img={AiImage.src} title='هوش مصنوعی'>بهترین طراحی طراحی و تجربه کاربری در زمینه وب سایت و اپلیکیشن با مدرن ترین متود های روز دنیا</ServiceItemComponent></SwiperSlide>
                     </Swiper>
                     <SliderPaginationComponent 
+                        swiper={slider} 
                         activeIndex={activeIndexOfSlider} 
                         slidesCount={8} 
                         hasButtons 

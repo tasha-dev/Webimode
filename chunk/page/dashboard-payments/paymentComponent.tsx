@@ -13,6 +13,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import PaymentComponent from "../dashboard/paymentComponent";
 import {Navigation} from "swiper/modules";
+import * as SwiperType from "swiper/types";
 import 'swiper/css';
 
 // Defining type of props
@@ -26,6 +27,9 @@ export default function PaymentSliderComponent({date, paymentType}:propsType):Re
     // Defining state of component
     const [dateValue, setDateValue] = useState<Value>(date);
     const [activeSlide, setActiveSlide]:[number, Dispatch<number>] = useState(0);
+    const [activeSlideMQ, setActiveSlideMQ]:[number, Dispatch<number>] = useState(0);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+    const [sliderMQ, setSliderMQ]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
 
     // Returning JSX
     return (
@@ -66,6 +70,7 @@ export default function PaymentSliderComponent({date, paymentType}:propsType):Re
                     slidesPerGroup={4}
                     spaceBetween={22}
                     onSlideChange={(event) => setActiveSlide(event.activeIndex)}
+                    onSwiper={setSlider}
                     navigation={{
                         prevEl: (paymentType === 'cash-out') ? '#cash-out-prev-btn' : '#deposit-prev-btn',
                         nextEl: (paymentType === 'cash-out') ? '#cash-out-next-btn' : '#deposit-next-btn'
@@ -93,6 +98,7 @@ export default function PaymentSliderComponent({date, paymentType}:propsType):Re
                     <SwiperSlide><PaymentComponent date={new Date().toISOString()} link="#" paymentType={paymentType} price={256000} /></SwiperSlide>
                 </Swiper>
                 <SliderPaginationComponent
+                    swiper={slider}
                     theme={(paymentType === 'cash-out') ? 'alert' : 'theme'}
                     activeIndex={activeSlide}
                     slidesCount={5}
@@ -104,15 +110,16 @@ export default function PaymentSliderComponent({date, paymentType}:propsType):Re
             </div>
             <div className="lg:hidden block">
                 <Swiper
+                    onSwiper={setSliderMQ}
                     modules={[Navigation]}
-                    initialSlide={activeSlide}
+                    initialSlide={activeSlideMQ}
                     slidesPerView={1}
                     slidesPerGroup={1}
                     spaceBetween={22}
-                    onSlideChange={(event) => setActiveSlide(event.activeIndex)}
+                    onSlideChange={(event) => setActiveSlideMQ(event.activeIndex)}
                     navigation={{
-                        prevEl: (paymentType === 'cash-out') ? '#cash-out-prev-btn' : '#deposit-prev-btn',
-                        nextEl: (paymentType === 'cash-out') ? '#cash-out-next-btn' : '#deposit-next-btn'
+                        prevEl: (paymentType === 'cash-out') ? '#cash-out-prev-btn-mq' : '#deposit-prev-btn-mq',
+                        nextEl: (paymentType === 'cash-out') ? '#cash-out-next-btn-mq' : '#deposit-next-btn-mq'
                     }}
                 >
                     <SwiperSlide><PaymentComponent date={new Date().toISOString()} link="#" paymentType={paymentType} price={256000} /></SwiperSlide>
@@ -122,13 +129,14 @@ export default function PaymentSliderComponent({date, paymentType}:propsType):Re
                     <SwiperSlide><PaymentComponent date={new Date().toISOString()} link="#" paymentType={paymentType} price={256000} /></SwiperSlide>
                 </Swiper>
                 <SliderPaginationComponent
+                    swiper={sliderMQ}
                     theme={(paymentType === 'cash-out') ? 'alert' : 'theme'}
-                    activeIndex={activeSlide}
+                    activeIndex={activeSlideMQ}
                     slidesCount={5}
                     slidesPerView={1}
                     hasButtons
-                    nextBtnId={(paymentType === 'cash-out') ? 'cash-out-next-btn' : 'deposit-next-btn'}
-                    prevBtnId={(paymentType === 'cash-out') ? 'cash-out-prev-btn' : 'deposit-prev-btn'}
+                    nextBtnId={(paymentType === 'cash-out') ? 'cash-out-next-btn-mq' : 'deposit-next-btn-mq'}
+                    prevBtnId={(paymentType === 'cash-out') ? 'cash-out-prev-btn-mq' : 'deposit-prev-btn-mq'}
                 />
             </div>
         </div>

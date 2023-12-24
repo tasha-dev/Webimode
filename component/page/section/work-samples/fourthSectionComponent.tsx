@@ -9,6 +9,7 @@ import {Navigation} from "swiper/modules";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import ProjectComponent from "@/component/projectComponent";
 import ProjectImage from '@/public/img/blog/img-random.png';
+import * as SwiperType from "swiper/types";
 import 'swiper/css';
 
 // Creating and exporting fourth section of work samples page as defaultt
@@ -16,6 +17,8 @@ export default function FourthSectionComponent():ReactNode {
     // Defining states of component
     const [activeSliderIndex, setActiveSliderIndex]:[number, Dispatch<number>] = useState(0);
     const [activeSliderIndexMQ, setActiveSliderIndexMQ]:[number, Dispatch<number>] = useState(0);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+    const [sliderMQ, setSliderMQ]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
 
     // Returning JSX 
     return (
@@ -53,6 +56,7 @@ export default function FourthSectionComponent():ReactNode {
                 <main>
                     <div className="lg:block hidden">
                         <Swiper
+                            onSwiper={setSlider}
                             initialSlide={activeSliderIndex}
                             onSlideChange={(event) => setActiveSliderIndex(event.activeIndex)}
                             modules={[Navigation]}
@@ -85,10 +89,11 @@ export default function FourthSectionComponent():ReactNode {
                             <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" minPrice={2450000} maxPrice={7100000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
                             <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" minPrice={2450000} maxPrice={7100000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
                         </Swiper>
-                        <SliderPaginationComponent activeIndex={activeSliderIndex} slidesPerView={4} slidesCount={5} />
+                        <SliderPaginationComponent swiper={slider} activeIndex={activeSliderIndex} slidesPerView={4} slidesCount={5} />
                     </div>
                     <div className="lg:hidden block">
                         <Swiper
+                            onSwiper={setSliderMQ}
                             initialSlide={activeSliderIndexMQ}
                             onSlideChange={(event) => setActiveSliderIndexMQ(event.activeIndex)}
                             modules={[Navigation]}
@@ -107,6 +112,7 @@ export default function FourthSectionComponent():ReactNode {
                             <SwiperSlide><ProjectComponent theme="theme" img={ProjectImage.src} link="#" minPrice={2450000} maxPrice={7100000} rating={4.5} title="سایت فروشگاهی آترامارت">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است .</ProjectComponent></SwiperSlide>
                         </Swiper>
                         <SliderPaginationComponent 
+                            swiper={sliderMQ}
                             hasButtons 
                             prevBtnId="work-4-section-slider-prev-btn-mq" 
                             nextBtnId="work-4-section-slider-next-btn-mq" 

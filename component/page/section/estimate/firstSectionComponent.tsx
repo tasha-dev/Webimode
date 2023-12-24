@@ -45,10 +45,16 @@ export default function FirstSectionComponent():ReactNode {
                                 <button onClick={() => setSubject('4')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                                 <button onClick={() => setSubject('5')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                             </StepComponent>
-                            <StepComponent onRangeChange={(event) => {
-                                setPagesCountMax(event.maxValue);
-                                setPagesCountMin(event.minValue);
-                            }} contentType="range" number={2} subTitle="انواع تنوع در تعداد صفحات برای طراحی پروژه شما" title="تعداد صفحات سایت خود را  وارد کنید :" />
+                            <StepComponent 
+                                contentType="range" 
+                                number={2} 
+                                subTitle="انواع تنوع در تعداد صفحات برای طراحی پروژه شما" 
+                                title="تعداد صفحات سایت خود را  وارد کنید :" 
+                                onRangeChange={(event) => {
+                                    setPagesCountMax(event.maxValue);
+                                    setPagesCountMin(event.minValue);
+                                }} 
+                            />
                             <StepComponent dropdownTitle="نوع سیستم مدیریت محتوا" contentType="dropdown" number={3} subTitle="انواع سیستم های مدیریت محتوا برای بهبود عملکرد سایت شما" title="نوع سیستم مدیریت محتوا سایت خود را  وارد کنید :">
                                 <button onClick={() => setCms('1')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                                 <button onClick={() => setCms('2')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>

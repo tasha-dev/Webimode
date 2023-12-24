@@ -12,6 +12,7 @@ import ImageLight1 from '@/public/img/light/img-light-1.svg';
 import ImageLight2 from '@/public/img/light/img-light-2.svg';
 import TopsideImageCircleLeft from '@/public/img/work-samples/firstSection/img-circles-left.svg';
 import TopsideImageCircleRight from '@/public/img/work-samples/firstSection/img-circles-right.svg';
+import * as SwiperType from "swiper/types";
 import 'swiper/css';
 
 // Defining type of props
@@ -24,6 +25,7 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
     const [isMobileFilterModalOpened, setMobileFilterModalOpened]:[boolean, Dispatch<boolean>] = useState(false);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
 
     // Using useEffect hook to prevent window to scroll when mobile filter modal is opened
     useEffect(() => {
@@ -57,6 +59,7 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
                                 <IconComponent name="chevron-right" size={16} />
                             </button>
                             <Swiper
+                                onSwiper={setSlider}
                                 className="w-full"
                                 initialSlide={activeIndexOfSlider}
                                 modules={[Navigation]}
@@ -75,7 +78,7 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
                                 <IconComponent name="chevron-left" size={16} />
                             </button>
                         </div>
-                        <SliderPaginationComponent activeIndex={activeIndexOfSlider} slidesCount={5} slidesPerView={5} />
+                        <SliderPaginationComponent swiper={slider} activeIndex={activeIndexOfSlider} slidesCount={5} slidesPerView={5} />
                     </div>
                     <div className="lg:hidden block">
                         <button onClick={() => setMobileFilterModalOpened(true)} className="bg-lightestGrey w-full border-[1.5px] rounded-[12px] border-lightGrey flex items-center justify-between gap-[10px] p-[12px] text-lightGrey">

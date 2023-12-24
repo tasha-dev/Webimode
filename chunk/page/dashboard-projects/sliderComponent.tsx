@@ -10,6 +10,7 @@ import {Navigation} from "swiper/modules";
 import ProjectStateComponent from '@/chunk/page/dashboard/projectStateComponent'
 import DoneProjectComponent from '@/chunk/page/dashboard-projects/doneProjectComponent';
 import RandomImage from '@/public/img/blog/img-random.png';
+import * as SwiperType from "swiper/types";
 import 'swiper/css';
 
 // Defining type of props
@@ -24,7 +25,9 @@ export default function SliderComponent({title}:propsType):ReactNode {
     const [isFilterDropDownOpened, setFilterDropDownOpened]:[boolean, Dispatch<boolean>] = useState(false);
     const [activeSliderIndex, setActiveSliderIndex]:[number, Dispatch<number>] = useState(0);
     const [activeSliderIndexMQ, setActiveSliderIndexMQ]:[number, Dispatch<number>] = useState(0);
-
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+    const [sliderMQ, setSliderMQ]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+    
     // Returning JSX
     return (
         <div className="lg:w-auto w-[calc(93vw-20px)] overflow-hidden">
@@ -61,6 +64,7 @@ export default function SliderComponent({title}:propsType):ReactNode {
             </div>
             <div className="lg:block hidden w-full overflow-hidden">
                 <Swiper
+                    onSwiper={setSlider}
                     initialSlide={activeSliderIndex}
                     spaceBetween={20}
                     slidesPerGroup={3}
@@ -114,6 +118,7 @@ export default function SliderComponent({title}:propsType):ReactNode {
                     }
                 </Swiper>
                 <SliderPaginationComponent 
+                    swiper={slider}
                     hasButtons
                     activeIndex={activeSliderIndex}
                     slidesCount={5}
@@ -124,6 +129,7 @@ export default function SliderComponent({title}:propsType):ReactNode {
             </div>
             <div className="lg:hidden block w-full overflow-hidden">
                 <Swiper
+                    onSwiper={setSliderMQ}
                     initialSlide={activeSliderIndexMQ}
                     spaceBetween={20}
                     slidesPerGroup={1}
@@ -157,6 +163,7 @@ export default function SliderComponent({title}:propsType):ReactNode {
                     }
                 </Swiper>
                 <SliderPaginationComponent 
+                    swiper={sliderMQ}
                     hasButtons
                     activeIndex={activeSliderIndex}
                     slidesCount={5}

@@ -9,6 +9,8 @@ import {Navigation} from "swiper/modules";
 import {Swiper, SwiperSlide} from "swiper/react";
 import CommentComponent from "@/component/commentComponent";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
+import * as SwiperType from "swiper/types";
+import 'swiper/css';
 
 // Creating and exporting eleventh section of work samples page as default
 export default function EleventhSectionComponent(): ReactNode {
@@ -16,6 +18,9 @@ export default function EleventhSectionComponent(): ReactNode {
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
     const [activeIndexOfSliderXL, setActiveIndexOfSliderXL]:[number, Dispatch<number>] = useState(0);
     const [activeIndexOfSliderLG, setActiveIndexOfSliderLG]:[number, Dispatch<number>] = useState(0);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+    const [sliderXL, setSliderXL]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+    const [sliderLG, setSliderLG]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
 
     // Returning JSX
     return (
@@ -64,6 +69,7 @@ export default function EleventhSectionComponent(): ReactNode {
                         <main>
                             <div className="xl:block hidden">
                                 <Swiper
+                                    onSwiper={setSlider}
                                     modules={[Navigation]}
                                     initialSlide={activeIndexOfSlider}
                                     onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
@@ -91,10 +97,11 @@ export default function EleventhSectionComponent(): ReactNode {
                                     <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                                     <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                                 </Swiper>
-                                <SliderPaginationComponent activeIndex={activeIndexOfSlider} slidesCount={5} slidesPerView={3} />
+                                <SliderPaginationComponent swiper={slider} activeIndex={activeIndexOfSlider} slidesCount={5} slidesPerView={3} />
                             </div>
                             <div className="xl:hidden lg:block hidden">
                                 <Swiper
+                                    onSwiper={setSliderXL}
                                     initialSlide={activeIndexOfSliderXL}
                                     onSlideChange={(event) => setActiveIndexOfSliderXL(event.activeIndex)}
                                     spaceBetween={20}
@@ -112,10 +119,11 @@ export default function EleventhSectionComponent(): ReactNode {
                                     <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                                     <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                                 </Swiper>
-                                <SliderPaginationComponent activeIndex={activeIndexOfSliderXL} slidesCount={10} slidesPerView={2} />
+                                <SliderPaginationComponent swiper={sliderXL} activeIndex={activeIndexOfSliderXL} slidesCount={10} slidesPerView={2} />
                             </div>
                             <div className="lg:hidden block">
                                 <Swiper
+                                    onSwiper={setSliderLG}
                                     modules={[Navigation]}
                                     initialSlide={activeIndexOfSliderLG}
                                     onSlideChange={(event) => setActiveIndexOfSliderLG(event.activeIndex)}
@@ -133,7 +141,8 @@ export default function EleventhSectionComponent(): ReactNode {
                                     <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                                     <SwiperSlide><CommentComponent likeCount={12} dislikeCount={12} rating={4.3} name={'احسان امانیان'}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است</CommentComponent></SwiperSlide>
                                 </Swiper>
-                                <SliderPaginationComponent
+                                <SliderPaginationComponent 
+                                    swiper={sliderLG}
                                     hasButtons
                                     nextBtnId="single-blog-comment-next-btn-lg"
                                     prevBtnId="single-blog-comment-prev-btn-lg"

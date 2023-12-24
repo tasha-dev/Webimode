@@ -7,12 +7,15 @@ import FeatureComponent from "@/chunk/page/home/ninethSection/featureComponent";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import Link from "next/link";
 import {ReactNode, useState, Dispatch} from "react";
+import * as SwiperType from "swiper/types";
 import {Swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
 
 // Creating and exporting nineth section of home page as default
 export default function NinethSectionComponent():ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
 
     // Returning JSX
     return (
@@ -50,6 +53,7 @@ export default function NinethSectionComponent():ReactNode {
                     </div>
                     <div className="lg:hidden block">
                         <Swiper
+                            onSwiper={setSlider}
                             initialSlide={activeIndexOfSlider}
                             className="overflow-visible"
                             spaceBetween={20}
@@ -59,7 +63,7 @@ export default function NinethSectionComponent():ReactNode {
                             <SwiperSlide><FeatureComponent percentage={79} theme="blue" title="سرعت بیشتر">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ .</FeatureComponent></SwiperSlide>
                             <SwiperSlide><FeatureComponent percentage={86} theme="orange" title="امنیت بالاتر">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنانلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ .</FeatureComponent></SwiperSlide>
                         </Swiper>
-                        <SliderPaginationComponent activeIndex={activeIndexOfSlider} slidesCount={3} slidesPerView={1} />
+                        <SliderPaginationComponent swiper={slider} activeIndex={activeIndexOfSlider} slidesCount={3} slidesPerView={1} />
                     </div>
                 </main>
             </div>

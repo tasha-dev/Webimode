@@ -1,11 +1,13 @@
 // Importing part
 import {ReactNode} from "react";
 import IconComponent from "./iconComponent";
+import {Swiper} from "swiper/types";
 
 // Defining type of props
 interface propsType {
     activeIndex: number;
     slidesPerView: number;
+    swiper: Swiper | null;
     slidesCount: number;
     prevBtnId?: string;
     nextBtnId?: string;
@@ -15,7 +17,17 @@ interface propsType {
 }
 
 // Creating and exporting slider pagination as default
-export default function SliderPaginationComponent({activeIndex, slidesCount, hasButtons = false, slidesPerView, nextBtnId, prevBtnId, theme = 'theme', hasNumbers = false}:propsType):ReactNode {
+export default function SliderPaginationComponent({
+    activeIndex,
+    slidesCount,
+    hasButtons = false,
+    slidesPerView,
+    nextBtnId,
+    prevBtnId,
+    theme = 'theme',
+    hasNumbers = false,
+    swiper
+}:propsType):ReactNode {
     // Conditional rendering
     if (hasNumbers) {
         return (
@@ -26,10 +38,11 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                             <div 
                                 key={index} 
                                 data-active={(activeIndex/slidesPerView === index)} 
+                                onClick={() => swiper?.slideTo(index * slidesPerView)}
                                 className={
                                     (theme === 'theme') 
-                                    ? "slider-slide-bullet-number" 
-                                    : "slider-slide-bullet-number-white"
+                                        ? "slider-slide-bullet-number" 
+                                        : "slider-slide-bullet-number-white"
                                 }
                             >
                             </div>
@@ -39,6 +52,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                     [... new Array(slidesCount)].slice(0,4).map((item, index) => (
                                         <div
                                             key={index}
+                                            onClick={() => swiper?.slideTo(index * slidesPerView)}
                                             data-active={(Math.floor(activeIndex / slidesPerView) === index)}
                                             className={`${(theme === 'theme') ? "slider-slide-bullet-number": "slider-slide-bullet-number-white"}`}
                                         >
@@ -76,6 +90,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                     <div
                                         key={index}
                                         data-active={(activeIndex / slidesPerView === index)}
+                                        onClick={() => swiper?.slideTo(index * slidesPerView)}
                                         className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                     />
                                 )) : (
@@ -84,6 +99,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                             [... new Array(4)].map((item, index) => (
                                                 <div
                                                     key={index}
+                                                    onClick={() => swiper?.slideTo(index * slidesPerView)}
                                                     data-active={(Math.floor(activeIndex / slidesPerView) === index)}
                                                     className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                                 />
@@ -98,7 +114,11 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                 )
                         }
                     </div>
-                    <button id={nextBtnId} data-active={(activeIndex !== ((slidesCount*slidesPerView)-slidesPerView))} className={`slider-prev-next-btn${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}>
+                    <button 
+                        id={nextBtnId} 
+                        data-active={(activeIndex !== ((slidesCount*slidesPerView)-slidesPerView))} 
+                        className={`slider-prev-next-btn${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
+                    >
                         <IconComponent name="chevron-left" size={16} />
                     </button>
                 </div>
@@ -112,6 +132,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                 <div
                                     key={index}
                                     data-active={(activeIndex / slidesPerView === index)}
+                                    onClick={() => swiper?.slideTo(index * slidesPerView)}
                                     className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                 />
                             )) : (
@@ -120,6 +141,7 @@ export default function SliderPaginationComponent({activeIndex, slidesCount, has
                                         [... new Array(4)].map((item, index) => (
                                             <div
                                                 key={index}
+                                                onClick={() => swiper?.slideTo(index * slidesPerView)}
                                                 data-active={(Math.floor(activeIndex / slidesPerView) === index)}
                                                 className={`slider-slide-bullet${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}
                                             />

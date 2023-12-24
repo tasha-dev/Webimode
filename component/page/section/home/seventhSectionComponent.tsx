@@ -7,12 +7,15 @@ import FeaturesComponent from "@/chunk/page/home/seventhSection/featuresComponen
 import IconComponent from "@/chunk/iconComponent";
 import {Swiper, SwiperSlide} from "swiper/react";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
+import * as SwiperType from "swiper/types";
+import 'swiper/css';
 
 // Creating and exporting seventh section of home page as default
 export default function SeventhSectionComponent():ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
     const [activeFeatureIndex, setActiveFeatureIndex]:[number, Dispatch<number>] = useState(1);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
 
     // Defining refrences
     const firstLineHelper:MutableRefObject<any> = useRef();
@@ -103,6 +106,7 @@ export default function SeventhSectionComponent():ReactNode {
                 </div>
                 <div className="lg:hidden block">
                     <Swiper  
+                      onSwiper={setSlider}
                         initialSlide={activeIndexOfSlider}
                         onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
                         spaceBetween={20}
@@ -114,7 +118,7 @@ export default function SeventhSectionComponent():ReactNode {
                         <SwiperSlide><FeaturesComponent icon="hand-holding-dollor" isActive={false} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
                         <SwiperSlide><FeaturesComponent hasNoLeft icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
                     </Swiper>
-                    <SliderPaginationComponent activeIndex={activeIndexOfSlider} slidesCount={6} slidesPerView={1} />
+                    <SliderPaginationComponent swiper={slider} activeIndex={activeIndexOfSlider} slidesCount={6} slidesPerView={1} />
                 </div>
             </div>
         </section>
