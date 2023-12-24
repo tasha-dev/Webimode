@@ -35,20 +35,16 @@ export default function SecondSectionComponent():ReactNode {
     // Using useEffect hook to animate
     useEffect(() => {
         addEventListener('scroll', () => {
-            if (innerWidth > 1024) {
-                if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
-                    setActiveStep(1);
-                } else if (doElsCollide(secondLineHelper.current, mainStickyPart.current)) {
-                    setActiveStep(2);
-                } else if (doElsCollide(thirdLineHelper.current, mainStickyPart.current)) {
-                    setActiveStep(3);
-                } else if (doElsCollide(fourthLineHelper.current, mainStickyPart.current)) {
-                    setActiveStep(4);
-                } else if (doElsCollide(fifthLineHelper.current, mainStickyPart.current)) {
-                    setActiveStep(5);
-                }
-            } else {
+            if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
                 setActiveStep(1);
+            } else if (doElsCollide(secondLineHelper.current, mainStickyPart.current)) {
+                setActiveStep(2);
+            } else if (doElsCollide(thirdLineHelper.current, mainStickyPart.current)) {
+                setActiveStep(3);
+            } else if (doElsCollide(fourthLineHelper.current, mainStickyPart.current)) {
+                setActiveStep(4);
+            } else if (doElsCollide(fifthLineHelper.current, mainStickyPart.current)) {
+                setActiveStep(5);
             }
         })
     }, [])
@@ -74,17 +70,17 @@ export default function SecondSectionComponent():ReactNode {
                         مرحله آن پشتیبان شماست .
                     </p>
                 </header>
-                <div className="lg:h-[2000px] lg:relative">
-                    <div className="absolute top-0 left-0 w-full lg:block hidden">
+                <div className="h-[2000px] relative">
+                    <div className="absolute top-0 left-0 w-full">
                         <div ref={firstLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                         <div ref={secondLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                         <div ref={thirdLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                         <div ref={fourthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                         <div ref={fifthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                     </div>
-                    <main dir="ltr" className="grid lg:grid-cols-6 lg:gap-0 gap-[16px] grid-cols-1 lg:mt-[232px] mt-[32px] lg:sticky relative lg:top-[50%]" ref={mainStickyPart}>
+                    <main dir="ltr" className="grid lg:grid-cols-6 lg:gap-0 gap-[16px] grid-cols-1 lg:mt-[232px] mt-[32px] sticky lg:top-[50%] top-[20%] lg:translate-y-0" ref={mainStickyPart}>
                         <div data-active={(activeStep >= 1)} className="step-icon-component lg:flex hidden left-0 top-[50%] -translate-y-[50%] absolute"><IconComponent name="right-arrow" size={24} /></div>
-                        <StepComponent isFirstOne position="bottom" count="۱" isActive={(activeStep >= 1)} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
+                        <StepComponent position="bottom" count="۱" isActive={(activeStep >= 1)} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                         <StepComponent position="top" count="۲" isActive={(activeStep >= 2)} icon='money-check-edit' title='بررسی و اعلام هزینه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                         <StepComponent position="bottom" count="۳" isActive={(activeStep >= 3)} icon='design' title='طراحی اولیه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                         <StepComponent position="top" count="۴" isActive={(activeStep >= 4)} icon='replace' title='پیاده سازی و تحویل'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
