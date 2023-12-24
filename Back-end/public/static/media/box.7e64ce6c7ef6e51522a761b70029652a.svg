@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 48 48">
-  <path fill="#FF9800" d="M6 14H34V42H6z" />
-  <path fill="#FFB74D" d="M17 14H23V19H17z" />
-  <path fill="#F57C00" d="M34 14L42 6 42 32.875 34 42z" />
-  <path fill="#FFCC80" d="M6 14L16 6 42 6 34 14z" />
-  <path fill="#AB5600" d="M23.5,22h-7c-0.828,0-1.5-0.672-1.5-1.5s0.672-1.5,1.5-1.5h7c0.828,0,1.5,0.672,1.5,1.5S24.328,22,23.5,22" />
-  <path fill="#FFE0B2" d="M23 14L17 14 26 6 32 6z" />
-</svg>
