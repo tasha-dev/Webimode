@@ -61,7 +61,7 @@ export default function FourthSectionComponent():ReactNode {
             slidesPerGroup={14}
             spaceBetween={32}
             grabCursor
-            onSlideChange={(event) => {setActiveIndexOfSlider(event.activeIndex);console.log(event.activeIndex)}}
+            onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
             className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white w-full bg-lighterGrey'
             autoplay={{
               delay: 3000,
