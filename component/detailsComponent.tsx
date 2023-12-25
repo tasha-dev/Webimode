@@ -19,7 +19,7 @@ export default function DetailsComponent({children, title, isOpened = false}:pro
 
     // Returning JSX
     return (
-        <div data-opened={isOpenedState} className="transition-all overflow-hidden duration-500 ease-in-out border rounded-[16px] shadow-custom data-[opened='true']:bg-theme data-[opened='false']:bg-white data-[opened='false']:border-lightGrey data-[opened='true']:border-theme data-[opened='false']:h-[60px] data-[opened='true']:h-[200px]">
+        <div data-opened={isOpenedState} className="transition-all overflow-hidden duration-500 ease-in-out border rounded-[16px] shadow-custom data-[opened='true']:bg-theme data-[opened='false']:bg-white data-[opened='false']:border-lightGrey data-[opened='true']:border-theme data-[opened='false']:h-[60px] data-[opened='true']:h-auto">
             <button 
                 onClick={() => (isOpenedState) ? setOpenedState(false) : setOpenedState(true)} 
                 data-opened={isOpenedState} 
@@ -33,7 +33,7 @@ export default function DetailsComponent({children, title, isOpened = false}:pro
                     <IconComponent size={24} name="chevron-bottom-circle" />
                 </span>
             </button>
-            <div className="h-[calc(200px-50px)] overflow-y-auto overflow-x-hidden">
+            <div className="h-full overflow-hidden">
                 <div className="h-[2px] w-full mx-[16px] bg-gradient-to-r sticky top-0 from-transparent to-transparent via-white mb-[16px]" />
                 <div data-opened={isOpenedState} className="transitiona-all duration-500 pb-[16px] px-[16px] [&>p]:text-[16px] [&>p]:font-normal [&>p]:data-[opened='false']:text-lightGrey [&>p]:data-[opened='true']:text-white [&>p]:leading-[32px] data-[opened='false']:scale-110 data-[opened='true']:scale-100">
                     {children}
