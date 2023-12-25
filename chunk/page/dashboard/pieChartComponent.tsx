@@ -31,7 +31,7 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                     (!noTop)
                         ? (
                             <div className="flex items-center justify-between gap-[10px] mb-[26px]">
-                                <span className="text-[20px] font-normal text-dark block truncate">{title}</span>
+                                <span className="text-[20px] font-normal dark:text-white text-dark block truncate">{title}</span>
                                 <div className="lg:hidden block">
                                     <Link href={link} className="btn-secondary-theme-icon">
                                         <IconComponent name="chevron-left" size={10} />
@@ -48,8 +48,8 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             </div>
                         ) : false
                 }
-                <div className="p-[24px] bg-lightestGrey border border-lightGrey rounded-[40px] flex lg:flex-row flex-col items-start gap-[24px]">
-                    <div className="w-[120px] h-[120px] bg-white rounded-full overflow-hidden shrink-0">
+                <div className="p-[24px] dark:bg-pageDark bg-lightestGrey border dark:border-black border-lightGrey rounded-[40px] flex lg:flex-row flex-col items-start gap-[24px]">
+                    <div className="w-[120px] h-[120px] dark:bg-lightestDark bg-white rounded-full overflow-hidden shrink-0">
                         <Doughnut data={{
                             labels: ['taken', 'given'],
                             datasets: [
@@ -69,19 +69,19 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             <span className="text-[13px] font-normal text-current">کیف پول من</span>
                         </div>
                         <div className="flex flex-wrap items-end gap-[1ch]  mb-[16px]">
-                            <span className="text-dark text-[28px] font-bold">{(15360000).toLocaleString()}</span>
-                            <span className="text-dark text-[16px] font-normal">تومان</span>
+                            <span className="dark:text-white text-dark text-[28px] font-bold">{(15360000).toLocaleString()}</span>
+                            <span className="dark:text-white text-dark text-[16px] font-normal">تومان</span>
                         </div>
                         <div className="mb-[16px] lg:hidden flex flex-col gap-[16px]">
                             <div className="flex-wrap flex whitespace-nowrap overflow-auto no-scroll items-center gap-[1ch]">
                                 <div className="w-[12px] h-[12px] bg-theme rounded-full" />
-                                <span className="text-[13px] font-bold text-dark">میزان واریزی :</span>
+                                <span className="text-[13px] font-bold text-dark dark:text-white">میزان واریزی :</span>
                                 <span className="text-[10px] font-normal text-theme">{(18000000).toLocaleString()}</span>
                                 <span className="text-[10px] font-normal text-theme">میلیون تومان</span>
                             </div>
                             <div className="flex-wrap flex whitespace-nowrap overflow-auto no-scroll items-center gap-[1ch]">
                                 <div className="w-[12px] h-[12px] bg-alert rounded-full shrink-0" />
-                                <span className="text-[13px] shrink-0 font-bold text-dark">میزان برداشتی :</span>
+                                <span className="text-[13px] shrink-0 font-bold text-dark dark:text-white">میزان برداشتی :</span>
                                 <span className="text-[10px] shrink-0 font-normal text-alert">{(18000000).toLocaleString()}</span>
                                 <span className="text-[10px] shrink-0 font-normal text-alert">میلیون تومان</span>
                             </div>
@@ -90,7 +90,7 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             <div>
                                 <div className="mb-[16px] lg:flex hidden whitespace-nowrap overflow-auto no-scroll items-center gap-[1ch]">
                                     <div className="w-[12px] h-[12px] bg-theme rounded-full" />
-                                    <span className="text-[13px] font-bold text-dark">میزان واریزی :</span>
+                                    <span className="text-[13px] font-bold text-dark dark:text-white">میزان واریزی :</span>
                                     <span className="text-[10px] font-normal text-theme">{(18000000).toLocaleString()}</span>
                                     <span className="text-[10px] font-normal text-theme">میلیون تومان</span>
                                 </div>
@@ -104,7 +104,7 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             <div>
                                 <div className="mb-[16px] lg:flex hidden whitespace-nowrap overflow-auto no-scroll items-center gap-[1ch]">
                                     <div className="w-[12px] h-[12px] bg-alert rounded-full shrink-0" />
-                                    <span className="text-[13px] shrink-0 font-bold text-dark">میزان برداشتی :</span>
+                                    <span className="text-[13px] shrink-0 font-bold text-dark dark:text-white">میزان برداشتی :</span>
                                     <span className="text-[10px] shrink-0 font-normal text-alert">{(18000000).toLocaleString()}</span>
                                     <span className="text-[10px] shrink-0 font-normal text-alert">میلیون تومان</span>
                                 </div>
@@ -127,7 +127,7 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                     (!noTop)
                         ? (
                             <div className="flex items-center justify-between gap-[10px] mb-[26px]">
-                                <span className="text-[20px] font-normal text-dark block truncate">{title}</span>
+                                <span className="text-[20px] font-normal dark:text-white text-dark block truncate">{title}</span>
                                 <div className="lg:hidden block">
                                     <Link href={link} className="btn-secondary-theme-icon">
                                         <IconComponent name="chevron-left" size={10} />
@@ -144,9 +144,9 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             </div>
                         ) : false
                 }
-                <div className="p-[24px] bg-lightestGrey border border-lightGrey rounded-[40px]">
+                <div className="p-[24px] dark:bg-pageDark bg-lightestGrey border dark:border-black border-lightGrey rounded-[40px]">
                     <div className="flex lg:flex-row flex-col items-start gap-[24px]">
-                        <div data-small={small} className="data-[small='false']:w-[120px] data-[small='false']:h-[120px] data-[small='true']:w-[68px] data-[small='true']:h-[68px] bg-white rounded-full overflow-hidden shrink-0">
+                        <div data-small={small} className="data-[small='false']:w-[120px] data-[small='false']:h-[120px] data-[small='true']:w-[68px] data-[small='true']:h-[68px] dark:bg-lightestDark bg-white rounded-full overflow-hidden shrink-0">
                             <Doughnut data={{
                                 labels: ['web-design', 'logo-design', 'motion-graphic', 'seo', 'application'],
                                 datasets: [
@@ -173,8 +173,8 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                                     ? (
                                         <>
                                             <div className="flex items-end gap-[1ch] mb-[20px]">
-                                                <span className="text-dark text-[28px] font-bold">{3}</span>
-                                                <span className="text-dark text-[16px] font-normal">پروژه</span>
+                                                <span className="dark:text-white text-dark text-[28px] font-bold">{3}</span>
+                                                <span className="dark:text-white text-dark text-[16px] font-normal">پروژه</span>
                                             </div>
                                             <div className="flex gap-[16px] flex-wrap">
                                                 <div className="flex items-center gap-[6px]">
@@ -208,8 +208,8 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             ? (
                                 <>
                                     <div className="flex items-end gap-[1ch] mb-[20px]">
-                                        <span className="text-dark text-[28px] font-bold">{3}</span>
-                                        <span className="text-dark text-[16px] font-normal">پروژه</span>
+                                        <span className="dark:text-white text-dark text-[28px] font-bold">{3}</span>
+                                        <span className="dark:text-white text-dark text-[16px] font-normal">پروژه</span>
                                     </div>
                                     <div className="flex gap-[16px] flex-wrap">
                                         <div className="flex items-center gap-[6px]">

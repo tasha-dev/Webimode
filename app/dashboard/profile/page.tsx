@@ -21,10 +21,18 @@ export default function DashboardProfilePage():ReactNode {
                         <IconComponent name="circle-x" size={16} />
                         انصراف تغییرات
                     </Link>
-                    <button className="btn-dark lg:w-auto w-[50%]">
-                        <IconComponent name="penicl-circle" size={16} />
-                        تغیر اطلاعات
-                    </button>
+                    <div className="dark:hidden block">
+                        <button className="btn-dark lg:w-auto w-[50%]">
+                            <IconComponent name="penicl-circle" size={16} />
+                            تغیر اطلاعات
+                        </button>
+                    </div>
+                    <div className="dark:block hidden">
+                        <button className="btn-white lg:w-auto w-[50%]">
+                            <IconComponent name="penicl-circle" size={16} />
+                            تغیر اطلاعات
+                        </button>
+                    </div>
                 </div>
             </form>
         </DashboardPageTemplate>

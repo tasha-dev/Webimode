@@ -11,7 +11,7 @@ export default function FourthDivComponent():ReactNode {
     return (
         <div className="lg:w-auto w-full overflow-auto">
             <div className="flex items-center justify-between gap-[10px] mb-[26px]">
-                <span className="text-[20px] font-normal text-dark block truncate">روند تکمیل آخرین پروژه</span>
+                <span className="text-[20px] font-normal dark:text-white text-dark block truncate">روند تکمیل آخرین پروژه</span>
                 <div className="lg:hidden block">
                     <Link href={'/dashboard/projects'} className="btn-secondary-theme-icon">
                         <IconComponent name="chevron-left" size={10} />
@@ -26,8 +26,8 @@ export default function FourthDivComponent():ReactNode {
                     </Link>
                 </div>
             </div>
-            <div className="lg:p-[32px] lg:border border-lightGrey lg:rounded-[48px]">
-                <div className="lg:grid flex flex-col  grid-cols-3 gap-[23px]">
+            <div className="lg:p-[32px] lg:border dark:border-lightestDark border-lightGrey lg:rounded-[48px]">
+                <div className="lg:grid flex flex-col grid-cols-3 gap-[23px]">
                     <div className="flex flex-col gap-[24px] lg:shrink shrink-0">
                         <ProjectTitleComponent count={3} link="#" theme="theme" title="طراحی سایت" />
                         <ProjectStateComponent theme="theme" title="پروژه طراحی سایت فروشگاهی مبیت" deadLine={new Date('12/18/2025 10:00').toISOString()} uiUxProgress={48} frontEndProgress={73} backEndProgress={24} link='#' />

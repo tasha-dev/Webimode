@@ -30,7 +30,7 @@ export default function WalletComponent({cashOut, diposit, totalCash}:propsType)
     return (
         <div className="px-[32px] py-[16px] bg-dark bg-cover bg-[url(../public/img/dashboard-payment/img-bg-wallet.png)] rounded-[32px] grid lg:grid-cols-4 gap-[32px]">
             <div className="flex lg:flex-row flex-col lg:items-center items-start gap-[24px] lg:col-span-3">
-                <div className="w-[120px] h-[120px] overflow-hidden shrink-0 bg-white rounded-full">
+                <div className="w-[120px] h-[120px] overflow-hidden shrink-0 dark:bg-lightestDark bg-white rounded-full">
                     <Doughnut data={{
                         labels: ['diposit', 'cash-out'],
                         datasets: [

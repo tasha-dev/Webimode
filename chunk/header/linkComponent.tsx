@@ -27,7 +27,13 @@ export default function LinkComponent({children, link, isDropdown = false, activ
             (activeInHome)
                 ? (currentURL === link || currentURL === '/')
                 : (currentURL === link)
-        } className={`${(isDropdown) ? 'gap-[20px] flex justify-between text-lightGrey transition-all duration-500 group-hover:text-dark' : ' data-[theme="dark"]:text-white data-[theme="white"]:text-dark'} text-[16px] relative font-normal items-center data-[current-page="false"]:after:hidden data-[current-page="false"]:before:hidden data-[current-page="true"]:after:block data-[current-page="true"]:before:block before:absolute after:absolute before:w-[10px] after:w-[30px] before:bg-theme after:bg-dark after:h-[4px] before:h-[4px] after:rounded-[20rem] before:rounded-[20rem] before:top-[120%] after:top-[120%] before:right-0 after:right-[15px]`}>
+        } className={`
+                ${(isDropdown) 
+                    ? 'gap-[20px] flex justify-between text-lightGrey transition-all duration-500 data-[theme="white"]:text-dark group-hover:data-[theme="white"]:text-dark data-[theme="dark"]:text-white group-hover:data-[theme="dark"]:text-white/50' 
+                    : 'data-[theme="dark"]:text-white data-[theme="white"]:text-dark'}
+                    text-[16px] relative font-normal items-center data-[current-page="false"]:after:hidden data-[current-page="false"]:before:hidden data-[current-page="true"]:after:block data-[current-page="true"]:before:block before:absolute after:absolute before:w-[10px] after:w-[30px] before:bg-theme after:bg-dark after:h-[4px] before:h-[4px] after:rounded-[20rem] before:rounded-[20rem] before:top-[120%] after:top-[120%] before:right-0 after:right-[15px]`
+                }
+            >
             {children}
             {
                 (isDropdown)

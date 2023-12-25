@@ -31,17 +31,17 @@ export default function DoneProjectComponent({children, startDate, link, price, 
 
     // Returning JSX
     return (
-        <Link href={link} className="block transition-all duration-500 p-[12px] border border-lightGrey bg-lighterGrey hover:bg-white rounded-[24px] group">
+        <Link href={link} className="block transition-all duration-500 p-[12px] border dark:border-lightestDark border-lightGrey dark:bg-pageDark bg-lighterGrey hover:bg-white rounded-[24px] group">
             <Image alt={title} src={img} width={1000} height={1000} className="w-full h-[93px] object-cover mb-[16px] rounded-[24px]" />
             <div className="flex items-center justify-between gap-[20px] mb-[8px]">
-                <span className="text-[16px] font-normal text-dark">{title}</span>
-                <div className="flex items-center px-[8px] py-[4px] rounded-[6px] transition-all duration-500 bg-lightGrey text-lightestDark group-hover:bg-dark group-hover:text-white">
+                <span className="text-[16px] font-normal dark:text-white text-dark">{title}</span>
+                <div className="flex items-center px-[8px] py-[4px] rounded-[6px] transition-all duration-500 bg-lightGrey text-lightestDark dark:group-hover:bg-theme group-hover:bg-dark group-hover:text-white">
                     <IconComponent size={10} name="calender-clock" />
                     <span className="text-[10px] text-current font-normal mr-[10px]">{new Date(endDate).toLocaleDateString('fa-ir')}</span>
                 </div>
             </div>
             <p className="text-lightGrey text-[10px] font-normal mb-[12px]">{children}</p>
-                <div className="text-lightGrey transition-all duration-500 group-hover:text-dark mb-[12px] flex items-center gap-[10px]">
+                <div className="text-lightGrey transition-all duration-500 dark:group-hover:text-white group-hover:text-dark mb-[12px] flex items-center gap-[10px]">
                     <IconComponent size={12} name="circle-clock" />
                     {
                         (dateDiffrence.days !== 0)

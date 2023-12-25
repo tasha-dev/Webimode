@@ -12,7 +12,7 @@ export default function FifthDivComponent():ReactNode {
         <div className="grid lg:grid-cols-2 gap-[20px]">
             <div>
                 <div className="flex items-center justify-between gap-[10px] mb-[26px]">
-                    <span className="text-[20px] font-normal text-dark block truncate">تیکت و درخواست من</span>
+                    <span className="text-[20px] font-normal dark:text-white text-dark block truncate">تیکت و درخواست من</span>
                     <div className="lg:hidden block">
                         <Link href={'/dashboard/tickets'} className="btn-secondary-theme-icon">
                             <IconComponent name="chevron-left" size={10} />
@@ -36,7 +36,7 @@ export default function FifthDivComponent():ReactNode {
             </div>
             <div>
                 <div className="flex items-center justify-between gap-[10px] mb-[26px]">
-                    <span className="text-[20px] font-normal text-dark block truncate">مدیریت پرداخت ها</span>
+                    <span className="text-[20px] font-normal dark:text-white text-dark block truncate">مدیریت پرداخت ها</span>
                     <div className="lg:hidden block">
                         <Link href={'/dashboard/payments'} className="btn-secondary-theme-icon">
                             <IconComponent name="chevron-left" size={10} />

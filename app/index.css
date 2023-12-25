@@ -75,8 +75,9 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .chat-header-btn {@apply w-[40px] h-[40px] flex items-center justify-center rounded-[12px] border-[1.5px] border-white text-white transition-all duration-500 hover:bg-theme hover:border-theme;}
 .chat-header-btn:hover {box-shadow: 0px 8px 24px 0px rgba(73, 180, 134, 0.24), 2px 3px 16px 0px rgba(255, 255, 255, 0.24) inset, -2px -3px 24px 0px rgba(0, 0, 0, 0.12) inset;}
 .btn-dark {@apply px-[16px] py-[10px] rounded-[12px] border border-dark text-dark flex items-center justify-center gap-[12px] text-[13px] font-normal transition-all duration-500 hover:bg-dark hover:text-white;}
+.btn-white {@apply px-[16px] py-[10px] rounded-[12px] border border-white text-white flex items-center justify-center gap-[12px] text-[13px] font-normal transition-all duration-500 hover:bg-white hover:text-dark;}
 .btn-secondary-alert {@apply px-[16px] py-[10px] rounded-[12px] border border-alert text-alert flex items-center justify-center gap-[12px] text-[13px] font-normal transition-all duration-500 hover:bg-alert hover:text-white;}
-.scroll-notification-dashboard::-webkit-scrollbar {@apply bg-lightGrey rounded-tr-[8px] rounded-br-[8px] w-[8px];}
+.scroll-notification-dashboard::-webkit-scrollbar {@apply bg-lightGrey dark:bg-lightestDark rounded-tr-[8px] rounded-br-[8px] w-[8px];}
 .scroll-notification-dashboard::-webkit-scrollbar-thumb {@apply bg-theme rounded-tr-[8px] rounded-br-[8px];}
 
 /* Defining some mqs */

@@ -19,7 +19,7 @@ export default function DashboardNavComponent():ReactNode {
     // Conditional rendering
     if (!pathname.startsWith('/dashboard/tickets')) {
         return (
-            <nav className="p-[16px] bg-lightestGrey rounded-[24px]">
+            <nav className="p-[16px] bg-lightestGrey dark:bg-pageDark rounded-[24px]">
                 <ul className="flex flex-col gap-[20px] lg:mb-[250px] mb-[142px]">
                     <NavItemComponent icon="window" isActive={(pathname === '/dashboard')} link="/dashboard" title="فعالیت های اخیر" />
                     <NavItemComponent icon="circle-state" isActive={(pathname === '/dashboard/projects')} link="/dashboard/projects" title="مدیریت پروژه ها" />
@@ -53,7 +53,7 @@ export default function DashboardNavComponent():ReactNode {
         );
     } else {
         return (
-            <div className="grid lg:grid-cols-2 lg:col-span-2 bg-lightestGrey rounded-[24px] overflow-hidden">
+            <div className="grid lg:grid-cols-2 lg:col-span-2 bg-lightestGrey dark:bg-pageDark rounded-[24px] overflow-hidden">
                 <nav className="p-[16px]">
                     <ul className="flex flex-col gap-[20px] lg:mb-[250px] mb-[142px]">
                         <NavItemComponent icon="window" isActive={false} link="/dashboard" title="فعالیت های اخیر" />
@@ -87,14 +87,14 @@ export default function DashboardNavComponent():ReactNode {
                 </nav>
                 <div className="rounded-[24px] h-[990px] shadow-[14px_-47px_85px_0_rgba(0,0,0,0.12)_inset] flex flex-col overflow-hidden">
                     <div className="p-[16px] shrink-0">
-                        <span className="block text-[16px] font-normal mb-[16px] text-dark">تیکت و پیام های من</span>                        
+                        <span className="block text-[16px] font-normal mb-[16px] dark:text-white text-dark">تیکت و پیام های من</span>                        
                         <Link href={'#'} className="small-btn-primary">
                             <div className="w-[16px] h-[16px] flex items-center justify-center rounded-full bg-white text-theme">
                                 <span className="block h-full">+</span>
                             </div>
                             <span className="block truncate">افزودن تیکت</span>
                         </Link>
-                        <div className="w-full mt-[24px] border-b-[2px] border-dashed border-b-lighterGrey" />
+                        <div className="w-full mt-[24px] border-b-[2px] border-dashed dark:border-b-lightestDark border-b-lighterGrey" />
                     </div>
                     <div className="h-[100%] overflow-auto scroll-notification-dashboard">
                         <div className="max-h-[10000px] w-full p-[16px] flex flex-col gap-[32px]">

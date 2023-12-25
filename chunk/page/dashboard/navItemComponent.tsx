@@ -16,7 +16,7 @@ export default function NavItemComponent({icon, link, title, isActive}:propsType
     // Returning JSX
     return (
         <li>
-            <Link href={link} data-active={isActive} className="flex transition-all duration-500 items-center gap-[12px] px-[16px] py-[12px] w-full data-[active='false']:bg-lightestGrey data-[active='false']:hover:bg-lighterGrey data-[active='false']:text-lightGrey data-[active='true']:bg-theme data-[active='true']:text-white rounded-[14px] shadow-custom-outer-active">
+            <Link href={link} data-active={isActive} className="flex transition-all duration-500 items-center gap-[12px] px-[16px] py-[12px] w-full dark:data-[active='false']:bg-lightestDark dark:data-[active='false']:hover:bg-lightestDark data-[active='false']:bg-lightestGrey data-[active='false']:hover:bg-lighterGrey data-[active='false']:text-lightGrey data-[active='true']:bg-theme data-[active='true']:text-white rounded-[14px] shadow-custom-outer-active">
                 <span className="shrink-0 text-current">
                     <IconComponent name={icon} size={20} />
                 </span>

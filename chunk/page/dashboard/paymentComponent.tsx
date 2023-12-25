@@ -18,7 +18,7 @@ interface propsType {
 export default function PaymentComponent({date, link, paymentType, price}:propsType):ReactNode {
     // Returning JSX
     return (
-        <Link href={link} data-payment={paymentType} className="group relative block bg-white data-[payment='deposit']:hover:bg-theme transition-all duration-500 data-[payment='cash-out']:hover:bg-alert group overflow-hidden rounded-[20px] border data-[payment='cash-out']:border-alert data-[payment='deposit']:border-theme">
+        <Link href={link} data-payment={paymentType} className="group relative block dark:bg-pageDark bg-white data-[payment='deposit']:hover:bg-theme transition-all duration-500 data-[payment='cash-out']:hover:bg-alert group overflow-hidden rounded-[20px] border data-[payment='cash-out']:border-alert data-[payment='deposit']:border-theme">
             <Image alt="" src={(paymentType === 'cash-out') ? TopLeftImageAlert.src : TopLeftImageTheme.src} width={50} height={50} className="absolute top-0 left-0 z-[1] -translate-x-[2px] -translate-y-[2px]" />
             <div className="p-[12px] realtive z-[2]">
                 <div data-payment={paymentType} className="transition-all duration-500 data-[payment='cash-out']:bg-alert data-[payment='deposit']:bg-theme group-hover:bg-white data-[payment='cash-out']:group-hover:text-alert data-[payment='deposit']:group-hover:text-theme text-white mb-[4px] max-w-[36px] h-[21px] flex items-center justify-center rounded-[8px]">

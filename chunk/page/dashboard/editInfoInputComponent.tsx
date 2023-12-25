@@ -19,11 +19,11 @@ export default function EditInfoInputComponent({id, label, type, placeHolder}:pr
     if (type !== 'passowrd') {
         return (
             <div>
-                <label className="mb-[12px] block text-[16px] font-normal truncate text-dark" htmlFor={id}>{label}</label>
+                <label className="mb-[12px] block text-[16px] font-normal truncate dark:text-white text-dark" htmlFor={id}>{label}</label>
                 {
                     (id === 'meli-code-input')
-                        ? <input minLength={10} maxLength={10} className="appearance-none bg-lightestGrey border border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey focus:placeholder:text-dark focus:text-dark focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
-                        : <input className="appearance-none bg-lightestGrey border border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey focus:placeholder:text-dark focus:text-dark focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
+                        ? <input minLength={10} maxLength={10} className="appearance-none dark:bg-lightestDark bg-lightestGrey border dark:border-black border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey focus:placeholder:text-dark focus:text-dark dark:focus:border-theme focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
+                        : <input className="appearance-none bg-lightestGrey border dark:bg-lightestDark dark:border-black border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey dark:focus:placeholder:text-white dark:focus:text-white focus:placeholder:text-dark focus:text-dark dark:focus:border-theme focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
                 }
             </div>
         );
@@ -36,13 +36,13 @@ export default function EditInfoInputComponent({id, label, type, placeHolder}:pr
         return (
             <div>
                 <label className="mb-[12px] block text-[16px] font-normal truncate text-dark" htmlFor={id}>{label}</label>
-                <div data-focused={isFocused} className="overflow-hidden rounded-[12px] flex gap-[10px] bg-lightestGrey border data-[focused='false']:border-lighterGrey data-[focused='true']:border-theme transition-all duration-500">
+                <div data-focused={isFocused} className="overflow-hidden rounded-[12px] flex gap-[10px] dark:bg-lightestDark dark:border-black bg-lightestGrey border data-[focused='false']:border-lighterGrey data-[focused='true']:border-theme transition-all duration-500">
                     <input 
                         onFocus={() => setFocused(true)}
                         onBlur={() => setFocused(false)}
-                        className="p-[12px] w-full outline-0 bg-transparent" required type={inputType} placeholder={placeHolder} id={id} name={id} minLength={8} maxLength={10} 
+                        className="p-[12px] dark:placeholder:text-lightGrey dark:text-lightGrey w-full outline-0 bg-transparent" required type={inputType} placeholder={placeHolder} id={id} name={id} minLength={8} maxLength={10} 
                     />
-                    <button type="button" onClick={() => (inputType === 'password') ? setInputType('text') : setInputType('password')} className="shrink-0 aspect-square w-[50px] transition-all duration-500 bg-lightestGrey text-lightGrey hover:bg-lighterGrey text-[13px] font-normal focus:bg-lighterGrey flex items-center justify-center placeholder:text-lightGrey focus:placeholder:text-dark focus:text-dark">
+                    <button type="button" onClick={() => (inputType === 'password') ? setInputType('text') : setInputType('password')} className="shrink-0 aspect-square w-[50px] transition-all duration-500 dark:bg-lightestDark bg-lightestGrey text-lightGrey hover:bg-lighterGrey text-[13px] font-normal focus:bg-lighterGrey flex items-center justify-center dark:focus:text-white focus:text-dark">
                         <IconComponent name={'slash-eye'} size={16} />
                     </button>
                 </div>

@@ -19,13 +19,13 @@ export default function TicketComponent({children, date, link, sender, style = '
     // Conditional rendering
     if (style === 'small') {
         return (
-            <Link href={`/dashboard/tickets/${link}`} className="block bg-lightestGrey border border-lighterGrey group transition-all duration-500 rounded-[20px] p-[12px] hover:bg-theme hover:border-theme shadow-custom">
+            <Link href={`/dashboard/tickets/${link}`} className="block dark:bg-pageDark bg-lightestGrey border dark:border-lightestDark border-lighterGrey group transition-all duration-500 rounded-[20px] p-[12px] hover:bg-theme hover:border-theme shadow-custom">
                 <div className="flex items-start gap-[12px] mb-[12px]">
-                    <div className="flex items-center justify-center rounded-[8px] bg-lighterGrey text-white w-[36px] h-[36px] shrink-0 aspect-square transition-all duration-500 group-hover:bg-white group-hover:text-theme">
+                    <div className="flex items-center justify-center rounded-[8px] dark:bg-lightestDark bg-lighterGrey text-white w-[36px] h-[36px] shrink-0 aspect-square transition-all duration-500 group-hover:bg-white group-hover:text-theme">
                         <IconComponent name="ticket" size={20} />
                     </div>
                     <div className="w-full">
-                        <span className="block mb-[6px] text-[12px] text-dark truncate font-normal transition-all duration-500 group-hover:text-white">{sender}</span>
+                        <span className="block mb-[6px] text-[12px] dark:text-white text-dark truncate font-normal transition-all duration-500 group-hover:text-white">{sender}</span>
                         <div className="flex items-center gap-[8px]">
                             <span className="text-lightGrey  transition-all duration-500 group-hover:text-white">
                                 <IconComponent size={12} name="calender-clock" />
@@ -44,7 +44,7 @@ export default function TicketComponent({children, date, link, sender, style = '
                 </div>
                 <p className="mb-[4px] text-[10px] line-clamp-2 font-normal leading-[18px] text-lightGrey transition-all duration-500 group-hover:text-white">{children}</p>
                 <div className="flex items-center justify-end">
-                    <div className="w-[16px] h-[16px] flex items-center justify-center rounded-full bg-lightGrey text-white transition-all duration-500 group-hover:text-theme group-hover:bg-white">
+                    <div className="w-[16px] h-[16px] flex items-center justify-center rounded-full dark:bg-lightestDark bg-lightGrey text-white transition-all duration-500 group-hover:text-theme group-hover:bg-white">
                         <IconComponent name="chevron-left" size={10} />
                     </div>
                 </div>
@@ -52,15 +52,15 @@ export default function TicketComponent({children, date, link, sender, style = '
         );
     } else {
         return (
-            <Link href={`/dashboard/tickets/${link}`} className="block border-[1.5px] border-lightGrey bg-lightestGrey hover:bg-white hover:border-white shadow-lg group transition-all duration-500 rounded-[20px] p-[8px] group">
+            <Link href={`/dashboard/tickets/${link}`} className="block border-[1.5px] dark:border-lightestDark border-lightGrey dark:bg-pageDark bg-lightestGrey hover:bg-white hover:border-white shadow-lg group transition-all duration-500 rounded-[20px] p-[8px] group">
                 <div className="flex items-start justify-between gap-[10px] mb-[11px]">
-                    <div className="flex items-center justify-center rounded-[8px] bg-lighterGrey text-white w-[28px] h-[28px] shrink-0 aspect-square transition-all duration-500 group-hover:bg-lightTheme group-hover:text-white">
+                    <div className="flex items-center justify-center rounded-[8px] dark:bg-lightestDark bg-lighterGrey text-white w-[28px] h-[28px] shrink-0 aspect-square transition-all duration-500 group-hover:bg-lightTheme group-hover:text-white">
                         <IconComponent name="ticket" size={20} />
                     </div>
                     {
                         (newMassagesCount !== 0)
                             ? (
-                                <div className="bg-lighterGrey rounded-[6px] px-[8px] py-[2px] group-hover:bg-theme transition-all duration-500">
+                                <div className="bg-lighterGrey dark:bg-lightestDark rounded-[6px] px-[8px] py-[2px] group-hover:bg-theme transition-all duration-500">
                                     <span className="text-[10px] font-normal text-lightGrey transition-all duration-500 group-hover:text-white inline-block ml-[1ch]">
                                         {newMassagesCount}
                                     </span>
@@ -69,7 +69,7 @@ export default function TicketComponent({children, date, link, sender, style = '
                             ) : false
                     }
                 </div>
-                <span className="block mb-[4px] text-[12px] font-normal truncate">{title}</span>
+                <span className="block mb-[4px] text-[12px] font-normal truncate dark:text-white text-dark">{title}</span>
                 <p className="mb-[8px] text-[10px] line-clamp-2 font-normal leading-[18px] text-lightGrey transition-all duration-500">{children}</p>
                 <div className="flex justify-end items-center">
                     <div className="flex items-center gap-[10px] text-lightGrey ">

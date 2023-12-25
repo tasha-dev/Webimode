@@ -35,18 +35,18 @@ export default function ProjectStateComponent({uiUxProgress, backEndProgress, de
 
     // Returning JSX
     return (
-        <div data-theme={theme} className="p-[16px] rounded-[24px] border-[1.5px] transition-all duration-500 border-lightGrey data-[theme='blue']:hover:border-themeBlue data-[theme='theme']:hover:border-theme data-[theme='purple']:hover:border-themePurple shadow-xl shadow-transparent hover:shadow-black/10">
+        <div data-theme={theme} className="p-[16px] rounded-[24px] border-[1.5px] transition-all duration-500 dark:border-lightestDark border-lightGrey data-[theme='blue']:hover:border-themeBlue data-[theme='theme']:hover:border-theme data-[theme='purple']:hover:border-themePurple shadow-xl shadow-transparent hover:shadow-black/10">
             <div className="flex items-center justify-between mb-[10px] gap-[20px]">
-                <span className="text-[16px] font-normal truncate block">{title}</span>
+                <span className="text-[16px] font-normal truncate block dark:text-white text-dark">{title}</span>
                 <div className="shrink-0 relative">
                     <button 
                         onClick={() => (isDropdownOpened) ? setDropdownOpened(false) : setDropdownOpened(true)}
-                        className="w-[24px] h-[24px] flex items-center justify-center rounded-full transition-all duration-500 bg-lighterGrey text-lightestDark hover:bg-lightestDark hover:text-lighterGrey"
+                        className="w-[24px] h-[24px] flex items-center justify-center rounded-full transition-all duration-500 dark:bg-lightestDark dark:text-white bg-lighterGrey text-lightestDark hover:bg-lightestDark hover:text-lighterGrey"
                     >
                         <IconComponent name="three-dots" width={15} height={3} />
                     </button>
-                    <div data-opened={isDropdownOpened} className="absolute rounded-[10px] z-[100] border border-lighterGrey bg-lightestGrey w-[88px] py-[10px] top-[110%] left-0 transition-all duration-500 data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
-                        <button className="p-[12px] flex items-center gap-[10px] transition-all duration-500 hover:bg-lighterGrey w-full">
+                    <div data-opened={isDropdownOpened} className="absolute rounded-[10px] z-[100] border dark:border-black border-lighterGrey dark:bg-lightestDark bg-lightestGrey w-[88px] py-[10px] top-[110%] left-0 transition-all duration-500 data-[opened='false']:opacity-0 data-[opened='false']:invisible data-[opened='true']:opacity-100 data-[opened='true']:visible">
+                        <button className="p-[12px] flex items-center gap-[10px] transition-all duration-500 dark:hover:bg-dark hover:bg-lighterGrey w-full">
                             <span className="shrink-0 text-lightGrey">
                                 <IconComponent name="circle-x" size={12} />
                             </span>
@@ -54,7 +54,7 @@ export default function ProjectStateComponent({uiUxProgress, backEndProgress, de
                                 لغو پروژه
                             </span>
                         </button>
-                        <button className="p-[12px] flex items-center gap-[10px] transition-all duration-500 hover:bg-lighterGrey w-full">
+                        <button className="p-[12px] flex items-center gap-[10px] transition-all duration-500 dark:hover:bg-dark hover:bg-lighterGrey w-full">
                             <span className="shrink-0 text-lightGrey">
                                 <IconComponent name="ticket" size={12} />
                             </span>

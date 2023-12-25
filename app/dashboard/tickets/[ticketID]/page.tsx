@@ -34,12 +34,12 @@ export default function DashboardTicketChatPage():ReactNode {
     return (
         <DashboardPageComponent>
            <div className="flex flex-col gap-[32px] lg:h-[990px] h-[1000px]">
-                <div className="flex items-start justify-start ">
-                    <div className="bg-lightestGrey w-full row-span-1 px-[16px] py-[20px] rounded-[16px] flex items-center justify-between gap-[20px]">
+                <div className="flex items-start justify-start">
+                    <div className="dark:bg-pageDark bg-lightestGrey w-full row-span-1 px-[16px] py-[20px] rounded-[16px] flex items-center justify-between gap-[20px]">
                         <div className="flex gap-[12px]">
                             <Image className="w-[48px] h-[48px] shrink-0 aspect-square rounded-[12px]" alt="عکسی پروفایل" width={48} height={48} src={ImageOfMrEhsan.src} />
                             <div className="w-full overflow-hidden">
-                                <span className="block truncate mb-[6px] text-dark font-normal text-[15px]">بررسی تیکت مربطو به طراحی صفحه لندینگ پیج</span>
+                                <span className="block truncate mb-[6px] dark:text-white text-dark font-normal text-[15px]">بررسی تیکت مربطو به طراحی صفحه لندینگ پیج</span>
                                 <div className="flex items-center gap-[8px] text-lightGrey w-full">
                                     <IconComponent size={12} name="calender-clock" />
                                     <p className="text-[11px] text-lightGrey font-normal truncate">
@@ -52,8 +52,8 @@ export default function DashboardTicketChatPage():ReactNode {
                                 </div>
                             </div>
                         </div>
-                        <div className="shrink-0 border-r border-r-dark">
-                            <Link href={'/dashboard/tickets'} className="p-[16px] flex items-center text-dark justify-center transition-all duration-500 hover:text-theme">
+                        <div className="shrink-0 border-r dark:border-r-lightestDark border-r-dark">
+                            <Link href={'/dashboard/tickets'} className="p-[16px] flex items-center dark:text-white text-dark  justify-center transition-all duration-500 hover:text-theme">
                                 <IconComponent name="circle-x" size={24} />
                             </Link>
                         </div>
@@ -73,8 +73,8 @@ export default function DashboardTicketChatPage():ReactNode {
                                             {item?.date.getMinutes().toLocaleString('fa-ir')}
                                         </span>
                                     </div>
-                                    <div data-sender={item?.sender} className="border-[1.5px] p-[16px] data-[sender='you']:bg-lightestGrey data-[sender='you']:border-lightGrey data-[sender='you']:rounded-l-[12px] data-[sender='you']:rounded-tr-[12px] data-[sender='them']:bg-theme data-[sender='them']:border-theme data-[sender='them']:rounded-r-[12px] data-[sender='them']:rounded-tl-[12px]">
-                                        <p data-sender={item?.sender} className="lg:text-[16px] text-[13px] font-normal lg:leading-[36px] leading-[28px] data-[sender='you']:text-lightGrey data-[sender='them']:text-white">{item?.content}</p>
+                                    <div data-sender={item?.sender} className="border-[1.5px] p-[16px] dark:data-[sender='you']:bg-pageDark data-[sender='you']:bg-lightestGrey dark:data-[sender='you']:border-lightestDark data-[sender='you']:border-lightGrey data-[sender='you']:rounded-l-[12px] data-[sender='you']:rounded-tr-[12px] data-[sender='them']:bg-theme data-[sender='them']:border-theme data-[sender='them']:rounded-r-[12px] data-[sender='them']:rounded-tl-[12px]">
+                                        <p data-sender={item?.sender} className="lg:text-[16px] text-[13px] font-normal lg:leading-[36px] leading-[28px]data-[sender='you']:text-lightGrey dark:data-[sender='you']:text-white data-[sender='them']:text-white">{item?.content}</p>
                                     </div>
                                 </div>
                             )) : false
@@ -84,7 +84,7 @@ export default function DashboardTicketChatPage():ReactNode {
                     <form
                         action="#"
                         data-focused={isInputFocused}
-                        className="bg-lightestGrey row-span-1 border data-[focused='false']:border-lightGrey transition-all duration-500 data-[focused='true']:border-theme rounded-[12px] flex w-full items-center overflow-hidden"
+                        className="dark:bg-pageDark bg-lightestGrey row-span-1 border dark:data-[focused='false']:border-lightestDark data-[focused='false']:border-lightGrey transition-all duration-500 data-[focused='true']:border-theme rounded-[12px] flex w-full items-center overflow-hidden"
                         dir="ltr"
                         onSubmit={(event) => {
                             // Preventing from sending form to url
@@ -132,7 +132,7 @@ export default function DashboardTicketChatPage():ReactNode {
                             onBlur={() => setInputFocused(false)}
                             placeholder="چیزی تایپ کنید ...."
                             type="text"
-                            className="px-[16px] py-[12px] w-full bg-transparent text-[20px] font-normal outline-0 placeholder:text-lightGrey text-dark"
+                            className="px-[16px] py-[12px] w-full bg-transparent text-[20px] font-normal outline-0 placeholder:text-lightGrey dark:placeholder:text-lightestDark dark:text-white text-dark"
                         />
                         <button tabIndex={(isFetching) ? -1 : 0} className="p-[10px] shrink-0 aspect-square w-[50px] flex items-center justify-center">
                             <span className="rotate-180 text-lightGrey"><IconComponent size={24} name="send" /></span>

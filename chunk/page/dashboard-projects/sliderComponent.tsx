@@ -32,7 +32,7 @@ export default function SliderComponent({title}:propsType):ReactNode {
     return (
         <div className="lg:w-auto w-[calc(93vw-20px)] overflow-hidden">
             <div className="flex items-center justify-between gap-[20px] flex-wrap mb-[24px]">
-                <span className="text-[24px] font-normal">
+                <span className="text-[24px] font-normal dark:text-white text-dark">
                     {
                         (title === 'done-projects')
                             ? 'پروژه های انجام شده'
@@ -43,7 +43,7 @@ export default function SliderComponent({title}:propsType):ReactNode {
                     <button 
                         onClick={() => (isFilterDropDownOpened) ? setFilterDropDownOpened(false) : setFilterDropDownOpened(true)}
                         data-opened={isFilterDropDownOpened}
-                        className="flex items-center justify-between gap-[12px] rounded-[12px] border border-lightGrey bg-lighterGrey px-[12px] py-[10px]"
+                        className="flex items-center justify-between gap-[12px] rounded-[12px] border text-dark dark:text-white dark:border-black border-lightGrey  dark:bg-pageDark bg-lighterGrey px-[12px] py-[10px]"
                     >
                         <div className="flex items-center gap-[8px]">
                             <IconComponent size={16} name="filter" />
@@ -55,10 +55,10 @@ export default function SliderComponent({title}:propsType):ReactNode {
                         </div>
                         <IconComponent size={16} name="chevron-down" />
                     </button>
-                    <div data-opened={isFilterDropDownOpened} className="absolute z-[20] bg-lighterGrey border border-lightGrey rounded-[12px] overflow-hidden py-[20px] left-0 top-[110%] w-full transition-all duration-500 data-[opened='true']:opacity-100 data-[opened='true']:visible data-[opened='false']:opacity-0 data-[opened='false']:invisible">
-                        <button className="p-[10px] text-[13px] transition-all duration-500 hover:bg-dark/20 w-full text-start text-dark font-normal truncate block" onClick={() => {setFilter('all');setFilterDropDownOpened(false)}}>همه پروژه ها</button>
-                        <button className="p-[10px] text-[13px] transition-all duration-500 hover:bg-dark/20 w-full text-start text-dark font-normal truncate block" onClick={() => {setFilter('all');setFilterDropDownOpened(false)}}>همه پروژه ها</button>
-                        <button className="p-[10px] text-[13px] transition-all duration-500 hover:bg-dark/20 w-full text-start text-dark font-normal truncate block" onClick={() => {setFilter('all');setFilterDropDownOpened(false)}}>همه پروژه ها</button>
+                    <div data-opened={isFilterDropDownOpened} className="absolute z-[20] dark:bg-pageDark bg-lighterGrey border dark:border-black border-lightGrey rounded-[12px] overflow-hidden py-[20px] left-0 top-[110%] w-full transition-all duration-500 data-[opened='true']:opacity-100 data-[opened='true']:visible data-[opened='false']:opacity-0 data-[opened='false']:invisible">
+                        <button className="p-[10px] text-[13px] transition-all duration-500 dark:hover:bg-dark dark:text-white hover:bg-dark/20 w-full text-start text-dark font-normal truncate block" onClick={() => {setFilter('all');setFilterDropDownOpened(false)}}>همه پروژه ها</button>
+                        <button className="p-[10px] text-[13px] transition-all duration-500 dark:hover:bg-dark dark:text-white hover:bg-dark/20 w-full text-start text-dark font-normal truncate block" onClick={() => {setFilter('all');setFilterDropDownOpened(false)}}>همه پروژه ها</button>
+                        <button className="p-[10px] text-[13px] transition-all duration-500 dark:hover:bg-dark dark:text-white hover:bg-dark/20 w-full text-start text-dark font-normal truncate block" onClick={() => {setFilter('all');setFilterDropDownOpened(false)}}>همه پروژه ها</button>
                     </div>
                 </div>
             </div>
