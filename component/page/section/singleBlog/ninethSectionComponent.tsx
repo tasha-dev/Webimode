@@ -10,12 +10,16 @@ import {Navigation} from "swiper/modules";
 import BlogComponent from "@/component/blogComponent";
 import BlogImage from '@/public/img/blog/img-random.png';
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
+import * as SwiperType from "swiper/types";
+import 'swiper/css';
 
 // Creating and exporting nineth section of single blog page as default
 export default function NinethSectionComponent():ReactNode {
     // Defining states of component
     const [activeIndexOfSlider, setActiveIndexOfSlider]:[number, Dispatch<number>] = useState(0);
     const [activeIndexOfSliderMQ, setActiveIndexOfSliderMQ]:[number, Dispatch<number>] = useState(0);
+    const [slider, setSlider]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
+    const [sliderMQ, setSliderMQ]:[SwiperType.Swiper | null, Dispatch<any>] = useState(null);
 
     // Returnining JSX
     return (
@@ -42,6 +46,7 @@ export default function NinethSectionComponent():ReactNode {
                 <main>
                     <div className="lg:block hidden">
                         <Swiper
+                            onSwiper={setSlider}
                             modules={[Navigation]}
                             slidesPerGroup={3}
                             slidesPerView={3}
@@ -69,6 +74,7 @@ export default function NinethSectionComponent():ReactNode {
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                         </Swiper>
                         <SliderPaginationComponent 
+                            swiper={slider}
                             hasButtons
                             nextBtnId="next-services-section-10-slider-btn"
                             prevBtnId="prev-services-section-10-slider-btn"
@@ -78,8 +84,9 @@ export default function NinethSectionComponent():ReactNode {
                         />
                     </div>
                     <div className="lg:hidden block">
-                    <Swiper
-                            onSlideChange={(event) => {setActiveIndexOfSliderMQ(event.activeIndex)}}
+                        <Swiper
+                            onSwiper={setSliderMQ}
+                            onSlideChange={(event) => { setActiveIndexOfSliderMQ(event.activeIndex) }}
                             modules={[Navigation]}
                             slidesPerGroup={1}
                             slidesPerView={1}
@@ -88,7 +95,7 @@ export default function NinethSectionComponent():ReactNode {
                                 prevEl: '#prev-services-slider-section-10-btn-mq',
                                 nextEl: '#next-services-slider-section-10-btn-mq',
                             }}
-                        > 
+                        >
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
@@ -96,6 +103,7 @@ export default function NinethSectionComponent():ReactNode {
                             <SwiperSlide><BlogComponent link="/blog/#" title="مدرن ترین سبک های طراحی در 2023" date={new Date()} genre="دیجیتال" img={BlogImage.src}>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد . </BlogComponent></SwiperSlide>
                         </Swiper>
                         <SliderPaginationComponent 
+                            swiper={sliderMQ}
                             hasButtons
                             nextBtnId="next-services-slider-section-10-btn-mq"
                             prevBtnId="prev-services-slider-section-10-btn-mq"
