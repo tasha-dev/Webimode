@@ -17,8 +17,8 @@ export default function FirstSectionComponent({children}:propsType):ReactNode {
     return (
         <section>
             <div className="container relative">
-                <Image alt="" src={TopsideCirclesImageLeft.src} width={700} height={1400} className="w-[50%] lg:block hidden h-full absolute left-[20px] top-0 object-contain object-left" />
-                <Image alt="" src={TopsideCirclesImageRight.src} width={700} height={1400} className="w-[50%] lg:block hidden h-full absolute right-[20px] top-0 object-contain object-right" />
+                <Image alt="" src={TopsideCirclesImageLeft.src} width={700} height={1400} className="w-[50%] lg:block hidden h-full absolute left-[20px] top-0 object-contain object-left pointer-events-none" />
+                <Image alt="" src={TopsideCirclesImageRight.src} width={700} height={1400} className="w-[50%] lg:block hidden h-full absolute right-[20px] top-0 object-contain object-right pointer-events-none" />
                 <header className="flex items-center justify-center flex-col lg:mb-[48px] mb-[16px] p-[20px]">
                     <div className="sign">مقالات وبیمود</div>
                     <h1 className="font-normal lg:text-[48px] text-[20px] text-dark mb-[16px] text-center">
