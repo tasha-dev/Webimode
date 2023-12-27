@@ -9,7 +9,7 @@ import IconComponent from "@/chunk/iconComponent";
 export default function SliderComponent():ReactNode {
     // Returning JSX
     return (
-        <div>
+        <div data-pressed={false} className="w-[750px] h-[787px] origin-center aspect-square bg-transparent border-[4px] border-white rounded-full relative transition-all duration-500 z-[1] mt-[53px] data-[pressed='false']:cursor-grab data-[pressed='true']:cursor-grabbing">
             <div className="w-[48px] h-[48px] absolute top-[25%] left-[5%] -translate-x-[50%] transition-all duration-500 bg-theme border text-white border-white hover:bg-white hover:text-lightTheme rounded-full flex items-center justify-center">
                 <IconComponent size={16} name="calender-clock" />
             </div>

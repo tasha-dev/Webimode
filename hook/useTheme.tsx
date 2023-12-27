@@ -9,23 +9,15 @@ export default function useTheme():[themeType, Dispatch<any>] {
     // Defining state of hook
     const [theme, setTheme]:[themeType, Dispatch<any>] = useState('light');
 
-    // Using useEffect hook to check if theme is set in local storage
-    useEffect(() => {
-        const localStorageTheme:string|null = localStorage.getItem('theme');
-
-        if (localStorageTheme !== null) {
-            setTheme(localStorageTheme);
-        }
-    }, [])
-
     // Using useEffect to save theme in local storage
     useEffect(() => {
-        localStorage.setItem('theme', theme);
+        const documentElement:HTMLElement = document.documentElement;
 
-        (theme === 'dark')
-            ? document.documentElement.classList.add('dark')
-            : document.documentElement.classList.remove('dark')
-        
+        (documentElement.classList.contains('light'))
+            ? documentElement.classList.replace('light', 'dark')
+            : (documentElement.classList.contains('dark')) 
+                ? documentElement.classList.replace('dark', 'light')
+                : documentElement.classList.add('dark')
     }, [theme])
 
     // Returning theme
