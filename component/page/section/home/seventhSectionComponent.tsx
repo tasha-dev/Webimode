@@ -7,6 +7,7 @@ import FeaturesComponent from "@/chunk/page/home/seventhSection/featuresComponen
 import IconComponent from "@/chunk/iconComponent";
 import {Swiper, SwiperSlide} from "swiper/react";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
+import doElsCollide from "@/utils/doElsCollide";
 import * as SwiperType from "swiper/types";
 import 'swiper/css';
 
@@ -25,19 +26,6 @@ export default function SeventhSectionComponent():ReactNode {
     const fifthLineHelper:MutableRefObject<any> = useRef();
     const sixthLineHelper:MutableRefObject<any> = useRef();
     const mainStickyPart:MutableRefObject<any> = useRef();
-
-    // Defining a function to check if lement 1 is overlaping on element
-    function doElsCollide(el1:any, el2:any):boolean {
-        el1.offsetBottom = el1.offsetTop + el1.offsetHeight;
-        el1.offsetRight = el1.offsetLeft + el1.offsetWidth;
-        el2.offsetBottom = el2.offsetTop + el2.offsetHeight;
-        el2.offsetRight = el2.offsetLeft + el2.offsetWidth;
-    
-        return !((el1.offsetBottom < el2.offsetTop) ||
-                 (el1.offsetTop > el2.offsetBottom) ||
-                 (el1.offsetRight < el2.offsetLeft) ||
-                 (el1.offsetLeft > el2.offsetRight))
-    };
 
     // Using useEffect hook to animate
     useEffect(() => {
