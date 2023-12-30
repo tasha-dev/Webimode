@@ -22,7 +22,7 @@ export default function SecondSectionComponent():ReactNode {
 
     // Using useEffect hook to animate
     useEffect(() => {
-        addEventListener('scroll', () => {
+        function handleAnimate(): void {
             if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
                 setActiveStep(1);
             } else if (doElsCollide(secondLineHelper.current, mainStickyPart.current)) {
@@ -34,7 +34,10 @@ export default function SecondSectionComponent():ReactNode {
             } else if (doElsCollide(fifthLineHelper.current, mainStickyPart.current)) {
                 setActiveStep(5);
             }
-        })
+        }
+
+        addEventListener('scroll', handleAnimate);
+        return () => removeEventListener('scroll', handleAnimate);
     }, [])
 
     // Returning JSX

@@ -29,25 +29,29 @@ export default function SeventhSectionComponent():ReactNode {
 
     // Using useEffect hook to animate
     useEffect(() => {
-        addEventListener('scroll', () => {
-          if (innerWidth > 1024) {
-            if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
-              setActiveFeatureIndex(1);
-            } else if (doElsCollide(secondLineHelper.current, mainStickyPart.current)) {
-              setActiveFeatureIndex(2);
-            } else if (doElsCollide(thirdLineHelper.current, mainStickyPart.current)) {
-              setActiveFeatureIndex(3);
-            } else if (doElsCollide(fourthLineHelper.current, mainStickyPart.current)) {
-              setActiveFeatureIndex(4);
-            }  else if (doElsCollide(fifthLineHelper.current, mainStickyPart.current)) {
-              setActiveFeatureIndex(5);
-            }  else if (doElsCollide(sixthLineHelper.current, mainStickyPart.current)) {
-              setActiveFeatureIndex(6);
-            }
-          } else {
+      function handleAnimate(): void {
+        if (innerWidth > 1024) {
+          if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
             setActiveFeatureIndex(1);
+          } else if (doElsCollide(secondLineHelper.current, mainStickyPart.current)) {
+            setActiveFeatureIndex(2);
+          } else if (doElsCollide(thirdLineHelper.current, mainStickyPart.current)) {
+            setActiveFeatureIndex(3);
+          } else if (doElsCollide(fourthLineHelper.current, mainStickyPart.current)) {
+            setActiveFeatureIndex(4);
+          } else if (doElsCollide(fifthLineHelper.current, mainStickyPart.current)) {
+            setActiveFeatureIndex(5);
+          } else if (doElsCollide(sixthLineHelper.current, mainStickyPart.current)) {
+            setActiveFeatureIndex(6);
           }
-        })
+        } else {
+          setActiveFeatureIndex(1);
+        }
+      }
+
+      addEventListener('scroll', handleAnimate);
+      
+      return () => removeEventListener('scroll', handleAnimate);
     }, [])
 
     // Returning JSX

@@ -11,7 +11,7 @@ import SliderComponent from "@/chunk/page/home/fifthSection/sliderComponent";
 // Creating and exorting fifth section component as default
 export default function FifthSectionComponent():ReactNode {
     // Defining state of component
-    const [activeStep, setActiveStep]:[number, Dispatch<number>] = useState(4);
+    const [activeStep, setActiveStep]:[number, Dispatch<any>] = useState(4);
 
     // Returning JSX
     return (
