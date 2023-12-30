@@ -19,7 +19,7 @@ export default function NinethSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="lg:mt-[256px] mt-[50px] overflow-hidden">
+        <section className="lg:mt-[128px] mt-[50px] overflow-hidden">
             <div className="container p-[20px]">
                 <header className="mb-[100px] flex flex-col items-center justify-center">
                     <div className="sign">آمار و ارغام</div>

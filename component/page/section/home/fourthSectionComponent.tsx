@@ -29,7 +29,7 @@ export default function FourthSectionComponent():ReactNode {
   
   // Returning JSX
   return (
-    <section className="lg:my-[256px] my-[50px]">
+    <section className="lg:my-[128px] my-[50px]">
       <div className="container p-[20px]">
         <header className={'flex items-center justify-center flex-col mx-auto lg:mb-[40px] mb-[32px]'}>
           <div className={'sign'}>مهارت وبیمود</div>

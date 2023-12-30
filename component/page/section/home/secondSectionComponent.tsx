@@ -39,7 +39,7 @@ export default function SecondSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className={'lg:mt-[256px] mt-[50px]'}>
+        <section className={'lg:mt-[128px] mt-[50px]'}>
             <div className="container p-[20px]">
                 <header className={'flex items-center justify-center flex-col mx-auto lg:mb-[40px] mb-[32px]'}>
                     <div className={'sign'}>تیم وبیمود</div>

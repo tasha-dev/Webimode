@@ -28,7 +28,11 @@ export default function FooterComponent():ReactNode {
         return (
             <>
                 {(!noContactComponentURL.includes(pathname) && !pathname.startsWith('/dashboard/tickets')) ? <BeforeFooterComponent /> : false}
-                <footer data-hasbefore={(!noContactComponentURL.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))} data-hasmargintop={(!noMarginTopPages.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))} className="bg-gradient-to-b from-darkerTheme to-darkerTheme data-[hasmargintop='true']:lg:mt-[150px] lg:relative">
+                <footer 
+                    data-hasbefore={(!noContactComponentURL.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))} 
+                    data-hasmargintop={(!noMarginTopPages.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))} 
+                    className="bg-gradient-to-b from-darkerTheme to-darkerTheme data-[hasmargintop='true']:lg:mt-[150px] lg:relative"
+                >
                     {
                         (!noContactComponentURL.includes(pathname) && !pathname.startsWith('/dashboard/tickets'))
                             ? (
