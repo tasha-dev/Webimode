@@ -21,7 +21,7 @@ interface propsType {
 export default function ServiceItemComponent({children, icon, img, title, iconGradiant}:propsType):ReactNode {
     // Returning JSX
     return (
-        <div className="lg:h-[528px] h-[555px] rounded-r-[40px] transition-all ease-in-out duration-1000 rounded-l-[40px] hover:rounded-l-[0px] overflow-hidden relative group">
+        <div className="lg:h-[528px] h-[555px] rounded-r-[40px] transition-all ease-in-out duration-1000 rounded-l-[40px] lg:hover:rounded-l-[0px] overflow-hidden relative group">
             <div className={'lg:absolute relative top-0 left-0 w-full transition-all ease-in-out duration-1000 z-[-1] group-hover-skew'}>
                 <div className="h-full w-full scale-110 rounded-[40px] bg-black/50 absolute top-0 left-0 z-[2]" />
                 <Image className="w-full scale-110 rounded-[40px] object-cover lg:h-full h-[555px]" src={img} alt={title} width={1000} height={528} />
