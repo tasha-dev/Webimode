@@ -16,19 +16,19 @@ export default function DashboardProfilePage():ReactNode {
                 <EditInfoInputComponent id="email-input" label="ایمیل :" placeHolder="dasnasldj@yahoo.com" type="email" />
                 <EditInfoInputComponent id="meli-code-input" label="کد ملی :" placeHolder="09216542162" type="text" />
                 <EditInfoInputComponent id="password-input" label="رمز عبور :" placeHolder="XXXXXXXXX" type="passowrd" />
-                <div className="lg:col-span-3 col-span-1 flex items-end justify-end gap-[16px]">
-                    <Link href='/' className="btn-secondary-alert lg:w-auto w-[50%]">
+                <div className="lg:col-span-3 col-span-1 flex lg:flex lg:flex-row flex-col items-end justify-end gap-[16px]">
+                    <Link href='/' className="btn-secondary-alert lg:w-auto w-full">
                         <IconComponent name="circle-x" size={16} />
                         انصراف تغییرات
                     </Link>
-                    <div className="dark:hidden block">
-                        <button className="btn-dark lg:w-auto w-[50%]">
+                    <div className="dark:hidden block lg:w-auto w-full">
+                        <button className="btn-dark lg:w-auto w-full">
                             <IconComponent name="penicl-circle" size={16} />
                             تغیر اطلاعات
                         </button>
                     </div>
-                    <div className="dark:block hidden">
-                        <button className="btn-white lg:w-auto w-[50%]">
+                    <div className="dark:block hidden lg:w-auto w-full">
+                        <button className="btn-white lg:w-auto w-full">
                             <IconComponent name="penicl-circle" size={16} />
                             تغیر اطلاعات
                         </button>

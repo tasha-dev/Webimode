@@ -23,7 +23,7 @@ export default function DashboardPageComponent({children}:propsTye):ReactNode {
                 data-is-ticket-page={(pathname.startsWith('/dashboard/tickets'))} 
                 className="container p-[20px] grid data-[is-ticket-page='false']:lg:grid-cols-4 bg-white dark:bg-dark data-[is-ticket-page='true']:lg:grid-cols-5 gap-[20px] items-start">
                 <DashboardNavComponent />
-                <div className="lg:col-span-3 col-span-1 w-full">
+                <div className="lg:col-span-3 col-span-1 w-full overflow-hidden">
                     {children}
                 </div>
             </div>        
