@@ -42,7 +42,7 @@ export default function VideoPlayerComponent({cover = '', src, title = ''}:props
                 data-playing={isPlaying}
                 onClick={() => {if (!isLoading) {(isPlaying) ? setPlaying(false) : setPlaying(true)}}}
             >
-                <video className="transition-all duration-500 h-[325px] w-full object-cover" src={src} ref={videoElementRef} onLoadedData={() => setLoading(false)}>
+                <video poster={cover} className="transition-all duration-500 h-[325px] w-full object-cover" src={src} ref={videoElementRef} onLoadedData={() => setLoading(false)}>
                     <source src={src} srcSet={src} />
                 </video>
                 <div data-playing={isPlaying} className="absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-500 bg-dark data-[playing='false']:opacity-100 data-[playing='false']:visible data-[playing='true']:opacity-0 data-[playing='true']:invisible">

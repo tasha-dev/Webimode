@@ -35,7 +35,10 @@ export default function FirstSectionComponent():ReactNode {
                         <span className={'self-start'}><IconComponent name={'star'} size={14} /></span>
                         <span className={'self-end'}><IconComponent name={'star'} size={18} /></span>
                     </span>
-                    <VideoPlayerComponent title="ویدیو" src="https://video-vcdn.varzesh3.com/videos-quality/2023/12/07/A/p0le44o0.mp4" />
+                    <VideoPlayerComponent 
+                        title="ویدیو" 
+                        src="https://persian11.cdn.asset.aparat.com/aparat-video/87e3486e618b209508cf75e43774866c56398098-360p.mp4?wmsAuthSign=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbiI6ImFiYzRjMzUxZWVjZjU1NDBiZGY4NTk2YmJjMTRkZWMxIiwiZXhwIjoxNzAzOTQyMjIyLCJpc3MiOiJTYWJhIElkZWEgR1NJRyJ9.1WL7KqBM6km8HfO6SCg7OgS_2bAvlFCgZ3yNs-hMazQ"
+                    />
                 </div>
             </div>
         </section>
