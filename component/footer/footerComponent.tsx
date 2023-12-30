@@ -92,7 +92,7 @@ export default function FooterComponent():ReactNode {
                                         <li><Link className="transition-all duration-500 text-white lg:text-[16px] text-[13px] hover:text-theme block truncate font-normal " href='/about-us'>درباره ما</Link></li>
                                     </ul>
                                 </div>
-                                <div>
+                                <div className="lg:col-span-1 col-span-2">
                                     <span className="text-white truncate block lg:text-[20px] text-[16px] font-normal w-full mb-[16px]">خدمات مربوط کاربران</span>
                                     <ul className="flex flex-col gap-[16px]">
                                         <li><Link className="transition-all duration-500 text-white lg:text-[16px] text-[13px] hover:text-theme block truncate font-normal " href='/profile'>حساب کابری</Link></li>
