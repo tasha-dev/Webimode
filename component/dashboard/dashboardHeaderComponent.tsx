@@ -4,7 +4,7 @@
 // Importing part
 import {Dispatch, ReactNode} from "react";
 import ImageOfMrEhsan from '@/public/img/blog/img-ehsan.jpg';
-import LogoImage from '@/app/favicon.ico';
+import LogoImage from '@/public/img/img-logo.svg';
 import Image from "next/image";
 import Link from "next/link";
 import LinkComponent from "@/chunk/header/linkComponent";
@@ -29,7 +29,7 @@ export default function DashboardHeaderComponent():ReactNode {
                         <IconComponent name={'list-right'} size={20} />
                     </button>
                     <Link href={'/'}>
-                        <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={56} height={56} />
+                        <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={1080} height={1080} className="w-[56px] h-[56px] aspect-squar" />
                     </Link>
                     <div className={'vertical-divider lg:block hidden'} />
                     <ul className={'lg:flex hidden items-center gap-[30px]'}>

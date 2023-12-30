@@ -6,7 +6,7 @@ import {ReactNode} from "react";
 import ContactComponent from '@/chunk/footer/contactComponent';
 import Link from "next/link";
 import Image from 'next/image';
-import LogoImage from '@/app/favicon.ico';
+import LogoImage from '@/public/img/img-logo.svg';
 import IconComponent from "@/chunk/iconComponent";
 import {usePathname} from 'next/navigation';
 import BeforeFooterComponent from "@/component/footer/beforeFooterComponent";
@@ -44,7 +44,7 @@ export default function FooterComponent():ReactNode {
                     <div className="container p-[20px]">
                         <main>
                             <Link className="block h-[56px] w-[56px] mb-[12px] lg:mx-0 mx-auto" href={'/'}>
-                                <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={56} height={56} />
+                                <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={1080} height={1080} className="w-[56px] h-[56px] aspect-squar" />
                             </Link>
                             <h5 className="lg:mb-[16px] mb-[8px] text-white lg:text-[24px] text-[20px] font-semibold lg:text-start text-center">تیم وبیمود</h5>
                             <div className="grid lg:grid-cols-6 grid-cols-2 gap-[58px] lg:mb-[56px] mb-[32px]">
