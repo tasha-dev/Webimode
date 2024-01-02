@@ -70,29 +70,29 @@ export default function FirstSectionComponent():ReactNode {
                                 <button onClick={() => setFeatures('5')} data-theme={'dark'} className="dropdown-inner-btn">دکمه</button>
                             </StepComponent>
                         </div>
-                        <div className="lg:py-[32px] py-[24px] lg:px-[40px] px-[16px] bg-theme shadow-custom rounded-[48px] grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[36px] mb-[56px] z-[2] relative">
+                        <div className="lg:py-[32px] py-[20px] lg:px-[40px] px-[20px] bg-theme shadow-custom lg:rounded-[48px] rounded-[20px] grid lg:grid-cols-3 grid-cols-1 lg:gap-[50px] gap-[36px] mb-[56px] z-[2] relative">
                             <div className="lg:col-span-2 col-span-1">
-                                <span className="mb-[32px] text-white text-[24px] font-normal block">موارد انتخاب شده برای طراحی سایت خود  :</span>
+                                <span className="mb-[32px] text-white lg:text-[24px] text-[16px] font-normal block">موارد انتخاب شده برای طراحی سایت خود  :</span>
                                 <ul className="flex flex-col gap-[24px]">
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">موضوع سایت خود را وارد کنید ( {subject} )</span>
+                                        <span className="lg:text-[16px] text-[13px] font-normal text-current block">موضوع سایت خود را وارد کنید ( {subject} )</span>
                                     </li>
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">تعداد صفحات سایت خود را وارد کنید ( {pagesCountMin} الی {pagesCountMax} صفحه )</span>
+                                        <span className="lg:text-[16px] text-[13px] font-normal text-current block">تعداد صفحات سایت خود را وارد کنید ( {pagesCountMin} الی {pagesCountMax} صفحه )</span>
                                     </li>
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">نوع سیستم مدیریت محتوا سایت خود را وارد کنید ( {cms})</span>
+                                        <span className="lg:text-[16px] text-[13px] font-normal text-current block">نوع سیستم مدیریت محتوا سایت خود را وارد کنید ( {cms})</span>
                                     </li>
                                     <li className="flex items-center gap-[16px] text-white">
                                         <IconComponent size={24} name="check-circle" />
-                                        <span className="text-[16px] font-normal text-current block">ویژگی های سایت خود را وارد کنید ( {features} )</span>
+                                        <span className="lg:text-[16px] text-[13px] font-normal text-current block">ویژگی های سایت خود را وارد کنید ( {features} )</span>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="shadow-custom p-[48px] flex flex-col items-center justify-center shadow-custom bg-dark rounded-[40px] text-white">
+                            <div className="shadow-custom lg:p-[48px] p-[20px] flex flex-col items-center justify-center shadow-custom bg-dark lg:rounded-[40px] rounded-[20px] text-white">
                                 <IconComponent size={28} name="money-check-edit" />
                                 <span className="block mb-[16px] text-current text-center lg:text-[24px] text-[16px] font-semibold">قیمت تخمین زده شده :</span>
                                 <div className="flex items-end justify-center gap-[1ch] flex-wrap">
