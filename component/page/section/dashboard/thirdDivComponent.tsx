@@ -27,8 +27,8 @@ export default function ThirdDivComponent():ReactNode {
             </div>
             <div className="p-[32px] border dark:border-lightestDark border-lighterGrey rounde-[48px] grid lg:grid-cols-3 rounded-[48px]">
                 <div className="lg:col-span-2 lg:pb-[32px] pb-[32px] lg:px-[20px]">
-                    <span className="text-[20px] font-normal dark:text-white text-dark block truncate mb-[32px]">پروژه طراحی سایت فروشگاهی آفلند</span>
-                    <div className="grid grid-cols-4 overflow-auto xl:gap-[50px] sm:gap-[30px] gap-[20px]">
+                    <span className="lg:text-[20px] text-[16px] font-normal dark:text-white text-dark block lg:truncate mb-[32px]">پروژه طراحی سایت فروشگاهی آفلند</span>
+                    <div className="grid xl:grid-cols-4 grid-cols-2 w-full xl:gap-[50px] gap-[20px]">
                         <ProjectStepsComponent percent={100} title="طراحی UI UX" />
                         <ProjectStepsComponent percent={64} title="برنامه نویسی فرانت اند" />
                         <ProjectStepsComponent percent={48} title="برنامه نویسی بک اند" />

@@ -24,7 +24,7 @@ export default function NotificationComponent({children, count, date, sender, li
                     </div>
                 </div>
                 <div className="w-full">
-                    <div className="flex justify-between items-center gap-[10px]">
+                    <div className="flex flex-wrap justify-between items-center gap-[10px]">
                         <div className="py-[12px] flex items-center gap-[10px]">
                             <span className="dark:text-white text-dark text-[12px] font-normal block truncate max-w-[20ch]">{sender}</span>
                             {
@@ -36,7 +36,7 @@ export default function NotificationComponent({children, count, date, sender, li
                                     ) : false
                             }
                         </div>
-                        <div className="shrink-0 px-[10px] py-[10px] transition-all duration-500 dark:bg-white/20 bg-lighterGrey text-lightGrey group-hover:text-white group-hover:bg-theme flex items-center justify-center gap-[10px] rounded-tl-[20px] rounded-br-[20px]">
+                        <div className="shrink-0 lg:px-[10px] lg:py-[10px] transition-all duration-500 lg:dark:bg-white/20 lg:bg-lighterGrey text-lightGrey group-hover:text-white group-hover:bg-theme flex items-center justify-center gap-[10px] lg:rounded-tl-[20px] lg:rounded-br-[20px]">
                             <IconComponent name="calender-clock" size={16} />
                             <span className="text-[11px] font-normal text-current">
                                 {new Date(date).toLocaleDateString('fa-ir')}

@@ -23,7 +23,8 @@ export default function ProjectStepsComponent({percent, title, isLastOne = false
                             <div className="h-full w-full absolute top-0 right-[50%] z-[1] flex items-center justify-center">
                                 <div 
                                     data-completed={(percent === 100)} 
-                                className="w-full h-[1px] border-b-[4px] border-dashed dark:data-[completed='false']:border-b-lightestDark data-[completed='false']:border-b-lightGrey dark:data-[completed='true']:border-b-theme data-[completed='true']:border-b-theme" />
+                                    className="w-full h-[1px] border-b-[4px] xl:block hidden border-dashed dark:data-[completed='false']:border-b-lightestDark data-[completed='false']:border-b-lightGrey dark:data-[completed='true']:border-b-theme data-[completed='true']:border-b-theme" 
+                                />
                             </div>
                         )
                 }
