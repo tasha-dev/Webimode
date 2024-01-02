@@ -57,7 +57,7 @@ export default function FirstSectionComponent():ReactNode {
                 <main className="relative z-[2]">
                     <div className="relative">
                         <LineMorphComponent strokeColor="white" className="absolute lg:bottom-[75%] bottom-[15%] left-[50%] -translate-x-[50%] z-[-1] lg:w-[30%] w-[90%]" />
-                        <Image src={DemoImage.src} alt="دمو عکس" width={900} height={600} className="w-full z-[2] relative shadow-2xl rounded-[48px] object-cover border-[3px] border-lightestDark" />
+                        <Image src={DemoImage.src} alt="دمو عکس" width={900} height={600} className="w-full z-[2] relative shadow-2xl lg:rounded-[48px] rounded-[20px] lg:h-auto h-[250px] object-cover border-[3px] border-lightestDark" />
                         <span className="text-theme rotate-90 absolute bottom-[105%] right-0 lg:block hidden"><IconComponent name="arrow-curve" size={44} /></span>
                         <Image className="absolute xl:left-[28%] left-[25%] z-[1] top-[98%] lg:block hidden" src={LineImage2} alt="" width="285" height="211" />
                     </div>

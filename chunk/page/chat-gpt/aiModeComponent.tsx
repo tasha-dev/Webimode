@@ -18,7 +18,7 @@ export default function AiModeComponent({children, icon, img, link, title}:props
     // Returning JSX
     return (
         <Link href={link} className="block group overflow-hidden">
-            <div className="px-[24px] transition-all duration-500 pt-[22px] pb-[90px] rounded-[40px] bg-pageDark group-hover:bg-theme border-[3px] border-lightestDark group-hover:border-theme lg:flex items-start gap-[10px]">
+            <div className="lg:px-[24px] px-[20px] transition-all duration-500 lg:pt-[22px] pt-[20px] lg:pb-[90px] pb-[80px] lg:rounded-[40px] rounded-[20px] bg-pageDark group-hover:bg-theme border-[3px] border-lightestDark group-hover:border-theme lg:flex items-start gap-[10px]">
                 <div className="lg:block flex items-center justify-between gap-[10px] lg:mb-0 mb-[16px]">
                     <div className="w-[68px] h-[68px] transition-all duration-500 flex items-center justify-center rounded-full border-[10px] group-hover:bg-theme group-hover:border-darkerTheme group-hover:text-white border-dark bg-pageDark aspect-square shadow-custom text-lightGrey">
                         <IconComponent size={24} name={icon} />
@@ -37,8 +37,8 @@ export default function AiModeComponent({children, icon, img, link, title}:props
                     <p className="text-lightGrey transition-all duration-500 group-hover:text-white lg:leading-[34px] leading-[28px] lg:text-[16px] text-[13px] font-normal">{children}</p>
                 </div>
             </div>
-            <div className="px-[24px]">
-                <Image className="rounded-[40px] transition-all duration-500 group-hover:border-theme/50 object-cover h-[235px] border-[3px] border-lightestDark w-full shadow-[0_8px_20px_rgba(0,0,0,.24)] -mt-[71px]" width={1000} height={1000} src={img} alt={title} />
+            <div className="lg:px-[24px] px-[20px]">
+                <Image className="lg:rounded-[40px] rounded-[20px] transition-all duration-500 group-hover:border-theme/50 object-cover lg:h-[235px] h-[200px] border-[3px] border-lightestDark w-full shadow-[0_8px_20px_rgba(0,0,0,.24)] -mt-[71px]" width={1000} height={1000} src={img} alt={title} />
             </div>
         </Link>
     );
