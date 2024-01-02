@@ -9,7 +9,11 @@ export default function DashboardPaymentsComponent():ReactNode {
     // Returning JSX
     return (
         <DashboardPageComponent>
-            <WalletComponent cashOut={{percent: 31, price: 18000000}} diposit={{percent: 69, price: 3740000}} totalCash={15360000} />
+            <WalletComponent 
+                cashOut={{percent: 31, price: 18000000}} 
+                diposit={{percent: 69, price: 3740000}} 
+                totalCash={15360000} 
+            />
             <div className="lg:my-[36px] my-[20px]">
                 <PaymentSliderComponent date={new Date()} paymentType="cash-out" /> 
             </div>
