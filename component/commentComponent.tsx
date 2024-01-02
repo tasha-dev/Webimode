@@ -24,15 +24,15 @@ export default function CommentComponent({children, dislikeCount, likeCount, nam
 
     // Returning JSX
     return (
-        <div className='p-[24px] rounded-[32px] transition-all duration-500 border border-lightGrey hover:border-theme group'>
+        <div className='lg:p-[24px] p-[20px] lg:rounded-[32px] rounded-[20px] transition-all duration-500 border border-lightGrey hover:border-theme group'>
             <div className="flex items-center justify-between gap-[10px] mb-[8px]">
-                <div className="flex items-center justify-between gap-[12px] shrink-0 w-[90%]">
+                <div className="flex items-center justify-between gap-[12px] w-full">
                     <div className="w-[33px] h-[33px] transition-all duration-500 aspect-square flex justify-center items-center bg-lighterGrey text-lightGrey group-hover:bg-theme group-hover:text-white rounded-r-[8px] rounded-tl-[8px] shadow-lightGrey">
                         <IconComponent size={18} name={'rounded-star'} />
                     </div>
                     <span className="truncate block text-dark text-[20px] font-normal w-full">{name}</span>
                 </div>
-                <div className="w-[33px] h-[33px] transition-all duration-500 aspect-square flex justify-center items-center bg-lighterGrey text-lightGrey group-hover:bg-theme group-hover:text-white rounded-l-[8px] rounded-tr-[8px] shadow-lightGrey text-[13px] font-bold">
+                <div className="w-[33px] h-[33px] transition-all duration-500 shrink-0 aspect-square flex justify-center items-center bg-lighterGrey text-lightGrey group-hover:bg-theme group-hover:text-white rounded-l-[8px] rounded-tr-[8px] shadow-lightGrey text-[13px] font-bold">
                     {rating}
                 </div>
             </div>

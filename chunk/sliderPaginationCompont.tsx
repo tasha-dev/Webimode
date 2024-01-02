@@ -31,7 +31,7 @@ export default function SliderPaginationComponent({
     // Conditional rendering
     if (hasNumbers) {
         return (
-            <div className='flex gap-[24px] items-center justify-center mt-[64px] w-full'>
+            <div className='flex gap-[24px] items-center justify-center lg:mt-[64px] mt-[20px] w-full'>
                 {
                     (slidesCount < 10)
                         ? [... new Array(slidesCount)].map((item, index) => (

@@ -48,13 +48,13 @@ export default function FeatureComponent({children, percentage, theme, title}:pr
         <div 
             ref={elementRef}
             data-theme={theme} 
-            className="px-[16px] py-[24px] rounded-[64px] shadow-custom data-[theme='orange']:bg-lightOrange data-[theme='blue']:bg-themeBlue data-[theme='green']:bg-lightGreen"
+            className="lg:px-[16px] lg:py-[24px] px-[20px] py-[20px] lg:rounded-[64px] rounded-[20px] shadow-custom data-[theme='orange']:bg-lightOrange data-[theme='blue']:bg-themeBlue data-[theme='green']:bg-lightGreen"
         >
             <div className='flex justify-center lg:mt-[-70px] mt-[-90px]'>
                 <CircleProgressComponent percentage={percentageState} theme={theme} />
             </div>
-            <span className="mb-[8px] text-center mt-[16px] truncate block text-white text-[32px] font-semibold">{title}</span>
-            <p className="text-white text-center font-normal text-[16px] leading-[32px] line-clamp-5">{children}</p>
+            <span className="mb-[8px] text-center mt-[16px] truncate block text-white lg:text-[32px] text-[20px] font-semibold">{title}</span>
+            <p className="text-white text-center font-normal lg:text-[16px] text-[13px] leading-[32px] line-clamp-5">{children}</p>
         </div>
     );
 }

@@ -14,7 +14,7 @@ export default function CircleProgressComponent({percentage, theme, size = 40}:p
     return (
         <div 
             data-size={size} 
-            className="aspect-square data-[size='40']:lg:w-[40%] data-[size='40']:w-[30%] data-[size='full']:w-full rounded-full shadow-xl relative p-[5px] flex bg-lightGrey"
+            className="aspect-square data-[size='40']:lg:w-[40%] data-[size='40']:sm:w-[30%] data-[size='40']:w-[35%] data-[size='full']:w-full rounded-full shadow-xl relative p-[5px] flex bg-lightGrey"
         >
             <div 
                 className="rounded-full absolute w-full h-full z-[1] top-0 left-0" 
