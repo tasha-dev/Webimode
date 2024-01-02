@@ -20,8 +20,8 @@ export default function DashboardHeaderComponent():ReactNode {
 
     // Returning JSX 
     return (
-        <div className="dark:bg-dark bg-white w-full lg:p-[20px] container">
-            <header className="flex justify-between gap-[10px] flex-wrap lg:px-[24px] lg:py-[16px] lg:bg-lightestGrey lg:dark:bg-pageDark lg:rounded-[24px]">
+        <div className="dark:bg-dark bg-white w-full lg:p-[20px]">
+            <header className="flex justify-between gap-[10px] flex-wrap lg:px-[24px] lg:py-[16px] lg:bg-lightestGrey lg:dark:bg-pageDark lg:rounded-[24px] container">
                 <div className="flex items-center gap-[30px] lg:w-auto lg:justify-start w-full justify-between lg:border-b-0 border-b border-b-dark lg:pb-0 pb-[20px] lg:mx-0 mx-[20px] lg:mt-0 mt-[20px]">
                     <button
                         className={'lg:hidden flex justify-center items-center transition-all duration-500 border text-dark border-dark hover:bg-dark hover:text-white bg-white dark:bg-pageDark dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-dark  aspect-square w-[40px] rounded-[12px]'}

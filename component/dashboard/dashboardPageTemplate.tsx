@@ -18,7 +18,7 @@ export default function DashboardPageComponent({children}:propsTye):ReactNode {
 
     // Returning JSX
     return (
-        <section className="dashboard">
+        <section className="dashboard dark:bg-dark bg-white">
             <div 
                 data-is-ticket-page={(pathname.startsWith('/dashboard/tickets'))} 
                 className="container p-[20px] grid data-[is-ticket-page='false']:lg:grid-cols-4 bg-white dark:bg-dark data-[is-ticket-page='true']:lg:grid-cols-5 gap-[20px] items-start">
