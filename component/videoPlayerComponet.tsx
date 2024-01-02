@@ -37,7 +37,7 @@ export default function VideoPlayerComponent({cover = '', src, title = ''}:props
         <>
             <div 
                 tabIndex={0}
-                className="relative lg:h-[325px] h-[170px] rounded-[48px] overflow-hidden cursor-pointer lg:mx-[31px] mx-[16px]" 
+                className="relative lg:h-[325px] h-[200px] lg:rounded-[48px] rounded-[20px] overflow-hidden cursor-pointer lg:mx-[31px] mx-0" 
                 data-loading={isLoading}
                 data-playing={isPlaying}
                 onClick={() => {if (!isLoading) {(isPlaying) ? setPlaying(false) : setPlaying(true)}}}
@@ -56,7 +56,7 @@ export default function VideoPlayerComponent({cover = '', src, title = ''}:props
                     </div>
                 </div>
             </div>
-            <Image width={613} height={90} src={BottomImage.src} alt="عکس پایین ویدیو پلیر" className="w-full -mt-[40px]"  />
+            <Image width={613} height={90} src={BottomImage.src} alt="عکس پایین ویدیو پلیر" className="w-full -mt-[40px] lg:block hidden"  />
         </>
     );
 }

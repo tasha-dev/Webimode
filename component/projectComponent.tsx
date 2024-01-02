@@ -22,21 +22,21 @@ export default function ProjectComponent({img, link, maxPrice, minPrice, rating,
     // Returning JSX
     return (
         <Link href={link} className="group block">
-            <div className="w-full h-[182px] rounded-[32px] mb-[16px] relative overflow-hidden">
+            <div className="w-full lg:h-[182px] h-[200px] lg:rounded-[32px] rounded-[20px] mb-[16px] relative overflow-hidden">
                 <Image width={1000} height={1000} alt={title} src={img} className="block transition-all duration-500 object-cover w-full h-full absolute top-0 left-0 group-hover:scale-105" />
             </div>
             <div>
                 <div className="flex items-center justify-between mb-[16px] gap-[10px] w-full">
-                    <span data-theme={theme} className="text-[20px] block truncate font-normal w-full data-[theme='white']:text-white data-[theme='theme']:text-dark">{title}</span>
+                    <span data-theme={theme} className="lg:text-[20px] text-[16px] block truncate font-normal w-full data-[theme='white']:text-white data-[theme='theme']:text-dark">{title}</span>
                     <div data-theme={theme} data-rating-theme={ratingTheme} className="shadow-lg border data-[theme='white']:border-white data-[theme='theme']:border-theme shrink-0 data-[rating-theme='white']:text-theme data-[rating-theme='theme']:text-theme data-[rating-theme='blue']:text-darketThemeBlue data-[rating-theme='red']:text-themeRed bg-white flex items-center data-[] gap-[4px] rounded-[8px] px-[8px] py-[6px]">
                         <span className="font-bold text-[13px] block">{rating.toFixed(1)}</span>
                         <IconComponent name="rounded-star" size={16} />
                     </div>
                 </div>
-                <p data-theme={theme} className="text-[16px] leading-[32px] line-clamp-2 font-normal data-[theme='white']:text-white data-[theme='theme']:text-lighterGrey mb-[16px]">
+                <p data-theme={theme} className="lg:text-[16px] text-[13px] leading-[32px] line-clamp-2 font-normal data-[theme='white']:text-white data-[theme='theme']:text-lighterGrey mb-[16px]">
                     {children}
                 </p>
-                <p data-theme={theme} className="text-end data-[theme='white']:text-white data-[theme='theme']:text-theme text-[20px] font-normal mb-[32px]">
+                <p data-theme={theme} className="text-end data-[theme='white']:text-white data-[theme='theme']:text-theme lg:text-[20px] text-[16px] font-normal mb-[32px]">
                     <span className="font-bold inline-block ml-[1ch]">{minPrice.toLocaleString()}</span>
                     <span className="ml-[1ch]">-</span>
                     <span className="font-bold inline-block ml-[1ch]">{maxPrice.toLocaleString()}</span>
