@@ -22,7 +22,7 @@ export default function SignInPage():ReactNode {
               <div className='lg:hidden block'>
                 <div className="sign-mb-0">ثبت نام</div>
               </div>
-              <h1 className="font-semibold lg:text-[40px] text-[20px] text-dark leading-[74px] lg:mb-[12px] lg:text-start text-center">
+              <h1 className="font-semibold lg:text-[40px] text-[20px] text-dark lg:leading-[74px] leading-[40px] lg:mb-[12px] lg:text-start text-center">
                 <span className="text-theme inline-block ml-[1ch]">به راحتی ثبت نام کن</span>
                 و به خانواده وبیمود ملحق شو !
               </h1>
@@ -53,8 +53,8 @@ export default function SignInPage():ReactNode {
               </Link>
               <HalfDividerComponent>از قبل اکانت دارم</HalfDividerComponent>
               <div className="flex justify-center items-center mt-[32px]">
-                <Link href="/log-in" className="btn-secondary lg:w-[50%] w-[75%]">
-                  ورود به حساب
+                <Link href="/log-in" className="btn-secondary lg:w-[50%] w-full">
+                  <span className='truncate'>ورود به حساب</span>
                   <IconComponent size={16} name="chevron-left" />
                 </Link>
               </div>
