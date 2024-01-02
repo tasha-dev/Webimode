@@ -21,7 +21,7 @@ export default function BlogComponent({children, date, genre, link, title, isBig
     return (
         <Link href={link} data-isbig={isBig} className="block group xl:data-[isbig='true']:col-span-1 lg:data-[isbig='true']:col-span-2 col-span-1 xl:data-[isbig='true']:row-span-2 data-[isbig='true']:row-span-1 data-[isbig='false']:col-span-1 data-[isbig='false']:row-span-1">
             <article data-isbig={isBig} className={(!isBig) ? "flex lg:flex-row flex-col h-full gap-[20px]" : 'h-full'}>
-                <Image data-isbig={isBig} src={img} alt={title} width={1000} height={1000} className={(isBig) ? "mb-[16px] w-full h-[289px] rounded-[40px] object-cover" : 'lg:w-[50%] w-full lg:h-auto h-[289px] rounded-[40px] object-cover'} />
+                <Image data-isbig={isBig} src={img} alt={title} width={1000} height={1000} className={(isBig) ? "mb-[16px] w-full h-[200px] lg:rounded-[40px] rounded-[20px] object-cover" : 'lg:w-[50%] w-full lg:h-auto h-[200px] lg:rounded-[40px] rounded-[20px] object-cover'} />
                 <div data-isbig={isBig} className="xl:data-[isbig='false']:w-[50%] data-[isbig='false']:w-full overflow-hidden">
                     <div className="flex items-center gap-[16px] mb-[9px]">
                         <span className="text-[13px] block truncate font-normal text-lightGrey max-w-[10ch]">{genre}</span>
@@ -31,8 +31,8 @@ export default function BlogComponent({children, date, genre, link, title, isBig
                             <span className="text-[13px] font-normal text-current max-w-[10ch] block truncate">{date.toLocaleDateString('fa-ir')}</span>
                         </div>
                     </div>
-                    <span className="block truncate text-dark text-[24px] font-normal mb-[8px]">{title}</span>
-                    <p className="text-[15px] text-lightGrey font-normal leading-[28px] line-clamp-3 mb-[32px]">{children}</p>
+                    <span className="block truncate text-dark lg:text-[24px] text-[16px] font-normal mb-[8px]">{title}</span>
+                    <p className="lg:text-[15px] text-[13px] text-lightGrey font-normal leading-[28px] line-clamp-3 lg:mb-[32px] mb-[20px]">{children}</p>
                     <button data-isbig={isBig} className="data-[isbig='true']:w-full lg:data-[isbig='false']:w-auto w-full transition-all duration-500 group-hover:bg-lighterGrey group-hover:text-lightGrey px-[40px] py-[12px] flex items-center lg:data-[isbig='false']:justify-between data-[isbig='false']:justify-center data-[isbig='true']:justify-center gap-[12px] text-lightGrey rounded-[14px] text-[16px] font-normal border-[1.5px] border-lightGrey">
                         مشاهده مقاله
                         <IconComponent size={16} name="chevron-left" />
