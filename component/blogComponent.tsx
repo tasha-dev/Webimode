@@ -38,7 +38,7 @@ export default function BlogComponent({children, date, genre, img, title, link, 
                         <p data-theme={theme} className="data-[theme='theme']:text-lightGrey data-[theme='white']:text-lighterGrey font-normal lg:text-[15px] text-[13px] line-clamp-5 leading-[28px] lg:mb-[32px] mb-[24px]">{children}</p>
                         <button 
                             data-theme={theme}
-                            className={'transition-all shadow-custom-theme flex items-center w-full justify-center gap-[16px] lg:text-[18px] text-[13px] font-normal p-[12px] rounded-[14px] duration-200 text-white data-[theme="white"]:border data-[theme="white"]:border-white data-[theme="theme"]:bg-theme data-[theme="white"]:bg-transparent data-[theme="theme"]:group-hover:bg-darkerTheme data-[theme="white"]:group-hover:text-white/50 data-[theme="white"]:group-hover:border-white/50'}
+                            className={'transition-all shadow-custom-theme flex items-center w-full justify-center gap-[16px] lg:text-[18px] text-[13px] font-normal p-[12px] rounded-[14px] duration-200 text-white data-[theme="white"]:border data-[theme="white"]:border-white data-[theme="theme"]:bg-theme data-[theme="white"]:bg-transparent data-[theme="theme"]:group-hover:bg-darkerTheme data-[theme="white"]:group-hover:text-theme data-[theme="white"]:group-hover:border-theme data-[theme="white"]:group-hover:bg-white'}
                         >
                             مشاهده مقاله    
                             <IconComponent size={16} name="chevron-left" />
