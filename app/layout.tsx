@@ -76,7 +76,7 @@ interface propsType {
 export default function RootLayout({children}:propsType):ReactNode {
     // Returning JSX
     return (
-        <html>
+        <html className="scroll-smooth">
             <body dir={'rtl'} className={`${DanaFont.className} ${FredokaFont.variable} overflow-x-hidden overflow-y-auto`}>
                 <HeaderComponent />
                 {children}
