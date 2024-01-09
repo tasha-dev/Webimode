@@ -82,7 +82,7 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 
 /* Defining some mqs */
 @media (min-width: 1024px) {
-    .group:hover .group-hover-skew {transform: scale(1.1) perspective(300px) rotateY(-20deg);}
+    .group:hover .group-hover-skew {transform: scale(.72) perspective(500px) rotateY(-20deg);}
     .group:hover .group-hover-skew-small-scale {transform: scale(0.9) perspective(300px) rotateY(-10deg);}
     .group .group-hover-inner-img {transform: perspective(300px) rotateY(45deg);}
     .group:hover .group-hover-inner-img {transform: perspective(300px) rotateY(10deg);}
