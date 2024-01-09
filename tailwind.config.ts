@@ -19,7 +19,9 @@ const config: Config = {
                 circleMotion: 'circleMotion 10s linear infinite',
                 customRotate: 'customRotate 1.5s linear infinite',
                 rectanglePusle: 'rectanglePusle 3s ease infinite',
-                rectanglePusleCentred: 'rectanglePusleCentred 3s ease infinite'
+                rectanglePusleCentred: 'rectanglePusleCentred 3s ease infinite',
+                beforeLinkActive: 'beforeLinkActive 1s ease-in-out forwards',
+                afterLinkActive: 'afterLinkActive 1s ease-in-out forwards',
             },
             keyframes: {
                 customRotate: {
@@ -54,6 +56,26 @@ const config: Config = {
                     }, '100%' : {
                         transform: 'translateX(-50%) translateY(-50%) scale(1)',
                         opacity: '0%'
+                    }
+                },
+                beforeLinkActive: {
+                    '0%': {
+                        opacity: '0',
+                        width: '0'
+                    },
+                    '100%': {
+                        opacity: '100%',
+                        width: '10px'
+                    }
+                },
+                afterLinkActive: {
+                    '0%': {
+                        opacity: '0',
+                        width: '0'
+                    },
+                    '100%': {
+                        opacity: '100%',
+                        width: '30px'
                     }
                 }
             },
