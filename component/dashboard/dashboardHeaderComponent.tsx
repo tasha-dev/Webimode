@@ -31,7 +31,7 @@ export default function DashboardHeaderComponent():ReactNode {
                     <Link href={'/'}>
                         <Image src={LogoImage.src} alt={'لوگو وبیمود'} width={1080} height={1080} className="w-[56px] h-[56px] aspect-squar" />
                     </Link>
-                    <div className={'vertical-divider lg:block hidden'} />
+                    <div className={'vertical-divider-dashboard lg:block hidden'} />
                     <ul className={'lg:flex hidden items-center gap-[30px]'}>
                         <li><LinkComponent theme={(theme === 'dark') ? 'dark' : 'white'} activeInHome link={'/work-samples'}>نمونه کار ها</LinkComponent></li>
                         <DropdownComponent theme={(theme === 'dark') ? 'dark' : 'white'} link={'/services'} title={'خدمات ما'}>
@@ -58,12 +58,12 @@ export default function DashboardHeaderComponent():ReactNode {
                         </Link>
                     </div>
                     <div className="lg:flex hidden items-center justify-center">
-                        <div className={'vertical-divider'} />
+                        <div className={'vertical-divider-dashboard'} />
                     </div>
-                    <Link href={'/dashboard/notifications'} className="w-[56px] h-[56px] aspect-square flex items-center justify-center transition-all duration-500 border border-lightGrey hover:bg-lightGrey rounded-[16px] relative text-lightGrey hover:text-dark">
+                    <Link href={'/dashboard/notifications'} className="w-[56px] h-[56px] aspect-square flex items-center justify-center transition-all duration-500 border border-lightGrey hover:border-theme hover:bg-theme rounded-[16px] relative text-lightGrey hover:text-white">
                         <IconComponent name="bell-ring" size={24} />
                         <div className="absolute bottom-0 right-0 translate-y-[50%] translate-x-[50%] rounded-full flex items-center justify-center aspect-square w-[20px] h-[20px] bg-theme text-white text-[12px] font-bold">
-                            3
+                            <span className="block h-[70%]">3</span>
                         </div>
                     </Link>
                     <div className="group relative">
