@@ -62,7 +62,7 @@ export default function FourthSectionComponent():ReactNode {
             spaceBetween={32}
             grabCursor
             onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
-            className='p-[20px] border border-lightGrey rounded-[20px] lg:bg-white w-full bg-lighterGrey'
+            className='border border-lightGrey rounded-[20px] lg:bg-white w-full'
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -71,7 +71,8 @@ export default function FourthSectionComponent():ReactNode {
               1024: {slidesPerView: 14, slidesPerGroup: 14},
               768: {slidesPerView: 4, slidesPerGroup: 4},
               500: {slidesPerView: 3, slidesPerGroup: 3},
-              1: {slidesPerView: 2, slidesPerGroup: 2},
+              300: {slidesPerView: 2, slidesPerGroup: 2},
+              1: {slidesPerView: 1, slidesPerGroup: 1},
             }}
             navigation={{
               nextEl: '#next-tech-slider-btn',
