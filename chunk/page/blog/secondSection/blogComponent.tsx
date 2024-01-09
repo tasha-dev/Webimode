@@ -34,7 +34,7 @@ export default function BlogComponent({children, date, genre, link, title, isBig
                     } 
                 />
                 <div data-isbig={isBig} className="xl:data-[isbig='false']:w-[50%] xl:data-[isbig='true']:h-[48.5%] data-[isbig='false']:w-full overflow-hidden flex flex-col lg:justify-around justify-between items-start gap-[15px]">
-                    <div className="flex items-center gap-[16px]">
+                    <div className="flex items-center w-full gap-[16px]">
                         <span className="text-[13px] block truncate font-normal text-lightGrey max-w-[10ch]">{genre}</span>
                         <div className="bg-lightGrey h-[16px] w-[1px] rounded-[20px]" />
                         <div className="flex text-lightGrey gap-[12px]">
@@ -42,7 +42,7 @@ export default function BlogComponent({children, date, genre, link, title, isBig
                             <span className="text-[13px] font-normal text-current max-w-[10ch] block truncate">{date.toLocaleDateString('fa-ir')}</span>
                         </div>
                     </div>
-                    <span className="block truncate text-dark lg:text-[24px] text-[16px] font-normal">{title}</span>
+                    <span className="block truncate w-full text-dark lg:text-[24px] text-[16px] font-normal">{title}</span>
                     <p className="lg:text-[15px] text-[13px] text-lightGrey font-normal leading-[28px] line-clamp-2 lg:mb-[32px]">{children}</p>
                     <button data-isbig={isBig} className="data-[isbig='true']:w-full lg:data-[isbig='false']:w-auto w-full transition-all duration-500 group-hover:bg-theme group-hover:text-white group-hover:border-theme px-[40px] py-[12px] flex items-center lg:data-[isbig='false']:justify-between data-[isbig='false']:justify-center data-[isbig='true']:justify-center gap-[12px] text-lightGrey rounded-[14px] text-[16px] font-normal border-[1.5px] border-lightGrey">
                         مشاهده مقاله
