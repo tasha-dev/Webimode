@@ -24,9 +24,9 @@ export default function EleventhSectionComponent(): ReactNode {
 
     // Returning JSX
     return (
-        <section className="lg:mt-[96px] mt-[50px]">
+        <section>
             <div className="container">
-                <header className="xl:block hidden mb-[97px] p-[20px]">
+                <header className="xl:block hidden p-[20px]">
                     <div className="flex items-center">
                         <div className="w-full h-[2px] bg-gradient-to-l from-transparent to-lightGrey" />
                         <div className="w-[56px] h-[56px] aspect-square text-lightGrey flex items-center justify-center rounded-full bg-white border border-lightGrey">
@@ -36,7 +36,7 @@ export default function EleventhSectionComponent(): ReactNode {
                     </div>
                 </header>
                 <main>
-                    <div className="container px-[20px] py-[40px]">
+                    <div className="container px-[20px] pb-[40px]">
                         <div className="sign">نظرات کاربران</div>
                         <div className="flex items-center justify-between flex-wrap gap-[20px] mb-[40px]">
                             <h5 className="lg:text-[48px] text-[20px]">
