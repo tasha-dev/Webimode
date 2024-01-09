@@ -50,7 +50,7 @@ export default function FirstSectionComponent():ReactNode {
                             </Link>
                         </div>
                     </main>
-                    <div className={'xl:w-[50%] w-full relative overflow-hidden'}>
+                    <div className={'xl:w-[50%] w-full relative'}>
                         <Image width={625} height={962} src={leftSideImage.src} alt={'عکس گوشی'} className={'w-full lg:-mt-[30px] z-[3] relative'} />
                         <LineMorphComponent strokeColor="#49B486" className="absolute top-0 lg:translate-y-[-70px] translate-y-[-50px] left-0 z-[2] w-full" />
                         <Image width={500} height={395} src={leftSideImageBG.src} alt={'عکس  بکگراند گوشی'} className={'w-full hiden absolute top-0 left-0 z-[1]'} />
