@@ -69,10 +69,8 @@ export default function FourthSectionComponent():ReactNode {
             }}
             breakpoints={{
               1024: {slidesPerView: 14, slidesPerGroup: 14},
-              768: {slidesPerView: 4, slidesPerGroup: 4},
-              500: {slidesPerView: 3, slidesPerGroup: 3},
-              300: {slidesPerView: 2, slidesPerGroup: 2},
-              1: {slidesPerView: 1, slidesPerGroup: 1},
+              500: {slidesPerView: 4, slidesPerGroup: 4},
+              1: {slidesPerView: 2, slidesPerGroup: 2},
             }}
             navigation={{
               nextEl: '#next-tech-slider-btn',
