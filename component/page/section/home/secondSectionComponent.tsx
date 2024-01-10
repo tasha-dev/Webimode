@@ -7,6 +7,7 @@ import IconComponent from "@/chunk/iconComponent";
 import StepComponent from "@/chunk/page/home/secondSection/stepComponent";
 import doElsCollide from "@/utils/doElsCollide";
 import SkipButtonComponent from "@/chunk/skipButtonComponent";
+import Confetti from 'react-dom-confetti';
 
 // Creating and exporting second section of home page as default
 export default function SecondSectionComponent():ReactNode {
@@ -88,7 +89,7 @@ export default function SecondSectionComponent():ReactNode {
                         <div ref={fourthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                         <div ref={fifthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                     </div>
-                    <div className="lg:sticky lg:top-[50%] top-0 lg:mt-[232px] mt-0" ref={mainStickyPart}>
+                    <div className="lg:sticky lg:top-[50%] top-0 lg:mt-[232px] mt-0" ref={mainStickyPart} onClick={() => setActiveStep(5)}>
                         <main dir="ltr" className="grid lg:grid-cols-6 lg:gap-0 gap-[16px] grid-cols-1 relative">
                             <div data-active={(activeStep >= 1)} className="step-icon-component lg:flex hidden left-0 top-[50%] -translate-y-[50%] absolute"><IconComponent name="right-arrow" size={24} /></div>
                             <StepComponent position="bottom" count="۱" isActive={(activeStep >= 1)} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
@@ -96,6 +97,20 @@ export default function SecondSectionComponent():ReactNode {
                             <StepComponent position="bottom" count="۳" isActive={(activeStep >= 3)} icon='design' title='طراحی اولیه'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                             <StepComponent position="top" count="۴" isActive={(activeStep >= 4)} icon='replace' title='پیاده سازی و تحویل'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
                             <StepComponent position="bottom" count="۵" isActive={(activeStep >= 5)} icon='vote-yes' title='تغییر و تکمیل طراحی'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
+                            <div className="lg:flex hidden w-[200px] h-[200px] aspect-square absolute right-0 top-[50%] -translate-y-[50%] z-[-1] translate-x-[35%] items-center justify-center">
+                                <Confetti active={(activeStep >= 5)} config={{
+                                    angle: 90,
+                                    spread: 360,
+                                    startVelocity: 40,
+                                    elementCount: 150,
+                                    dragFriction: 0.12,
+                                    duration: 3000,
+                                    stagger: 3,
+                                    width: '10px',
+                                    height: '10px',
+                                    colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
+                                }} />
+                            </div>
                             <div data-active={(activeStep === 5)} className="h-[2px] step-component" />
                             <div data-active={(activeStep === 5)} className="step-icon-component lg:flex hidden absolute right-0 top-[50%] -translate-y-[50%]"><IconComponent name="party-horn" size={24} /></div>
                         </main>
