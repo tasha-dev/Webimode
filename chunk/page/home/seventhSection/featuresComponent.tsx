@@ -24,7 +24,7 @@ export default function FeaturesComponent({children, isActive, position, title, 
             <span data-active={isActive} className="lg:truncate transition-all duration-500 block mb-[8px] text-[16px] w-full text-center data-[active='true']:text-theme data-[active='false']:text-lightGrey">{title}</span>
             <p data-active={isActive} className="lg:line-clamp-4 transition-all duration-500 text-center text-[12px] font-normal data-[active='false']:text-lighterGrey data-[active='true']:text-dark leading-[24px] mb-[20px]">{children}</p>
             <div className="relative lg:block flex items-center justify-center">
-                <svg data-active={isActive} className="data-[active='true']:text-theme transition-all duration-500 data-[active='false']:text-lightGrey lg:w-full w-[50%]" viewBox="0 0 214 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg data-active={isActive} className="data-[active='true']:text-theme transition-all duration-500 data-[active='false']:text-lightGrey w-full" viewBox="0 0 214 291" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M107.493 240.026L3.12142 183.586L107.493 129.494L211.865 183.586L107.493 240.026Z" stroke="currentColor" strokeWidth="2" fill="white"/>
                     <path d="M107.496 92.7541L48.4661 60.8334L107.496 30.2405L166.526 60.8334L107.496 92.7541Z" fill="currentColor" fillOpacity="0.16" stroke="currentColor" strokeWidth="1.5"/>
                     <path d="M103.965 87.8038L168.125 60.5273V180.597C168.125 187.237 164.024 193.187 157.818 195.55L109.388 213.99C106.77 214.987 103.965 213.053 103.965 210.252V87.8038Z" fill="currentColor"/>
