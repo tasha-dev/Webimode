@@ -23,7 +23,7 @@ export default function NinethSectionComponent():ReactNode {
 
     // Returnining JSX
     return (
-        <section className="lg:mt-[256px] mt-[50px]">
+        <section className="lg:mt-[50px] mt-[50px]">
             <div className="container p-[20px]">
                 <header className="flex items-end justify-between gap-[10px] lg:mb-[51px] mb-[24px]">
                     <div>
