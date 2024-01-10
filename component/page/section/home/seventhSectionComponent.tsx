@@ -8,9 +8,10 @@ import IconComponent from "@/chunk/iconComponent";
 import {Swiper, SwiperSlide} from "swiper/react";
 import SliderPaginationComponent from "@/chunk/sliderPaginationCompont";
 import doElsCollide from "@/utils/doElsCollide";
+import SkipButtonComponent from "@/chunk/skipButtonComponent";
+import {Autoplay} from "swiper/modules";
 import * as SwiperType from "swiper/types";
 import 'swiper/css';
-import SkipButtonComponent from "@/chunk/skipButtonComponent";
 
 // Creating and exporting seventh section of home page as default
 export default function SeventhSectionComponent():ReactNode {
@@ -106,13 +107,15 @@ export default function SeventhSectionComponent():ReactNode {
                         initialSlide={activeIndexOfSlider}
                         onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
                         spaceBetween={20}
+                        modules={[Autoplay]}
+                        autoplay={{delay: 3000}}
                     >
-                        <SwiperSlide><FeaturesComponent icon="shield-check" isActive={true} isGoingToBeActive={true} position="top" title="خرید امن با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
-                        <SwiperSlide><FeaturesComponent icon="hand-holding-dollor" isActive={false} isGoingToBeActive={false} position="bottom" title="مرکز حل اختلافات با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
-                        <SwiperSlide><FeaturesComponent icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
-                        <SwiperSlide><FeaturesComponent icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
-                        <SwiperSlide><FeaturesComponent icon="hand-holding-dollor" isActive={false} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
-                        <SwiperSlide><FeaturesComponent hasNoLeft icon="shaking-hands" isActive={false} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
+                        <SwiperSlide><FeaturesComponent icon="shield-check" isActive={true} isGoingToBeActive={false} position="top" title="خرید امن با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
+                        <SwiperSlide><FeaturesComponent icon="hand-holding-dollor" isActive={true} isGoingToBeActive={false} position="bottom" title="مرکز حل اختلافات با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
+                        <SwiperSlide><FeaturesComponent icon="shaking-hands" isActive={true} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
+                        <SwiperSlide><FeaturesComponent icon="shaking-hands" isActive={true} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
+                        <SwiperSlide><FeaturesComponent icon="hand-holding-dollor" isActive={true} isGoingToBeActive={false} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
+                        <SwiperSlide><FeaturesComponent hasNoLeft icon="shaking-hands" isActive={true} isGoingToBeActive={false} position="bottom" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent></SwiperSlide>
                     </Swiper>
                     <SliderPaginationComponent swiper={slider} activeIndex={activeIndexOfSlider} slidesCount={6} slidesPerView={1} />
                 </div>

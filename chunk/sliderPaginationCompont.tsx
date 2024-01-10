@@ -79,7 +79,7 @@ export default function SliderPaginationComponent({
     } else {
         if (hasButtons) {
             return (
-                <div className="flex items-center justify-center gap-[20px] mt-[64px]">
+                <div className="flex items-center justify-center gap-[20px] lg:mt-[64px] mt-[20px]">
                     <button id={prevBtnId} data-active={(activeIndex !== 0)} className={`slider-prev-next-btn${(theme === 'theme') ? '' : (theme === 'white') ? '-white' : '-alert'}`}>
                         <IconComponent name="chevron-right" size={16} />
                     </button>
@@ -125,7 +125,7 @@ export default function SliderPaginationComponent({
             );
         } else {
             return (
-                <div className='flex gap-[12px] items-center justify-center mt-[64px] w-full'>
+                <div className='flex gap-[12px] items-center justify-center lg:mt-[64px] mt-[20px] w-full'>
                     {
                         (slidesCount < 10)
                             ? [... new Array(slidesCount)].map((item, index) => (
