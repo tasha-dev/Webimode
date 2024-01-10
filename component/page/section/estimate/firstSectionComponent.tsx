@@ -96,7 +96,7 @@ export default function FirstSectionComponent():ReactNode {
                                 <IconComponent size={28} name="money-check-edit" />
                                 <span className="block mb-[16px] text-current text-center lg:text-[24px] text-[16px] font-semibold">قیمت تخمین زده شده :</span>
                                 <div className="flex items-end justify-center gap-[1ch] flex-wrap">
-                                    <span className="block text-current font-bold lg:text-[32px] text-[24px]">{(1000000).toLocaleString()} از</span>
+                                    <span className="block text-current font-bold lg:text-[32px] text-[24px]">از {(1000000).toLocaleString()}</span>
                                     <span className="block text-current font-semibold lg:text-[16px] text-[13px]">میلیون تومان</span>
                                 </div>
                             </div>
