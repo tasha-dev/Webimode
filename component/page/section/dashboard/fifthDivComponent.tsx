@@ -51,13 +51,18 @@ export default function FifthDivComponent():ReactNode {
                         </Link>
                     </div>
                 </div>
-                <div className="grid lg:grid-cols-3 gap-[22px]">
-                    <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="deposit" price={256000} />
-                    <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="cash-out" price={256000} />
-                    <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="cash-out" price={256000} />
-                    <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="deposit" price={256000} />
-                    <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="deposit" price={256000} />
-                    <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="cash-out" price={256000} />
+                <div>
+                    <div className="grid lg:grid-cols-3 gap-[22px]">
+                        <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="deposit" price={256000} />
+                        <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="cash-out" price={256000} />
+                        <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="cash-out" price={256000} />
+                    </div>
+                    <div className="w-full my-[22px] h-[1px] bg-gradient-to-r from-transparent to-transparent via-lightGrey" />
+                    <div className="grid lg:grid-cols-3 gap-[22px]">
+                        <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="deposit" price={256000} />
+                        <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="deposit" price={256000} />
+                        <PaymentComponent date={new Date('August 3 2022 22:30').toISOString()} link="#" paymentType="cash-out" price={256000} />
+                    </div>
                 </div>
             </div>
         </div>
