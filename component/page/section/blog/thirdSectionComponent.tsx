@@ -24,7 +24,7 @@ export default function ThirdSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="lg:mt-[200px] mt-[50px]">
+        <section className="lg:mt-[80px] mt-[50px]">
             <div className="container p-[20px]">
                 <BlogGenreHeaderComponent highlightedTitle={'داغ ترین'} nonHighlightedTitle="مقالات" link="#" />
                 <main>
