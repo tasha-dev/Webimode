@@ -40,7 +40,6 @@ export default function SeventhSectionComponent():ReactNode {
                             </h4>
                         </div>
                         <div className='flex justify-around flex-col'>
-                            <p className='paragraph xl:text-start text-center'>بهترین و با کیفیت ترین خدمات طراحی و پشتیبانی و برنامه نویسی را با تیم وبیمود در بلاترین سطح تجربه کنید !</p>
                             <div className={'xl:flex hidden gap-[34px] shrink-0'}>
                                 <Link href={'/contact-us'} className={'btn-primary'}>
                                     درخواست همکاری  
@@ -51,6 +50,7 @@ export default function SeventhSectionComponent():ReactNode {
                                     <IconComponent name={'chevron-left'} size={16} />
                                 </Link>
                             </div>
+                            <p className='paragraph xl:text-start text-center'>بهترین و با کیفیت ترین خدمات طراحی و پشتیبانی و برنامه نویسی را با تیم وبیمود در بلاترین سطح تجربه کنید !</p>
                         </div>
                     </div>
                 </header>
