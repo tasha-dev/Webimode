@@ -35,7 +35,11 @@ export default function HeaderComponent():ReactNode {
         return <DashboardHeaderComponent />;
     } else {
         return (
-            <header data-hasdarkbg={darkBgUrl.includes(pathname)} data-scrolled={isScrolled} className="lg:fixed static top-0 transition-all duration-500 w-full data-[hasdarkbg='true']:bg-dark data-[hasdarkbg='false']:lg:bg-white z-[100] lg:shadow-lg lg:data-[scrolled='false']:shadow-transparent lg:data-[scrolled='true']:shadow-lightGrey/20">
+            <header 
+                data-hasdarkbg={darkBgUrl.includes(pathname)} 
+                data-scrolled={isScrolled} 
+                className="lg:fixed static top-0 transition-all duration-500 w-full data-[hasdarkbg='true']:bg-dark data-[hasdarkbg='false']:lg:bg-white z-[100] lg:shadow-lg lg:data-[scrolled='false']:shadow-transparent lg:data-[scrolled='true']:shadow-lightGrey/20"
+            >
                 <div className="container lg:px-[32px] px-[20px] lg:py-[20px] py-[10px] lg:flex items-center justify-between gap-[10px] flex-wrap">
                     <div className={'flex items-center lg:justify-start justify-between lg:w-auto w-full gap-[30px]'}>
                         <button 
@@ -50,7 +54,7 @@ export default function HeaderComponent():ReactNode {
                         <div className={'vertical-divider lg:block hidden'} />
                         <ul className={'lg:flex hidden items-center gap-[30px]'}>
                             <li><LinkComponent theme={(darkBgUrl.includes(pathname)) ? 'dark' : 'white'} activeInHome link={'/work-samples'}>نمونه کار ها</LinkComponent></li>
-                            <DropdownComponent link={'/services'} title={'خدمات ما'}>
+                            <DropdownComponent link={'/services'} title={'خدمات ما'} theme={(darkBgUrl.includes(pathname)) ? 'dark' : 'white'}>
                                 <li><Link className={'px-[15px] truncate text-[16px] text-dark font-normal py-[5px] block hover:bg-white/30 transition-all duration-500'} href={'#'}>لینک ۱</Link></li>
                                 <li><Link className={'px-[15px] truncate text-[16px] text-dark font-normal py-[5px] block hover:bg-white/30 transition-all duration-500'} href={'#'}>لینک ۲</Link></li>
                                 <li><Link className={'px-[15px] truncate text-[16px] text-dark font-normal py-[5px] block hover:bg-white/30 transition-all duration-500'} href={'#'}>لینک ۳</Link></li>
