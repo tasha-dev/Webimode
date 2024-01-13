@@ -26,7 +26,7 @@ export default function SliderComponent({activeStep, setActiveStep}:propsTYpe):R
                   return 1;
                 }
               });
-        }, 6000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, [])
@@ -45,6 +45,15 @@ export default function SliderComponent({activeStep, setActiveStep}:propsTYpe):R
     // Returning JSX
     return (
         <div
+            onClick={() => {
+                setActiveStep((prevActiveStep: number) => {
+                    if (prevActiveStep + 1 <= 7) {
+                        return prevActiveStep + 1;
+                    } else {
+                        return 1;
+                    }
+                });
+            }}
             style={{transform: `rotate(${rotation}deg)`}}
             className="w-[750px] h-[750px] origin-center aspect-square border-[4px] border-white rounded-full transition-all duration-500 bg-transparent relative z-[1] mt-[53px]"
         >
