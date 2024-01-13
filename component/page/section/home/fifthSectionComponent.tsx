@@ -85,7 +85,10 @@ export default function FifthSectionComponent():ReactNode {
                                                     : 'متن نامربوط 7'
                         }   
                     </p>
-                    <SliderComponent activeStep={activeStep} setActiveStep={setActiveStep} />
+                    <SliderComponent 
+                    activeStep={activeStep}
+                    setActiveStep={setActiveStep} 
+                    />
                 </main>
             </div>
         </section>
