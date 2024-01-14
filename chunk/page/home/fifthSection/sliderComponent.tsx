@@ -26,7 +26,7 @@ export default function SliderComponent({activeStep, setActiveStep}:propsType):R
                   return 4;
                 }
               });
-        }, 7000);
+        }, 6000);
 
         return () => clearInterval(interval);
     }, [])
