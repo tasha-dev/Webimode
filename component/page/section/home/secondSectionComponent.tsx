@@ -89,7 +89,7 @@ export default function SecondSectionComponent():ReactNode {
                         <div ref={fourthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                         <div ref={fifthLineHelper} className="w-full left-0 h-[calc(2000px/5)]"/>
                     </div>
-                    <div className="lg:sticky lg:top-[50%] top-0 lg:mt-[232px] mt-0" ref={mainStickyPart} onClick={() => setActiveStep(5)}>
+                    <div className="lg:sticky lg:top-[50%] top-0 lg:mt-[232px] mt-0" ref={mainStickyPart}>
                         <main dir="ltr" className="grid lg:grid-cols-6 lg:gap-0 gap-[16px] grid-cols-1 relative">
                             <div data-active={(activeStep >= 1)} className="step-icon-component lg:flex hidden left-0 top-[50%] -translate-y-[50%] absolute"><IconComponent name="right-arrow" size={24} /></div>
                             <StepComponent position="bottom" count="۱" isActive={(activeStep >= 1)} icon='brief-case' title='درخواست و ثبت سفارش'>تیم وبیمود افتخار این را دارد که از اولین مرحله ثبت سفارش تا آخرین مرحله آن پشتیبان شماست .</StepComponent>
