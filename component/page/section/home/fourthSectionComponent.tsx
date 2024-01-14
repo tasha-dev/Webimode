@@ -64,7 +64,7 @@ export default function FourthSectionComponent():ReactNode {
               onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
               className='home-first-section-slider'
               autoplay={{
-                delay: 3000,
+                delay: 1500,
                 disableOnInteraction: false,
               }}
               navigation={{
@@ -127,7 +127,7 @@ export default function FourthSectionComponent():ReactNode {
               onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
               className='home-first-section-slider-mq'
               autoplay={{
-                delay: 3000,
+                delay: 1500,
                 disableOnInteraction: false,
               }}
               navigation={{
