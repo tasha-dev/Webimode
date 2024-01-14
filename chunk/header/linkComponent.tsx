@@ -31,7 +31,7 @@ export default function LinkComponent({children, link, isDropdown = false, activ
                 ${(isDropdown) 
                     ? 'gap-[20px] flex justify-between text-lightGrey transition-all duration-500 data-[theme="white"]:text-dark group-hover:data-[theme="white"]:text-dark data-[theme="dark"]:text-white group-hover:data-[theme="dark"]:text-white/50' 
                     : 'data-[theme="dark"]:text-white data-[theme="white"]:text-dark'}
-                    text-[16px] relative font-normal items-center data-[current-page="false"]:after:hidden data-[current-page="false"]:before:hidden data-[current-page="true"]:after:block data-[current-page="true"]:before:block before:absolute after:absolute before:bg-theme after:bg-dark after:h-[4px] before:h-[4px] after:rounded-[20rem] before:rounded-[20rem] before:top-[120%] after:top-[120%] before:right-0 after:right-[15px] data-[current-page="true"]:after:animate-afterLinkActive data-[current-page="true"]:before:animate-beforeLinkActive data-[current-page="true"]:before:delay-150 data-[current-page="true"]:after:delay-150`
+                    text-[16px] relative font-normal items-center data-[current-page="false"]:after:hidden data-[current-page="false"]:before:hidden data-[current-page="true"]:after:block data-[current-page="true"]:before:block before:absolute after:absolute before:bg-theme after:bg-dark after:h-[4px] before:h-[4px] after:rounded-[20rem] before:rounded-[20rem] before:top-[120%] after:top-[120%] before:right-0 after:right-[15px] duration-500 data-[current-page="true"]:after:animate-pulse data-[current-page="true"]:before:animate-pulse data-[current-page="true"]:before:w-[10px] data-[current-page="true"]:after:w-[30px]`
                 }
             >
             {children}

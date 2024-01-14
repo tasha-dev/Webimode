@@ -57,26 +57,6 @@ const config: Config = {
                         transform: 'translateX(-50%) translateY(-50%) scale(1)',
                         opacity: '0%'
                     }
-                },
-                beforeLinkActive: {
-                    '0%': {
-                        opacity: '0',
-                        width: '0'
-                    },
-                    '100%': {
-                        opacity: '100%',
-                        width: '10px'
-                    }
-                },
-                afterLinkActive: {
-                    '0%': {
-                        opacity: '0',
-                        width: '0'
-                    },
-                    '100%': {
-                        opacity: '100%',
-                        width: '30px'
-                    }
                 }
             },
             colors: {
