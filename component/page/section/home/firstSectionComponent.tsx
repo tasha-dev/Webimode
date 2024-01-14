@@ -16,8 +16,7 @@ export default function FirstSectionComponent():ReactNode {
             <div className="container">
                 <img className={'absolute top-0 right-0 z-[-1]'} src={bgZigzagImage.src} alt="عکس زیگزاگ در پس زمینه" />
                 <div className={'flex xl:flex-row flex-col lg:gap-[186px] gap-[100px] justify-between items-start px-[20px]'}>
-                    <main className={'xl:w-[50%] w-full lg:block flex items-center flex-col'}>
-                        <div className={'sign'}>تیم وبیمود</div>
+                    <main className={'xl:w-[50%] w-full lg:block flex items-center flex-col lg:mt-0 mt-[50px]'}>
                         <h1 className={'lg:block hidden text-[64px] text-dark font-bold'}>وبیمود</h1>
                         <h2 className={'lg:inline-block hidden text-[64px] relative mb-[24px]'}>
                             <span className={'text-dark font-normal inline-block ml-[10px]'}>واقعی کردن</span>
