@@ -7,6 +7,8 @@ import IconComponent from '@/chunk/iconComponent';
 import Image from "next/image";
 import BgImage from '@/public/img/home/fifthSection/img-bg-overlay.png';
 import SliderComponent from "@/chunk/page/home/fifthSection/sliderComponent";
+import TitleOnSliderComponent from "@/chunk/page/home/fifthSection/titleOnSliderComponent";
+import ParagraphOnSliderComponent from "@/chunk/page/home/fifthSection/paragraphOnSliderComponent";
 
 // Creating and exorting fifth section component as default
 export default function FifthSectionComponent():ReactNode {
@@ -35,59 +37,11 @@ export default function FifthSectionComponent():ReactNode {
                     </h4>
                 </header>
                 <main className="flex flex-col items-center justify-center">
-                    <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">
-                        {
-                            (activeStep === 1)
-                                ? 'متن نامربوط 1'
-                                : (activeStep === 2)
-                                    ? 'متن نامربوط 2'
-                                    : (activeStep === 3)
-                                        ? 'متن نامربوط 3'
-                                        : (activeStep === 4)
-                                            ? 'پشتیبانی 24/7 در کنار شما'
-                                            : (activeStep === 5)
-                                                ? 'متن نامربوط 5'
-                                                : (activeStep === 6)
-                                                    ? 'متن نامربوط 6'
-                                                    : 'متن نامربوط 7'
-                        }  
-                    </h6>
-                    <p className="text-center paragraph-small">
-                        {
-                            (activeStep === 1)
-                                ? 'متن نامربوط 1'
-                                : (activeStep === 2)
-                                    ? 'متن نامربوط 2'
-                                    : (activeStep === 3)
-                                        ? 'متن نامربوط 3'
-                                        : (activeStep === 4)
-                                            ? 'تیم وبیمود افتخار این را دارد بتا بتواند در تمامی مراحل ایده پردازی تا '
-                                            : (activeStep === 5)
-                                                ? 'متن نامربوط 5'
-                                                : (activeStep === 6)
-                                                    ? 'متن نامربوط 6'
-                                                    : 'متن نامربوط 7'
-                        }   
-                        <br />
-                        {
-                            (activeStep === 1)
-                                ? 'متن نامربوط 1'
-                                : (activeStep === 2)
-                                    ? 'متن نامربوط 2'
-                                    : (activeStep === 3)
-                                        ? 'متن نامربوط 3'
-                                        : (activeStep === 4)
-                                            ? 'تحویل و پشتیبانی پروژه در تمام ساعت زور و روز های هفته ر کنار شما باشد'
-                                            : (activeStep === 5)
-                                                ? 'متن نامربوط 5'
-                                                : (activeStep === 6)
-                                                    ? 'متن نامربوط 6'
-                                                    : 'متن نامربوط 7'
-                        }   
-                    </p>
+                    <TitleOnSliderComponent activeStep={activeStep}  />
+                    <ParagraphOnSliderComponent activeStep={activeStep}  />
                     <SliderComponent 
-                    activeStep={activeStep}
-                    setActiveStep={setActiveStep} 
+                        activeStep={activeStep}
+                        setActiveStep={setActiveStep} 
                     />
                 </main>
             </div>
