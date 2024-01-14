@@ -80,11 +80,25 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .btn-secondary-alert {@apply px-[16px] py-[10px] rounded-[12px] border border-alert text-alert flex items-center justify-center gap-[12px] text-[13px] font-normal transition-all duration-500 hover:bg-alert hover:text-white;}
 .scroll-notification-dashboard::-webkit-scrollbar {@apply bg-lightGrey dark:bg-lightestDark rounded-tr-[8px] rounded-br-[8px] w-[8px];}
 .scroll-notification-dashboard::-webkit-scrollbar-thumb {@apply bg-theme rounded-tr-[8px] rounded-br-[8px];}  
+.home-first-section-slider, .home-first-section-slider-mq {
+    border: 1px solid #BBBBBB;
+    border-radius: 20px;
+    padding-inline: 10px !important; 
+    background-color: white;
+    width: 100%;
+}
 
 /* Defining some mqs */
 @media (min-width: 1024px) {
+    .home-first-section-slider {display: block !important;}
+    .home-first-section-slider-mq {display: none !important;}
     .group:hover .group-hover-skew {transform: scale(.72) perspective(500px) rotateY(-20deg);}
     .group:hover .group-hover-skew-small-scale {transform: scale(0.9) perspective(300px) rotateY(-10deg);}
     .group .group-hover-inner-img {transform: perspective(300px) rotateY(45deg);}
     .group:hover .group-hover-inner-img {transform: perspective(300px) rotateY(10deg);}
+}
+
+@media (max-width: 1024px) {
+    .home-first-section-slider {display: none !important;}
+    .home-first-section-slider-mq {display: block !important;}
 }

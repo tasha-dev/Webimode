@@ -20,7 +20,7 @@ export default function SliderItemComponent({alt, img, item}:propsType):ReactNod
                 data-item={item}
                 width={100} 
                 height={100} 
-                className={`rounded-full object-cover aspect-square pointer-events-none lg:data-[item='1']:w-[24px] lg:data-[item='2']:w-[28px] lg:data-[item='3']:w-[32px] lg:data-[item='4']:w-[36px] lg:data-[item='5']:w-[48px] lg:data-[item='6']:w-[48px] w-[48px]`} 
+                className={`rounded-full object-cover aspect-square pointer-events-none lg:data-[item='1']:w-[24px] data-[item='1']:w-[40px] lg:data-[item='2']:w-[28px] data-[item='2']:w-[50px] lg:data-[item='3']:w-[32px] data-[item='3']:w-[60px] lg:data-[item='4']:w-[36px] data-[item='4']:w-[50px] lg:data-[item='5']:w-[48px] data-[item='5']:w-[48px] lg:data-[item='6']:w-[48px] data-[item='6']:w-[40px]`} 
             />
         </div>
     );
