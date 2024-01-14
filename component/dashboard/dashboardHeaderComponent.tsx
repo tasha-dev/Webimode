@@ -60,12 +60,6 @@ export default function DashboardHeaderComponent():ReactNode {
                     <div className="lg:flex hidden items-center justify-center">
                         <div className={'vertical-divider-dashboard'} />
                     </div>
-                    <Link href={'/dashboard/notifications'} className="w-[56px] h-[56px] aspect-square flex items-center justify-center transition-all duration-500 border border-lightGrey hover:border-theme hover:bg-theme rounded-[16px] relative text-lightGrey hover:text-white">
-                        <IconComponent name="bell-ring" size={24} />
-                        <div className="absolute bottom-0 right-0 translate-y-[50%] translate-x-[50%] rounded-full flex items-center justify-center aspect-square w-[20px] h-[20px] bg-theme text-white text-[12px] font-bold">
-                            <span className="block h-[70%]">3</span>
-                        </div>
-                    </Link>
                     <div className="group relative">
                         <Image src={BackgroundImage.src} width={212} height={100} alt="" className="w-full pointer-events-none lg:block hidden scale-150 h-full z-[1] absolute top-0 left-0" />
                         <button className="p-[8px] z-10 relative dark:bg-lightestDark bg-white rounded-[16px] lg:shadow-none shadow-xl flex items-center justify-between gap-[28px] w-[228px] transition-all duration-500 dark:group-hover:bg-lightestDark group-hover:bg-gray-200">
