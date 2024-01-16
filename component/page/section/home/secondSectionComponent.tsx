@@ -42,7 +42,7 @@ export default function SecondSectionComponent():ReactNode {
             if (innerWidth < 1024) {
                 setActiveStep((prevStep:number) => prevStep + 1)}
             }
-        , 5000)
+        , 200)
 
         addEventListener('scroll', handleAnimate);
 
