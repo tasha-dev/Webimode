@@ -72,48 +72,54 @@ export default function FourthSectionComponent():ReactNode {
                 prevEl: '#prev-tech-slider-btn',
               }}
             >
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} item="5" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} item="5" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} item="5" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} item="5" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} item="5" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} item="7" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} item="5" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} item="2" /></SwiperSlide>
+                <div className='swiper-group'>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
+                </div>
+                <div className='swiper-group'>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
+                </div>
+                <div className='swiper-group'>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
+                  <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
+                </div>
           </Swiper>
           <Swiper 
               modules={[Navigation, Autoplay, Mousewheel]}
@@ -126,55 +132,36 @@ export default function FourthSectionComponent():ReactNode {
               grabCursor
               onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
               className='home-first-section-slider-mq'
-              autoplay={{
-                delay: 1500,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 1500,
+              //   disableOnInteraction: false,
+              // }}
               navigation={{
                 nextEl: '#next-tech-slider-btn',
                 prevEl: '#prev-tech-slider-btn',
               }}
             >
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس"  img={cPlusPlusImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} item="6" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} item="1" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} item="2" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} item="3" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} item="4" /></SwiperSlide>
-                <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} item="6" /></SwiperSlide>
+            <div className='swiper-group'>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
+            </div>
+            <div className='swiper-group'>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
+            </div>
+            <div className='swiper-group'>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
+              <SwiperSlide><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
+            </div>
           </Swiper>
           <button id='next-tech-slider-btn' data-active={(activeIndexOfSlider !== 28)} className='slider-prev-next-btn lg:flex hidden shrink-0'>
             <IconComponent size={16} name="chevron-left" />
