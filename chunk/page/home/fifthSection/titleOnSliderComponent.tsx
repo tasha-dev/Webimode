@@ -21,11 +21,5 @@ export default function TitleOnSliderComponent({activeStep}:propsType):ReactNode
     else if (activeStep === 10) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۰</h6>;}
     else if (activeStep === 11) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۱</h6>;}
     else if (activeStep === 12) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۲</h6>;}
-    else if (activeStep === 13) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۳</h6>;}
-    else if (activeStep === 14) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۴</h6>;}
-    else if (activeStep === 15) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۵</h6>;}
-    else if (activeStep === 16) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۶</h6>;}
-    else if (activeStep === 17) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۷</h6>;}
-    else if (activeStep === 18) {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ۱۸</h6>;}
     else {return <h6 className="text-center mb-[4px] text-white text-[16px] font-bold">متن ?</h6>;}
 }
