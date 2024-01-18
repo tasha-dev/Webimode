@@ -66,8 +66,14 @@ export default function SliderComponent({activeStep, setActiveStep}:propsType):R
         const previousEl:Element | null| undefined = activeElement?.previousElementSibling;
         const nextEl:Element | null| undefined = activeElement?.nextElementSibling;
 
-        previousEl?.setAttribute('data-prev-of-active', 'true');
-        nextEl?.setAttribute('data-next-of-active', 'true');
+        const AllNextOfActive = document.querySelectorAll('.home-fifth-section-slider-item[data-next-of-active="true"]');
+        const AllPrevOfActive = document.querySelectorAll('.home-fifth-section-slider-item[data-prev-of-active="true"]');
+        
+        AllNextOfActive.forEach((item) => item.setAttribute('data-next-of-active', 'false'));
+        AllPrevOfActive.forEach((item) => item.setAttribute('data-prev-of-active', 'false'));
+
+        if (nextEl !== null) {nextEl?.setAttribute('data-next-of-active', 'true')};
+        if (previousEl !== null) {previousEl?.setAttribute('data-prev-of-active', 'true')};
     }, [activeStep])
 
     // Returning JSX
