@@ -29,6 +29,8 @@ export default function FeaturesComponent({children, isActive, position, title, 
                     <path d="M107.496 92.7541L48.4661 60.8334L107.496 30.2405L166.526 60.8334L107.496 92.7541Z" fill="currentColor" fillOpacity="0.16" stroke="currentColor" strokeWidth="1.5"/>
                     <path d="M103.965 87.8038L168.125 60.5273V180.597C168.125 187.237 164.024 193.187 157.818 195.55L109.388 213.99C106.77 214.987 103.965 213.053 103.965 210.252V87.8038Z" fill="currentColor"/>
                     <path d="M110.402 87.8014L46.862 60.7705V180.916C46.862 187.518 50.9179 193.443 57.0733 195.832L104.955 214.414C107.577 215.431 110.402 213.497 110.402 210.685L110.402 87.8014Z" fill="currentColor"/>
+                    <path d="M155.5 196.5L168 191.5V175.5H154L155.5 196.5Z" fill="currentColor" />
+                    <path d="M47 192L56.5 195.5L59.5 190.5L56.5 180.5L47 178.892V192Z" fill="currentColor" />
                 </svg>
                 {
                     (position === 'top' && !hasNoLeft)

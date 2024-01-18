@@ -34,17 +34,17 @@ export default function SeventhSectionComponent():ReactNode {
       function handleAnimate(): void {
         if (innerWidth > 1024) {
           if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
-            setActiveFeatureIndex(1);
+            setActiveFeatureIndex(1);            
           } else if (doElsCollide(secondLineHelper.current, mainStickyPart.current)) {
-            setActiveFeatureIndex(2);
+            setActiveFeatureIndex(2);            
           } else if (doElsCollide(thirdLineHelper.current, mainStickyPart.current)) {
-            setActiveFeatureIndex(3);
+            setActiveFeatureIndex(3);            
           } else if (doElsCollide(fourthLineHelper.current, mainStickyPart.current)) {
-            setActiveFeatureIndex(4);
+            setActiveFeatureIndex(4);            
           } else if (doElsCollide(fifthLineHelper.current, mainStickyPart.current)) {
-            setActiveFeatureIndex(5);
+            setActiveFeatureIndex(5);            
           } else if (doElsCollide(sixthLineHelper.current, mainStickyPart.current)) {
-            setActiveFeatureIndex(6);
+            setActiveFeatureIndex(6);            
           }
         } else {
           setActiveFeatureIndex(1);
@@ -89,8 +89,8 @@ export default function SeventhSectionComponent():ReactNode {
                         <div ref={fifthLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
                         <div ref={sixthLineHelper} className="w-full left-0 h-[calc(4200px/6)]"/>
                     </div>
-                    <div className="sticky top-[20%]">
-                      <main ref={mainStickyPart} className="grid grid-cols-6 gap-[20px] relative">
+                    <div className="sticky top-[20%]" ref={mainStickyPart}>
+                      <main className="grid grid-cols-6 gap-[20px] relative">
                           <FeaturesComponent icon="shield-check" isActive={(activeFeatureIndex >= 1)} isGoingToBeActive={(activeFeatureIndex === 1)} position="top" title="خرید امن با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
                           <FeaturesComponent icon="hand-holding-dollor" isActive={(activeFeatureIndex >= 2)} isGoingToBeActive={(activeFeatureIndex === 2)} position="bottom" title="مرکز حل اختلافات با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
                           <FeaturesComponent icon="shaking-hands" isActive={(activeFeatureIndex >= 3)} isGoingToBeActive={(activeFeatureIndex === 3)} position="top" title="ضمانت بازگشت وجه با وبیمود">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است و چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است</FeaturesComponent>
