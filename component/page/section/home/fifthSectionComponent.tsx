@@ -19,7 +19,7 @@ export default function FifthSectionComponent():ReactNode {
     return (
         <section className="bg-theme relative">
             <Image src={BgImage.src} width={1140} height={717} alt="عکس بکگراند" className="opacity-50 w-full h-full object-cover absolute top-0 left-0 z-[1] pointer-events-none" />
-            <div className="w-full h-full absolute top-0 left-0 bg-gradient-to-b via-dark/10 from-transparent to-dark/80 z-[3] pointer-events-none" />
+            <div className="lg:block hidden w-full h-full absolute top-0 left-0 bg-gradient-to-b via-dark/10 from-transparent to-dark/80 z-[3] pointer-events-none" />
             <div className="container px-[20px] lg:py-[48px] py-[32px] z-[2] relative">
                 <header className="flex flex-col items-center justify-center lg:mb-[56px] mb-[40px]">
                     <div className="sign-white">چرا وبیمود</div>

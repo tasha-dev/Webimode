@@ -62,7 +62,7 @@ export default function FourthSectionComponent():ReactNode {
               spaceBetween={32}
               grabCursor
               onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
-              className='home-first-section-slider'
+              className='home-fourth-section-slider'
               autoplay={{
                 delay: 1500,
                 disableOnInteraction: false,
@@ -131,11 +131,11 @@ export default function FourthSectionComponent():ReactNode {
               spaceBetween={20}
               grabCursor
               onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
-              className='home-first-section-slider-mq'
-              // autoplay={{
-              //   delay: 1500,
-              //   disableOnInteraction: false,
-              // }}
+              className='home-fourth-section-slider-mq'
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
               navigation={{
                 nextEl: '#next-tech-slider-btn',
                 prevEl: '#prev-tech-slider-btn',

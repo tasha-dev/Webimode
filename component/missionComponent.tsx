@@ -27,7 +27,7 @@ export default function MissionComponent():ReactNode {
                         </div>
                     </div>
                     <LineMorphComponent strokeColor="white" className="aspect-square xl:w-[80%] w-[100%] absolute right-[50%] top-[50%] translate-x-[50%] -translate-y-[50%] z-[-1]" />
-                    <Image className={'z-[5] lg:w-auto w-[90%] xl:-translate-y-[calc(574px-465px)] xl:h-[574px]'} src={rocketImage.src} alt="عکس موشک" width={422} height={574} />
+                    <Image className={'z-[5] w-[90%] xl:-translate-y-[calc(574px-465px)] xl:h-[574px]'} src={rocketImage.src} alt="عکس موشک" width={422} height={574} />
                 </div>
                 <div className={'xl:w-[50%] w-full xl:py-[60px] py-[32px] xl:px-[68px] px-[16px] lg:block flex items-center justify-center flex-col'}>
                     <div className={'sign-white'}>ماموریت وبیمود</div>
