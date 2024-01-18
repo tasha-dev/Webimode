@@ -1,9 +1,12 @@
 // Importing part
 import {ReactNode} from "react";
 
+// Defining type of names of this component and exporting it
+export type nameType = 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'|'nim-circle-arrow'|'image'|'question-chat'|'exit'|'bin'|'three-dots'|'cloud-download'|'undo'|'bell-ring'|'circle-state'|'ticket'|'wallet'|'question-circle'|'gear'|'penicl-circle'|'bell'|'check'|'cash-out'|'deposit';
+
 // Defining type of props
 interface propsType {
-    name: 'chevron-down'|'chevron-left'|'list'|'list-right'|'shaking-hands'|'telephone'|'star'|'right-arrow'|'party-horn'|'brief-case'|'money-check-edit'|'design'|'replace'|'vote-yes'|'window'|'poll'|'pencil-paintbrush'|'mobile'|'slack'|'lang'|'ai'|'chevron-right'|'rounded-star'|'like'|'dislike'|'send'|'shield-check'|'hand-holding-dollor'|'shaking-hands'|'hand-arrow'|'hand-arrow-left'|'clock'|'mail'|'location'|'splash-lines'|'person'|'file-write'|'info'|'whatsapp'|'instagram'|'linkedin'|'google'|'caller'|'slash-eye'|'search'|'arrow-curve'|'jet'|'file'|'share'|'circle-clock'|'chat'|'play'|'headphone'|'percentage'|'arrow-lt'|'browser'|'calender-clock'|'dollor-circle'|'globe'|'lock'|'house-buliding'|'shop'|'wp'|'ban-bug'|'cloud-upload'|'addsign'|'check-circle'|'file-search'|'circle-check'|'circle-x'|'circle-warn'|'chevron-bottom-circle'|'filter'|'nim-circle-arrow'|'image'|'question-chat'|'exit'|'bin'|'three-dots'|'cloud-download'|'undo'|'bell-ring'|'circle-state'|'ticket'|'wallet'|'question-circle'|'gear'|'penicl-circle'|'bell'|'check'|'cash-out'|'deposit'; 
+    name: nameType; 
     size?: number;
     width?: number;
     height?: number;

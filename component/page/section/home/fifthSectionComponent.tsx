@@ -6,7 +6,7 @@ import {Dispatch, ReactNode, useState} from "react";
 import IconComponent from '@/chunk/iconComponent';
 import Image from "next/image";
 import BgImage from '@/public/img/home/fifthSection/img-bg-overlay.png';
-import SliderComponent from "@/chunk/page/home/fifthSection/sliderComponent";
+import SliderComponent from "@/chunk/page/home/fifthSection/slider/sliderComponent";
 import TitleOnSliderComponent from "@/chunk/page/home/fifthSection/titleOnSliderComponent";
 import ParagraphOnSliderComponent from "@/chunk/page/home/fifthSection/paragraphOnSliderComponent";
 
@@ -17,7 +17,7 @@ export default function FifthSectionComponent():ReactNode {
 
     // Returning JSX
     return (
-        <section className="bg-theme relative">
+        <section className="bg-theme relative ">
             <Image src={BgImage.src} width={1140} height={717} alt="عکس بکگراند" className="opacity-50 w-full h-full object-cover absolute top-0 left-0 z-[1] pointer-events-none" />
             <div className="lg:block hidden w-full h-full absolute top-0 left-0 bg-gradient-to-b via-dark/10 from-transparent to-dark/80 z-[3] pointer-events-none" />
             <div className="container px-[20px] lg:py-[48px] py-[32px] z-[2] relative">
