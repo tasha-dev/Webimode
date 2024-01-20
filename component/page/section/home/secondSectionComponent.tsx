@@ -40,9 +40,9 @@ export default function SecondSectionComponent():ReactNode {
 
         const interval = setInterval(() => {
             if (innerWidth < 1024) {
-                setActiveStep((prevStep:number) => prevStep + 1)}
-            }
-        , 200)
+                setActiveStep((prevStep:number) => prevStep + 1);
+            }}
+        , 1000)
 
         addEventListener('scroll', handleAnimate);
 
@@ -53,11 +53,7 @@ export default function SecondSectionComponent():ReactNode {
     }, [])
 
     useEffect(() => {
-        if (innerWidth < 1024) { 
-            if (activeStep > 5) {
-                setActiveStep(1);
-            }
-        }
+        if (innerWidth < 1024 && activeStep >= 5) {setActiveStep(5)}
     }, [activeStep])
 
     // Returning JSX

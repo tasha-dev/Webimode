@@ -25,7 +25,7 @@ export default function FeaturesComponent({children, isActive, position, title, 
             <p data-active={isActive} className="lg:line-clamp-4 transition-all duration-500 text-center text-[12px] font-normal data-[active='false']:text-lighterGrey data-[active='true']:text-dark leading-[24px] mb-[20px]">{children}</p>
             <div className="relative lg:block flex items-center justify-center">
                 <svg data-active={isActive} className="data-[active='true']:text-theme transition-all duration-500 data-[active='false']:text-lightGrey w-full" viewBox="0 0 214 268" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M107.493 217.026L3.12142 160.586L107.493 106.494L211.865 160.586L107.493 217.026Z" fill="white" stroke="currentColor" stroke-width="2" />
+                    <path d="M107.493 217.026L3.12142 160.586L107.493 106.494L211.865 160.586L107.493 217.026Z" fill="white" stroke="currentColor" strokeWidth="2" />
                     <path d="M169 160.5L106.5 191.5V58L169 30V160.5Z" fill="currentColor" stroke="currentColor" />
                     <path d="M106.5 191.5V58L46 30.5V160L106.5 191.5Z" fill="currentColor" stroke="currentColor" />
                     <path d="M106.5 58L46 30.5L106.5 1.5L169 30L106.5 58Z" fill="white" stroke="currentColor" />
