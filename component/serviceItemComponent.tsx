@@ -24,7 +24,7 @@ export default function ServiceItemComponent({children, icon, img, title, iconGr
     return (
         <div 
             data-left-side={isLeftSide}
-            className="lg:h-[528px] h-[555px] lg:rounded-r-[40px] lg:data-[left-side='true']:hover:rounded-r-[0px] rounded-r-[20px] transition-all ease-in-out duration-1000 lg:rounded-l-[40px] lg:hover:data-[left-side='false']:rounded-l-[0px] rounded-l-[20px] overflow-hidden relative group"
+            className="xl:h-[528px] h-[555px] xl:rounded-r-[40px] xl:data-[left-side='true']:hover:rounded-r-[0px] rounded-r-[20px] transition-all ease-in-out duration-1000 xl:rounded-l-[40px] xl:hover:data-[left-side='false']:rounded-l-[0px] rounded-l-[20px] overflow-hidden relative group"
         >
             <div className={'lg:absolute relative top-0 left-0 w-full transition-all ease-in-out duration-1000 z-[-1] group-hover-skew'}>
                 <div className="h-full w-full scale-110 rounded-[40px] bg-black/50 absolute top-0 left-0 z-[2]" />
@@ -74,7 +74,7 @@ export default function ServiceItemComponent({children, icon, img, title, iconGr
                 width={1000}
                 height={1000}
                 data-left-side={isLeftSide}
-                className="absolute w-[50%] top-0 data-[left-side='true']:right-0 data-[left-side='false']:left-0 h-full data-[left-side='false']:origin-left data-[left-side='true']:origin-right object-cover rounded-[20px] opacity-0 transition-all ease-in-out duration-1000 group-hover-inner-img lg:group-hover:opacity-100"
+                className="absolute w-[50%] top-0 data-[left-side='true']:right-0 data-[left-side='false']:left-0 h-full data-[left-side='false']:origin-left data-[left-side='true']:origin-right object-cover rounded-[20px] opacity-0 transition-all ease-in-out duration-1000 group-hover-inner-img xl:group-hover:opacity-100"
             />
         </div>
     );
