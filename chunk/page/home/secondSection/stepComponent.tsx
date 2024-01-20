@@ -24,7 +24,14 @@ export default function StepComponent({children, icon, isActive, title, position
                         {count}
                     </div>
                 </div>
-                <DetailComponent position={position} icon={icon} isActive={isActive} title={title}>{children}</DetailComponent>
+                <DetailComponent 
+                    position={position} 
+                    icon={icon} 
+                    isActive={isActive} 
+                    title={title}
+                >
+                    {children}
+                </DetailComponent>
             </div>
         </div>
     );
