@@ -52,6 +52,7 @@ export default function SecondSectionComponent():ReactNode {
         };
     }, [])
 
+    // Using useEffect hook to check if user is on mq and activeStep is more or equal to 5 which is last step. then stop from adding number to the state.
     useEffect(() => {
         if (innerWidth < 1024 && activeStep >= 5) {setActiveStep(5)}
     }, [activeStep])
