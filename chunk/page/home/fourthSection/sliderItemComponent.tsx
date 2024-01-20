@@ -1,18 +1,34 @@
+// Forcing nextJS to render this component as client side component
+'use client';
+
 // Importing part
-import {ReactNode} from "react";
+import {MutableRefObject, ReactNode, useRef} from "react";
 import Image from 'next/image';
+import useIsElementInView from "@/hook/useIsElementInView";
 
 // Defining type of props
 interface propsType {
     img: string;
     alt: string;
+    hiddenOnMq? : boolean;
 }
 
 // Creating and exporting slider item component as default
-export default function SliderItemComponent({alt, img}:propsType):ReactNode {
+export default function SliderItemComponent({alt, img, hiddenOnMq = false}:propsType):ReactNode {
+    // Defining refrence to elemnt
+    const elementRef:MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+    // Checking if element is in view
+    const isElementInView:boolean = useIsElementInView(elementRef);
+
     // Returning JSX
     return (
-        <div className="h-[80px] flex items-center justify-center slider-item">
+        <div 
+            ref={elementRef} 
+            data-showing={isElementInView} 
+            data-hides-on-mq={hiddenOnMq}
+            className="h-[80px] data-[hides-on-mq='false']:flex lg:data-[hides-on-mq='true']:flex data-[hides-on-mq='true']:hidden items-center justify-center slider-item transition-all duration-500"
+        >
             <Image 
                 src={img} 
                 alt={alt} 

@@ -48,7 +48,7 @@ export default function FourthSectionComponent():ReactNode {
               در بهترین حالت ممکن برطرف کند .
           </p>
         </header>
-        <main className='gap-[24px] flex items-center justify-center'>
+        <main className='flex items-center justify-between gap-[18px]'>
           <button id='prev-tech-slider-btn' data-active={(activeIndexOfSlider !== 0)} className='slider-prev-next-btn lg:flex hidden shrink-0'>
             <IconComponent size={16} name="chevron-right" />
           </button>
@@ -57,8 +57,7 @@ export default function FourthSectionComponent():ReactNode {
               initialSlide={activeIndexOfSlider}
               direction='horizontal'
               mousewheel={true}
-              slidesPerView={14} 
-              slidesPerGroup={14}
+              slidesPerView={1} 
               spaceBetween={32}
               grabCursor
               onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
@@ -72,98 +71,62 @@ export default function FourthSectionComponent():ReactNode {
                 prevEl: '#prev-tech-slider-btn',
               }}
             >
-                <div className='swiper-group'>
-                  <SwiperSlide key={1}><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
-                  <SwiperSlide key={2}><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
-                  <SwiperSlide key={3}><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
-                  <SwiperSlide key={4}><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
-                  <SwiperSlide key={5}><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
-                  <SwiperSlide key={6}><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} /></SwiperSlide>
-                  <SwiperSlide key={7}><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
-                  <SwiperSlide key={8}><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
-                  <SwiperSlide key={9}><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
-                  <SwiperSlide key={10}><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
-                  <SwiperSlide key={11}><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
-                  <SwiperSlide key={12}><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
-                  <SwiperSlide key={13}><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
-                  <SwiperSlide key={14}><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
-                </div>
-                <div className='swiper-group'>
-                  <SwiperSlide key={15}><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
-                  <SwiperSlide key={16}><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
-                  <SwiperSlide key={17}><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
-                  <SwiperSlide key={18}><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
-                  <SwiperSlide key={19}><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
-                  <SwiperSlide key={20}><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} /></SwiperSlide>
-                  <SwiperSlide key={21}><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
-                  <SwiperSlide key={22}><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
-                  <SwiperSlide key={23}><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
-                  <SwiperSlide key={24}><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
-                  <SwiperSlide key={25}><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
-                  <SwiperSlide key={26}><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
-                  <SwiperSlide key={27}><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
-                  <SwiperSlide key={28}><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
-                </div>
-                <div className='swiper-group'>
-                  <SwiperSlide key={29}><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
-                  <SwiperSlide key={30}><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
-                  <SwiperSlide key={31}><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
-                  <SwiperSlide key={32}><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
-                  <SwiperSlide key={33}><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
-                  <SwiperSlide key={34}><SliderItemComponent alt="عکس لوگو ریکت" img={reactImage.src} /></SwiperSlide>
-                  <SwiperSlide key={35}><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
-                  <SwiperSlide key={36}><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
-                  <SwiperSlide key={37}><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
-                  <SwiperSlide key={38}><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
-                  <SwiperSlide key={39}><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
-                  <SwiperSlide key={40}><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
-                  <SwiperSlide key={41}><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
-                  <SwiperSlide key={42}><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
-                </div>
+                <SwiperSlide>
+                  <div className='flex items-center gap-[32px] justify-between'>
+                    <SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} />
+                    <SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} />
+                    <SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} />
+                    <SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} />
+                    <SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ریکت" img={reactImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو پی اچ پی" img={phpImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو جاوااسکریپت" img={jsImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو سی شارپ" img={cSharpImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو فیگما" img={figmaImage.src} />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='flex items-center gap-[32px] justify-between'>
+                    <SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} />
+                    <SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} />
+                    <SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} />
+                    <SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} />
+                    <SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ریکت" img={reactImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو پی اچ پی" img={phpImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو جاوااسکریپت" img={jsImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو سی شارپ" img={cSharpImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو فیگما" img={figmaImage.src} />
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className='flex items-center gap-[32px] justify-between'>
+                    <SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} />
+                    <SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} />
+                    <SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} />
+                    <SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} />
+                    <SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ریکت" img={reactImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو پی اچ پی" img={phpImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو جاوااسکریپت" img={jsImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو سی شارپ" img={cSharpImage.src} />
+                    <SliderItemComponent hiddenOnMq alt="عکس لوگو فیگما" img={figmaImage.src} />
+                  </div>
+                </SwiperSlide>
           </Swiper>
-          <Swiper 
-              modules={[Navigation, Autoplay, Mousewheel]}
-              initialSlide={activeIndexOfSlider}
-              direction='horizontal'
-              mousewheel={true}
-              slidesPerView={5} 
-              slidesPerGroup={5}
-              spaceBetween={20}
-              grabCursor
-              onSlideChange={(event) => setActiveIndexOfSlider(event.activeIndex)}
-              className='home-fourth-section-slider-mq'
-              autoplay={{
-                delay: 1500,
-                disableOnInteraction: false,
-              }}
-              navigation={{
-                nextEl: '#next-tech-slider-btn',
-                prevEl: '#prev-tech-slider-btn',
-              }}
-            >
-            <div className='swiper-group'>
-              <SwiperSlide key={43}><SliderItemComponent alt="عکس لوگو چت بی تی" img={chatGPTImage.src} /></SwiperSlide>
-              <SwiperSlide key={44}><SliderItemComponent alt="عکس لوگو جاوا" img={javaImage.src} /></SwiperSlide>
-              <SwiperSlide key={45}><SliderItemComponent alt="عکس لوگو سی پلاس پلاس" img={cPlusPlusImage.src} /></SwiperSlide>
-              <SwiperSlide key={46}><SliderItemComponent alt="عکس لوگو ایندیزاین" img={IndisignImage.src} /></SwiperSlide>
-              <SwiperSlide key={47}><SliderItemComponent alt="عکس لوگو سی اس اس" img={cssImage.src} /></SwiperSlide>
-            </div>
-            <div className='swiper-group'>
-              <SwiperSlide key={48}><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
-              <SwiperSlide key={49}><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
-              <SwiperSlide key={50}><SliderItemComponent alt="عکس لوگو اچ تی ام ال" img={htmlImage.src} /></SwiperSlide>
-              <SwiperSlide key={51}><SliderItemComponent alt="عکس لوگو فوتوشاپ" img={PhotoahopImage.src} /></SwiperSlide>
-              <SwiperSlide key={52}><SliderItemComponent alt="عکس لوگو ایلوستریتور" img={illustratorImage.src} /></SwiperSlide>
-            </div>
-            <div className='swiper-group'>
-              <SwiperSlide key={53}><SliderItemComponent alt="عکس لوگو ادوبی ایکس دی" img={XDImage.src} /></SwiperSlide>
-              <SwiperSlide key={54}><SliderItemComponent alt="عکس لوگو سی شارپ" img={cSharpImage.src} /></SwiperSlide>
-              <SwiperSlide key={55}><SliderItemComponent alt="عکس لوگو فیگما" img={figmaImage.src} /></SwiperSlide>
-              <SwiperSlide key={56}><SliderItemComponent alt="عکس لوگو پی اچ پی" img={phpImage.src} /></SwiperSlide>
-              <SwiperSlide key={57}><SliderItemComponent alt="عکس لوگو جاوااسکریپت" img={jsImage.src} /></SwiperSlide>
-            </div>
-          </Swiper>
-          <button id='next-tech-slider-btn' data-active={(activeIndexOfSlider !== 28)} className='slider-prev-next-btn lg:flex hidden shrink-0'>
+          <button id='next-tech-slider-btn' data-active={(activeIndexOfSlider !== 2)} className='slider-prev-next-btn lg:flex hidden shrink-0'>
             <IconComponent size={16} name="chevron-left" />
           </button>
         </main>
