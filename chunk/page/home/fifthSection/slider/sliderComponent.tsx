@@ -43,7 +43,7 @@ export default function SliderComponent({activeStep, setActiveStep}:propsType):R
 
     // Using useEffect to set active step automaticcaly
     useEffect(() => {
-        const interval = setInterval(handleStepIncreament, 6000);
+        const interval = setInterval(handleStepIncreament, 3000);
         return () => clearInterval(interval);
     }, [])
 
