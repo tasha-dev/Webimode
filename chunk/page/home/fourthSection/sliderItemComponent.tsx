@@ -10,11 +10,10 @@ import useIsElementInView from "@/hook/useIsElementInView";
 interface propsType {
     img: string;
     alt: string;
-    hiddenOnMq? : boolean;
 }
 
 // Creating and exporting slider item component as default
-export default function SliderItemComponent({alt, img, hiddenOnMq = false}:propsType):ReactNode {
+export default function SliderItemComponent({alt, img}:propsType):ReactNode {
     // Defining refrence to elemnt
     const elementRef:MutableRefObject<HTMLDivElement | null> = useRef(null);
 
@@ -26,8 +25,8 @@ export default function SliderItemComponent({alt, img, hiddenOnMq = false}:props
         <div 
             ref={elementRef} 
             data-showing={isElementInView} 
-            data-hides-on-mq={hiddenOnMq}
-            className="h-[80px] data-[hides-on-mq='false']:flex lg:data-[hides-on-mq='true']:flex data-[hides-on-mq='true']:hidden items-center justify-center slider-item transition-all duration-500"
+            data-view-index={4}
+            className="h-[80px] flex items-center justify-center slider-item transition-all duration-500"
         >
             <Image 
                 src={img} 
