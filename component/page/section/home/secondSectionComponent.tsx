@@ -13,7 +13,7 @@ import Confetti from 'react-dom-confetti';
 export default function SecondSectionComponent():ReactNode {
     // Defining states of component
     const [activeStep, setActiveStep]:[number, Dispatch<any>] = useState(1);
-    const [innerWidthUser, setInnerWidthUser]:[number, Dispatch<number>] = useState(window.innerWidth);
+    const [innerWidthUser, setInnerWidthUser]:[number, Dispatch<number>] = useState(0);
 
     // Defining refrences
     const firstLineHelper:MutableRefObject<any> = useRef();
