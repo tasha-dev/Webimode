@@ -23,8 +23,16 @@ export default function SecondSectionComponent():ReactNode {
     const fifthLineHelper:MutableRefObject<any> = useRef();
     const mainStickyPart:MutableRefObject<any> = useRef();
 
-    // Using useEffect hook to set innerWidth of page to state.
-    useEffect(() => addEventListener('resize', () => setInnerWidthUser(window.innerWidth)), []);
+    // Using useEffect hook to set innerWidth of page to state when page loads and resizez and removing event listeners when component gets umounted.
+    useEffect(() => {
+        addEventListener('resize', () => setInnerWidthUser(window.innerWidth));
+        addEventListener('load', () => setInnerWidthUser(window.innerWidth));
+
+        return () => {
+            removeEventListener('resize', () => setInnerWidthUser(window.innerWidth));
+            removeEventListener('load', () => setInnerWidthUser(window.innerWidth));
+        }
+    }, []);
 
     // Using useEffect for making active step to stop at 5 when it gets more and equal to 5.
     useEffect(() => {if (activeStep >= 5 && innerWidthUser < 1024) {setActiveStep(5)}}, [activeStep])
