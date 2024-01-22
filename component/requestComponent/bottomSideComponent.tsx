@@ -47,10 +47,10 @@ export default function BottomSideComponent({activeStep, nextStepFunction, prevS
                     setRelatedWebsites={(payload:string) => setRelatedWebsites(payload)} 
                     setActiveAditional={(payload:string) => setActiveAditional(payload)}
                 />
-                <div className="flex flex-wrap items-center justify-center gap-[24px]">
+                <div className="flex lg:flex-row flex-col items-center justify-center gap-[24px]">
                     <button 
                         onClick={prevStepFunction} 
-                        className="btn-secondary-white"
+                        className="btn-secondary-white lg:w-auto w-full"
                     >
                         <IconComponent name="chevron-right" size={16} />
                         مرحله قبل
@@ -72,7 +72,7 @@ export default function BottomSideComponent({activeStep, nextStepFunction, prevS
                                     additinalFeatures: activeAditional
                                 });
                         }} 
-                        className="btn-primary"
+                        className="btn-primary lg:w-auto w-full"
                     >
                         {
                             (activeStep !== 8)
