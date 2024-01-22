@@ -22,7 +22,7 @@ export default function MiddleSideComponent():ReactNode {
 
     // Returning JSX
     return (
-        <div className="lg:col-span-3 bg-dark lg:h-scren h-auto relative lg:w-auto w-screen">
+        <div className="lg:col-span-3 bg-dark lg:h-screen h-auto relative lg:w-auto w-screen">
             <div data-fetching={isFetching} className="absolute top-0 left-0 transition-all duration-500 w-full h-full flex items-center justify-center bg-dark/90 z-[2] data-[fetching='false']:opacity-0 data-[fetching='false']:pointer-events-none">
                 <LoadingComponent />
             </div>
@@ -33,10 +33,10 @@ export default function MiddleSideComponent():ReactNode {
                 <button tabIndex={(isFetching) ? -1 : 0} onClick={() => setActiveAi('midjourny')} data-active={(activeAi === 'midjourny')} className="chat-ai-btn">midjourny</button>
             </div>
             <div ref={middleSideRef} data-has-massage={(massages.length !== 0)} className="relative col-span-1 lg:row-span-4 lg:h-[60vh] h-[100vh] overflow-x-hidden overflow-y-auto lg:pl-[20px] lg:pr-[20px] py-[20px] pl-[30px] pr-[20px] no-scroll">
-                <div data-has-massage={(massages.length !== 0)} className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] lg:p-[24px] p-[16px] transition-all duration-500 ease-in-out lg:w-[75%] w-[85%] shadow-black border border-lightestDark bg-pageDark rounded-[40px] data-[has-massage='true']:opacity-0 data-[has-massage='true']:invisible data-[has-massage='false']:opacity-100 data-[has-massage='false']:visible">
-                    <div className="flex lg:w-[50%] w-[75%] items-center mx-auto p-[16px] bg-white/20 rounded-[12px] justify-between gap-[10px] shadow-black mb-[32px]">
-                        <span className="text-lightGrey shrink-0"><IconComponent name="circle-warn" size={16} /></span>
-                        <span className="text-lightGrey block truncate text-[20px] font-normal">توجه داشته باشید</span>
+                <div data-has-massage={(massages.length !== 0)} className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] lg:p-[24px] p-[16px] transition-all duration-500 ease-in-out lg:w-[75%] w-[85%] shadow-black border border-lightestDark bg-pageDark lg:rounded-[40px] rounded-[20px] data-[has-massage='true']:opacity-0 data-[has-massage='true']:invisible data-[has-massage='false']:opacity-100 data-[has-massage='false']:visible">
+                    <div className="flex lg:w-[50%] w-[85%] items-center mx-auto p-[16px] bg-white/20 rounded-[12px] justify-between gap-[10px] shadow-black mb-[32px]">
+                        <span className="text-lightGrey  shrink-0"><IconComponent name="circle-warn" size={16} /></span>
+                        <span className="text-lightGrey block truncate lg:text-[20px] text-[16px] font-normal">توجه داشته باشید</span>
                         <span className="text-lightGrey shrink-0"><IconComponent name="circle-warn" size={16} /></span>
                     </div>
                     <ul className="list-disc flex flex-col gap-[24px] lg:w-[75%] w-full lg:mx-auto lg:pr-0 pr-[20px]">
