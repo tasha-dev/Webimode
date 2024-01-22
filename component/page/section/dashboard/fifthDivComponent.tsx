@@ -9,8 +9,8 @@ import PaymentComponent from '@/chunk/page/dashboard/paymentComponent';
 export default function FifthDivComponent():ReactNode {
     // Returning JSX
     return (
-        <div className="flex gap-[20px]">
-            <div className="w-[50%]">
+        <div className="flex lg:flex-row flex-col gap-[20px]">
+            <div className="lg:w-[50%] w-full">
                 <div className="flex items-center justify-between gap-[10px] mb-[26px]">
                     <span className="text-[20px] font-normal dark:text-white text-dark block truncate">تیکت و درخواست من</span>
                     <div className="lg:hidden block">
@@ -34,8 +34,8 @@ export default function FifthDivComponent():ReactNode {
                     <TicketComponent date={new Date('August 3 2022 22:30').toISOString()} link="idk" sender="تیم پشتیبانی">ما در تیم پشتیبانی بعد تحقیق فراوان در مورد درخواست شما ، تصمیم گرفته ایم که محصول شما را .....</TicketComponent>
                 </div>
             </div>
-            <div className="shrink-0 w-[1px] my-[22px] bg-gradient-to-t from-transparent to-transparent via-lightGrey" />
-            <div className="w-[50%]">
+            <div className="shrink-0 lg:w-[1px] w-full lg:h-auto h-[1px] my-[22px] lg:bg-gradient-to-t bg-gradient-to-l from-transparent to-transparent via-lightGrey" />
+            <div className="lg:w-[50%] w-full">
                 <div className="flex items-center justify-between gap-[10px] mb-[26px]">
                     <span className="text-[20px] font-normal dark:text-white text-dark block truncate">مدیریت پرداخت ها</span>
                     <div className="lg:hidden block">
