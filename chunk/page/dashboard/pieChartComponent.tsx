@@ -48,7 +48,7 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             </div>
                         ) : false
                 }
-                <div className="p-[24px] dark:bg-pageDark bg-lightestGrey border dark:border-black border-lightGrey rounded-[40px] flex lg:flex-row flex-col items-start gap-[24px]">
+                <div className="p-[24px] dark:bg-pageDark bg-lightestGrey border border-lightGrey dark:border-lightestDark rounded-[40px] flex lg:flex-row flex-col items-start gap-[24px]">
                     <div className="w-[120px] h-[120px] dark:bg-lightestDark bg-white rounded-full overflow-hidden shrink-0">
                         <Doughnut data={{
                             labels: ['taken', 'given'],
@@ -144,7 +144,7 @@ export default function PieChartComponent({data, link, title, type, noTop = fals
                             </div>
                         ) : false
                 }
-                <div className="p-[24px] dark:bg-pageDark bg-lightestGrey border dark:border-black border-lightGrey rounded-[40px]">
+                <div className="p-[24px] dark:bg-pageDark bg-lightestGrey border border-lightGrey dark:border-lightestDark rounded-[40px]">
                     <div className="flex lg:flex-row flex-col items-start gap-[24px]">
                         <div data-small={small} className="data-[small='false']:w-[120px] data-[small='false']:h-[120px] data-[small='true']:w-[68px] data-[small='true']:h-[68px] dark:bg-lightestDark bg-white rounded-full overflow-hidden shrink-0">
                             <Doughnut data={{

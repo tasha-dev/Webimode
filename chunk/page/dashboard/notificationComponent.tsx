@@ -17,14 +17,14 @@ export default function NotificationComponent({children, count, date, sender, li
     // Returning JSX
     return (
         <li>
-            <Link href={link} className="flex dark:bg-lightestDark bg-white gap-[10px] items-start group border dark:border-black border-lightGrey rounded-[20px] overflow-hidden">
+            <Link href={link} className="flex dark:bg-lightestDark bg-white gap-[10px] items-start group border border-lightGrey dark:border-lightestDark rounded-[20px] overflow-hidden">
                 <div className="p-[12px] shrink-0">
                     <div className="w-[40px] h-[40px] flex justify-center items-center dark:bg-white/20 bg-lightGrey rounded-[8px] transition-all duration-500 group-hover:bg-theme text-white">
                         <IconComponent name="bell" size={20} />
                     </div>
                 </div>
                 <div className="w-full">
-                    <div className="flex flex-wrap justify-between items-center gap-[10px]">
+                    <div className="flex lg:flex-row flex-col justify-between lg:items-center items-start gap-[10px]">
                         <div className="py-[12px] flex items-center gap-[10px]">
                             <span className="dark:text-white text-dark text-[12px] font-normal block truncate max-w-[20ch]">{sender}</span>
                             {
@@ -36,7 +36,7 @@ export default function NotificationComponent({children, count, date, sender, li
                                     ) : false
                             }
                         </div>
-                        <div className="shrink-0 lg:px-[10px] lg:py-[10px] transition-all duration-500 lg:dark:bg-white/20 lg:bg-lighterGrey text-lightGrey group-hover:text-white group-hover:bg-theme flex items-center justify-center gap-[10px] lg:rounded-tl-[20px] lg:rounded-br-[20px]">
+                        <div className="lg:px-[10px] lg:py-[10px] transition-all duration-500 lg:dark:bg-white/20 lg:bg-lighterGrey text-lightGrey lg:group-hover:text-white lg:group-hover:bg-theme flex items-center justify-center gap-[10px] lg:rounded-tl-[20px] lg:rounded-br-[20px]">
                             <IconComponent name="calender-clock" size={16} />
                             <span className="text-[11px] font-normal text-current">
                                 {new Date(date).toLocaleDateString('fa-ir')}

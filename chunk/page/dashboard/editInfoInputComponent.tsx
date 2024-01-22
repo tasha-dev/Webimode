@@ -22,8 +22,8 @@ export default function EditInfoInputComponent({id, label, type, placeHolder}:pr
                 <label className="mb-[12px] block text-[16px] font-normal truncate dark:text-white text-dark" htmlFor={id}>{label}</label>
                 {
                     (id === 'meli-code-input')
-                        ? <input minLength={10} maxLength={10} className="appearance-none dark:bg-lightestDark bg-lightestGrey border dark:border-black border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey focus:placeholder:text-dark focus:text-dark dark:focus:border-theme focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
-                        : <input className="appearance-none bg-lightestGrey border dark:bg-lightestDark dark:border-black border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey dark:focus:placeholder:text-white dark:focus:text-white focus:placeholder:text-dark focus:text-dark dark:focus:border-theme focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
+                        ? <input minLength={10} maxLength={10} className="appearance-none dark:bg-lightestDark bg-lightestGrey border dark:border-white/20 border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey focus:placeholder:text-dark focus:text-dark dark:focus:border-theme focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
+                        : <input className="appearance-none bg-lightestGrey border dark:bg-lightestDark dark:border-white/20 border-lighterGrey transition-all duration-500 text-right rounded-[12px] placeholder:transition-all placeholder:duration-500 outline-0 w-full block p-[12px] text-[13px] font-normal placeholder:text-lightGrey text-lightGrey dark:focus:placeholder:text-white dark:focus:text-white focus:placeholder:text-dark focus:text-dark dark:focus:border-theme focus:border-theme" required type={type} placeholder={placeHolder} id={id} name={id} />
                 }
             </div>
         );
@@ -36,7 +36,7 @@ export default function EditInfoInputComponent({id, label, type, placeHolder}:pr
         return (
             <div>
                 <label className="mb-[12px] block text-[16px] font-normal truncate text-dark" htmlFor={id}>{label}</label>
-                <div data-focused={isFocused} className="overflow-hidden rounded-[12px] flex gap-[10px] dark:bg-lightestDark dark:border-black bg-lightestGrey border data-[focused='false']:border-lighterGrey data-[focused='true']:border-theme transition-all duration-500">
+                <div data-focused={isFocused} className="overflow-hidden rounded-[12px] flex gap-[10px] dark:bg-lightestDark dark:border-white/20 bg-lightestGrey border data-[focused='false']:border-lighterGrey data-[focused='true']:border-theme transition-all duration-500">
                     <input 
                         onFocus={() => setFocused(true)}
                         onBlur={() => setFocused(false)}

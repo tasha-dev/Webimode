@@ -19,7 +19,7 @@ export default function TicketComponent({children, date, link, sender, style = '
     // Conditional rendering
     if (style === 'small') {
         return (
-            <Link href={`/dashboard/tickets/${link}`} className="block dark:bg-pageDark bg-lightestGrey border dark:border-lightestDark border-lighterGrey group transition-all duration-500 rounded-[20px] p-[12px] hover:bg-theme hover:border-theme shadow-custom">
+            <Link href={`/dashboard/tickets/${link}`} className="block dark:bg-pageDark bg-lightestGrey border border-lightGrey dark:border-lightestDark group transition-all duration-500 rounded-[20px] p-[12px] hover:bg-theme hover:border-theme shadow-custom">
                 <div className="flex items-start gap-[12px] mb-[12px]">
                     <div className="flex items-center justify-center rounded-[8px] dark:bg-lightestDark bg-lighterGrey text-white w-[36px] h-[36px] shrink-0 aspect-square transition-all duration-500 group-hover:bg-white group-hover:text-theme">
                         <IconComponent name="ticket" size={20} />
