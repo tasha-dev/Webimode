@@ -7,7 +7,7 @@ import NotFoundImage from '@/public/img/code-pages/img-404.png';
 export default function NotFoundPage(): ReactNode {
     // Returning JSX
     return (
-        <section>
+        <section id="404-page">
             <div className="container p-[20px]">
                 <main className="lg:w-[75%] w-full flex flex-col items-center justify-center mx-auto">
                     <Image className="w-full mb-[50px] mx-auto" width={1000} height={1000} alt="صفحه مورد نظر یافت نشد!" src={NotFoundImage.src} />
