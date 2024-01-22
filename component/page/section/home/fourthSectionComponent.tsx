@@ -189,7 +189,7 @@ export default function FourthSectionComponent():ReactNode {
               direction='horizontal'
               mousewheel={true}
               slidesPerView={5}
-              spaceBetween={32}
+              spaceBetween={15}
               grabCursor
               className='home-fourth-section-slider-mq'
               onSlideChange={(event) => {
