@@ -33,7 +33,7 @@ export default function SliderPaginationComponent({
         return (
             <div className='flex gap-[24px] items-center justify-center lg:mt-[64px] mt-[20px] w-full'>
                 {
-                    (slidesCount < 10)
+                    (slidesCount < 12)
                         ? [... new Array(slidesCount)].map((item, index) => (
                             <div 
                                 key={index} 
@@ -62,6 +62,7 @@ export default function SliderPaginationComponent({
                                 }
                                 <span className="text-[24px] text-lightGrey font-normal">...</span>
                                 <div
+                                    onClick={() => swiper?.slideTo(12 * slidesPerView)}
                                     data-active={(Math.floor(activeIndex / slidesPerView) === 10)}
                                     className={
                                         (theme === 'theme')
@@ -85,7 +86,7 @@ export default function SliderPaginationComponent({
                     </button>
                     <div className='flex gap-[12px] items-center justify-center'>
                         {
-                            (slidesCount < 10)
+                            (slidesCount < 12)
                                 ? [... new Array(slidesCount)].map((item, index) => (
                                     <div
                                         key={index}
@@ -127,7 +128,7 @@ export default function SliderPaginationComponent({
             return (
                 <div className='flex gap-[12px] items-center justify-center lg:mt-[64px] mt-[20px] w-full'>
                     {
-                        (slidesCount < 10)
+                        (slidesCount < 12)
                             ? [... new Array(slidesCount)].map((item, index) => (
                                 <div
                                     key={index}
