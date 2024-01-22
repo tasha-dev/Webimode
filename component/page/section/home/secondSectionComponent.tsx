@@ -13,6 +13,7 @@ import Confetti from 'react-dom-confetti';
 export default function SecondSectionComponent():ReactNode {
     // Defining states of component
     const [activeStep, setActiveStep]:[number, Dispatch<any>] = useState(1);
+    const [innerWidthUser, setInnerWidthUser]:[number, Dispatch<number>] = useState(window.innerWidth);
 
     // Defining refrences
     const firstLineHelper:MutableRefObject<any> = useRef();
@@ -22,8 +23,15 @@ export default function SecondSectionComponent():ReactNode {
     const fifthLineHelper:MutableRefObject<any> = useRef();
     const mainStickyPart:MutableRefObject<any> = useRef();
 
-    // Using useEffect hook to animate
+    // Using useEffect hook to set innerWidth of page to state.
+    useEffect(() => addEventListener('resize', () => setInnerWidthUser(window.innerWidth)), []);
+
+    // Using useEffect for making active step to stop at 5 when it gets more and equal to 5.
+    useEffect(() => {if (activeStep >= 5 && innerWidthUser < 1024) {setActiveStep(5)}}, [activeStep])
+
+    // Using useEffect hook to ...
     useEffect(() => {
+        // Defining a function to handle animation on scroll of the element
         function handleAnimate(): void {
             if (doElsCollide(firstLineHelper.current, mainStickyPart.current)) {
                 setActiveStep(1);
@@ -38,24 +46,16 @@ export default function SecondSectionComponent():ReactNode {
             }
         }
 
-        const interval = setInterval(() => {
-            if (innerWidth < 1024) {
-                setActiveStep((prevStep:number) => prevStep + 1);
-            }}
-        , 1000)
-
-        addEventListener('scroll', handleAnimate);
-
-        return () => {
-            removeEventListener('scroll', handleAnimate);
-            clearInterval(interval);
-        };
-    }, [])
-
-    // Using useEffect hook to check if user is on mq and activeStep is more or equal to 5 which is last step. then stop from adding number to the state.
-    useEffect(() => {
-        if (innerWidth < 1024 && activeStep >= 5) {setActiveStep(5)}
-    }, [activeStep])
+        // If user is in desktop mq, then add scroll event to window which calls 'handleAnimate' function and removing it when component gets unmounted
+        // Otherwise add 1 to activeStep state every 1000 and remove it when component get unmounted
+        if (innerWidthUser > 1024) {
+            addEventListener('scroll', handleAnimate);
+            return () => removeEventListener('scroll', handleAnimate);
+        } else {
+            const interval = setInterval(() => {setActiveStep((prevStep:number) => prevStep + 1)}, 1000);
+            return () => clearInterval(interval);
+        }
+    }, [innerWidthUser])
 
     // Returning JSX
     return (
