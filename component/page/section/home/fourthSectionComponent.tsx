@@ -82,7 +82,7 @@ export default function FourthSectionComponent():ReactNode {
   ];
 
   // A function to add sorting style of items inside slider
-  function addSortingClassName(event:SwiperTypes.Swiper):void {
+  function addSortingAttr(event:SwiperTypes.Swiper):void {
     const Element3:HTMLElement | null = event.slides[event.activeIndex + 2];
     const Element4:HTMLElement | null = event.slides[event.activeIndex + 3];
     const Element5:HTMLElement | null = event.slides[event.activeIndex + 4];
@@ -108,7 +108,7 @@ export default function FourthSectionComponent():ReactNode {
     Element8?.firstElementChild?.setAttribute('data-view-index', '3');
   }
 
-  function addSortingClassNameMQ(event:SwiperTypes.Swiper):void {
+  function addSortingAttrMQ(event:SwiperTypes.Swiper):void {
     const Element2:HTMLElement | null = event.slides[event.activeIndex + 1];
     const Element3:HTMLElement | null = event.slides[event.activeIndex + 2];
     const Element4:HTMLElement | null = event.slides[event.activeIndex + 3];
@@ -145,17 +145,18 @@ export default function FourthSectionComponent():ReactNode {
               <IconComponent size={16} name="chevron-right" />
             </button>
             <Swiper
-              onSwiper={(event) => addSortingClassName(event)}
+              onSwiper={(event) => addSortingAttr(event)}
               modules={[Navigation, Autoplay, Mousewheel]}
               initialSlide={activeIndexOfSlider}
               direction='horizontal'
               mousewheel={true}
               slidesPerView={14}
               spaceBetween={32}
+              autoplay={{delay: 3000,disableOnInteraction: true}}
               grabCursor
               className='home-fourth-section-slider'
               onSlideChange={(event) => {
-                addSortingClassName(event);
+                addSortingAttr(event);
                 setActiveIndexOfSlider(event.activeIndex);
               }}
               navigation={{
@@ -183,17 +184,18 @@ export default function FourthSectionComponent():ReactNode {
               <IconComponent size={16} name="chevron-right" />
             </button>
             <Swiper
-              onSwiper={(event) => addSortingClassNameMQ(event)}
+              onSwiper={(event) => addSortingAttrMQ(event)}
               modules={[Navigation, Autoplay, Mousewheel]}
               initialSlide={activeIndexOfSliderMQ}
               direction='horizontal'
               mousewheel={true}
               slidesPerView={5}
               spaceBetween={15}
+              autoplay={{delay: 3000,disableOnInteraction: true}}
               grabCursor
               className='home-fourth-section-slider-mq'
               onSlideChange={(event) => {
-                addSortingClassNameMQ(event);
+                addSortingAttrMQ(event);
                 setActiveIndexOfSliderMQ(event.activeIndex);
               }}
               navigation={{
