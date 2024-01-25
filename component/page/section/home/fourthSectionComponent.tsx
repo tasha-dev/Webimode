@@ -81,7 +81,7 @@ export default function FourthSectionComponent():ReactNode {
     {alt: "عکس لوگو فیگما", img: figmaImage.src}
   ];
 
-  // A function to add sorting style of items inside slider
+  // Defining functions for sorting animation of slider
   function addSortingAttr(event:SwiperTypes.Swiper):void {
     const Element3:HTMLElement | null = event.slides[event.activeIndex + 2];
     const Element4:HTMLElement | null = event.slides[event.activeIndex + 3];
@@ -108,6 +108,32 @@ export default function FourthSectionComponent():ReactNode {
     Element8?.firstElementChild?.setAttribute('data-view-index', '3');
   }
 
+  function clearSortingAttr(event:SwiperTypes.Swiper):void {
+    const Element3:HTMLElement | null = event.slides[event.activeIndex + 2];
+    const Element4:HTMLElement | null = event.slides[event.activeIndex + 3];
+    const Element5:HTMLElement | null = event.slides[event.activeIndex + 4];
+    const Element6:HTMLElement | null = event.slides[event.activeIndex + 5];
+    const Element7:HTMLElement | null = event.slides[event.activeIndex + 6];
+    const Element8:HTMLElement | null = event.slides[event.activeIndex + 7];
+    const Element9:HTMLElement | null = event.slides[event.activeIndex + 8];
+    const Element10:HTMLElement | null = event.slides[event.activeIndex + 9];
+    const Element11:HTMLElement | null = event.slides[event.activeIndex + 10];
+    const Element12:HTMLElement | null = event.slides[event.activeIndex + 11];
+
+    Element3?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element4?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element12?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element11?.firstElementChild?.setAttribute('data-view-index', '4');
+
+    Element5?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element6?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element9?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element10?.firstElementChild?.setAttribute('data-view-index', '4');
+
+    Element7?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element8?.firstElementChild?.setAttribute('data-view-index', '4');
+  }
+
   function addSortingAttrMQ(event:SwiperTypes.Swiper):void {
     const Element2:HTMLElement | null = event.slides[event.activeIndex + 1];
     const Element3:HTMLElement | null = event.slides[event.activeIndex + 2];
@@ -117,6 +143,18 @@ export default function FourthSectionComponent():ReactNode {
     Element3?.firstElementChild?.setAttribute('data-view-index', '3');
     Element4?.firstElementChild?.setAttribute('data-view-index', '2');
   }
+
+  function clearSortingAttrMQ(event:SwiperTypes.Swiper):void {
+    const Element2:HTMLElement | null = event.slides[event.activeIndex + 1];
+    const Element3:HTMLElement | null = event.slides[event.activeIndex + 2];
+    const Element4:HTMLElement | null = event.slides[event.activeIndex + 3];
+
+    Element2?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element3?.firstElementChild?.setAttribute('data-view-index', '4');
+    Element4?.firstElementChild?.setAttribute('data-view-index', '4');
+  }
+
+
 
   // Returning JSX
   return (
@@ -152,9 +190,10 @@ export default function FourthSectionComponent():ReactNode {
               mousewheel={true}
               slidesPerView={14}
               spaceBetween={32}
-              autoplay={{delay: 3000,disableOnInteraction: true}}
+              autoplay={{delay: 2000}}
               grabCursor
               className='home-fourth-section-slider'
+              onTouchMove={(event) => clearSortingAttr(event)}
               onSlideChange={(event) => {
                 addSortingAttr(event);
                 setActiveIndexOfSlider(event.activeIndex);
@@ -190,10 +229,11 @@ export default function FourthSectionComponent():ReactNode {
               direction='horizontal'
               mousewheel={true}
               slidesPerView={5}
-              spaceBetween={15}
-              autoplay={{delay: 3000,disableOnInteraction: true}}
+              spaceBetween={10}
+              autoplay={{delay: 2000}}
               grabCursor
               className='home-fourth-section-slider-mq'
+              onTouchMove={(event) => clearSortingAttrMQ(event)}
               onSlideChange={(event) => {
                 addSortingAttrMQ(event);
                 setActiveIndexOfSliderMQ(event.activeIndex);
