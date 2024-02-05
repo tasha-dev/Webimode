@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 /*Custom styles*/
+button[disabled="true"] {@apply opacity-50 pointer-events-none;}
 body > section:first-of-type:not(.dashboard) {@apply lg:pt-[200px] pt-[20px];}
 .shadow-custom {box-shadow: -2px -2px 12px 0px rgba(0, 0, 0, 0.04) inset, 2px 2px 30px 0px rgba(255, 255, 255, 0.36) inset;}
 .shadow-custom-active[data-active="true"] {box-shadow: -2px -2px 12px 0px rgba(0, 0, 0, 0.04) inset, 2px 2px 30px 0px rgba(255, 255, 255, 0.36) inset;}
