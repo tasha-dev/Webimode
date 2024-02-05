@@ -2,18 +2,16 @@
 'use client';
 
 // Importing part
-import {ReactNode, useState} from "react";
+import {Dispatch, ReactNode, useState} from "react";
 
 // Defining type of props
 interface propsType {
-    count?: number;
+    score: number;
+    setScore: Dispatch<any>;
 }
 
-// Creating and exporting score componet as default
-export default function ScoreComponent({count = 5.0}:propsType):ReactNode {
-    // Defining states of component
-    const [score, setScore]: [number,any] = useState(count);
-
+// Creating and exporting score component as default
+export default function ScoreComponent({score, setScore}:propsType):ReactNode {
     // Returning JSX
     return (
         <div className="col-span-1 transition-all duration-500 rounded-[16px] bg-transparent placeholder:transition-all placeholder:duration-500 p-[16px] text-[16px] font-normal border border-lightGrey hover:border-dark flex items-center justify-between gap-[10px]">
