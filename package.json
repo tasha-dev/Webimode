@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.4",
     "chart.js": "^4.4.1",
     "multi-range-slider-react": "^2.0.7",
     "next": "14.0.2",
@@ -16,8 +17,10 @@
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-dom-confetti": "^0.2.0",
+    "react-hook-form": "^7.50.0",
     "react-multi-date-picker": "^4.4.1",
-    "swiper": "^11.0.4"
+    "swiper": "^11.0.4",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",
