@@ -63,6 +63,11 @@ export default function LogInPage():ReactNode {
               <form onSubmit={handleSubmit(submitEventHandler)} action="#" className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] mb-[32px]">
                 <InputComponent inputType={'email'} errorText={errors.email?.message} register={register} name="email" placeHolder="ایمیل ...." icon="person" />
                 <InputComponent inputType={'password'} errorText={errors.password?.message} register={register} icon='slash-eye' name="password" placeHolder="رمز عبور ...." />
+                {
+                  (errors.root?.message)
+                      ? <p className={'text-[15px] font-normal text-red-600 mt-[20px] lg:col-span-2 col-span-1'}>{errors.root?.message}</p>
+                      : false
+                }
                 <button disabled={isValidating} className="lg:col-span-2 col-span-1 mt-[40px] btn-secondary-theme">
                     ورود به حساب
                   <IconComponent size={16} name="chevron-left" />   

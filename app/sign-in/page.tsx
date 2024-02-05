@@ -77,6 +77,11 @@ export default function SignInPage():ReactNode {
                 <InputComponent errorText={errors.email?.message} register={register} name="email" placeHolder="ایمیل ...." inputType="email" icon="mail" />
                 <InputComponent errorText={errors.password?.message} register={register} icon='slash-eye' name="password" placeHolder="رمز عبور ...." inputType="password" />
                 <InputComponent errorText={errors.passwordRepeat?.message} register={register} icon='slash-eye' name="passwordRepeat" placeHolder="تکرار رمز عبور ...." inputType="password" />
+                {
+                  (errors.root?.message)
+                      ? <p className={'text-[15px] font-normal text-red-600 mt-[20px] lg:col-span-2 col-span-1'}>{errors.root?.message}</p>
+                      : false
+                }
                 <button disabled={isValidating} className="lg:col-span-2 col-span-1 mt-[40px] btn-secondary-theme">
                   ثبت نام کنید
                   <IconComponent size={16} name="chevron-left" />   
