@@ -4,6 +4,9 @@
 // Importing part
 import {Dispatch, ReactNode, useState} from "react";
 import IconComponent from "@/chunk/iconComponent";
+import {z} from "zod";
+import {SubmitHandler, useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
 
 // Defining props type
 interface propsType {
@@ -15,12 +18,36 @@ interface propsType {
     adminReply?: string;
 }
 
+// Defining type of form
+const formSchema = z.object({
+    comment: z.string().min(10, 'متن پاسخ شما نباید از 10 کارکتر کمتر باشد.').max(200, 'متن پاسخ شما نباید از 200 کارکتر بیشتر باشد.')
+});
+
+type formType = z.infer<typeof formSchema>;
+
 // Creating and exporting comment component as default
 export default function CommentComponent({children, dislikeCount, likeCount, name, rating, adminReply = ''}:propsType):ReactNode {
     // Defining states of component
     const [isCommentLiked, setCommentLiked]:[boolean, Dispatch<boolean>] = useState(false);
     const [isCommentDisliked, setCommentDisliked]:[boolean, Dispatch<boolean>] = useState(false);
     const [isCommentShowing, setCommentShowing]:[boolean, Dispatch<boolean>] = useState(false);
+
+    // Defining form hook to handle form
+    const {
+        register,
+        handleSubmit,
+        formState: {
+            errors,
+            isValidating
+        }
+    } = useForm<formType>({
+        resolver: zodResolver(formSchema)
+    })
+
+    // Handling submit event of form
+    const handleFormSubmit:SubmitHandler<formType> = (data) => {
+        console.log(data);
+    }
 
     // Returning JSX
     return (
@@ -93,10 +120,25 @@ export default function CommentComponent({children, dislikeCount, likeCount, nam
             }
             <div data-showing={isCommentShowing} className="transition-all duration-500 data-[showing='false']:hidden data-[showing='true']:block">
                 <div className="w-full h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-500 via-lightGrey group-hover:via-theme my-[16px]" />
-                <form action={'#'} className="flex items-end gap-[20px] bg-lighterGrey border border-lightGrey rounded-[16px] overflow-hidden">
-                    <textarea required name="comment" id="comment-input" placeholder="پاسخ خود را بنویسید" className="p-[12px] w-full bg-transparent h-[92px] outline-none resize-none placeholder:text-[13px] placeholder:text-lightGrey text-[13px] text-dark"/>
-                    <button className="w-[28px] h-[28px] aspect-square rounded-[8px] m-[12px] bg-lightGrey text-gray-500 flex items-center justify-center transition-all duration-500 hover:bg-gray-500 hover:text-gray-700">
-                        <IconComponent name="send" size={20} />
+                <form onSubmit={handleSubmit(handleFormSubmit)} action={'#'} className="flex items-end gap-[20px] bg-lighterGrey border border-lightGrey rounded-[16px] overflow-hidden">
+                    <div className={'w-full'}>
+                        <textarea
+                            {...register('comment')}
+                            placeholder="پاسخ خود را بنویسید"
+                            className="p-[12px] w-full bg-transparent h-[92px] outline-none resize-none placeholder:text-[13px] placeholder:text-lightGrey text-[13px] text-dark"
+                        />
+                        {
+                            (errors.comment?.message)
+                                ? (
+                                    <div className={'p-[12px]'}>
+                                        <p className={'text-[15px] font-normal text-red-600'}>{errors.comment?.message}</p>
+                                    </div>
+                                ) : false
+                        }
+                    </div>
+                    <button disabled={isValidating}
+                            className="w-[28px] h-[28px] aspect-square rounded-[8px] m-[12px] bg-lightGrey text-gray-500 flex items-center justify-center transition-all duration-500 hover:bg-gray-500 hover:text-gray-700">
+                        <IconComponent name="send" size={20}/>
                     </button>
                 </form>
             </div>
