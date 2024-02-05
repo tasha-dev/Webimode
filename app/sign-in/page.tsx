@@ -1,3 +1,6 @@
+// Forcing nextJS to render this component as client side component
+'use client';
+
 // Improrting part
 import {ReactNode} from 'react';
 import Link from 'next/link';
@@ -6,9 +9,47 @@ import InputComponent from '@/chunk/inputComponent';
 import HalfDividerComponent from '@/chunk/halfDividerComponent';
 import Image from 'next/image';
 import LeftSideImage from '@/public/img/img-sign-in.png';
+import {SubmitHandler, useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+
+// Defining type of form
+const formSchema = z.object({
+  email: z.string().email('لطفا ایمیل را به درستی وارد کنید.'),
+  password: z.string().min(8, 'رمز عبور نمیتواند کمتر از 8 کارکتر باشد.').max(12, 'رمز عبور نمیتواند بیشتر از 12 کارکتر باشد.'),
+  passwordRepeat: z.string().min(8, 'رمز عبور نمیتواند کمتر از 8 کارکتر باشد.').max(12, 'رمز عبور نمیتواند بیشتر از 12 کارکتر باشد.'),
+  name: z.string().min(2, 'نام کمتر از 2 کارکتر میباشد.').max(100, 'نام بیشتر از 100 کارکتر میباشد.'),
+  company: z.string().min(8, 'شماره شرکت از 8 عدد کمتر نباید باشد.').max(8, 'شماره شرکت از 8 عدد بیشتر نباید باشد.'),
+  tel: z.string().min(8, 'شماره تلفن از 8 عدد کمتر نباید باشد.').max(8, 'شماره تلفن از 8 عدد بیشتر نباید باشد.')
+});
+
+type formType = z.infer<typeof formSchema>;
 
 // Creating and exporting sign in page as default
 export default function SignInPage():ReactNode {
+  // Defining useForm hook to handle form
+  const {
+    register,
+    handleSubmit,
+    setError,
+    formState: {
+      errors,
+      isValidating
+    }
+  } = useForm<formType>({
+    resolver: zodResolver(formSchema)
+  });
+
+  // Handling submit event of form
+  const submitEventHandler: SubmitHandler<formType> = (data) => {
+    if (data.password !== data.passwordRepeat) {
+      setError('password', {message: 'مقدار گذرواژه و تکرار ان باید یکی باشد'})
+      setError('passwordRepeat', {message: 'مقدار گذرواژه و تکرار ان باید یکی باشد'})
+    } else {
+      console.log(data);
+    }
+  }
+
   // Returning JSX 
   return (
     <section className='lg:mb-0 mb-[50px]'>
@@ -29,14 +70,14 @@ export default function SignInPage():ReactNode {
               <p className="paragraph lg:text-start text-center">به راحتی در وب سایت وبیمود ثبت نام کنید و از نمونه کار های ما دیدن کنید و اگر ایده ای دارین برای ما مطرح کنید تا به واقعیت بپیوندد .</p>
             </header>
             <main>
-              <form action="#" className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] mb-[32px]">
-                <InputComponent name="name-input" required placeHolder="نام و نام خانوادگی ...." inputType="text" icon="person" />
-                <InputComponent name="tel-input" required placeHolder="شماره تلفن ...." inputType="tel" icon="telephone" />
-                <InputComponent name="company-tell-input" required placeHolder="شماره شرکت ( اختیاری )" inputType="tel" icon="caller" />
-                <InputComponent name="email-input" required placeHolder="ایمیل ...." inputType="email" icon="mail" />
-                <InputComponent icon='slash-eye' name="password-input" required placeHolder="رمز عبور ...." inputType="password" />
-                <InputComponent icon='slash-eye' name="password-repeat-input" required placeHolder="تکرار رمز عبور ...." inputType="password" />
-                <button className="lg:col-span-2 col-span-1 mt-[40px] btn-secondary-theme">
+              <form onSubmit={handleSubmit(submitEventHandler)} action="#" className="grid lg:grid-cols-2 grid-cols-1 gap-[20px] mb-[32px]">
+                <InputComponent errorText={errors.name?.message} register={register} name="name" placeHolder="نام و نام خانوادگی ...." inputType="text" icon="person" />
+                <InputComponent errorText={errors.tel?.message} register={register} name="tel" placeHolder="شماره تلفن ...." inputType="tel" icon="telephone" />
+                <InputComponent errorText={errors.company?.message} register={register} name="company" placeHolder="شماره شرکت ( اختیاری )" inputType="tel" icon="caller" />
+                <InputComponent errorText={errors.email?.message} register={register} name="email" placeHolder="ایمیل ...." inputType="email" icon="mail" />
+                <InputComponent errorText={errors.password?.message} register={register} icon='slash-eye' name="password" placeHolder="رمز عبور ...." inputType="password" />
+                <InputComponent errorText={errors.passwordRepeat?.message} register={register} icon='slash-eye' name="passwordRepeat" placeHolder="تکرار رمز عبور ...." inputType="password" />
+                <button disabled={isValidating} className="lg:col-span-2 col-span-1 mt-[40px] btn-secondary-theme">
                   ثبت نام کنید
                   <IconComponent size={16} name="chevron-left" />   
                 </button>

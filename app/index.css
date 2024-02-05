@@ -83,9 +83,9 @@ footer[data-hasbefore="true"]::before {@apply content-[''] absolute top-0 left-0
 .scroll-notification-dashboard::-webkit-scrollbar-thumb {@apply bg-theme rounded-tr-[8px] rounded-br-[8px];}  
 
 /* Fifth section of home page (semi cirrcluar slider) */
-.home-fifth-section-slider .home-fifth-section-slider-item:is([data-next-of-active="false"], [data-prev-of-active="false"], [data-active="false"]) {@apply scale-75};
-.home-fifth-section-slider .home-fifth-section-slider-item:is([data-next-of-active="true"], [data-prev-of-active="true"]) {@apply scale-[0.8]};
-.home-fifth-section-slider .home-fifth-section-slider-item[data-active="true"] {@apply scale-100};
+.home-fifth-section-slider .home-fifth-section-slider-item:is([data-next-of-active="false"], [data-prev-of-active="false"], [data-active="false"]) {@apply scale-75}
+.home-fifth-section-slider .home-fifth-section-slider-item:is([data-next-of-active="true"], [data-prev-of-active="true"]) {@apply scale-[0.8]}
+.home-fifth-section-slider .home-fifth-section-slider-item[data-active="true"] {@apply scale-100}
 
 .home-fifth-section-slider .home-fifth-section-slider-item[data-index="1"] {@apply left-0 top-[50%] -translate-x-[50%] -translate-y-[50%];}
 .home-fifth-section-slider .home-fifth-section-slider-item[data-index="2"] {@apply left-0 top-[20%] translate-x-[10%] translate-y-0;}
