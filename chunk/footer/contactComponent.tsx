@@ -1,24 +1,72 @@
+// Forcing nextJS to render this component as client side component
+'use client';
+
 // Importing part
 import {ReactNode} from "react";
 import IconComponent from "@/chunk/iconComponent";
 import InputComponent from "@/chunk/footer/inputComponent";
+import {z} from "zod";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {SubmitHandler, useForm} from "react-hook-form";
+
+// Defining type of form
+const formSchema = z.object({
+    email: z.string().email('لطفا ایمیل را به درستی وارد کنید.'),
+    name: z.string().min(2, 'نام کمتر از 2 کارکتر میباشد.').max(100, 'نام بیشتر از 100 کارکتر میباشد.'),
+    text: z.string().min(10, 'نام کمتر از 10 کارکتر میباشد.').max(200, 'نام بیشتر از 200 کارکتر میباشد.'),
+});
+
+type formType = z.infer<typeof formSchema>;
 
 // Creating and exporting contact component of footer as default
 export default function ContactComponent():ReactNode {
+    // Defining useForm hook to use
+    const {
+        register,
+        handleSubmit,
+        setError,
+        formState: {
+            errors,
+            isSubmitting
+        }
+    } = useForm<formType>({
+        resolver: zodResolver(formSchema)
+    });
+
+    // Handling submit event of form
+    const submitEventHandler:SubmitHandler<formType> = (data) => {
+        setError("root", {
+            message: 'اررور کاستوم'
+        })
+    }
+
     // Returning JSX
     return (
         <div className="lg:absolute relative lg:bottom-[80%] lg:left-[20px] lg:w-[35%] w-full">
             <span className="lg:block hidden absolute bottom-full left-full text-dark"><IconComponent name="splash-lines" size={32} /></span>
-            <form action="#" className="shadow-2xl lg:border-2 border-white bg-gradient-to-b from-darkerTheme to-darkestTheme lg:p-[32px] p-[16px] lg:rounded-[56px] flex flex-col gap-[32px]">
-                <InputComponent icon="person" inputType="text" name="name-input-footer" placeHolder="نام ...." required />
-                <InputComponent icon="mail" inputType="mail" name="email-input-footer" placeHolder="ایمیل ...." required />
-                <InputComponent icon="file-write" inputType="text" name="text-input-footer" placeHolder="ایمیل ...." required isTextArea />
-                <button className="btn-primary w-full">
+            <form
+                onClick={() => console.log(errors)}
+                onSubmit={handleSubmit(submitEventHandler)}
+                action="#"
+                className="shadow-2xl transition-all duration-500 lg:border-2 border-lightTheme bg-gradient-to-b from-darkerTheme to-darkestTheme lg:p-[32px] p-[16px] lg:rounded-[56px] flex flex-col gap-[32px]"
+            >
+                <InputComponent register={register} icon="person" name={"name"} errorText={errors.name?.message} placeHolder="نام ...."/>
+                <InputComponent register={register} icon="mail" name={"email"} errorText={errors.email?.message} placeHolder="ایمیل ...."/>
+                <InputComponent register={register} icon="file-write" name={"text"} errorText={errors.text?.message} placeHolder="متن ...." isTextArea />
+                {
+                    (errors.root?.message)
+                        ? (
+                            <div className={'p-[16px] bg-red-950 border-[1.5px] border-red-600 rounded-[13px] mt-[16px]'}>
+                                <p className={'text-red-600 font-normal text-[15px]'}>{errors.root?.message}</p>
+                            </div>
+                        ) : false
+                }
+                <button className="btn-primary w-full" disabled={isSubmitting}>
                     ثبت درخواست
-                    <IconComponent name="chevron-left" size={16} />
+                    <IconComponent name="chevron-left" size={16}/>
                 </button>
                 <p className="text-white lg:text-[16px] text-[13px] font-normal flex items-start gap-[10px]">
-                    <span className="shrnik-0"><IconComponent name="info" size={24} /></span>
+                    <span className="shrnik-0"><IconComponent name="info" size={24}/></span>
                     بین 24 تا 48 ساعت آینده تیم وبیمود با شما ارتباط خواهد گرفت
                 </p>
             </form>
