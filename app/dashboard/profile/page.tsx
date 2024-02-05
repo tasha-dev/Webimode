@@ -64,13 +64,13 @@ export default function DashboardProfilePage():ReactNode {
                         انصراف تغییرات
                     </Link>
                     <div className="dark:hidden block lg:w-auto w-full">
-                        <button className="btn-dark lg:w-auto w-full">
+                        <button disabled={isValidating} className="btn-dark lg:w-auto w-full">
                             <IconComponent name="penicl-circle" size={16} />
                             تغیر اطلاعات
                         </button>
                     </div>
                     <div className="dark:block hidden lg:w-auto w-full">
-                        <button className="btn-white lg:w-auto w-full">
+                        <button disabled={isValidating} className="btn-white lg:w-auto w-full">
                             <IconComponent name="penicl-circle" size={16} />
                             تغیر اطلاعات
                         </button>

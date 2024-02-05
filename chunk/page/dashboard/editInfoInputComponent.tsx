@@ -49,6 +49,7 @@ export default function EditInfoInputComponent({register, errorText, label, type
                         {...register(name, {
                             onBlur: () => setFocused(false)
                         })}
+                        type={inputType}
                         onFocus={() => setFocused(true)}
                         className="p-[12px] dark:placeholder:text-lightGrey dark:text-lightGrey w-full outline-0 bg-transparent" placeholder={placeHolder}
                     />
