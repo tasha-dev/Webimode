@@ -20,6 +20,9 @@ export default function SecondSectionComponent():ReactNode {
                     </div>
                     <InputComponent id={'subject'} placeHolder={'عنوان پروژه شما'} label={'یک عنوان برای پروژه خود انتخاب کنید :'} type={'text'} />
                     <InputComponent id={'time'} placeHolder={'تعداد روز'} label={'زمان پیشنهادی شما برای تحویل پروژه چقدر است ؟ :'} type={'number'} />
+                    <div className={'lg:col-span-2 col-span-1'}>
+                        <InputComponent id={'description'} placeHolder={'توضیحات پروژه خود را برای ما بنویسید ....'} label={'توضیحات پروژه :'} istextArea />
+                    </div>
                 </main>
             </div>
         </section>
