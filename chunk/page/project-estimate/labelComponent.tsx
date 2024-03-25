@@ -18,7 +18,7 @@ export default function LabelComponent({children, forProp, isActive}:propsType):
                 data-active={isActive}
                 className={'transition-all duration-500 data-[active="false"]:text-dark data-[active="true"]:text-theme'}
             >
-                <IconComponent name={'left-polygon'} size={20} />
+                <IconComponent name={'left-polygon'} size={40} />
             </span>
             <span
                 data-active={isActive}

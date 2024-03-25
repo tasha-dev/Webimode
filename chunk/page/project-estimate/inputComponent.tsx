@@ -8,7 +8,7 @@ import LabelComponent from "@/chunk/page/project-estimate/labelComponent";
 // Defining type of props
 interface propsType {
     label?: string;
-    type?: 'number' | 'text';
+    type?: 'number' | 'text' | 'tel' | 'email';
     istextArea?: boolean;
     placeHolder: string;
     id: string;
@@ -29,7 +29,7 @@ export default function InputComponent({placeHolder, label, istextArea = false, 
                         : false
                 }
                 <textarea
-                    className={'transition-all resize-none outline-0 duration-500 w-full border focus:bg-theme/20 bg-white focus:border-theme rounded-[10px] border-lightGrey p-[10px] lg:h-[140px]'}
+                    className={'transition-all text-right placeholder:text-right resize-none outline-0 duration-500 w-full border focus:bg-theme/20 bg-white focus:border-theme rounded-[10px] border-lightGrey p-[10px] lg:h-[140px]'}
                     onFocus={() => setFocused(true)}
                     onBlur={() => setFocused(false)}
                     name={id}
@@ -48,7 +48,7 @@ export default function InputComponent({placeHolder, label, istextArea = false, 
                         : false
                 }
                 <input
-                    className={'transition-all outline-0 duration-500 w-full border focus:bg-theme/20 bg-white focus:border-theme rounded-[10px] border-lightGrey p-[10px]'}
+                    className={'transition-all text-right placeholder:text-right outline-0 duration-500 w-full border focus:bg-theme/20 bg-white focus:border-theme rounded-[10px] border-lightGrey p-[10px]'}
                     onFocus={() => setFocused(true)}
                     onBlur={() => setFocused(false)}
                     name={id}
