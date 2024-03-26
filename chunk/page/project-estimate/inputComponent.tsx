@@ -13,7 +13,7 @@ interface propsType {
     placeHolder: string;
     id: string;
     inputHasMarginRight?: boolean;
-    onChange?: ChangeEventHandler;
+    onChange?: ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
 }
 
 // Creating and exporting input component as default
