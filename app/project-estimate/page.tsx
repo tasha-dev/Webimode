@@ -5,6 +5,7 @@ import SecondSectionComponent from "@/component/page/section/project-estimate/se
 import Image from 'next/image';
 import GreenLightImage from '@/public/img/project-estimate/img-green-light.svg';
 import PurpleLightImage from '@/public/img/project-estimate/img-purple-light.svg';
+import ThirdSectionComponent from "@/component/page/section/project-estimate/thirdSectionComponent";
 
 // Defining metadata of page
 export const metadata = {title: 'هزینه'}
@@ -19,6 +20,7 @@ export default function ProjectEstimatePage():ReactNode {
             <Image alt={'Light image'} src={PurpleLightImage.src} width={300} height={300} className={'absolute -z-10 top-[1400px] left-0'} />
             <FirstSectionComponent />
             <SecondSectionComponent />
+            <ThirdSectionComponent />
         </>
     );
 }
