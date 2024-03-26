@@ -2,7 +2,7 @@
 'use client';
 
 // Importing part
-import {ReactNode, useState} from "react";
+import {ChangeEventHandler, ReactNode, useState} from "react";
 import LabelComponent from "@/chunk/page/project-estimate/labelComponent";
 import Icon from "@/chunk/iconComponent";
 
@@ -12,10 +12,11 @@ interface propsType {
     items: string[];
     id: string;
     inputHasMarginRight?: boolean;
+    onChange?: ChangeEventHandler<HTMLSelectElement>;
 }
 
 // Creating and exporting dropdown component as default
-export default function DropdownComponent({items, label, id, inputHasMarginRight = false}:propsType):ReactNode {
+export default function DropdownComponent({items, label, id, inputHasMarginRight = false, onChange}:propsType):ReactNode {
     // Defining states of component
     const [isOpened, setOpened] = useState<boolean>(false);
 
@@ -27,6 +28,7 @@ export default function DropdownComponent({items, label, id, inputHasMarginRight
                 <select
                     onFocus={() => setOpened(true)}
                     onBlur={() => setOpened(false)}
+                    onChange={onChange}
                     name={id}
                     id={id}
                     className={'outline-0 text-dark transition-all duration-500 items-center w-full justify-between gap-[20px] border focus:bg-theme/20 bg-white focus:border-theme rounded-[10px] border-lightGrey p-[10px]'}

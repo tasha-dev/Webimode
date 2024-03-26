@@ -1,11 +1,20 @@
+// Forcing nextJS to render this component as client side component
+'use client';
+
 // Importing part
-import {ReactNode} from "react";
+import {ReactNode, useState} from "react";
 import InputComponent from "@/chunk/page/project-estimate/inputComponent";
 import DropdownComponent from "@/chunk/page/project-estimate/dropdownComponent";
 import IconComponent from "@/chunk/iconComponent";
 
 // Creating and exporting second section of project estimate page as default
 export default function SecondSectionComponent():ReactNode {
+    // Defining states of component
+    const [group, setGroup] = useState<string>('asdasdas');
+    const [subject, setSubject] = useState<string>();
+    const [time, setTime] = useState<string>();
+    const [description, setDescription] = useState<string>();
+
     // Returning JSX
     return (
         <section>
@@ -14,16 +23,17 @@ export default function SecondSectionComponent():ReactNode {
                     <div className={'grid lg:grid-cols-2 grid-cols-1 gap-[20px]'}>
                         <div className={'lg:col-span-2 col-span-1'}>
                             <DropdownComponent
+                                onChange={(event) => setGroup(event.target.value)}
                                 inputHasMarginRight
                                 id={'dropdown'}
                                 label={'یک دسته بندی برای پروژه خود انتخاب کنید :'}
                                 items={['item 1', 'item 2']}
                             />
                         </div>
-                        <InputComponent inputHasMarginRight id={'subject'} placeHolder={'عنوان پروژه شما'} label={'یک عنوان برای پروژه خود انتخاب کنید :'} type={'text'}/>
-                        <InputComponent id={'time'} placeHolder={'تعداد روز'} label={'زمان پیشنهادی شما برای تحویل پروژه چقدر است ؟ :'} type={'number'}/>
+                        <InputComponent onChange={(event) => setSubject(event.target.value)} inputHasMarginRight id={'subject'} placeHolder={'عنوان پروژه شما'} label={'یک عنوان برای پروژه خود انتخاب کنید :'} type={'text'}/>
+                        <InputComponent onChange={(event) => setTime(event.target.value)} id={'time'} placeHolder={'تعداد روز'} label={'زمان پیشنهادی شما برای تحویل پروژه چقدر است ؟ :'} type={'number'}/>
                         <div className={'lg:col-span-2 col-span-1'}>
-                            <InputComponent inputHasMarginRight id={'description'} placeHolder={'توضیحات پروژه خود را برای ما بنویسید ....'} label={'توضیحات پروژه :'} istextArea/>
+                            <InputComponent onChange={(event) => setDescription(event.target.value)} inputHasMarginRight id={'description'} placeHolder={'توضیحات پروژه خود را برای ما بنویسید ....'} label={'توضیحات پروژه :'} istextArea/>
                         </div>
                         <div
                             className={'lg:col-span-2 col-span-1 grid lg:grid-cols-3 items-end grid-cols-1 gap-[20px]'}>
