@@ -7,6 +7,9 @@ import ThirdDivComponent from "@/component/page/section/dashboard/thirdDivCompon
 import FourthDivComponent from "@/component/page/section/dashboard/fourthDivComponent";
 import FifthDivComponent from "@/component/page/section/dashboard/fifthDivComponent";
 
+// Defining metadata of page
+export const metadata = {title: 'داشبورد'}
+
 // Creating and exporting dashboard page as default
 export default function DashboardPage():ReactNode {
     // Returning JSX

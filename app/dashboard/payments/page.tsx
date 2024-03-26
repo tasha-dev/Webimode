@@ -4,6 +4,9 @@ import DashboardPageComponent from "@/component/dashboard/dashboardPageTemplate"
 import WalletComponent from '@/component/page/section/dashboard-payment/walletComponent';
 import PaymentSliderComponent from '@/chunk/page/dashboard-payments/paymentComponent';
 
+// Defining metadata of page
+export const metadata = {title: 'پرداخت ها'}
+
 // Creating and exporting dashboard payments page as default
 export default function DashboardPaymentsComponent():ReactNode {
     // Returning JSX

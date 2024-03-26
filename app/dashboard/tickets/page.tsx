@@ -2,6 +2,9 @@
 import {ReactNode} from "react";
 import DashboardPageComponent from "@/component/dashboard/dashboardPageTemplate";
 
+// Defining metadata of page
+export const metadata = {title: 'تیکت ها'}
+
 // Creating and exporting tickets dashboard page as default
 export default function DashboardTicketPage():ReactNode {
     // Returning JSX

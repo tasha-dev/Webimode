@@ -53,7 +53,7 @@ const DanaFont = LocalFont({
 
 // Defining metadata of pages and exporting them
 export const metadata:Metadata = {
-    title: 'وبیمود',
+    title: {template: '%s | وبیمود', default: 'وبیمود'},
     description: 'وبیمود واقعی کردن ایده ها - بهترین خدمات برنامه نویسی ، طرای سایت ، طراحی لوگو ، انیمیشن و... با تیم حرفه ای وبیمود کسب و کار خود را به سطح باللاتری ببرید !',
     keywords: ['programming', 'coding', 'web', 'webimode', 'website design', 'logo', 'animation', 'وبیمود', 'برنامه نویسی', 'کد زدن', 'وب', 'دیزاین', 'لوگو', 'طراحی', 'انیمیشن'],
     twitter: {

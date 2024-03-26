@@ -4,6 +4,9 @@ import DashboardPageComponent from "@/component/dashboard/dashboardPageTemplate"
 import RandomImage from '@/public/img/blog/img-random.png';
 import Image from "next/image";
 
+// Defining metadata of page
+export const metadata = {title: 'سوالات'}
+
 // Creating and exporting Faq page of dashboard as default
 export default function DashboardFaqPage():ReactNode {
 // Returning JSX

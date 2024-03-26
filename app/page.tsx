@@ -12,6 +12,9 @@ import EighthSectionComponent from "@/component/page/section/home/eighthSectionC
 import NinethSectionComponent from "@/component/page/section/home/ninethSectionComponent";
 import TenthSectionComponent from "@/component/page/section/home/tenthSectionCompoent";
 
+// Defining metadata of page
+export const metadata = {title: 'وبیمود | خانه'}
+
 // Creating and exporting Home Page as default
 export default function HomePage():ReactNode {
     // Returning JSX

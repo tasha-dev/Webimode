@@ -10,6 +10,9 @@ import SeventhSectionComponent from "@/component/page/section/singleBlog/seventh
 import EighthSectionComponent from "@/component/page/section/singleBlog/eighthSectionComponent";
 import NinethSectionComponent from "@/component/page/section/singleBlog/ninethSectionComponent";
 
+// Defining metadata of page
+export const metadata = {title: 'وبلاگ'}
+
 // Creating and exporting blog (Single) page as default
 export default function SingleBlogPage():ReactNode {
     // Returning JSX

@@ -6,6 +6,9 @@ import Image from 'next/image';
 import GreenLightImage from '@/public/img/project-estimate/img-green-light.svg';
 import PurpleLightImage from '@/public/img/project-estimate/img-purple-light.svg';
 
+// Defining metadata of page
+export const metadata = {title: 'هزینه'}
+
 // Creating and exporting project estimation page as default
 export default function ProjectEstimatePage():ReactNode {
     // Returning JSX

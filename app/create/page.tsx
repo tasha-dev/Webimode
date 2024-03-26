@@ -12,6 +12,9 @@ import EightSectionComponent from "@/component/page/section/create/eighthSection
 import NinethSectionComponent from "@/component/page/section/create/ninethSectionComponent";
 import TenthSectionComponent from "@/component/page/section/create/tenthSectionComponent";
 
+// Defining metadata of page
+export const metadata = {title: 'پروژه جدید'}
+
 // Creating and exporting create page as default
 export default function CreateBlogPage():ReactNode {
     // Returning JSX

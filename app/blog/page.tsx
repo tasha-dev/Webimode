@@ -7,6 +7,9 @@ import FifthSectionComponent from "@/component/page/section/blog/fifthSectionCom
 import SixthSectionComponent from "@/component/page/section/blog/sixthSectionComponent";
 import SeventhSectionComponent from "@/component/page/section/blog/seventhSectionComponent";
 
+// Defining metadata of page
+export const metadata = {title: 'وبلاگ'}
+
 // Creating and exporting blog page as defualt
 export default function BlogPage():ReactNode {
     // Returning JSX

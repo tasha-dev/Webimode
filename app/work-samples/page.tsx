@@ -11,6 +11,9 @@ import NinethSectionComponent from "@/component/page/section/work-samples/nineth
 import TenthSectionComponent from "@/component/page/section/work-samples/tenthSectionCompoent";
 import EleventhSectionComponent from "@/component/page/section/work-samples/eleventhSectionComponent";
 
+// Defining metadata of page
+export const metadata = {title: 'نمونه کارها'}
+
 // Creating and exporting work samples page as default
 export default function WorkSamplesPage():ReactNode {
     // Returning JSX

@@ -6,14 +6,15 @@ import {ReactNode, useState} from "react";
 import InputComponent from "@/chunk/page/project-estimate/inputComponent";
 import DropdownComponent from "@/chunk/page/project-estimate/dropdownComponent";
 import IconComponent from "@/chunk/iconComponent";
+import ContentComponent from "@/chunk/page/project-estimate/contentComponent";
 
 // Creating and exporting second section of project estimate page as default
 export default function SecondSectionComponent():ReactNode {
     // Defining states of component
-    const [group, setGroup] = useState<string>('asdasdas');
-    const [subject, setSubject] = useState<string>();
-    const [time, setTime] = useState<string>();
-    const [description, setDescription] = useState<string>();
+    const [group, setGroup] = useState<string>('');
+    const [subject, setSubject] = useState<string>('');
+    const [time, setTime] = useState<string>('0');
+    const [description, setDescription] = useState<string>('');
 
     // Returning JSX
     return (
@@ -48,6 +49,16 @@ export default function SecondSectionComponent():ReactNode {
                         </span>
                         <span className={'text-white font-normal text-[20px]'}>موارد انتخاب شده</span>
                     </div>
+                    <div className={'lg:col-span-2 grid lg:grid-cols-3 gap-[20px] mb-[20px]'}>
+                        <ContentComponent value={group} label={'دسته بندی پروژه :'} placeHolder={'دسته بندی پروژه شما'} />
+                        <ContentComponent value={subject} label={'عنوان پروژه شما :'} placeHolder={'نام پروژه شما'} />
+                        <ContentComponent isDay value={time} label={'زمان پیشنهادی شما :'} placeHolder={'زمان مورد نیاز تحویل پروژه '} />
+                    </div>
+                    <ContentComponent value={description} label={'توضیحات پروژه :'} isTextArea />
+                    <button className={'btn-primary w-full mt-[20px]'}>
+                        ارسال درخواست
+                        <IconComponent name={'chevron-left'} size={20} />
+                    </button>
                 </form>
             </div>
         </section>

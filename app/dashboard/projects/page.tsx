@@ -4,6 +4,9 @@ import DashboardPage from "@/component/dashboard/dashboardPageTemplate";
 import FirstDivComponent from "@/component/page/section/dashboard-projects/firstDivComponent";
 import SliderComponent from "@/chunk/page/dashboard-projects/sliderComponent";
 
+// Defining metadata of page
+export const metadata = {title: 'پروژه ها'}
+
 // Creatingn and exporting projects page in dasboard as default
 export default function DashboardProjectsPage():ReactNode {
     // Returning JSX
