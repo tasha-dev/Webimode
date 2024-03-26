@@ -35,7 +35,7 @@ export default function DropdownComponent({items, placeHolder, label, id}:propsT
                         <Icon name={'chevron-down'} size={10} />
                     </span>
                 </button>
-                <div data-opened={isOpened} className={'absolute transition-all py-[20px] flex flex-col duration-500 top-[110%] left-0 w-full lg:h-[200px] h-[100px] overflow-auto bg-white shadow-2xl shadow-black/20 rounded-[10px] data-[opened="true"]:visible data-[opened="true"]:opacity-100 data-[opened="false"]:invisible data-[opened="false"]:opacity-0 '}>
+                <div data-opened={isOpened} className={'absolute transition-all z-20 py-[20px] flex flex-col duration-500 top-[110%] left-0 w-full lg:h-[200px] h-[100px] overflow-auto bg-white shadow-2xl shadow-black/20 rounded-[10px] data-[opened="true"]:visible data-[opened="true"]:opacity-100 data-[opened="false"]:invisible data-[opened="false"]:opacity-0 '}>
                     {
                         items.map((item, index) => (
                             <button key={index} className={'p-[10px] bg-white hover:bg-lighterGrey transition-all duration-500 text-[16px] font-normal text-right'}>

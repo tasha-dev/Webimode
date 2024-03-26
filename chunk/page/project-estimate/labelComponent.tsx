@@ -13,10 +13,10 @@ interface propsType {
 export default function LabelComponent({children, forProp, isActive}:propsType):ReactNode {
     // Returning JSX
     return (
-        <label htmlFor={forProp} className={'flex items-center gap-[10px] mb-[20px]'}>
+        <label htmlFor={forProp} className={'flex lg:flex-row flex-col items-center gap-[10px] mb-[20px]'}>
             <span
                 data-active={isActive}
-                className={'transition-all duration-500 data-[active="false"]:text-dark data-[active="true"]:text-theme'}
+                className={'transition-all duration-500 data-[active="false"]:text-dark data-[active="true"]:text-theme lg:rotate-0 -rotate-90'}
             >
                 <IconComponent name={'left-polygon'} size={40} />
             </span>

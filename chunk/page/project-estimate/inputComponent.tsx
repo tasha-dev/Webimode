@@ -29,7 +29,7 @@ export default function InputComponent({placeHolder, label, istextArea = false, 
                         : false
                 }
                 <textarea
-                    className={'transition-all text-right placeholder:text-right resize-none outline-0 duration-500 w-full border focus:bg-theme/20 bg-white focus:border-theme rounded-[10px] border-lightGrey p-[10px] lg:h-[140px]'}
+                    className={'transition-all text-right placeholder:text-right resize-none outline-0 duration-500 w-full border focus:bg-theme/20 bg-white focus:border-theme rounded-[10px] border-lightGrey p-[10px] h-[140px]'}
                     onFocus={() => setFocused(true)}
                     onBlur={() => setFocused(false)}
                     name={id}
