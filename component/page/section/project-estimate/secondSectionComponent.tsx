@@ -7,6 +7,7 @@ import InputComponent from "@/chunk/page/project-estimate/inputComponent";
 import DropdownComponent from "@/chunk/page/project-estimate/dropdownComponent";
 import IconComponent from "@/chunk/iconComponent";
 import ContentComponent from "@/chunk/page/project-estimate/contentComponent";
+import RequestSuccessComponent from "@/component/requestSuccessComponent";
 
 // Creating and exporting second section of project estimate page as default
 export default function SecondSectionComponent():ReactNode {
@@ -15,12 +16,22 @@ export default function SecondSectionComponent():ReactNode {
     const [subject, setSubject] = useState<string>('');
     const [time, setTime] = useState<string>('0');
     const [description, setDescription] = useState<string>('');
+    const [success, setSuccess] = useState<boolean>(false);
+
+    // Defining a function to handle submit events
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        setSuccess(true);
+        setInterval(() => setSuccess(false), 3000);
+    }
 
     // Returning JSX
     return (
         <section>
+            <RequestSuccessComponent showing={success} closeFn={() => setSuccess(false)} />
             <div className="container p-[20px]">
-                <form action={'#'} className={'bg-white p-[20px] rounded-[10px] shadow-2xl shadow-black/20'}>
+                <form onSubmit={handleSubmit} action={'#'} className={'bg-white p-[20px] rounded-[10px] shadow-2xl shadow-black/20'}>
                     <div className={'grid lg:grid-cols-2 grid-cols-1 gap-[20px]'}>
                         <div className={'lg:col-span-2 col-span-1'}>
                             <DropdownComponent

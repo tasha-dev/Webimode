@@ -24,7 +24,7 @@ export default function DropdownComponent({items, label, id, inputHasMarginRight
     return (
         <div>
             <LabelComponent forProp={id} isActive={isOpened}>{label}</LabelComponent>
-            <div className={`relative ${(inputHasMarginRight) ? 'pr-[50px]' : ''}`}>
+            <div className={`relative ${(inputHasMarginRight) ? 'lg:pr-[50px]' : ''}`}>
                 <select
                     onFocus={() => setOpened(true)}
                     onBlur={() => setOpened(false)}
