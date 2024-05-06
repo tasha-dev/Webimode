@@ -26,7 +26,7 @@ export default function LabelComponent({children, forProp, isActive}:propsType):
             />
             <span
                 data-active={isActive}
-                className={'transition-all shrink-0 duration-500 font-bold text-[20px] data-[active="false"]:text-dark data-[active="true"]:text-theme'}
+                className={'transition-all shrink-0 duration-500 lg:font-bold font-medium lg:text-[20px] xs:text-[14px] text-[12px] data-[active="false"]:text-dark data-[active="true"]:text-theme'}
             >
                 {children}
             </span>
